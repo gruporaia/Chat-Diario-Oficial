@@ -8,6 +8,8 @@
 
 4. Os PDFs e o índice final gerado são enviados para um bucket no S3/Minio, permitindo que seja compartilhado entre diferentes serviços.
 
+![Group 55](https://github.com/user-attachments/assets/f294d968-7071-44b6-8a68-9673bd052054)
+
 ## Configuração do Docker + Airflow
 Projeto de ingestão de dados utiliza do Airflow. Para isso, utilizamos Docker para tornar mais prático o desenvolvimento.
 Para isso, siga as seguintes instruções: 
