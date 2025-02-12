@@ -1,0 +1,213 @@
+[2025-01-24T20:13:42.292+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-24T20:13:42.313+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pull_gazettes_data.preprocess_documents_task scheduled__2025-01-20T00:00:00+00:00 [queued]>
+[2025-01-24T20:13:42.322+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pull_gazettes_data.preprocess_documents_task scheduled__2025-01-20T00:00:00+00:00 [queued]>
+[2025-01-24T20:13:42.324+0000] {taskinstance.py:2865} INFO - Starting attempt 2 of 2
+[2025-01-24T20:13:42.337+0000] {taskinstance.py:2888} INFO - Executing <Task(PreprocessDocuments): preprocess_documents_task> on 2025-01-20 00:00:00+00:00
+[2025-01-24T20:13:42.355+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1308) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-24T20:13:42.356+0000] {standard_task_runner.py:72} INFO - Started process 1321 to run task
+[2025-01-24T20:13:42.356+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'pull_gazettes_data', 'preprocess_documents_task', 'scheduled__2025-01-20T00:00:00+00:00', '--job-id', '23', '--raw', '--subdir', 'DAGS_FOLDER/dag_script.py', '--cfg-path', '/tmp/tmp4aggogbw']
+[2025-01-24T20:13:42.359+0000] {standard_task_runner.py:105} INFO - Job 23: Subtask preprocess_documents_task
+[2025-01-24T20:13:42.408+0000] {task_command.py:467} INFO - Running <TaskInstance: pull_gazettes_data.preprocess_documents_task scheduled__2025-01-20T00:00:00+00:00 [running]> on host 972b45cbfb12
+[2025-01-24T20:13:42.485+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='***@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='pull_gazettes_data' AIRFLOW_CTX_TASK_ID='preprocess_documents_task' AIRFLOW_CTX_EXECUTION_DATE='2025-01-20T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-01-20T00:00:00+00:00'
+[2025-01-24T20:13:42.486+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-24T20:13:42.499+0000] {logging_mixin.py:190} INFO - Checking pre processed documents log
+[2025-01-24T20:13:42.509+0000] {logging_mixin.py:190} INFO - Already preprocessed documents: set()
+[2025-01-24T20:13:42.643+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-11-22_7138.pdf into multiple PDF single pages
+[2025-01-24T20:13:43.921+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-11-23_7139.pdf into multiple PDF single pages
+[2025-01-24T20:13:45.778+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-11-26_7140.pdf into multiple PDF single pages
+[2025-01-24T20:13:47.104+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-11-27_7141.pdf into multiple PDF single pages
+[2025-01-24T20:13:48.547+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-11-28_7142.pdf into multiple PDF single pages
+[2025-01-24T20:13:49.845+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-11-29_7143.pdf into multiple PDF single pages
+[2025-01-24T20:13:51.907+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-11-30_7144.pdf into multiple PDF single pages
+[2025-01-24T20:13:53.526+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-12-03_7145.pdf into multiple PDF single pages
+[2025-01-24T20:13:55.032+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-12-04_7146.pdf into multiple PDF single pages
+[2025-01-24T20:13:57.027+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-12-05_7147.pdf into multiple PDF single pages
+[2025-01-24T20:13:58.285+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-12-06_7148.pdf into multiple PDF single pages
+[2025-01-24T20:13:59.839+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-12-07_7149.pdf into multiple PDF single pages
+[2025-01-24T20:14:02.644+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-12-10_7150.pdf into multiple PDF single pages
+[2025-01-24T20:14:04.289+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-12-11_7151.pdf into multiple PDF single pages
+[2025-01-24T20:14:06.095+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-12-12_7152.pdf into multiple PDF single pages
+[2025-01-24T20:14:08.142+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-12-13_7153.pdf into multiple PDF single pages
+[2025-01-24T20:14:10.556+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-12-14_7154.pdf into multiple PDF single pages
+[2025-01-24T20:14:12.010+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-12-17_7155.pdf into multiple PDF single pages
+[2025-01-24T20:14:13.427+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-12-18_7156.pdf into multiple PDF single pages
+[2025-01-24T20:14:15.293+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-12-19_7157.pdf into multiple PDF single pages
+[2025-01-24T20:14:16.693+0000] {logging_mixin.py:190} INFO - Breaking down pdf test.py into multiple PDF single pages
+[2025-01-24T20:14:18.218+0000] {logging_mixin.py:190} INFO - Breaking down pdf teste.py into multiple PDF single pages
+[2025-01-24T20:14:19.631+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-24T20:14:20.048+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:14:22.302+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:14:23.413+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:14:23.788+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-11-22_7138.pdf-page-0.pdf
+[2025-01-24T20:14:29.143+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-11-22_7138.pdf-page-0.pdf in 9.59 sec.
+[2025-01-24T20:14:29.160+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-24T20:14:29.356+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:14:31.895+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:14:32.463+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:14:32.877+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-11-22_7138.pdf-page-1.pdf
+[2025-01-24T20:14:34.847+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-11-22_7138.pdf-page-1.pdf in 5.69 sec.
+[2025-01-24T20:14:34.858+0000] {taskinstance.py:3310} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/docling_core/utils/file.py", line 69, in resolve_source_to_stream
+    http_url: AnyHttpUrl = TypeAdapter(AnyHttpUrl).validate_python(source)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pydantic/type_adapter.py", line 412, in validate_python
+    return self.validator.validate_python(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for function-wrap[wrap_val()]
+  Input should be a valid URL, relative URL without a base [type=url_parsing, input_value='/usr/local/airflow/data/...-22_7138.pdf-page-2.pdf', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.10/v/url_parsing
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/utils/preprocess_documents.py", line 120, in execute
+    'preprocessed_document': self.preprocess_file(document_metadata['file_path']),
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/utils/preprocess_documents.py", line 85, in preprocess_file
+    result = converter.convert(source)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pydantic/_internal/_validate_call.py", line 38, in wrapper_function
+    return wrapper(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pydantic/_internal/_validate_call.py", line 111, in __call__
+    res = self.__pydantic_validator__.validate_python(pydantic_core.ArgsKwargs(args, kwargs))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docling/document_converter.py", line 195, in convert
+    return next(all_res)
+           ^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docling/document_converter.py", line 216, in convert_all
+    for conv_res in conv_res_iter:
+                    ^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docling/document_converter.py", line 238, in _convert
+    for input_batch in chunkify(
+                       ^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docling/utils/utils.py", line 12, in chunkify
+    for first in iterator:  # Take the first element from the iterator
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docling/datamodel/document.py", line 238, in docs
+    resolve_source_to_stream(item, self.headers)
+  File "/home/airflow/.local/lib/python3.12/site-packages/docling_core/utils/file.py", line 89, in resolve_source_to_stream
+    stream = BytesIO(local_path.read_bytes())
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/pathlib.py", line 1019, in read_bytes
+    with self.open(mode='rb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/usr/local/airflow/data/pdf_single_page/3106200_2024-11-22_7138.pdf-page-2.pdf'
+[2025-01-24T20:14:34.879+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=pull_gazettes_data, task_id=preprocess_documents_task, run_id=scheduled__2025-01-20T00:00:00+00:00, execution_date=20250120T000000, start_date=20250124T201342, end_date=20250124T201434
+[2025-01-24T20:14:34.892+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-24T20:14:34.893+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 23 for task preprocess_documents_task ([Errno 2] No such file or directory: '/usr/local/airflow/data/pdf_single_page/3106200_2024-11-22_7138.pdf-page-2.pdf'; 1321)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/docling_core/utils/file.py", line 69, in resolve_source_to_stream
+    http_url: AnyHttpUrl = TypeAdapter(AnyHttpUrl).validate_python(source)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pydantic/type_adapter.py", line 412, in validate_python
+    return self.validator.validate_python(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for function-wrap[wrap_val()]
+  Input should be a valid URL, relative URL without a base [type=url_parsing, input_value='/usr/local/airflow/data/...-22_7138.pdf-page-2.pdf', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.10/v/url_parsing
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 115, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3004, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3158, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3182, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/utils/preprocess_documents.py", line 120, in execute
+    'preprocessed_document': self.preprocess_file(document_metadata['file_path']),
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/utils/preprocess_documents.py", line 85, in preprocess_file
+    result = converter.convert(source)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pydantic/_internal/_validate_call.py", line 38, in wrapper_function
+    return wrapper(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pydantic/_internal/_validate_call.py", line 111, in __call__
+    res = self.__pydantic_validator__.validate_python(pydantic_core.ArgsKwargs(args, kwargs))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docling/document_converter.py", line 195, in convert
+    return next(all_res)
+           ^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docling/document_converter.py", line 216, in convert_all
+    for conv_res in conv_res_iter:
+                    ^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docling/document_converter.py", line 238, in _convert
+    for input_batch in chunkify(
+                       ^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docling/utils/utils.py", line 12, in chunkify
+    for first in iterator:  # Take the first element from the iterator
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docling/datamodel/document.py", line 238, in docs
+    resolve_source_to_stream(item, self.headers)
+  File "/home/airflow/.local/lib/python3.12/site-packages/docling_core/utils/file.py", line 89, in resolve_source_to_stream
+    stream = BytesIO(local_path.read_bytes())
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/pathlib.py", line 1019, in read_bytes
+    with self.open(mode='rb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/usr/local/airflow/data/pdf_single_page/3106200_2024-11-22_7138.pdf-page-2.pdf'
+[2025-01-24T20:14:35.001+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-01-24T20:14:35.030+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-01-24T20:14:35.035+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

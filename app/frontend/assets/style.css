@@ -1,0 +1,71 @@
+/* Container do título com o ícone */
+.title-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+/* Ícone ao lado do título */
+.title-container img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; 
+    object-fit: cover;
+}
+
+/* Estilo do título */
+.title-container h1 {
+    font-size: 32px;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.st-key-styledinput input, .st-alert-success, .response-box {
+    background-color: transparent; 
+    border: 3px solid #0077cc;
+    border-radius: 12px;
+    padding: 10px;
+    font-size: 16px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%; /* Garante que ocupe toda a largura disponível */
+}
+
+/* Botão estilizado sem animação */
+.st-key-pulse button {
+    background-color: #005fa3;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo da resposta */
+.response-box {
+    margin-top: 20px;
+    overflow-wrap: break-word; /* Permite quebra apenas quando necessário */
+}
+
+/* Fundo da página */
+@media(prefers-color-scheme: dark) {
+    body {
+        background-color: #021420 !important; /* Azul vibrante */
+        color: #ffffff !important;
+    }
+}
+
+/* Fundo da página */
+@media(prefers-color-scheme: light) {
+    body {
+        background-color: #ecf7ff !important; /* Azul vibrante */
+        color: #107DCA ! important;
+    }
+}
+
+

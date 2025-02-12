@@ -1,0 +1,40 @@
+[2025-01-25T20:19:14.390+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-25T20:19:14.406+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pull_gazettes_data.generate_indexes_task manual__2025-01-25T20:13:16.586213+00:00 [queued]>
+[2025-01-25T20:19:14.414+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pull_gazettes_data.generate_indexes_task manual__2025-01-25T20:13:16.586213+00:00 [queued]>
+[2025-01-25T20:19:14.415+0000] {taskinstance.py:2865} INFO - Starting attempt 2 of 3
+[2025-01-25T20:19:14.427+0000] {taskinstance.py:2888} INFO - Executing <Task(GenerateIndexTask): generate_indexes_task> on 2025-01-25 20:13:16.586213+00:00
+[2025-01-25T20:19:14.440+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=24934) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-25T20:19:14.442+0000] {standard_task_runner.py:72} INFO - Started process 24947 to run task
+[2025-01-25T20:19:14.441+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'pull_gazettes_data', 'generate_indexes_task', 'manual__2025-01-25T20:13:16.586213+00:00', '--job-id', '149', '--raw', '--subdir', 'DAGS_FOLDER/dag_script.py', '--cfg-path', '/tmp/tmphdyh7i4m']
+[2025-01-25T20:19:14.443+0000] {standard_task_runner.py:105} INFO - Job 149: Subtask generate_indexes_task
+[2025-01-25T20:19:14.483+0000] {task_command.py:467} INFO - Running <TaskInstance: pull_gazettes_data.generate_indexes_task manual__2025-01-25T20:13:16.586213+00:00 [running]> on host 41bcec3d818b
+[2025-01-25T20:19:14.562+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='***@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='pull_gazettes_data' AIRFLOW_CTX_TASK_ID='generate_indexes_task' AIRFLOW_CTX_EXECUTION_DATE='2025-01-25T20:13:16.586213+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-25T20:13:16.586213+00:00'
+[2025-01-25T20:19:14.564+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-25T20:19:14.579+0000] {logging_mixin.py:190} INFO - Initializing database
+[2025-01-25T20:19:15.146+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T20:19:15.166+0000] {logging_mixin.py:190} INFO - Parsing database current state
+[2025-01-25T20:19:15.167+0000] {logging_mixin.py:190} INFO - instantiating new database /usr/local/***/data/vector_db/
+[2025-01-25T20:19:15.168+0000] {logging_mixin.py:190} INFO - Reading file metadata
+[2025-01-25T20:19:15.177+0000] {logging_mixin.py:190} INFO - [FileMetadata(uuid='3106200_2024-12-17_7155-page-0-0'), FileMetadata(uuid='3106200_2024-12-17_7155-page-1-1'), FileMetadata(uuid='3106200_2024-12-17_7155-page-2-2'), FileMetadata(uuid='3106200_2024-12-17_7155-page-3-3'), FileMetadata(uuid='3106200_2024-12-17_7155-page-4-4'), FileMetadata(uuid='3106200_2024-12-17_7155-page-5-5'), FileMetadata(uuid='3106200_2024-12-17_7155-page-6-6'), FileMetadata(uuid='3106200_2024-12-17_7155-page-7-7'), FileMetadata(uuid='3106200_2024-12-17_7155-page-8-8'), FileMetadata(uuid='3106200_2024-12-17_7155-page-9-9'), FileMetadata(uuid='3106200_2024-12-17_7155-page-10-10'), FileMetadata(uuid='3106200_2024-12-17_7155-page-11-11'), FileMetadata(uuid='3106200_2024-12-17_7155-page-12-12'), FileMetadata(uuid='3106200_2024-12-17_7155-page-13-13'), FileMetadata(uuid='3106200_2024-12-17_7155-page-14-14'), FileMetadata(uuid='3106200_2024-12-17_7155-page-15-15'), FileMetadata(uuid='3106200_2024-12-17_7155-page-16-16'), FileMetadata(uuid='3106200_2024-12-17_7155-page-17-17'), FileMetadata(uuid='3106200_2024-12-17_7155-page-20-20'), FileMetadata(uuid='3106200_2024-12-17_7155-page-21-21'), FileMetadata(uuid='3106200_2024-12-17_7155-page-22-22'), FileMetadata(uuid='3106200_2024-12-17_7155-page-23-23'), FileMetadata(uuid='3106200_2024-12-17_7155-page-24-24')]
+[2025-01-25T20:19:15.178+0000] {logging_mixin.py:190} INFO - Adding batch of documents
+[2025-01-25T20:19:15.552+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T20:19:15.927+0000] {logging_mixin.py:190} INFO - Added 26 chunks for document: 3106200_2024-12-17_7155-page-0-0
+[2025-01-25T20:19:15.927+0000] {logging_mixin.py:190} INFO - Saving current vector index status
+[2025-01-25T20:19:15.938+0000] {logging_mixin.py:190} INFO - Waiting 2 seconds
+[2025-01-25T20:19:18.352+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T20:19:18.623+0000] {logging_mixin.py:190} INFO - Added 17 chunks for document: 3106200_2024-12-17_7155-page-1-1
+[2025-01-25T20:19:18.624+0000] {logging_mixin.py:190} INFO - Saving current vector index status
+[2025-01-25T20:19:18.635+0000] {logging_mixin.py:190} INFO - Waiting 5 seconds
+[2025-01-25T20:19:24.052+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T20:19:24.488+0000] {logging_mixin.py:190} INFO - Added 27 chunks for document: 3106200_2024-12-17_7155-page-2-2
+[2025-01-25T20:19:24.489+0000] {logging_mixin.py:190} INFO - Saving current vector index status
+[2025-01-25T20:19:24.503+0000] {logging_mixin.py:190} INFO - Waiting 3 seconds
+[2025-01-25T20:19:24.544+0000] {local_task_job_runner.py:346} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2025-01-25T20:19:24.545+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-01-25T20:19:24.548+0000] {process_utils.py:132} INFO - Sending 15 to group 24947. PIDs of all processes in the group: [24947]
+[2025-01-25T20:19:24.548+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 24947
+[2025-01-25T20:19:24.549+0000] {taskinstance.py:3092} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-01-25T20:19:24.566+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-25T20:19:24.601+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=24947, status='terminated', exitcode=0, started='20:19:13') (24947) terminated with exit code 0

@@ -1,0 +1,251 @@
+[2025-01-25T18:48:32.106+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-25T18:48:32.126+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pull_gazettes_data.preprocess_documents_task manual__2025-01-25T18:40:08.903055+00:00 [queued]>
+[2025-01-25T18:48:32.135+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pull_gazettes_data.preprocess_documents_task manual__2025-01-25T18:40:08.903055+00:00 [queued]>
+[2025-01-25T18:48:32.136+0000] {taskinstance.py:2865} INFO - Starting attempt 2 of 2
+[2025-01-25T18:48:32.149+0000] {taskinstance.py:2888} INFO - Executing <Task(PreprocessDocuments): preprocess_documents_task> on 2025-01-25 18:40:08.903055+00:00
+[2025-01-25T18:48:32.170+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=20925) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-25T18:48:32.171+0000] {standard_task_runner.py:72} INFO - Started process 20947 to run task
+[2025-01-25T18:48:32.171+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'pull_gazettes_data', 'preprocess_documents_task', 'manual__2025-01-25T18:40:08.903055+00:00', '--job-id', '121', '--raw', '--subdir', 'DAGS_FOLDER/dag_script.py', '--cfg-path', '/tmp/tmpy4eh_ema']
+[2025-01-25T18:48:32.173+0000] {standard_task_runner.py:105} INFO - Job 121: Subtask preprocess_documents_task
+[2025-01-25T18:48:32.224+0000] {task_command.py:467} INFO - Running <TaskInstance: pull_gazettes_data.preprocess_documents_task manual__2025-01-25T18:40:08.903055+00:00 [running]> on host 41bcec3d818b
+[2025-01-25T18:48:32.290+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='***@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='pull_gazettes_data' AIRFLOW_CTX_TASK_ID='preprocess_documents_task' AIRFLOW_CTX_EXECUTION_DATE='2025-01-25T18:40:08.903055+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-25T18:40:08.903055+00:00'
+[2025-01-25T18:48:32.292+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-25T18:48:32.309+0000] {logging_mixin.py:190} INFO - Checking pre processed documents log
+[2025-01-25T18:48:32.317+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-12-17_7155.pdf into multiple PDF single pages
+[2025-01-25T18:48:33.259+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T18:48:33.613+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:48:36.042+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:48:36.586+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:48:36.978+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-17_7155-page-0-0.pdf
+[2025-01-25T18:48:47.164+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-12-17_7155-page-0-0.pdf in 14.00 sec.
+[2025-01-25T18:48:47.181+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-12-17_7155-page-0-0.md
+[2025-01-25T18:48:47.197+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T18:48:47.355+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:48:49.884+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:48:50.415+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:48:50.898+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-17_7155-page-1-1.pdf
+[2025-01-25T18:48:56.805+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-12-17_7155-page-1-1.pdf in 9.61 sec.
+[2025-01-25T18:48:56.814+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-12-17_7155-page-1-1.md
+[2025-01-25T18:48:56.828+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T18:48:56.996+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:49:00.183+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:49:00.786+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:49:01.453+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-17_7155-page-2-2.pdf
+[2025-01-25T18:49:09.146+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-12-17_7155-page-2-2.pdf in 12.33 sec.
+[2025-01-25T18:49:09.164+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-12-17_7155-page-2-2.md
+[2025-01-25T18:49:09.175+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T18:49:09.329+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:49:11.949+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:49:12.582+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:49:13.113+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-17_7155-page-3-3.pdf
+[2025-01-25T18:49:23.207+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-12-17_7155-page-3-3.pdf in 14.04 sec.
+[2025-01-25T18:49:23.225+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-12-17_7155-page-3-3.md
+[2025-01-25T18:49:23.239+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T18:49:23.395+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:49:25.672+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:49:26.172+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:49:26.789+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-17_7155-page-4-4.pdf
+[2025-01-25T18:49:30.030+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-12-17_7155-page-4-4.pdf in 6.80 sec.
+[2025-01-25T18:49:30.059+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-12-17_7155-page-4-4.md
+[2025-01-25T18:49:30.166+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T18:49:30.361+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:49:53.241+0000] {job.py:229} INFO - Heartbeat recovered after 25.55 seconds
+[2025-01-25T18:49:54.419+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:49:54.992+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:49:55.467+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-17_7155-page-5-5.pdf
+[2025-01-25T18:49:57.396+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-12-17_7155-page-5-5.pdf in 27.24 sec.
+[2025-01-25T18:49:57.403+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-12-17_7155-page-5-5.md
+[2025-01-25T18:49:57.416+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T18:49:57.601+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:49:59.828+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:50:00.236+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:50:00.573+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-17_7155-page-6-6.pdf
+[2025-01-25T18:50:02.092+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-12-17_7155-page-6-6.pdf in 4.68 sec.
+[2025-01-25T18:50:02.099+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-12-17_7155-page-6-6.md
+[2025-01-25T18:50:02.110+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T18:50:02.263+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:50:04.464+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:50:04.992+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:50:05.331+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-17_7155-page-7-7.pdf
+[2025-01-25T18:50:06.897+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-12-17_7155-page-7-7.pdf in 4.79 sec.
+[2025-01-25T18:50:06.904+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-12-17_7155-page-7-7.md
+[2025-01-25T18:50:06.914+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T18:50:07.153+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:50:09.226+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:50:09.648+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:50:10.426+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-17_7155-page-8-8.pdf
+[2025-01-25T18:50:12.017+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-12-17_7155-page-8-8.pdf in 5.11 sec.
+[2025-01-25T18:50:12.024+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-12-17_7155-page-8-8.md
+[2025-01-25T18:50:12.037+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T18:50:12.227+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:50:14.596+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:50:15.469+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:50:15.845+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-17_7155-page-9-9.pdf
+[2025-01-25T18:50:17.557+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-12-17_7155-page-9-9.pdf in 5.52 sec.
+[2025-01-25T18:50:17.564+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-12-17_7155-page-9-9.md
+[2025-01-25T18:50:17.577+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T18:50:17.752+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:50:19.806+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:50:20.252+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:50:20.666+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-17_7155-page-10-10.pdf
+[2025-01-25T18:50:22.580+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-12-17_7155-page-10-10.pdf in 5.01 sec.
+[2025-01-25T18:50:22.586+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-12-17_7155-page-10-10.md
+[2025-01-25T18:50:22.597+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T18:50:22.756+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:50:24.989+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:50:25.462+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:50:25.862+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-17_7155-page-11-11.pdf
+[2025-01-25T18:50:31.855+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-12-17_7155-page-11-11.pdf in 9.26 sec.
+[2025-01-25T18:50:31.865+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-12-17_7155-page-11-11.md
+[2025-01-25T18:50:31.874+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T18:50:32.024+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:50:34.300+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:50:34.772+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:50:35.127+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-17_7155-page-12-12.pdf
+[2025-01-25T18:50:36.614+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-12-17_7155-page-12-12.pdf in 4.74 sec.
+[2025-01-25T18:50:36.619+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-12-17_7155-page-12-12.md
+[2025-01-25T18:50:36.629+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T18:50:36.778+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:50:38.889+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:50:39.327+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:50:39.661+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-17_7155-page-13-13.pdf
+[2025-01-25T18:50:41.118+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-12-17_7155-page-13-13.pdf in 4.49 sec.
+[2025-01-25T18:50:41.122+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-12-17_7155-page-13-13.md
+[2025-01-25T18:50:41.131+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T18:50:41.282+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:50:43.221+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:50:43.625+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:50:43.969+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-17_7155-page-14-14.pdf
+[2025-01-25T18:50:45.496+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-12-17_7155-page-14-14.pdf in 4.37 sec.
+[2025-01-25T18:50:45.502+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-12-17_7155-page-14-14.md
+[2025-01-25T18:50:45.511+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T18:50:45.655+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:50:47.743+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:50:48.155+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:50:48.907+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-17_7155-page-15-15.pdf
+[2025-01-25T18:50:50.573+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-12-17_7155-page-15-15.pdf in 5.07 sec.
+[2025-01-25T18:50:50.580+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-12-17_7155-page-15-15.md
+[2025-01-25T18:50:50.591+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T18:50:50.746+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:50:52.776+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:50:53.242+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:50:53.760+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-17_7155-page-16-16.pdf
+[2025-01-25T18:50:55.772+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-12-17_7155-page-16-16.pdf in 5.19 sec.
+[2025-01-25T18:50:55.780+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-12-17_7155-page-16-16.md
+[2025-01-25T18:50:55.791+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T18:50:55.944+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:50:58.053+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:50:58.502+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:50:58.862+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-17_7155-page-17-17.pdf
+[2025-01-25T18:51:03.591+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-12-17_7155-page-17-17.pdf in 7.80 sec.
+[2025-01-25T18:51:03.598+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-12-17_7155-page-17-17.md
+[2025-01-25T18:51:03.608+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T18:51:03.834+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:51:05.819+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:51:06.228+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:51:06.548+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-17_7155-page-20-20.pdf
+[2025-01-25T18:51:08.136+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-12-17_7155-page-20-20.pdf in 4.53 sec.
+[2025-01-25T18:51:08.143+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-12-17_7155-page-20-20.md
+[2025-01-25T18:51:08.153+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T18:51:08.334+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:51:10.328+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:51:10.723+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:51:11.044+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-17_7155-page-21-21.pdf
+[2025-01-25T18:51:20.859+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-12-17_7155-page-21-21.pdf in 12.71 sec.
+[2025-01-25T18:51:20.872+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-12-17_7155-page-21-21.md
+[2025-01-25T18:51:20.881+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T18:51:21.101+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:51:23.280+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:51:23.694+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:51:24.017+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-17_7155-page-22-22.pdf
+[2025-01-25T18:51:26.676+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-12-17_7155-page-22-22.pdf in 5.80 sec.
+[2025-01-25T18:51:26.683+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-12-17_7155-page-22-22.md
+[2025-01-25T18:51:26.692+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T18:51:26.843+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:51:28.800+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:51:29.208+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:51:29.543+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-17_7155-page-23-23.pdf
+[2025-01-25T18:51:36.445+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-12-17_7155-page-23-23.pdf in 9.76 sec.
+[2025-01-25T18:51:36.463+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-12-17_7155-page-23-23.md
+[2025-01-25T18:51:36.474+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T18:51:36.624+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:51:38.687+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:51:39.093+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:51:39.466+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-17_7155-page-24-24.pdf
+[2025-01-25T18:51:42.444+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-12-17_7155-page-24-24.pdf in 5.97 sec.
+[2025-01-25T18:51:42.450+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-12-17_7155-page-24-24.md
+[2025-01-25T18:51:42.573+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-12-18_7156.pdf into multiple PDF single pages
+[2025-01-25T18:51:44.688+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T18:51:44.860+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:51:46.949+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:51:47.355+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:51:47.682+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-18_7156-page-0-0.pdf
+[2025-01-25T18:51:49.009+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-12-18_7156-page-0-0.pdf in 4.33 sec.
+[2025-01-25T18:51:49.014+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-12-18_7156-page-0-0.md
+[2025-01-25T18:51:49.024+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T18:51:49.173+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:51:51.318+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:51:51.723+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:51:52.040+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-18_7156-page-5-5.pdf
+[2025-01-25T18:52:12.647+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-12-18_7156-page-5-5.pdf in 23.63 sec.
+[2025-01-25T18:52:12.679+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-12-18_7156-page-5-5.md
+[2025-01-25T18:52:12.689+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T18:52:12.854+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:52:14.939+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:52:15.340+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:52:15.681+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-18_7156-page-6-6.pdf
+[2025-01-25T18:52:35.048+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-12-18_7156-page-6-6.pdf in 22.37 sec.
+[2025-01-25T18:52:35.072+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-12-18_7156-page-6-6.md
+[2025-01-25T18:52:35.083+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T18:52:35.230+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:52:37.194+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:52:37.595+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:52:37.907+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-18_7156-page-7-7.pdf
+[2025-01-25T18:53:06.272+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-12-18_7156-page-7-7.pdf in 31.20 sec.
+[2025-01-25T18:53:06.297+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-12-18_7156-page-7-7.md
+[2025-01-25T18:53:06.307+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T18:53:06.514+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:53:08.502+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:53:08.891+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:53:09.210+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-18_7156-page-8-8.pdf
+[2025-01-25T18:53:30.311+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-12-18_7156-page-8-8.pdf in 24.01 sec.
+[2025-01-25T18:53:30.337+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-12-18_7156-page-8-8.md
+[2025-01-25T18:53:30.347+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T18:53:30.519+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:53:32.868+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:53:33.270+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:53:33.584+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-18_7156-page-9-9.pdf
+[2025-01-25T18:54:07.036+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-12-18_7156-page-9-9.pdf in 36.70 sec.
+[2025-01-25T18:54:07.076+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-12-18_7156-page-9-9.md
+[2025-01-25T18:54:07.088+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T18:54:07.236+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:54:09.272+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:54:09.692+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:54:10.048+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-18_7156-page-10-10.pdf
+[2025-01-25T18:54:43.312+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-12-18_7156-page-10-10.pdf in 36.23 sec.
+[2025-01-25T18:54:43.344+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-12-18_7156-page-10-10.md
+[2025-01-25T18:54:43.354+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T18:54:43.608+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:54:45.690+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:54:46.085+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:54:46.405+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-18_7156-page-11-11.pdf
+[2025-01-25T18:55:09.224+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-12-18_7156-page-11-11.pdf in 25.88 sec.
+[2025-01-25T18:55:09.257+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-12-18_7156-page-11-11.md
+[2025-01-25T18:55:09.270+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T18:55:09.430+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:55:11.450+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:55:11.839+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:55:12.482+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-18_7156-page-12-12.pdf
+[2025-01-25T18:55:51.445+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-12-18_7156-page-12-12.pdf in 42.18 sec.
+[2025-01-25T18:55:51.473+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-12-18_7156-page-12-12.md
+[2025-01-25T18:55:51.485+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T18:55:51.732+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:55:53.851+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:55:54.282+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:55:54.658+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-18_7156-page-13-13.pdf
+[2025-01-25T18:56:30.203+0000] {job.py:229} INFO - Heartbeat recovered after 28.33 seconds
+[2025-01-25T18:56:30.218+0000] {local_task_job_runner.py:266} INFO - Task exited with return code -9For more information, see https://***.apache.org/docs/apache-***/stable/troubleshooting.html#LocalTaskJob-killed
+[2025-01-25T18:56:30.263+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-01-25T18:56:30.266+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

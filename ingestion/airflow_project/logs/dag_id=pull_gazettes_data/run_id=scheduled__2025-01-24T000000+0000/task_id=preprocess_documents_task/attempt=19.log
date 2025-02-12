@@ -1,0 +1,84 @@
+[2025-01-25T01:46:27.187+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-25T01:46:27.203+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pull_gazettes_data.preprocess_documents_task scheduled__2025-01-24T00:00:00+00:00 [queued]>
+[2025-01-25T01:46:27.210+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pull_gazettes_data.preprocess_documents_task scheduled__2025-01-24T00:00:00+00:00 [queued]>
+[2025-01-25T01:46:27.211+0000] {taskinstance.py:2865} INFO - Starting attempt 19 of 20
+[2025-01-25T01:46:27.222+0000] {taskinstance.py:2888} INFO - Executing <Task(PreprocessDocuments): preprocess_documents_task> on 2025-01-24 00:00:00+00:00
+[2025-01-25T01:46:27.236+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=7129) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-25T01:46:27.238+0000] {standard_task_runner.py:72} INFO - Started process 7142 to run task
+[2025-01-25T01:46:27.238+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'pull_gazettes_data', 'preprocess_documents_task', 'scheduled__2025-01-24T00:00:00+00:00', '--job-id', '65', '--raw', '--subdir', 'DAGS_FOLDER/dag_script.py', '--cfg-path', '/tmp/tmpij63c21e']
+[2025-01-25T01:46:27.241+0000] {standard_task_runner.py:105} INFO - Job 65: Subtask preprocess_documents_task
+[2025-01-25T01:46:27.283+0000] {task_command.py:467} INFO - Running <TaskInstance: pull_gazettes_data.preprocess_documents_task scheduled__2025-01-24T00:00:00+00:00 [running]> on host 41bcec3d818b
+[2025-01-25T01:46:27.344+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='***@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='pull_gazettes_data' AIRFLOW_CTX_TASK_ID='preprocess_documents_task' AIRFLOW_CTX_EXECUTION_DATE='2025-01-24T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='19' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-01-24T00:00:00+00:00'
+[2025-01-25T01:46:27.345+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-25T01:46:27.363+0000] {logging_mixin.py:190} INFO - Checking pre processed documents log
+[2025-01-25T01:46:27.370+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-11-26_7140.pdf into multiple PDF single pages
+[2025-01-25T01:46:27.429+0000] {logging_mixin.py:190} INFO - [(4, 3, 410, 410, 8, 'CalRGB', '', 'Xi2', 'FlateDecode', 0), (3, 0, 410, 410, 8, 'DeviceGray', '', 'Xi1', 'FlateDecode', 0)]
+[2025-01-25T01:46:27.504+0000] {logging_mixin.py:190} INFO - [(4, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi5', '', 0), (3, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi4', '', 0)]
+[2025-01-25T01:46:27.546+0000] {logging_mixin.py:190} INFO - [(3, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi7', '', 0), (4, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi8', '', 0), (128, 144, 1682, 2684, 8, 'DeviceRGB', '', 'Im1', 'DCTDecode', 0), (129, 143, 3898, 2598, 8, 'DeviceRGB', '', 'Im0', 'DCTDecode', 0)]
+[2025-01-25T01:46:27.616+0000] {logging_mixin.py:190} INFO - [(3, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi10', '', 0), (4, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi11', '', 0)]
+[2025-01-25T01:46:27.668+0000] {logging_mixin.py:190} INFO - [(3, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi13', '', 0), (4, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi14', '', 0)]
+[2025-01-25T01:46:27.706+0000] {logging_mixin.py:190} INFO - [(4, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi17', '', 0), (3, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi16', '', 0)]
+[2025-01-25T01:46:27.742+0000] {logging_mixin.py:190} INFO - [(4, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi20', '', 0), (3, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi19', '', 0)]
+[2025-01-25T01:46:27.792+0000] {logging_mixin.py:190} INFO - [(4, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi23', '', 0), (3, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi22', '', 0)]
+[2025-01-25T01:46:27.830+0000] {logging_mixin.py:190} INFO - [(4, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi26', '', 0), (3, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi25', '', 0)]
+[2025-01-25T01:46:27.869+0000] {logging_mixin.py:190} INFO - [(4, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi29', '', 0), (3, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi28', '', 0)]
+[2025-01-25T01:46:27.909+0000] {logging_mixin.py:190} INFO - [(4, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi32', '', 0), (3, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi31', '', 0)]
+[2025-01-25T01:46:27.942+0000] {logging_mixin.py:190} INFO - [(4, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi35', '', 0), (3, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi34', '', 0)]
+[2025-01-25T01:46:27.983+0000] {logging_mixin.py:190} INFO - [(4, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi38', '', 0), (3, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi37', '', 0)]
+[2025-01-25T01:46:28.047+0000] {logging_mixin.py:190} INFO - [(4, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi41', '', 0), (3, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi40', '', 0)]
+[2025-01-25T01:46:28.087+0000] {logging_mixin.py:190} INFO - [(4, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi44', '', 0), (3, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi43', '', 0)]
+[2025-01-25T01:46:28.127+0000] {logging_mixin.py:190} INFO - [(4, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi47', '', 0), (3, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi46', '', 0)]
+[2025-01-25T01:46:28.158+0000] {logging_mixin.py:190} INFO - [(3, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi49', '', 0), (4, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi50', '', 0)]
+[2025-01-25T01:46:28.197+0000] {logging_mixin.py:190} INFO - [(4, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi53', '', 0), (3, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi52', '', 0)]
+[2025-01-25T01:46:28.230+0000] {logging_mixin.py:190} INFO - [(4, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi56', '', 0), (3, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi55', '', 0)]
+[2025-01-25T01:46:28.276+0000] {logging_mixin.py:190} INFO - [(4, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi59', '', 0), (3, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi58', '', 0)]
+[2025-01-25T01:46:28.325+0000] {logging_mixin.py:190} INFO - [(3, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi61', '', 0), (4, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi62', '', 0)]
+[2025-01-25T01:46:28.366+0000] {logging_mixin.py:190} INFO - [(4, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi65', '', 0), (3, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi64', '', 0)]
+[2025-01-25T01:46:28.407+0000] {logging_mixin.py:190} INFO - [(4, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi68', '', 0), (3, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi67', '', 0)]
+[2025-01-25T01:46:28.453+0000] {logging_mixin.py:190} INFO - [(4, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi71', '', 0), (3, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi70', '', 0)]
+[2025-01-25T01:46:28.498+0000] {logging_mixin.py:190} INFO - [(3, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi73', '', 0), (4, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi74', '', 0)]
+[2025-01-25T01:46:28.549+0000] {logging_mixin.py:190} INFO - [(4, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi77', '', 0), (3, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi76', '', 0)]
+[2025-01-25T01:46:28.593+0000] {logging_mixin.py:190} INFO - [(4, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi80', '', 0), (3, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi79', '', 0)]
+[2025-01-25T01:46:28.634+0000] {logging_mixin.py:190} INFO - [(4, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi83', '', 0), (3, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi82', '', 0)]
+[2025-01-25T01:46:28.682+0000] {logging_mixin.py:190} INFO - [(4, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi86', '', 0), (3, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi85', '', 0)]
+[2025-01-25T01:46:28.733+0000] {logging_mixin.py:190} INFO - [(4, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi89', '', 0), (3, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi88', '', 0)]
+[2025-01-25T01:46:28.771+0000] {logging_mixin.py:190} INFO - [(4, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi92', '', 0), (3, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi91', '', 0)]
+[2025-01-25T01:46:28.810+0000] {logging_mixin.py:190} INFO - [(4, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi95', '', 0), (3, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi94', '', 0)]
+[2025-01-25T01:46:28.851+0000] {logging_mixin.py:190} INFO - [(3, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi97', '', 0), (4, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi98', '', 0)]
+[2025-01-25T01:46:28.902+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: [] file_uuid_breakdown
+[2025-01-25T01:46:28.996+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T01:46:29.325+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T01:46:31.488+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T01:46:32.060+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T01:46:32.531+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-11-26_7140-page-0-0.pdf
+[2025-01-25T01:46:34.191+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-11-26_7140-page-0-0.pdf in 5.28 sec.
+[2025-01-25T01:46:34.197+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-11-26_7140-page-0-0.md
+[2025-01-25T01:46:34.212+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-11-26_7140  ... 2025-01-25 01:46:34.195651
+
+[1 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T01:46:34.219+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T01:46:34.376+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T01:46:36.371+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T01:46:36.778+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T01:46:37.098+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-11-26_7140-page-1-1.pdf
+[2025-01-25T01:46:38.576+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-11-26_7140-page-1-1.pdf in 4.36 sec.
+[2025-01-25T01:46:38.582+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-11-26_7140-page-1-1.md
+[2025-01-25T01:46:38.593+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-11-26_7140  ... 2025-01-25 01:46:34.195651
+0  3106200_2024-11-26_7140  ... 2025-01-25 01:46:38.580421
+
+[2 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T01:46:38.601+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T01:46:38.813+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T01:46:40.878+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T01:46:41.754+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T01:46:42.072+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-11-26_7140-page-2-2.pdf
+[2025-01-25T01:47:01.756+0000] {job.py:229} INFO - Heartbeat recovered after 19.37 seconds
+[2025-01-25T01:47:01.772+0000] {local_task_job_runner.py:266} INFO - Task exited with return code -9For more information, see https://***.apache.org/docs/apache-***/stable/troubleshooting.html#LocalTaskJob-killed
+[2025-01-25T01:47:01.815+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-01-25T01:47:01.818+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

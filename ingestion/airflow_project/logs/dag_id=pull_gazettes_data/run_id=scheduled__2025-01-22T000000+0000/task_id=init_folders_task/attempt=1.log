@@ -1,0 +1,129 @@
+[2025-01-24T19:13:06.798+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-24T19:13:06.813+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pull_gazettes_data.init_folders_task scheduled__2025-01-22T00:00:00+00:00 [queued]>
+[2025-01-24T19:13:06.820+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pull_gazettes_data.init_folders_task scheduled__2025-01-22T00:00:00+00:00 [queued]>
+[2025-01-24T19:13:06.821+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2025-01-24T19:13:06.832+0000] {taskinstance.py:2888} INFO - Executing <Task(InitFoldersTask): init_folders_task> on 2025-01-22 00:00:00+00:00
+[2025-01-24T19:13:06.847+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=103) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-24T19:13:06.849+0000] {standard_task_runner.py:72} INFO - Started process 146 to run task
+[2025-01-24T19:13:06.849+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'pull_gazettes_data', 'init_folders_task', 'scheduled__2025-01-22T00:00:00+00:00', '--job-id', '49', '--raw', '--subdir', 'DAGS_FOLDER/dag_script.py', '--cfg-path', '/tmp/tmpd4lxtcr4']
+[2025-01-24T19:13:06.852+0000] {standard_task_runner.py:105} INFO - Job 49: Subtask init_folders_task
+[2025-01-24T19:13:06.890+0000] {task_command.py:467} INFO - Running <TaskInstance: pull_gazettes_data.init_folders_task scheduled__2025-01-22T00:00:00+00:00 [running]> on host 5792905bcb6a
+[2025-01-24T19:13:06.963+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='***@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='pull_gazettes_data' AIRFLOW_CTX_TASK_ID='init_folders_task' AIRFLOW_CTX_EXECUTION_DATE='2025-01-22T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-01-22T00:00:00+00:00'
+[2025-01-24T19:13:06.965+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-24T19:13:06.991+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-24T19:13:06.992+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=pull_gazettes_data, task_id=init_folders_task, run_id=scheduled__2025-01-22T00:00:00+00:00, execution_date=20250122T000000, start_date=20250124T191306, end_date=20250124T191306
+[2025-01-24T19:13:07.023+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-01-24T19:13:07.049+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-01-24T19:13:07.051+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-01-24T20:00:16.944+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-24T20:00:16.968+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pull_gazettes_data.init_folders_task scheduled__2025-01-22T00:00:00+00:00 [queued]>
+[2025-01-24T20:00:16.980+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pull_gazettes_data.init_folders_task scheduled__2025-01-22T00:00:00+00:00 [queued]>
+[2025-01-24T20:00:16.981+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2025-01-24T20:00:16.997+0000] {taskinstance.py:2888} INFO - Executing <Task(InitFoldersTask): init_folders_task> on 2025-01-22 00:00:00+00:00
+[2025-01-24T20:00:17.024+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=421) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-24T20:00:17.029+0000] {standard_task_runner.py:72} INFO - Started process 496 to run task
+[2025-01-24T20:00:17.036+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'pull_gazettes_data', 'init_folders_task', 'scheduled__2025-01-22T00:00:00+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/dag_script.py', '--cfg-path', '/tmp/tmp7c9aktvu']
+[2025-01-24T20:00:17.043+0000] {standard_task_runner.py:105} INFO - Job 7: Subtask init_folders_task
+[2025-01-24T20:00:17.110+0000] {task_command.py:467} INFO - Running <TaskInstance: pull_gazettes_data.init_folders_task scheduled__2025-01-22T00:00:00+00:00 [running]> on host 972b45cbfb12
+[2025-01-24T20:00:17.224+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='***@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='pull_gazettes_data' AIRFLOW_CTX_TASK_ID='init_folders_task' AIRFLOW_CTX_EXECUTION_DATE='2025-01-22T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-01-22T00:00:00+00:00'
+[2025-01-24T20:00:17.226+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-24T20:00:17.279+0000] {logging_mixin.py:190} INFO - Folder: /usr/local/***/data/pdf_single_page/ does not exists, creating it.
+[2025-01-24T20:00:17.283+0000] {taskinstance.py:3310} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/utils/init_folders_task.py", line 26, in execute
+    os.makedirs(folder)
+  File "<frozen os>", line 225, in makedirs
+FileExistsError: [Errno 17] File exists: '/usr/local/airflow/data/pdf_single_page/'
+[2025-01-24T20:00:17.308+0000] {taskinstance.py:1225} INFO - Marking task as UP_FOR_RETRY. dag_id=pull_gazettes_data, task_id=init_folders_task, run_id=scheduled__2025-01-22T00:00:00+00:00, execution_date=20250122T000000, start_date=20250124T200016, end_date=20250124T200017
+[2025-01-24T20:00:17.332+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-24T20:00:17.333+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 7 for task init_folders_task ([Errno 17] File exists: '/usr/local/airflow/data/pdf_single_page/'; 496)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 115, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3004, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3158, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3182, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/utils/init_folders_task.py", line 26, in execute
+    os.makedirs(folder)
+  File "<frozen os>", line 225, in makedirs
+FileExistsError: [Errno 17] File exists: '/usr/local/airflow/data/pdf_single_page/'
+[2025-01-24T20:00:17.367+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-01-24T20:00:17.396+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-01-24T20:00:17.399+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-01-24T21:11:00.026+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-24T21:11:00.051+0000] {taskinstance.py:2602} INFO - Dependencies not met for <TaskInstance: pull_gazettes_data.init_folders_task scheduled__2025-01-22T00:00:00+00:00 [failed]>, dependency 'Task Instance State' FAILED: Task is in the 'failed' state.
+[2025-01-24T21:11:00.054+0000] {local_task_job_runner.py:166} INFO - Task is not able to be run
+[2025-01-24T23:13:11.745+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-24T23:13:11.772+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pull_gazettes_data.init_folders_task scheduled__2025-01-22T00:00:00+00:00 [queued]>
+[2025-01-24T23:13:11.785+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pull_gazettes_data.init_folders_task scheduled__2025-01-22T00:00:00+00:00 [queued]>
+[2025-01-24T23:13:11.787+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2025-01-24T23:13:11.805+0000] {taskinstance.py:2888} INFO - Executing <Task(InitFoldersTask): init_folders_task> on 2025-01-22 00:00:00+00:00
+[2025-01-24T23:13:11.834+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=370) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-24T23:13:11.836+0000] {standard_task_runner.py:72} INFO - Started process 434 to run task
+[2025-01-24T23:13:11.837+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'pull_gazettes_data', 'init_folders_task', 'scheduled__2025-01-22T00:00:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/dag_script.py', '--cfg-path', '/tmp/tmphdd26xyt']
+[2025-01-24T23:13:11.840+0000] {standard_task_runner.py:105} INFO - Job 6: Subtask init_folders_task
+[2025-01-24T23:13:11.934+0000] {task_command.py:467} INFO - Running <TaskInstance: pull_gazettes_data.init_folders_task scheduled__2025-01-22T00:00:00+00:00 [running]> on host 41bcec3d818b
+[2025-01-24T23:13:12.082+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='***@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='pull_gazettes_data' AIRFLOW_CTX_TASK_ID='init_folders_task' AIRFLOW_CTX_EXECUTION_DATE='2025-01-22T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-01-22T00:00:00+00:00'
+[2025-01-24T23:13:12.084+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-24T23:13:12.129+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-24T23:13:12.130+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=pull_gazettes_data, task_id=init_folders_task, run_id=scheduled__2025-01-22T00:00:00+00:00, execution_date=20250122T000000, start_date=20250124T231311, end_date=20250124T231312
+[2025-01-24T23:13:12.175+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-01-24T23:13:12.206+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-01-24T23:13:12.208+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

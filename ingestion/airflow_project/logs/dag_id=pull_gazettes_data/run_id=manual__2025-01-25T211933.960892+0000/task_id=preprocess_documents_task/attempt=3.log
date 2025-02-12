@@ -1,0 +1,319 @@
+[2025-01-25T21:25:41.577+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-25T21:25:41.594+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pull_gazettes_data.preprocess_documents_task manual__2025-01-25T21:19:33.960892+00:00 [queued]>
+[2025-01-25T21:25:41.603+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pull_gazettes_data.preprocess_documents_task manual__2025-01-25T21:19:33.960892+00:00 [queued]>
+[2025-01-25T21:25:41.604+0000] {taskinstance.py:2865} INFO - Starting attempt 3 of 4
+[2025-01-25T21:25:41.618+0000] {taskinstance.py:2888} INFO - Executing <Task(PreprocessDocuments): preprocess_documents_task> on 2025-01-25 21:19:33.960892+00:00
+[2025-01-25T21:25:41.630+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=27696) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-25T21:25:41.632+0000] {standard_task_runner.py:72} INFO - Started process 27716 to run task
+[2025-01-25T21:25:41.632+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'pull_gazettes_data', 'preprocess_documents_task', 'manual__2025-01-25T21:19:33.960892+00:00', '--job-id', '179', '--raw', '--subdir', 'DAGS_FOLDER/dag_script.py', '--cfg-path', '/tmp/tmpglswnirl']
+[2025-01-25T21:25:41.634+0000] {standard_task_runner.py:105} INFO - Job 179: Subtask preprocess_documents_task
+[2025-01-25T21:25:41.672+0000] {task_command.py:467} INFO - Running <TaskInstance: pull_gazettes_data.preprocess_documents_task manual__2025-01-25T21:19:33.960892+00:00 [running]> on host 41bcec3d818b
+[2025-01-25T21:25:41.740+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='***@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='pull_gazettes_data' AIRFLOW_CTX_TASK_ID='preprocess_documents_task' AIRFLOW_CTX_EXECUTION_DATE='2025-01-25T21:19:33.960892+00:00' AIRFLOW_CTX_TRY_NUMBER='3' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-25T21:19:33.960892+00:00'
+[2025-01-25T21:25:41.742+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-25T21:25:41.754+0000] {logging_mixin.py:190} INFO - Checking pre processed documents log
+[2025-01-25T21:25:41.755+0000] {logging_mixin.py:190} INFO - usr/local/***/data/ingestion_checkpoint_logs/preprocessed_documents_log.csv True
+[2025-01-25T21:25:41.763+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-12-17_7155.pdf into multiple PDF single pages
+[2025-01-25T21:25:41.803+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.805+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.806+0000] {logging_mixin.py:190} INFO - 3106200_2024-12-17_7155-page-0-0 in set() = False
+[2025-01-25T21:25:41.807+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.808+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-17_7155-page-0-0.pdf already broken down into
+[2025-01-25T21:25:41.809+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.809+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.810+0000] {logging_mixin.py:190} INFO - 3106200_2024-12-17_7155-page-1-1 in set() = False
+[2025-01-25T21:25:41.811+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.811+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-17_7155-page-1-1.pdf already broken down into
+[2025-01-25T21:25:41.812+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.813+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.814+0000] {logging_mixin.py:190} INFO - 3106200_2024-12-17_7155-page-2-2 in set() = False
+[2025-01-25T21:25:41.815+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.815+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-17_7155-page-2-2.pdf already broken down into
+[2025-01-25T21:25:41.816+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.817+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.817+0000] {logging_mixin.py:190} INFO - 3106200_2024-12-17_7155-page-3-3 in set() = False
+[2025-01-25T21:25:41.818+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.818+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-17_7155-page-3-3.pdf already broken down into
+[2025-01-25T21:25:41.819+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.820+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.821+0000] {logging_mixin.py:190} INFO - 3106200_2024-12-17_7155-page-4-4 in set() = False
+[2025-01-25T21:25:41.822+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.822+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-17_7155-page-4-4.pdf already broken down into
+[2025-01-25T21:25:41.823+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.824+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.826+0000] {logging_mixin.py:190} INFO - 3106200_2024-12-17_7155-page-5-5 in set() = False
+[2025-01-25T21:25:41.827+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.827+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-17_7155-page-5-5.pdf already broken down into
+[2025-01-25T21:25:41.828+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.829+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.829+0000] {logging_mixin.py:190} INFO - 3106200_2024-12-17_7155-page-6-6 in set() = False
+[2025-01-25T21:25:41.830+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.831+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-17_7155-page-6-6.pdf already broken down into
+[2025-01-25T21:25:41.832+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.833+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.834+0000] {logging_mixin.py:190} INFO - 3106200_2024-12-17_7155-page-7-7 in set() = False
+[2025-01-25T21:25:41.834+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.835+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-17_7155-page-7-7.pdf already broken down into
+[2025-01-25T21:25:41.835+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.836+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.837+0000] {logging_mixin.py:190} INFO - 3106200_2024-12-17_7155-page-8-8 in set() = False
+[2025-01-25T21:25:41.837+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.838+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-17_7155-page-8-8.pdf already broken down into
+[2025-01-25T21:25:41.839+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.840+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.841+0000] {logging_mixin.py:190} INFO - 3106200_2024-12-17_7155-page-9-9 in set() = False
+[2025-01-25T21:25:41.842+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.843+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-17_7155-page-9-9.pdf already broken down into
+[2025-01-25T21:25:41.844+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.845+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.846+0000] {logging_mixin.py:190} INFO - 3106200_2024-12-17_7155-page-10-10 in set() = False
+[2025-01-25T21:25:41.847+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.848+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-17_7155-page-10-10.pdf already broken down into
+[2025-01-25T21:25:41.849+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.850+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.851+0000] {logging_mixin.py:190} INFO - 3106200_2024-12-17_7155-page-11-11 in set() = False
+[2025-01-25T21:25:41.851+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.852+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-17_7155-page-11-11.pdf already broken down into
+[2025-01-25T21:25:41.852+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.854+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.855+0000] {logging_mixin.py:190} INFO - 3106200_2024-12-17_7155-page-12-12 in set() = False
+[2025-01-25T21:25:41.856+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.856+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-17_7155-page-12-12.pdf already broken down into
+[2025-01-25T21:25:41.857+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.858+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.858+0000] {logging_mixin.py:190} INFO - 3106200_2024-12-17_7155-page-13-13 in set() = False
+[2025-01-25T21:25:41.859+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.859+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-17_7155-page-13-13.pdf already broken down into
+[2025-01-25T21:25:41.860+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.860+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.861+0000] {logging_mixin.py:190} INFO - 3106200_2024-12-17_7155-page-14-14 in set() = False
+[2025-01-25T21:25:41.861+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.862+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-17_7155-page-14-14.pdf already broken down into
+[2025-01-25T21:25:41.862+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.863+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.863+0000] {logging_mixin.py:190} INFO - 3106200_2024-12-17_7155-page-15-15 in set() = False
+[2025-01-25T21:25:41.864+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.865+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-17_7155-page-15-15.pdf already broken down into
+[2025-01-25T21:25:41.865+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.866+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.867+0000] {logging_mixin.py:190} INFO - 3106200_2024-12-17_7155-page-16-16 in set() = False
+[2025-01-25T21:25:41.868+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.868+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-17_7155-page-16-16.pdf already broken down into
+[2025-01-25T21:25:41.869+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.869+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.870+0000] {logging_mixin.py:190} INFO - 3106200_2024-12-17_7155-page-17-17 in set() = False
+[2025-01-25T21:25:41.870+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.871+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-17_7155-page-17-17.pdf already broken down into
+[2025-01-25T21:25:41.872+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.873+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.873+0000] {logging_mixin.py:190} INFO - 3106200_2024-12-17_7155-page-18-18 in set() = False
+[2025-01-25T21:25:41.874+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.894+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.894+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.895+0000] {logging_mixin.py:190} INFO - 3106200_2024-12-17_7155-page-19-19 in set() = False
+[2025-01-25T21:25:41.896+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.899+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.901+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.901+0000] {logging_mixin.py:190} INFO - 3106200_2024-12-17_7155-page-20-20 in set() = False
+[2025-01-25T21:25:41.903+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.903+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-17_7155-page-20-20.pdf already broken down into
+[2025-01-25T21:25:41.904+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.905+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.905+0000] {logging_mixin.py:190} INFO - 3106200_2024-12-17_7155-page-21-21 in set() = False
+[2025-01-25T21:25:41.906+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.907+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-17_7155-page-21-21.pdf already broken down into
+[2025-01-25T21:25:41.908+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.909+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.910+0000] {logging_mixin.py:190} INFO - 3106200_2024-12-17_7155-page-22-22 in set() = False
+[2025-01-25T21:25:41.911+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.912+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-17_7155-page-22-22.pdf already broken down into
+[2025-01-25T21:25:41.913+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.914+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.914+0000] {logging_mixin.py:190} INFO - 3106200_2024-12-17_7155-page-23-23 in set() = False
+[2025-01-25T21:25:41.915+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.916+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-17_7155-page-23-23.pdf already broken down into
+[2025-01-25T21:25:41.916+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.917+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.917+0000] {logging_mixin.py:190} INFO - 3106200_2024-12-17_7155-page-24-24 in set() = False
+[2025-01-25T21:25:41.918+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:41.919+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-17_7155-page-24-24.pdf already broken down into
+[2025-01-25T21:25:41.960+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T21:25:42.220+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T21:25:44.594+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T21:25:45.099+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T21:25:45.577+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-17_7155-page-0-0.pdf
+[2025-01-25T21:25:53.098+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-12-17_7155-page-0-0.pdf in 11.17 sec.
+[2025-01-25T21:25:53.109+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:53.110+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:53.110+0000] {logging_mixin.py:190} INFO - 3106200_2024-12-17_7155-page-0-0 in set() = False
+[2025-01-25T21:25:53.111+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: []
+[2025-01-25T21:25:53.113+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-12-17_7155-page-0-0.md
+[2025-01-25T21:25:53.123+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T21:25:53.274+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T21:25:55.285+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T21:25:55.677+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T21:25:56.030+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-17_7155-page-1-1.pdf
+[2025-01-25T21:25:56.809+0000] {local_task_job_runner.py:346} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2025-01-25T21:25:56.811+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-01-25T21:25:56.813+0000] {process_utils.py:132} INFO - Sending 15 to group 27716. PIDs of all processes in the group: [27716]
+[2025-01-25T21:25:56.814+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 27716
+[2025-01-25T21:25:56.819+0000] {taskinstance.py:3092} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-01-25T21:25:56.845+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-25T21:25:56.906+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=27716, status='terminated', exitcode=0, started='21:25:40') (27716) terminated with exit code 0

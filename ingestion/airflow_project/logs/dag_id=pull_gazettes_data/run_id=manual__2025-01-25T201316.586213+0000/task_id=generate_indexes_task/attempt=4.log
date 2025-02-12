@@ -1,0 +1,123 @@
+[2025-01-25T20:48:07.755+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-25T20:48:07.770+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pull_gazettes_data.generate_indexes_task manual__2025-01-25T20:13:16.586213+00:00 [queued]>
+[2025-01-25T20:48:07.779+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pull_gazettes_data.generate_indexes_task manual__2025-01-25T20:13:16.586213+00:00 [queued]>
+[2025-01-25T20:48:07.779+0000] {taskinstance.py:2865} INFO - Starting attempt 4 of 5
+[2025-01-25T20:48:07.791+0000] {taskinstance.py:2888} INFO - Executing <Task(GenerateIndexTask): generate_indexes_task> on 2025-01-25 20:13:16.586213+00:00
+[2025-01-25T20:48:07.802+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=26240) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-25T20:48:07.803+0000] {standard_task_runner.py:72} INFO - Started process 26253 to run task
+[2025-01-25T20:48:07.803+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'pull_gazettes_data', 'generate_indexes_task', 'manual__2025-01-25T20:13:16.586213+00:00', '--job-id', '169', '--raw', '--subdir', 'DAGS_FOLDER/dag_script.py', '--cfg-path', '/tmp/tmp2q4hmsd7']
+[2025-01-25T20:48:07.805+0000] {standard_task_runner.py:105} INFO - Job 169: Subtask generate_indexes_task
+[2025-01-25T20:48:07.842+0000] {task_command.py:467} INFO - Running <TaskInstance: pull_gazettes_data.generate_indexes_task manual__2025-01-25T20:13:16.586213+00:00 [running]> on host 41bcec3d818b
+[2025-01-25T20:48:07.913+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='***@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='pull_gazettes_data' AIRFLOW_CTX_TASK_ID='generate_indexes_task' AIRFLOW_CTX_EXECUTION_DATE='2025-01-25T20:13:16.586213+00:00' AIRFLOW_CTX_TRY_NUMBER='4' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-25T20:13:16.586213+00:00'
+[2025-01-25T20:48:07.914+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-25T20:48:07.928+0000] {logging_mixin.py:190} INFO - Initializing database
+[2025-01-25T20:48:08.495+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T20:48:08.515+0000] {logging_mixin.py:190} INFO - Parsing database current state
+[2025-01-25T20:48:08.517+0000] {logging_mixin.py:190} INFO - loading database /usr/local/***/data/vector_db/
+[2025-01-25T20:48:08.538+0000] {logging_mixin.py:190} INFO - Reading file metadata
+[2025-01-25T20:48:08.547+0000] {logging_mixin.py:190} INFO - [FileMetadata(uuid='3106200_2024-12-17_7155-page-3-3'), FileMetadata(uuid='3106200_2024-12-17_7155-page-4-4'), FileMetadata(uuid='3106200_2024-12-17_7155-page-5-5'), FileMetadata(uuid='3106200_2024-12-17_7155-page-6-6'), FileMetadata(uuid='3106200_2024-12-17_7155-page-7-7'), FileMetadata(uuid='3106200_2024-12-17_7155-page-8-8'), FileMetadata(uuid='3106200_2024-12-17_7155-page-9-9'), FileMetadata(uuid='3106200_2024-12-17_7155-page-10-10'), FileMetadata(uuid='3106200_2024-12-17_7155-page-11-11'), FileMetadata(uuid='3106200_2024-12-17_7155-page-12-12'), FileMetadata(uuid='3106200_2024-12-17_7155-page-13-13'), FileMetadata(uuid='3106200_2024-12-17_7155-page-14-14'), FileMetadata(uuid='3106200_2024-12-17_7155-page-15-15'), FileMetadata(uuid='3106200_2024-12-17_7155-page-16-16'), FileMetadata(uuid='3106200_2024-12-17_7155-page-17-17'), FileMetadata(uuid='3106200_2024-12-17_7155-page-20-20'), FileMetadata(uuid='3106200_2024-12-17_7155-page-21-21'), FileMetadata(uuid='3106200_2024-12-17_7155-page-22-22'), FileMetadata(uuid='3106200_2024-12-17_7155-page-23-23'), FileMetadata(uuid='3106200_2024-12-17_7155-page-24-24')]
+[2025-01-25T20:48:08.548+0000] {logging_mixin.py:190} INFO - Adding batch of documents
+[2025-01-25T20:48:08.923+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T20:48:09.926+0000] {taskinstance.py:3310} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/utils/generate_index_task.py", line 208, in execute
+    self.add_batch_documents(file_metadata_list)
+  File "/opt/airflow/dags/utils/generate_index_task.py", line 173, in add_batch_documents
+    self.add_document(path, file_metadata)
+  File "/opt/airflow/dags/utils/generate_index_task.py", line 146, in add_document
+    vector_db_ids = self.vector_store.add_documents(documents=docs, ids=chunks_uuids)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/langchain_core/vectorstores/base.py", line 287, in add_documents
+    return self.add_texts(texts, metadatas, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/langchain_community/vectorstores/faiss.py", line 341, in add_texts
+    return self.__add(texts, embeddings, metadatas=metadatas, ids=ids)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/langchain_community/vectorstores/faiss.py", line 316, in __add
+    self.docstore.add({id_: doc for id_, doc in zip(ids, documents)})
+  File "/home/airflow/.local/lib/python3.12/site-packages/langchain_community/docstore/in_memory.py", line 28, in add
+    raise ValueError(f"Tried to add ids that already exist: {overlapping}")
+ValueError: Tried to add ids that already exist: {'3106200_2024-12-17_7155-page-3-3_chunk9', '3106200_2024-12-17_7155-page-3-3_chunk0', '3106200_2024-12-17_7155-page-3-3_chunk6', '3106200_2024-12-17_7155-page-3-3_chunk12', '3106200_2024-12-17_7155-page-3-3_chunk23', '3106200_2024-12-17_7155-page-3-3_chunk28', '3106200_2024-12-17_7155-page-3-3_chunk14', '3106200_2024-12-17_7155-page-3-3_chunk3', '3106200_2024-12-17_7155-page-3-3_chunk32', '3106200_2024-12-17_7155-page-3-3_chunk31', '3106200_2024-12-17_7155-page-3-3_chunk15', '3106200_2024-12-17_7155-page-3-3_chunk25', '3106200_2024-12-17_7155-page-3-3_chunk18', '3106200_2024-12-17_7155-page-3-3_chunk26', '3106200_2024-12-17_7155-page-3-3_chunk27', '3106200_2024-12-17_7155-page-3-3_chunk4', '3106200_2024-12-17_7155-page-3-3_chunk10', '3106200_2024-12-17_7155-page-3-3_chunk30', '3106200_2024-12-17_7155-page-3-3_chunk20', '3106200_2024-12-17_7155-page-3-3_chunk19', '3106200_2024-12-17_7155-page-3-3_chunk24', '3106200_2024-12-17_7155-page-3-3_chunk8', '3106200_2024-12-17_7155-page-3-3_chunk17', '3106200_2024-12-17_7155-page-3-3_chunk1', '3106200_2024-12-17_7155-page-3-3_chunk2', '3106200_2024-12-17_7155-page-3-3_chunk13', '3106200_2024-12-17_7155-page-3-3_chunk7', '3106200_2024-12-17_7155-page-3-3_chunk21', '3106200_2024-12-17_7155-page-3-3_chunk11', '3106200_2024-12-17_7155-page-3-3_chunk22', '3106200_2024-12-17_7155-page-3-3_chunk5', '3106200_2024-12-17_7155-page-3-3_chunk33', '3106200_2024-12-17_7155-page-3-3_chunk29', '3106200_2024-12-17_7155-page-3-3_chunk16'}
+[2025-01-25T20:48:09.948+0000] {taskinstance.py:1225} INFO - Marking task as UP_FOR_RETRY. dag_id=pull_gazettes_data, task_id=generate_indexes_task, run_id=manual__2025-01-25T20:13:16.586213+00:00, execution_date=20250125T201316, start_date=20250125T204807, end_date=20250125T204809
+[2025-01-25T20:48:09.968+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-25T20:48:09.969+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 169 for task generate_indexes_task (Tried to add ids that already exist: {'3106200_2024-12-17_7155-page-3-3_chunk9', '3106200_2024-12-17_7155-page-3-3_chunk0', '3106200_2024-12-17_7155-page-3-3_chunk6', '3106200_2024-12-17_7155-page-3-3_chunk12', '3106200_2024-12-17_7155-page-3-3_chunk23', '3106200_2024-12-17_7155-page-3-3_chunk28', '3106200_2024-12-17_7155-page-3-3_chunk14', '3106200_2024-12-17_7155-page-3-3_chunk3', '3106200_2024-12-17_7155-page-3-3_chunk32', '3106200_2024-12-17_7155-page-3-3_chunk31', '3106200_2024-12-17_7155-page-3-3_chunk15', '3106200_2024-12-17_7155-page-3-3_chunk25', '3106200_2024-12-17_7155-page-3-3_chunk18', '3106200_2024-12-17_7155-page-3-3_chunk26', '3106200_2024-12-17_7155-page-3-3_chunk27', '3106200_2024-12-17_7155-page-3-3_chunk4', '3106200_2024-12-17_7155-page-3-3_chunk10', '3106200_2024-12-17_7155-page-3-3_chunk30', '3106200_2024-12-17_7155-page-3-3_chunk20', '3106200_2024-12-17_7155-page-3-3_chunk19', '3106200_2024-12-17_7155-page-3-3_chunk24', '3106200_2024-12-17_7155-page-3-3_chunk8', '3106200_2024-12-17_7155-page-3-3_chunk17', '3106200_2024-12-17_7155-page-3-3_chunk1', '3106200_2024-12-17_7155-page-3-3_chunk2', '3106200_2024-12-17_7155-page-3-3_chunk13', '3106200_2024-12-17_7155-page-3-3_chunk7', '3106200_2024-12-17_7155-page-3-3_chunk21', '3106200_2024-12-17_7155-page-3-3_chunk11', '3106200_2024-12-17_7155-page-3-3_chunk22', '3106200_2024-12-17_7155-page-3-3_chunk5', '3106200_2024-12-17_7155-page-3-3_chunk33', '3106200_2024-12-17_7155-page-3-3_chunk29', '3106200_2024-12-17_7155-page-3-3_chunk16'}; 26253)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 115, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3004, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3158, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3182, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/utils/generate_index_task.py", line 208, in execute
+    self.add_batch_documents(file_metadata_list)
+  File "/opt/airflow/dags/utils/generate_index_task.py", line 173, in add_batch_documents
+    self.add_document(path, file_metadata)
+  File "/opt/airflow/dags/utils/generate_index_task.py", line 146, in add_document
+    vector_db_ids = self.vector_store.add_documents(documents=docs, ids=chunks_uuids)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/langchain_core/vectorstores/base.py", line 287, in add_documents
+    return self.add_texts(texts, metadatas, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/langchain_community/vectorstores/faiss.py", line 341, in add_texts
+    return self.__add(texts, embeddings, metadatas=metadatas, ids=ids)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/langchain_community/vectorstores/faiss.py", line 316, in __add
+    self.docstore.add({id_: doc for id_, doc in zip(ids, documents)})
+  File "/home/airflow/.local/lib/python3.12/site-packages/langchain_community/docstore/in_memory.py", line 28, in add
+    raise ValueError(f"Tried to add ids that already exist: {overlapping}")
+ValueError: Tried to add ids that already exist: {'3106200_2024-12-17_7155-page-3-3_chunk9', '3106200_2024-12-17_7155-page-3-3_chunk0', '3106200_2024-12-17_7155-page-3-3_chunk6', '3106200_2024-12-17_7155-page-3-3_chunk12', '3106200_2024-12-17_7155-page-3-3_chunk23', '3106200_2024-12-17_7155-page-3-3_chunk28', '3106200_2024-12-17_7155-page-3-3_chunk14', '3106200_2024-12-17_7155-page-3-3_chunk3', '3106200_2024-12-17_7155-page-3-3_chunk32', '3106200_2024-12-17_7155-page-3-3_chunk31', '3106200_2024-12-17_7155-page-3-3_chunk15', '3106200_2024-12-17_7155-page-3-3_chunk25', '3106200_2024-12-17_7155-page-3-3_chunk18', '3106200_2024-12-17_7155-page-3-3_chunk26', '3106200_2024-12-17_7155-page-3-3_chunk27', '3106200_2024-12-17_7155-page-3-3_chunk4', '3106200_2024-12-17_7155-page-3-3_chunk10', '3106200_2024-12-17_7155-page-3-3_chunk30', '3106200_2024-12-17_7155-page-3-3_chunk20', '3106200_2024-12-17_7155-page-3-3_chunk19', '3106200_2024-12-17_7155-page-3-3_chunk24', '3106200_2024-12-17_7155-page-3-3_chunk8', '3106200_2024-12-17_7155-page-3-3_chunk17', '3106200_2024-12-17_7155-page-3-3_chunk1', '3106200_2024-12-17_7155-page-3-3_chunk2', '3106200_2024-12-17_7155-page-3-3_chunk13', '3106200_2024-12-17_7155-page-3-3_chunk7', '3106200_2024-12-17_7155-page-3-3_chunk21', '3106200_2024-12-17_7155-page-3-3_chunk11', '3106200_2024-12-17_7155-page-3-3_chunk22', '3106200_2024-12-17_7155-page-3-3_chunk5', '3106200_2024-12-17_7155-page-3-3_chunk33', '3106200_2024-12-17_7155-page-3-3_chunk29', '3106200_2024-12-17_7155-page-3-3_chunk16'}
+[2025-01-25T20:48:09.986+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-01-25T20:48:10.009+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-01-25T20:48:10.011+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

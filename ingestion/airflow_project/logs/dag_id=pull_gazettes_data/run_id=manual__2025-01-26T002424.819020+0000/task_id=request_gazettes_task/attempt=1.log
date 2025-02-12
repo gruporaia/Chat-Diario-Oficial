@@ -1,0 +1,26 @@
+[2025-01-26T00:24:53.090+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-26T00:24:53.106+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pull_gazettes_data.request_gazettes_task manual__2025-01-26T00:24:24.819020+00:00 [queued]>
+[2025-01-26T00:24:53.114+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pull_gazettes_data.request_gazettes_task manual__2025-01-26T00:24:24.819020+00:00 [queued]>
+[2025-01-26T00:24:53.115+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2025-01-26T00:24:53.127+0000] {taskinstance.py:2888} INFO - Executing <Task(RequestGazettesTask): request_gazettes_task> on 2025-01-26 00:24:24.819020+00:00
+[2025-01-26T00:24:53.146+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=37514) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-26T00:24:53.147+0000] {standard_task_runner.py:72} INFO - Started process 37527 to run task
+[2025-01-26T00:24:53.148+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'pull_gazettes_data', 'request_gazettes_task', 'manual__2025-01-26T00:24:24.819020+00:00', '--job-id', '212', '--raw', '--subdir', 'DAGS_FOLDER/dag_script.py', '--cfg-path', '/tmp/tmpwyg6m5lc']
+[2025-01-26T00:24:53.150+0000] {standard_task_runner.py:105} INFO - Job 212: Subtask request_gazettes_task
+[2025-01-26T00:24:53.192+0000] {task_command.py:467} INFO - Running <TaskInstance: pull_gazettes_data.request_gazettes_task manual__2025-01-26T00:24:24.819020+00:00 [running]> on host 41bcec3d818b
+[2025-01-26T00:24:53.276+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='***@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='pull_gazettes_data' AIRFLOW_CTX_TASK_ID='request_gazettes_task' AIRFLOW_CTX_EXECUTION_DATE='2025-01-26T00:24:24.819020+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-26T00:24:24.819020+00:00'
+[2025-01-26T00:24:53.277+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-26T00:24:53.288+0000] {logging_mixin.py:190} INFO - Running for start_date: 2024-11-27, end_date: 2025-01-25
+[2025-01-26T00:24:54.304+0000] {logging_mixin.py:190} INFO - Total number of Gazettes: 17
+[2025-01-26T00:24:54.304+0000] {logging_mixin.py:190} INFO - log request call: https://queridodiario.ok.org.br/api/gazettes, params: {'size': 1, 'excerpt_size': 500, 'published_since': '2024-11-27', 'published_until': '2025-01-25', 'territory_ids': '3106200', 'offset': 0}
+[2025-01-26T00:25:04.272+0000] {logging_mixin.py:190} INFO - Managing URL log
+[2025-01-26T00:25:04.288+0000] {logging_mixin.py:190} INFO - Skipping text url: https://querido-diario.nyc3.cdn.digitaloceanspaces.com/3106200/2024-12-19/fa771a286c095dd9faf497a166b8353e28b0c515.pdf because it was already downloaded in 2025-01-25 18:45:34.739558
+[2025-01-26T00:25:04.289+0000] {logging_mixin.py:190} INFO - Skipping text url: https://querido-diario.nyc3.cdn.digitaloceanspaces.com/3106200/2024-12-18/6861cc2d150a5545f9d7d9e925e878ac5b4e7a31.pdf because it was already downloaded in 2025-01-25 18:45:34.739558
+[2025-01-26T00:25:04.290+0000] {logging_mixin.py:190} INFO - Skipping text url: https://querido-diario.nyc3.cdn.digitaloceanspaces.com/3106200/2024-12-17/2d6c6b4f17f03de27a15537564469fdcb6a29062.pdf because it was already downloaded in 2025-01-25 18:45:34.739558
+[2025-01-26T00:25:06.914+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-26T00:25:06.915+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=pull_gazettes_data, task_id=request_gazettes_task, run_id=manual__2025-01-26T00:24:24.819020+00:00, execution_date=20250126T002424, start_date=20250126T002453, end_date=20250126T002506
+[2025-01-26T00:25:06.953+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-01-26T00:25:06.981+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-01-26T00:25:06.983+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

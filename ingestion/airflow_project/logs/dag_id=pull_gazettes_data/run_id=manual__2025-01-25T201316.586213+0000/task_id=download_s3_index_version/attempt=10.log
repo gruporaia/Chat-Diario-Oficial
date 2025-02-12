@@ -1,0 +1,59 @@
+[2025-01-25T20:32:21.125+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-25T20:32:21.140+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pull_gazettes_data.download_s3_index_version manual__2025-01-25T20:13:16.586213+00:00 [queued]>
+[2025-01-25T20:32:21.147+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pull_gazettes_data.download_s3_index_version manual__2025-01-25T20:13:16.586213+00:00 [queued]>
+[2025-01-25T20:32:21.148+0000] {taskinstance.py:2865} INFO - Starting attempt 10 of 11
+[2025-01-25T20:32:21.159+0000] {taskinstance.py:2888} INFO - Executing <Task(DownloadContentFromS3): download_s3_index_version> on 2025-01-25 20:13:16.586213+00:00
+[2025-01-25T20:32:21.170+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=25469) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-25T20:32:21.172+0000] {standard_task_runner.py:72} INFO - Started process 25482 to run task
+[2025-01-25T20:32:21.172+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'pull_gazettes_data', 'download_s3_index_version', 'manual__2025-01-25T20:13:16.586213+00:00', '--job-id', '155', '--raw', '--subdir', 'DAGS_FOLDER/dag_script.py', '--cfg-path', '/tmp/tmp19zaq71c']
+[2025-01-25T20:32:21.174+0000] {standard_task_runner.py:105} INFO - Job 155: Subtask download_s3_index_version
+[2025-01-25T20:32:21.214+0000] {task_command.py:467} INFO - Running <TaskInstance: pull_gazettes_data.download_s3_index_version manual__2025-01-25T20:13:16.586213+00:00 [running]> on host 41bcec3d818b
+[2025-01-25T20:32:21.295+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='***@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='pull_gazettes_data' AIRFLOW_CTX_TASK_ID='download_s3_index_version' AIRFLOW_CTX_EXECUTION_DATE='2025-01-25T20:13:16.586213+00:00' AIRFLOW_CTX_TRY_NUMBER='10' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-25T20:13:16.586213+00:00'
+[2025-01-25T20:32:21.297+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-25T20:32:21.322+0000] {base.py:84} INFO - Retrieving connection 'minio_s3_conn_id'
+[2025-01-25T20:32:21.323+0000] {connection_wrapper.py:391} INFO - AWS Connection (conn_id='minio_s3_conn_id', conn_type='aws') credentials retrieved from extra.
+[2025-01-25T20:32:21.324+0000] {warnings.py:112} WARNING - <string>:9: AirflowProviderDeprecationWarning: extra['host'] is deprecated and will be removed in a future release. Please set extra['endpoint_url'] instead
+
+[2025-01-25T20:32:21.559+0000] {s3.py:1422} INFO - Downloading source S3 file from Bucket diario-oficial-db-dump with path vector_db/index.faiss
+[2025-01-25T20:32:21.756+0000] {logging_mixin.py:190} INFO - /usr/local/***/data/vector_db/***_tmp_dir_9933ee6e/index.faiss
+[2025-01-25T20:33:41.913+0000] {local_task_job_runner.py:346} WARNING - State of this instance has been externally set to restarting. Terminating instance.
+[2025-01-25T20:33:41.915+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-01-25T20:33:41.917+0000] {process_utils.py:132} INFO - Sending 15 to group 25482. PIDs of all processes in the group: [25482]
+[2025-01-25T20:33:41.918+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 25482
+[2025-01-25T20:33:41.918+0000] {taskinstance.py:3092} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-01-25T20:33:41.933+0000] {taskinstance.py:3310} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/opt/airflow/dags/utils/download_content_from_s3_bucket.py", line 52, in download_from_s3
+    try:
+        ^
+FileNotFoundError: [Errno 2] No such file or directory: '/usr/local/airflow/data/vector_db/airflow_tmp_dir_9933ee6e/index.faiss' -> '/usr/local/airflow/data/vector_db/vector_db/index.faiss'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/utils/download_content_from_s3_bucket.py", line 61, in execute
+    if self.s3_bucket_exists():
+        ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/utils/download_content_from_s3_bucket.py", line 55, in download_from_s3
+    except FileNotFoundError:
+        ^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3094, in signal_handler
+    raise AirflowTaskTerminated("Task received SIGTERM signal")
+airflow.exceptions.AirflowTaskTerminated: Task received SIGTERM signal
+[2025-01-25T20:33:41.946+0000] {taskinstance.py:1225} INFO - Marking task as UP_FOR_RETRY. dag_id=pull_gazettes_data, task_id=download_s3_index_version, run_id=manual__2025-01-25T20:13:16.586213+00:00, execution_date=20250125T201316, start_date=20250125T203221, end_date=20250125T203341
+[2025-01-25T20:33:41.961+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-25T20:33:42.011+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=25482, status='terminated', exitcode=2, started='20:32:20') (25482) terminated with exit code 2

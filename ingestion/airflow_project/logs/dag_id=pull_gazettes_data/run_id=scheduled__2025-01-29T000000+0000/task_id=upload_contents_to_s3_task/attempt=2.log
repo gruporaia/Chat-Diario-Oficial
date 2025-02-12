@@ -1,0 +1,115 @@
+[2025-01-31T23:15:36.413+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-31T23:15:36.440+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pull_gazettes_data.upload_contents_to_s3_task scheduled__2025-01-29T00:00:00+00:00 [queued]>
+[2025-01-31T23:15:36.454+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pull_gazettes_data.upload_contents_to_s3_task scheduled__2025-01-29T00:00:00+00:00 [queued]>
+[2025-01-31T23:15:36.455+0000] {taskinstance.py:2865} INFO - Starting attempt 2 of 2
+[2025-01-31T23:15:36.476+0000] {taskinstance.py:2888} INFO - Executing <Task(UploadContentsToS3): upload_contents_to_s3_task> on 2025-01-29 00:00:00+00:00
+[2025-01-31T23:15:36.488+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=450) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-31T23:15:36.490+0000] {standard_task_runner.py:72} INFO - Started process 452 to run task
+[2025-01-31T23:15:36.490+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'pull_gazettes_data', 'upload_contents_to_s3_task', 'scheduled__2025-01-29T00:00:00+00:00', '--job-id', '293', '--raw', '--subdir', 'DAGS_FOLDER/dag_script.py', '--cfg-path', '/tmp/tmpgo54i7ra']
+[2025-01-31T23:15:36.493+0000] {standard_task_runner.py:105} INFO - Job 293: Subtask upload_contents_to_s3_task
+[2025-01-31T23:15:36.564+0000] {task_command.py:467} INFO - Running <TaskInstance: pull_gazettes_data.upload_contents_to_s3_task scheduled__2025-01-29T00:00:00+00:00 [running]> on host 41bcec3d818b
+[2025-01-31T23:15:36.672+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='***@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='pull_gazettes_data' AIRFLOW_CTX_TASK_ID='upload_contents_to_s3_task' AIRFLOW_CTX_EXECUTION_DATE='2025-01-29T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-01-29T00:00:00+00:00'
+[2025-01-31T23:15:36.674+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-31T23:15:36.702+0000] {base.py:84} INFO - Retrieving connection 'minio_s3_conn_id'
+[2025-01-31T23:15:36.703+0000] {connection_wrapper.py:391} INFO - AWS Connection (conn_id='minio_s3_conn_id', conn_type='aws') credentials retrieved from extra.
+[2025-01-31T23:15:36.704+0000] {warnings.py:112} WARNING - <string>:9: AirflowProviderDeprecationWarning: extra['host'] is deprecated and will be removed in a future release. Please set extra['endpoint_url'] instead
+
+[2025-01-31T23:15:37.649+0000] {s3.py:323} ERROR - Access to bucket "diario-oficial-db-dump" is forbidden or there was an error with the request
+[2025-01-31T23:15:37.650+0000] {s3.py:326} ERROR - An error occurred (403) when calling the HeadBucket operation: Forbidden
+[2025-01-31T23:15:37.667+0000] {taskinstance.py:3310} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/utils/upload_contents_to_s3_bucket.py", line 70, in execute
+    self.create_bucket()
+  File "/opt/airflow/dags/utils/upload_contents_to_s3_bucket.py", line 39, in create_bucket
+    self.hook.create_bucket(self.bucket_name)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/amazon/aws/hooks/s3.py", line 132, in wrapper
+    return func(*bound_args.args, **bound_args.kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/amazon/aws/hooks/s3.py", line 362, in create_bucket
+    self.get_conn().create_bucket(Bucket=bucket_name)
+  File "/home/airflow/.local/lib/python3.12/site-packages/botocore/client.py", line 569, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/botocore/client.py", line 1023, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (InvalidAccessKeyId) when calling the CreateBucket operation: The Access Key Id you provided does not exist in our records.
+[2025-01-31T23:15:37.678+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=pull_gazettes_data, task_id=upload_contents_to_s3_task, run_id=scheduled__2025-01-29T00:00:00+00:00, execution_date=20250129T000000, start_date=20250131T231536, end_date=20250131T231537
+[2025-01-31T23:15:37.695+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-31T23:15:37.696+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 293 for task upload_contents_to_s3_task (An error occurred (InvalidAccessKeyId) when calling the CreateBucket operation: The Access Key Id you provided does not exist in our records.; 452)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 115, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3004, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3158, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3182, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/utils/upload_contents_to_s3_bucket.py", line 70, in execute
+    self.create_bucket()
+  File "/opt/airflow/dags/utils/upload_contents_to_s3_bucket.py", line 39, in create_bucket
+    self.hook.create_bucket(self.bucket_name)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/amazon/aws/hooks/s3.py", line 132, in wrapper
+    return func(*bound_args.args, **bound_args.kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/amazon/aws/hooks/s3.py", line 362, in create_bucket
+    self.get_conn().create_bucket(Bucket=bucket_name)
+  File "/home/airflow/.local/lib/python3.12/site-packages/botocore/client.py", line 569, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/botocore/client.py", line 1023, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (InvalidAccessKeyId) when calling the CreateBucket operation: The Access Key Id you provided does not exist in our records.
+[2025-01-31T23:15:37.751+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-01-31T23:15:37.773+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-01-31T23:15:37.782+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

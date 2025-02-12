@@ -1,0 +1,82 @@
+[2025-01-25T10:54:47.814+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-25T10:54:47.846+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pull_gazettes_data.preprocess_documents_task scheduled__2025-01-24T00:00:00+00:00 [queued]>
+[2025-01-25T10:54:47.858+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pull_gazettes_data.preprocess_documents_task scheduled__2025-01-24T00:00:00+00:00 [queued]>
+[2025-01-25T10:54:47.859+0000] {taskinstance.py:2865} INFO - Starting attempt 23 of 24
+[2025-01-25T10:54:47.880+0000] {taskinstance.py:2888} INFO - Executing <Task(PreprocessDocuments): preprocess_documents_task> on 2025-01-24 00:00:00+00:00
+[2025-01-25T10:54:47.916+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1093) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-25T10:54:47.923+0000] {standard_task_runner.py:72} INFO - Started process 1124 to run task
+[2025-01-25T10:54:47.934+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'pull_gazettes_data', 'preprocess_documents_task', 'scheduled__2025-01-24T00:00:00+00:00', '--job-id', '71', '--raw', '--subdir', 'DAGS_FOLDER/dag_script.py', '--cfg-path', '/tmp/tmpyf98retd']
+[2025-01-25T10:54:47.941+0000] {standard_task_runner.py:105} INFO - Job 71: Subtask preprocess_documents_task
+[2025-01-25T10:54:48.040+0000] {task_command.py:467} INFO - Running <TaskInstance: pull_gazettes_data.preprocess_documents_task scheduled__2025-01-24T00:00:00+00:00 [running]> on host 41bcec3d818b
+[2025-01-25T10:54:48.148+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='***@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='pull_gazettes_data' AIRFLOW_CTX_TASK_ID='preprocess_documents_task' AIRFLOW_CTX_EXECUTION_DATE='2025-01-24T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='23' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-01-24T00:00:00+00:00'
+[2025-01-25T10:54:48.151+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-25T10:54:48.171+0000] {logging_mixin.py:190} INFO - Checking pre processed documents log
+[2025-01-25T10:54:48.182+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-11-26_7140.pdf into multiple PDF single pages
+[2025-01-25T10:54:48.411+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-2-2.pdf already broken down into
+[2025-01-25T10:54:48.411+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-3-3.pdf already broken down into
+[2025-01-25T10:54:48.412+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-4-4.pdf already broken down into
+[2025-01-25T10:54:48.412+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-5-5.pdf already broken down into
+[2025-01-25T10:54:48.412+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-6-6.pdf already broken down into
+[2025-01-25T10:54:48.413+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-7-7.pdf already broken down into
+[2025-01-25T10:54:48.413+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-8-8.pdf already broken down into
+[2025-01-25T10:54:48.414+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-9-9.pdf already broken down into
+[2025-01-25T10:54:48.414+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-10-10.pdf already broken down into
+[2025-01-25T10:54:48.415+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-11-11.pdf already broken down into
+[2025-01-25T10:54:48.415+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-12-12.pdf already broken down into
+[2025-01-25T10:54:48.416+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-13-13.pdf already broken down into
+[2025-01-25T10:54:48.416+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-14-14.pdf already broken down into
+[2025-01-25T10:54:48.417+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-15-15.pdf already broken down into
+[2025-01-25T10:54:48.417+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-16-16.pdf already broken down into
+[2025-01-25T10:54:48.417+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-17-17.pdf already broken down into
+[2025-01-25T10:54:48.418+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-18-18.pdf already broken down into
+[2025-01-25T10:54:48.418+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-19-19.pdf already broken down into
+[2025-01-25T10:54:48.419+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-20-20.pdf already broken down into
+[2025-01-25T10:54:48.419+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-21-21.pdf already broken down into
+[2025-01-25T10:54:48.419+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-22-22.pdf already broken down into
+[2025-01-25T10:54:48.420+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-23-23.pdf already broken down into
+[2025-01-25T10:54:48.420+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-24-24.pdf already broken down into
+[2025-01-25T10:54:48.421+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-25-25.pdf already broken down into
+[2025-01-25T10:54:48.421+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-26-26.pdf already broken down into
+[2025-01-25T10:54:48.422+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-27-27.pdf already broken down into
+[2025-01-25T10:54:48.422+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-28-28.pdf already broken down into
+[2025-01-25T10:54:48.423+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-29-29.pdf already broken down into
+[2025-01-25T10:54:48.423+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-30-30.pdf already broken down into
+[2025-01-25T10:54:48.423+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-31-31.pdf already broken down into
+[2025-01-25T10:54:48.424+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-32-32.pdf already broken down into
+[2025-01-25T10:54:48.431+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: [] file_uuid_breakdown
+[2025-01-25T10:54:48.556+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T10:54:49.053+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T10:54:52.700+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T10:54:53.278+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T10:54:53.770+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-11-26_7140-page-0-0.pdf
+[2025-01-25T10:54:55.520+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-11-26_7140-page-0-0.pdf in 7.08 sec.
+[2025-01-25T10:54:55.529+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-11-26_7140-page-0-0.md
+[2025-01-25T10:54:55.547+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-11-26_7140  ... 2025-01-25 10:54:55.526130
+
+[1 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T10:54:55.555+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T10:54:55.712+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T10:54:58.556+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T10:54:58.967+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T10:54:59.301+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-11-26_7140-page-1-1.pdf
+[2025-01-25T10:55:00.743+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-11-26_7140-page-1-1.pdf in 5.19 sec.
+[2025-01-25T10:55:00.750+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-11-26_7140-page-1-1.md
+[2025-01-25T10:55:00.761+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-11-26_7140  ... 2025-01-25 10:54:55.526130
+0  3106200_2024-11-26_7140  ... 2025-01-25 10:55:00.747478
+
+[2 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T10:55:00.779+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T10:55:00.932+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T10:55:03.509+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T10:55:04.341+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T10:55:04.657+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-11-26_7140-page-2-2.pdf
+[2025-01-25T10:55:22.977+0000] {job.py:229} INFO - Heartbeat recovered after 14.85 seconds
+[2025-01-25T10:55:22.989+0000] {local_task_job_runner.py:266} INFO - Task exited with return code -9For more information, see https://***.apache.org/docs/apache-***/stable/troubleshooting.html#LocalTaskJob-killed
+[2025-01-25T10:55:23.034+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-01-25T10:55:23.037+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,48 @@
+version: '3.8'
+
+x-minio-common:
+  &minio-common
+  image: minio/minio
+  command: server /data --console-address ":9001"
+  environment:
+      MINIO_ROOT_USER: admin
+      MINIO_ROOT_PASSWORD: admin123
+  volumes:
+    - ./minio/data:/data
+  expose:
+    - "9000"
+    - "9001" 
+
+services:
+  backend:
+    image: app_backend
+    build: 
+      context: ./app
+    container_name: fastapi_backend
+    ports:
+      - "8000:8000"  # FastAPI backend
+    volumes:
+      - ./app:/app
+  
+  frontend:
+    image: app_frontend
+    build:
+      context: ./frontend
+    container_name: streamlit_frontend
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./frontend:/frontend
+
+  minio:
+    <<: *minio-common
+    hostname: minio
+    ports:
+    - 9000:9000
+    - 9001:9001
+    deploy:
+        resources:
+          limits:
+            memory: 2GB
+          reservations:
+            memory: 1GB

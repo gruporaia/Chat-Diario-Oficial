@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+boto3
+apscheduler
+langchain_community
+langchain_cohere
+faiss-cpu

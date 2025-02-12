@@ -1,0 +1,26 @@
+[2025-01-25T20:31:00.780+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-25T20:31:00.795+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pull_gazettes_data.download_s3_index_version manual__2025-01-25T20:13:16.586213+00:00 [queued]>
+[2025-01-25T20:31:00.803+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pull_gazettes_data.download_s3_index_version manual__2025-01-25T20:13:16.586213+00:00 [queued]>
+[2025-01-25T20:31:00.804+0000] {taskinstance.py:2865} INFO - Starting attempt 9 of 10
+[2025-01-25T20:31:00.815+0000] {taskinstance.py:2888} INFO - Executing <Task(DownloadContentFromS3): download_s3_index_version> on 2025-01-25 20:13:16.586213+00:00
+[2025-01-25T20:31:00.827+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=25398) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-25T20:31:00.828+0000] {standard_task_runner.py:72} INFO - Started process 25429 to run task
+[2025-01-25T20:31:00.829+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'pull_gazettes_data', 'download_s3_index_version', 'manual__2025-01-25T20:13:16.586213+00:00', '--job-id', '154', '--raw', '--subdir', 'DAGS_FOLDER/dag_script.py', '--cfg-path', '/tmp/tmp2sxf0n38']
+[2025-01-25T20:31:00.831+0000] {standard_task_runner.py:105} INFO - Job 154: Subtask download_s3_index_version
+[2025-01-25T20:31:00.868+0000] {task_command.py:467} INFO - Running <TaskInstance: pull_gazettes_data.download_s3_index_version manual__2025-01-25T20:13:16.586213+00:00 [running]> on host 41bcec3d818b
+[2025-01-25T20:31:00.933+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='***@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='pull_gazettes_data' AIRFLOW_CTX_TASK_ID='download_s3_index_version' AIRFLOW_CTX_EXECUTION_DATE='2025-01-25T20:13:16.586213+00:00' AIRFLOW_CTX_TRY_NUMBER='9' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-25T20:13:16.586213+00:00'
+[2025-01-25T20:31:00.935+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-25T20:31:00.954+0000] {base.py:84} INFO - Retrieving connection 'minio_s3_conn_id'
+[2025-01-25T20:31:00.955+0000] {connection_wrapper.py:391} INFO - AWS Connection (conn_id='minio_s3_conn_id', conn_type='aws') credentials retrieved from extra.
+[2025-01-25T20:31:00.956+0000] {warnings.py:112} WARNING - <string>:9: AirflowProviderDeprecationWarning: extra['host'] is deprecated and will be removed in a future release. Please set extra['endpoint_url'] instead
+
+[2025-01-25T20:31:01.166+0000] {s3.py:1422} INFO - Downloading source S3 file from Bucket diario-oficial-db-dump with path vector_db/index.faiss
+[2025-01-25T20:31:41.207+0000] {local_task_job_runner.py:346} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2025-01-25T20:31:41.208+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-01-25T20:31:41.209+0000] {process_utils.py:132} INFO - Sending 15 to group 25429. PIDs of all processes in the group: [25429]
+[2025-01-25T20:31:41.210+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 25429
+[2025-01-25T20:31:41.210+0000] {taskinstance.py:3092} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-01-25T20:31:41.225+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-25T20:31:41.262+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=25429, status='terminated', exitcode=0, started='20:30:59') (25429) terminated with exit code 0

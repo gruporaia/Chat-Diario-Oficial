@@ -1,0 +1,228 @@
+[2025-01-25T16:13:43.714+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-25T16:13:43.733+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pull_gazettes_data.generate_indexes_task scheduled__2025-01-24T00:00:00+00:00 [queued]>
+[2025-01-25T16:13:43.744+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pull_gazettes_data.generate_indexes_task scheduled__2025-01-24T00:00:00+00:00 [queued]>
+[2025-01-25T16:13:43.745+0000] {taskinstance.py:2865} INFO - Starting attempt 15 of 16
+[2025-01-25T16:13:43.759+0000] {taskinstance.py:2888} INFO - Executing <Task(GenerateIndexTask): generate_indexes_task> on 2025-01-24 00:00:00+00:00
+[2025-01-25T16:13:43.772+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=14839) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-25T16:13:43.774+0000] {standard_task_runner.py:72} INFO - Started process 14852 to run task
+[2025-01-25T16:13:43.774+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'pull_gazettes_data', 'generate_indexes_task', 'scheduled__2025-01-24T00:00:00+00:00', '--job-id', '100', '--raw', '--subdir', 'DAGS_FOLDER/dag_script.py', '--cfg-path', '/tmp/tmplyf2nrk5']
+[2025-01-25T16:13:43.776+0000] {standard_task_runner.py:105} INFO - Job 100: Subtask generate_indexes_task
+[2025-01-25T16:13:43.819+0000] {task_command.py:467} INFO - Running <TaskInstance: pull_gazettes_data.generate_indexes_task scheduled__2025-01-24T00:00:00+00:00 [running]> on host 41bcec3d818b
+[2025-01-25T16:13:43.888+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='***@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='pull_gazettes_data' AIRFLOW_CTX_TASK_ID='generate_indexes_task' AIRFLOW_CTX_EXECUTION_DATE='2025-01-24T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='15' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-01-24T00:00:00+00:00'
+[2025-01-25T16:13:43.889+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-25T16:13:43.908+0000] {logging_mixin.py:190} INFO - Initializing database
+[2025-01-25T16:13:44.324+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T16:13:44.344+0000] {logging_mixin.py:190} INFO - Parsing database current state
+[2025-01-25T16:13:44.345+0000] {logging_mixin.py:190} INFO - loading database /usr/local/***/data/vector_db/
+[2025-01-25T16:13:44.353+0000] {logging_mixin.py:190} INFO - Reading file metadata
+[2025-01-25T16:13:44.394+0000] {logging_mixin.py:190} INFO - [FileMetadata(uuid='3106200_2024-11-26_7140-page-0-0'), FileMetadata(uuid='3106200_2024-11-26_7140-page-1-1'), FileMetadata(uuid='3106200_2024-11-26_7140-page-10-10'), FileMetadata(uuid='3106200_2024-11-26_7140-page-11-11'), FileMetadata(uuid='3106200_2024-11-26_7140-page-12-12'), FileMetadata(uuid='3106200_2024-11-26_7140-page-13-13'), FileMetadata(uuid='3106200_2024-11-26_7140-page-14-14'), FileMetadata(uuid='3106200_2024-11-26_7140-page-15-15'), FileMetadata(uuid='3106200_2024-11-26_7140-page-16-16'), FileMetadata(uuid='3106200_2024-11-26_7140-page-17-17'), FileMetadata(uuid='3106200_2024-11-26_7140-page-18-18'), FileMetadata(uuid='3106200_2024-11-26_7140-page-19-19'), FileMetadata(uuid='3106200_2024-11-26_7140-page-2-2'), FileMetadata(uuid='3106200_2024-11-26_7140-page-20-20'), FileMetadata(uuid='3106200_2024-11-26_7140-page-21-21'), FileMetadata(uuid='3106200_2024-11-26_7140-page-22-22'), FileMetadata(uuid='3106200_2024-11-26_7140-page-23-23'), FileMetadata(uuid='3106200_2024-11-26_7140-page-24-24'), FileMetadata(uuid='3106200_2024-11-26_7140-page-25-25'), FileMetadata(uuid='3106200_2024-11-26_7140-page-26-26'), FileMetadata(uuid='3106200_2024-11-26_7140-page-27-27'), FileMetadata(uuid='3106200_2024-11-26_7140-page-28-28'), FileMetadata(uuid='3106200_2024-11-26_7140-page-29-29'), FileMetadata(uuid='3106200_2024-11-26_7140-page-3-3'), FileMetadata(uuid='3106200_2024-11-26_7140-page-30-30'), FileMetadata(uuid='3106200_2024-11-26_7140-page-31-31'), FileMetadata(uuid='3106200_2024-11-26_7140-page-32-32'), FileMetadata(uuid='3106200_2024-11-26_7140-page-4-4'), FileMetadata(uuid='3106200_2024-11-26_7140-page-5-5'), FileMetadata(uuid='3106200_2024-11-26_7140-page-6-6'), FileMetadata(uuid='3106200_2024-11-26_7140-page-7-7'), FileMetadata(uuid='3106200_2024-11-26_7140-page-8-8'), FileMetadata(uuid='3106200_2024-11-26_7140-page-9-9'), FileMetadata(uuid='3106200_2024-11-27_7141-page-0-0'), FileMetadata(uuid='3106200_2024-11-27_7141-page-1-1'), FileMetadata(uuid='3106200_2024-11-27_7141-page-10-10'), FileMetadata(uuid='3106200_2024-11-27_7141-page-11-11'), FileMetadata(uuid='3106200_2024-11-27_7141-page-12-12'), FileMetadata(uuid='3106200_2024-11-27_7141-page-13-13'), FileMetadata(uuid='3106200_2024-11-27_7141-page-14-14'), FileMetadata(uuid='3106200_2024-11-27_7141-page-15-15'), FileMetadata(uuid='3106200_2024-11-27_7141-page-16-16'), FileMetadata(uuid='3106200_2024-11-27_7141-page-17-17'), FileMetadata(uuid='3106200_2024-11-27_7141-page-18-18'), FileMetadata(uuid='3106200_2024-11-27_7141-page-19-19'), FileMetadata(uuid='3106200_2024-11-27_7141-page-2-2'), FileMetadata(uuid='3106200_2024-11-27_7141-page-20-20'), FileMetadata(uuid='3106200_2024-11-27_7141-page-21-21'), FileMetadata(uuid='3106200_2024-11-27_7141-page-22-22'), FileMetadata(uuid='3106200_2024-11-27_7141-page-23-23'), FileMetadata(uuid='3106200_2024-11-27_7141-page-24-24'), FileMetadata(uuid='3106200_2024-11-27_7141-page-25-25'), FileMetadata(uuid='3106200_2024-11-27_7141-page-26-26'), FileMetadata(uuid='3106200_2024-11-27_7141-page-27-27'), FileMetadata(uuid='3106200_2024-11-27_7141-page-28-28'), FileMetadata(uuid='3106200_2024-11-27_7141-page-29-29'), FileMetadata(uuid='3106200_2024-11-27_7141-page-3-3'), FileMetadata(uuid='3106200_2024-11-27_7141-page-30-30'), FileMetadata(uuid='3106200_2024-11-27_7141-page-31-31'), FileMetadata(uuid='3106200_2024-11-27_7141-page-32-32'), FileMetadata(uuid='3106200_2024-11-27_7141-page-33-33'), FileMetadata(uuid='3106200_2024-11-27_7141-page-34-34'), FileMetadata(uuid='3106200_2024-11-27_7141-page-35-35'), FileMetadata(uuid='3106200_2024-11-27_7141-page-36-36'), FileMetadata(uuid='3106200_2024-11-27_7141-page-4-4'), FileMetadata(uuid='3106200_2024-11-27_7141-page-5-5'), FileMetadata(uuid='3106200_2024-11-27_7141-page-6-6'), FileMetadata(uuid='3106200_2024-11-27_7141-page-7-7'), FileMetadata(uuid='3106200_2024-11-27_7141-page-8-8'), FileMetadata(uuid='3106200_2024-11-27_7141-page-9-9'), FileMetadata(uuid='3106200_2024-11-28_7142-page-0-0'), FileMetadata(uuid='3106200_2024-11-28_7142-page-1-1'), FileMetadata(uuid='3106200_2024-11-28_7142-page-10-10'), FileMetadata(uuid='3106200_2024-11-28_7142-page-11-11'), FileMetadata(uuid='3106200_2024-11-28_7142-page-12-12'), FileMetadata(uuid='3106200_2024-11-28_7142-page-13-13'), FileMetadata(uuid='3106200_2024-11-28_7142-page-14-14'), FileMetadata(uuid='3106200_2024-11-28_7142-page-15-15'), FileMetadata(uuid='3106200_2024-11-28_7142-page-16-16'), FileMetadata(uuid='3106200_2024-11-28_7142-page-17-17'), FileMetadata(uuid='3106200_2024-11-28_7142-page-18-18'), FileMetadata(uuid='3106200_2024-11-28_7142-page-19-19'), FileMetadata(uuid='3106200_2024-11-28_7142-page-2-2'), FileMetadata(uuid='3106200_2024-11-28_7142-page-20-20'), FileMetadata(uuid='3106200_2024-11-28_7142-page-21-21'), FileMetadata(uuid='3106200_2024-11-28_7142-page-22-22'), FileMetadata(uuid='3106200_2024-11-28_7142-page-23-23'), FileMetadata(uuid='3106200_2024-11-28_7142-page-24-24'), FileMetadata(uuid='3106200_2024-11-28_7142-page-25-25'), FileMetadata(uuid='3106200_2024-11-28_7142-page-25-29'), FileMetadata(uuid='3106200_2024-11-28_7142-page-26-26'), FileMetadata(uuid='3106200_2024-11-28_7142-page-27-27'), FileMetadata(uuid='3106200_2024-11-28_7142-page-28-28'), FileMetadata(uuid='3106200_2024-11-28_7142-page-29-29'), FileMetadata(uuid='3106200_2024-11-28_7142-page-3-3'), FileMetadata(uuid='3106200_2024-11-28_7142-page-30-30'), FileMetadata(uuid='3106200_2024-11-28_7142-page-31-31'), FileMetadata(uuid='3106200_2024-11-28_7142-page-32-32'), FileMetadata(uuid='3106200_2024-11-28_7142-page-33-33'), FileMetadata(uuid='3106200_2024-11-28_7142-page-34-34'), FileMetadata(uuid='3106200_2024-11-28_7142-page-35-35'), FileMetadata(uuid='3106200_2024-11-28_7142-page-36-36'), FileMetadata(uuid='3106200_2024-11-28_7142-page-37-37'), FileMetadata(uuid='3106200_2024-11-28_7142-page-38-38'), FileMetadata(uuid='3106200_2024-11-28_7142-page-39-39'), FileMetadata(uuid='3106200_2024-11-28_7142-page-4-4'), FileMetadata(uuid='3106200_2024-11-28_7142-page-40-40'), FileMetadata(uuid='3106200_2024-11-28_7142-page-41-41'), FileMetadata(uuid='3106200_2024-11-28_7142-page-42-42'), FileMetadata(uuid='3106200_2024-11-28_7142-page-43-43'), FileMetadata(uuid='3106200_2024-11-28_7142-page-44-44'), FileMetadata(uuid='3106200_2024-11-28_7142-page-45-45'), FileMetadata(uuid='3106200_2024-11-28_7142-page-5-5'), FileMetadata(uuid='3106200_2024-11-28_7142-page-6-6'), FileMetadata(uuid='3106200_2024-11-28_7142-page-7-7'), FileMetadata(uuid='3106200_2024-11-28_7142-page-8-8'), FileMetadata(uuid='3106200_2024-11-28_7142-page-9-9'), FileMetadata(uuid='3106200_2024-11-29_7143-page-0-0'), FileMetadata(uuid='3106200_2024-11-29_7143-page-1-1'), FileMetadata(uuid='3106200_2024-11-29_7143-page-10-10'), FileMetadata(uuid='3106200_2024-11-29_7143-page-11-11'), FileMetadata(uuid='3106200_2024-11-29_7143-page-12-12'), FileMetadata(uuid='3106200_2024-11-29_7143-page-13-13'), FileMetadata(uuid='3106200_2024-11-29_7143-page-14-14'), FileMetadata(uuid='3106200_2024-11-29_7143-page-15-15'), FileMetadata(uuid='3106200_2024-11-29_7143-page-16-16'), FileMetadata(uuid='3106200_2024-11-29_7143-page-17-17'), FileMetadata(uuid='3106200_2024-11-29_7143-page-18-18'), FileMetadata(uuid='3106200_2024-11-29_7143-page-19-19'), FileMetadata(uuid='3106200_2024-11-29_7143-page-2-2'), FileMetadata(uuid='3106200_2024-11-29_7143-page-20-20'), FileMetadata(uuid='3106200_2024-11-29_7143-page-21-21'), FileMetadata(uuid='3106200_2024-11-29_7143-page-22-22'), FileMetadata(uuid='3106200_2024-11-29_7143-page-23-23'), FileMetadata(uuid='3106200_2024-11-29_7143-page-24-24'), FileMetadata(uuid='3106200_2024-11-29_7143-page-25-25'), FileMetadata(uuid='3106200_2024-11-29_7143-page-26-26'), FileMetadata(uuid='3106200_2024-11-29_7143-page-27-27'), FileMetadata(uuid='3106200_2024-11-29_7143-page-28-28'), FileMetadata(uuid='3106200_2024-11-29_7143-page-29-29'), FileMetadata(uuid='3106200_2024-11-29_7143-page-3-3'), FileMetadata(uuid='3106200_2024-11-29_7143-page-30-30'), FileMetadata(uuid='3106200_2024-11-29_7143-page-31-31'), FileMetadata(uuid='3106200_2024-11-29_7143-page-32-32'), FileMetadata(uuid='3106200_2024-11-29_7143-page-33-33'), FileMetadata(uuid='3106200_2024-11-29_7143-page-34-34'), FileMetadata(uuid='3106200_2024-11-29_7143-page-35-35'), FileMetadata(uuid='3106200_2024-11-29_7143-page-36-36'), FileMetadata(uuid='3106200_2024-11-29_7143-page-37-37'), FileMetadata(uuid='3106200_2024-11-29_7143-page-38-38'), FileMetadata(uuid='3106200_2024-11-29_7143-page-4-4'), FileMetadata(uuid='3106200_2024-11-29_7143-page-5-5'), FileMetadata(uuid='3106200_2024-11-29_7143-page-6-6'), FileMetadata(uuid='3106200_2024-11-29_7143-page-7-7'), FileMetadata(uuid='3106200_2024-11-29_7143-page-8-8'), FileMetadata(uuid='3106200_2024-11-29_7143-page-9-9'), FileMetadata(uuid='3106200_2024-11-30_7144-page-0-0'), FileMetadata(uuid='3106200_2024-11-30_7144-page-1-1'), FileMetadata(uuid='3106200_2024-11-30_7144-page-10-10'), FileMetadata(uuid='3106200_2024-11-30_7144-page-11-11'), FileMetadata(uuid='3106200_2024-11-30_7144-page-12-12'), FileMetadata(uuid='3106200_2024-11-30_7144-page-13-13'), FileMetadata(uuid='3106200_2024-11-30_7144-page-14-14'), FileMetadata(uuid='3106200_2024-11-30_7144-page-15-15'), FileMetadata(uuid='3106200_2024-11-30_7144-page-16-16'), FileMetadata(uuid='3106200_2024-11-30_7144-page-17-17'), FileMetadata(uuid='3106200_2024-11-30_7144-page-18-18'), FileMetadata(uuid='3106200_2024-11-30_7144-page-19-19'), FileMetadata(uuid='3106200_2024-11-30_7144-page-2-2'), FileMetadata(uuid='3106200_2024-11-30_7144-page-20-20'), FileMetadata(uuid='3106200_2024-11-30_7144-page-21-21'), FileMetadata(uuid='3106200_2024-11-30_7144-page-22-22'), FileMetadata(uuid='3106200_2024-11-30_7144-page-23-23'), FileMetadata(uuid='3106200_2024-11-30_7144-page-24-24'), FileMetadata(uuid='3106200_2024-11-30_7144-page-25-25'), FileMetadata(uuid='3106200_2024-11-30_7144-page-26-26'), FileMetadata(uuid='3106200_2024-11-30_7144-page-27-27'), FileMetadata(uuid='3106200_2024-11-30_7144-page-28-28'), FileMetadata(uuid='3106200_2024-11-30_7144-page-29-29'), FileMetadata(uuid='3106200_2024-11-30_7144-page-3-3'), FileMetadata(uuid='3106200_2024-11-30_7144-page-30-30'), FileMetadata(uuid='3106200_2024-11-30_7144-page-31-31'), FileMetadata(uuid='3106200_2024-11-30_7144-page-32-32'), FileMetadata(uuid='3106200_2024-11-30_7144-page-33-33'), FileMetadata(uuid='3106200_2024-11-30_7144-page-34-34'), FileMetadata(uuid='3106200_2024-11-30_7144-page-35-35'), FileMetadata(uuid='3106200_2024-11-30_7144-page-36-36'), FileMetadata(uuid='3106200_2024-11-30_7144-page-37-37'), FileMetadata(uuid='3106200_2024-11-30_7144-page-4-4'), FileMetadata(uuid='3106200_2024-11-30_7144-page-5-5'), FileMetadata(uuid='3106200_2024-11-30_7144-page-6-6'), FileMetadata(uuid='3106200_2024-11-30_7144-page-7-7'), FileMetadata(uuid='3106200_2024-11-30_7144-page-8-8'), FileMetadata(uuid='3106200_2024-11-30_7144-page-9-9'), FileMetadata(uuid='3106200_2024-12-03_7145-page-0-0'), FileMetadata(uuid='3106200_2024-12-03_7145-page-1-1'), FileMetadata(uuid='3106200_2024-12-03_7145-page-10-10'), FileMetadata(uuid='3106200_2024-12-03_7145-page-11-11'), FileMetadata(uuid='3106200_2024-12-03_7145-page-12-12'), FileMetadata(uuid='3106200_2024-12-03_7145-page-13-13'), FileMetadata(uuid='3106200_2024-12-03_7145-page-14-14'), FileMetadata(uuid='3106200_2024-12-03_7145-page-15-15'), FileMetadata(uuid='3106200_2024-12-03_7145-page-16-16'), FileMetadata(uuid='3106200_2024-12-03_7145-page-17-17'), FileMetadata(uuid='3106200_2024-12-03_7145-page-18-18'), FileMetadata(uuid='3106200_2024-12-03_7145-page-19-19'), FileMetadata(uuid='3106200_2024-12-03_7145-page-2-2'), FileMetadata(uuid='3106200_2024-12-03_7145-page-20-20'), FileMetadata(uuid='3106200_2024-12-03_7145-page-21-21'), FileMetadata(uuid='3106200_2024-12-03_7145-page-22-22'), FileMetadata(uuid='3106200_2024-12-03_7145-page-23-23'), FileMetadata(uuid='3106200_2024-12-03_7145-page-24-24'), FileMetadata(uuid='3106200_2024-12-03_7145-page-25-25'), FileMetadata(uuid='3106200_2024-12-03_7145-page-26-26'), FileMetadata(uuid='3106200_2024-12-03_7145-page-27-27'), FileMetadata(uuid='3106200_2024-12-03_7145-page-28-28'), FileMetadata(uuid='3106200_2024-12-03_7145-page-29-29'), FileMetadata(uuid='3106200_2024-12-03_7145-page-3-3'), FileMetadata(uuid='3106200_2024-12-03_7145-page-30-30'), FileMetadata(uuid='3106200_2024-12-03_7145-page-31-31'), FileMetadata(uuid='3106200_2024-12-03_7145-page-32-32'), FileMetadata(uuid='3106200_2024-12-03_7145-page-33-33'), FileMetadata(uuid='3106200_2024-12-03_7145-page-34-34'), FileMetadata(uuid='3106200_2024-12-03_7145-page-4-4'), FileMetadata(uuid='3106200_2024-12-03_7145-page-5-5'), FileMetadata(uuid='3106200_2024-12-03_7145-page-6-6'), FileMetadata(uuid='3106200_2024-12-03_7145-page-7-7'), FileMetadata(uuid='3106200_2024-12-03_7145-page-8-8'), FileMetadata(uuid='3106200_2024-12-03_7145-page-9-9'), FileMetadata(uuid='3106200_2024-12-04_7146-page-0-0'), FileMetadata(uuid='3106200_2024-12-04_7146-page-1-1'), FileMetadata(uuid='3106200_2024-12-04_7146-page-10-10'), FileMetadata(uuid='3106200_2024-12-04_7146-page-11-11'), FileMetadata(uuid='3106200_2024-12-04_7146-page-12-12'), FileMetadata(uuid='3106200_2024-12-04_7146-page-13-13'), FileMetadata(uuid='3106200_2024-12-04_7146-page-14-14'), FileMetadata(uuid='3106200_2024-12-04_7146-page-15-15'), FileMetadata(uuid='3106200_2024-12-04_7146-page-16-16'), FileMetadata(uuid='3106200_2024-12-04_7146-page-17-17'), FileMetadata(uuid='3106200_2024-12-04_7146-page-18-18'), FileMetadata(uuid='3106200_2024-12-04_7146-page-19-19'), FileMetadata(uuid='3106200_2024-12-04_7146-page-2-2'), FileMetadata(uuid='3106200_2024-12-04_7146-page-20-20'), FileMetadata(uuid='3106200_2024-12-04_7146-page-21-21'), FileMetadata(uuid='3106200_2024-12-04_7146-page-22-22'), FileMetadata(uuid='3106200_2024-12-04_7146-page-23-23'), FileMetadata(uuid='3106200_2024-12-04_7146-page-24-24'), FileMetadata(uuid='3106200_2024-12-04_7146-page-25-25'), FileMetadata(uuid='3106200_2024-12-04_7146-page-26-26'), FileMetadata(uuid='3106200_2024-12-04_7146-page-27-27'), FileMetadata(uuid='3106200_2024-12-04_7146-page-28-28'), FileMetadata(uuid='3106200_2024-12-04_7146-page-29-29'), FileMetadata(uuid='3106200_2024-12-04_7146-page-3-3'), FileMetadata(uuid='3106200_2024-12-04_7146-page-30-30'), FileMetadata(uuid='3106200_2024-12-04_7146-page-31-31'), FileMetadata(uuid='3106200_2024-12-04_7146-page-32-32'), FileMetadata(uuid='3106200_2024-12-04_7146-page-33-33'), FileMetadata(uuid='3106200_2024-12-04_7146-page-34-34'), FileMetadata(uuid='3106200_2024-12-04_7146-page-35-35'), FileMetadata(uuid='3106200_2024-12-04_7146-page-36-36'), FileMetadata(uuid='3106200_2024-12-04_7146-page-37-37'), FileMetadata(uuid='3106200_2024-12-04_7146-page-38-38'), FileMetadata(uuid='3106200_2024-12-04_7146-page-39-39'), FileMetadata(uuid='3106200_2024-12-04_7146-page-4-4'), FileMetadata(uuid='3106200_2024-12-04_7146-page-5-5'), FileMetadata(uuid='3106200_2024-12-04_7146-page-6-6'), FileMetadata(uuid='3106200_2024-12-04_7146-page-7-7'), FileMetadata(uuid='3106200_2024-12-04_7146-page-8-8'), FileMetadata(uuid='3106200_2024-12-04_7146-page-9-9'), FileMetadata(uuid='3106200_2024-12-05_7147-page-0-0'), FileMetadata(uuid='3106200_2024-12-05_7147-page-1-1'), FileMetadata(uuid='3106200_2024-12-05_7147-page-10-10'), FileMetadata(uuid='3106200_2024-12-05_7147-page-11-11'), FileMetadata(uuid='3106200_2024-12-05_7147-page-12-12'), FileMetadata(uuid='3106200_2024-12-05_7147-page-13-13'), FileMetadata(uuid='3106200_2024-12-05_7147-page-14-14'), FileMetadata(uuid='3106200_2024-12-05_7147-page-15-15'), FileMetadata(uuid='3106200_2024-12-05_7147-page-16-16'), FileMetadata(uuid='3106200_2024-12-05_7147-page-17-17'), FileMetadata(uuid='3106200_2024-12-05_7147-page-18-18'), FileMetadata(uuid='3106200_2024-12-05_7147-page-19-19'), FileMetadata(uuid='3106200_2024-12-05_7147-page-2-2'), FileMetadata(uuid='3106200_2024-12-05_7147-page-20-20'), FileMetadata(uuid='3106200_2024-12-05_7147-page-21-21'), FileMetadata(uuid='3106200_2024-12-05_7147-page-22-22'), FileMetadata(uuid='3106200_2024-12-05_7147-page-3-3'), FileMetadata(uuid='3106200_2024-12-05_7147-page-4-4'), FileMetadata(uuid='3106200_2024-12-05_7147-page-5-5'), FileMetadata(uuid='3106200_2024-12-05_7147-page-6-6'), FileMetadata(uuid='3106200_2024-12-05_7147-page-7-7'), FileMetadata(uuid='3106200_2024-12-05_7147-page-8-8'), FileMetadata(uuid='3106200_2024-12-05_7147-page-9-9'), FileMetadata(uuid='3106200_2024-12-06_7148-page-0-0'), FileMetadata(uuid='3106200_2024-12-06_7148-page-1-1'), FileMetadata(uuid='3106200_2024-12-06_7148-page-10-10'), FileMetadata(uuid='3106200_2024-12-06_7148-page-11-11'), FileMetadata(uuid='3106200_2024-12-06_7148-page-12-12'), FileMetadata(uuid='3106200_2024-12-06_7148-page-13-13'), FileMetadata(uuid='3106200_2024-12-06_7148-page-14-14'), FileMetadata(uuid='3106200_2024-12-06_7148-page-15-15'), FileMetadata(uuid='3106200_2024-12-06_7148-page-16-16'), FileMetadata(uuid='3106200_2024-12-06_7148-page-17-17'), FileMetadata(uuid='3106200_2024-12-06_7148-page-18-18'), FileMetadata(uuid='3106200_2024-12-06_7148-page-19-19'), FileMetadata(uuid='3106200_2024-12-06_7148-page-2-2'), FileMetadata(uuid='3106200_2024-12-06_7148-page-20-20'), FileMetadata(uuid='3106200_2024-12-06_7148-page-21-21'), FileMetadata(uuid='3106200_2024-12-06_7148-page-22-22'), FileMetadata(uuid='3106200_2024-12-06_7148-page-23-23'), FileMetadata(uuid='3106200_2024-12-06_7148-page-24-24'), FileMetadata(uuid='3106200_2024-12-06_7148-page-25-25'), FileMetadata(uuid='3106200_2024-12-06_7148-page-26-26'), FileMetadata(uuid='3106200_2024-12-06_7148-page-27-27'), FileMetadata(uuid='3106200_2024-12-06_7148-page-28-28'), FileMetadata(uuid='3106200_2024-12-06_7148-page-29-29'), FileMetadata(uuid='3106200_2024-12-06_7148-page-3-3'), FileMetadata(uuid='3106200_2024-12-06_7148-page-30-30'), FileMetadata(uuid='3106200_2024-12-06_7148-page-31-31'), FileMetadata(uuid='3106200_2024-12-06_7148-page-32-32'), FileMetadata(uuid='3106200_2024-12-06_7148-page-33-33'), FileMetadata(uuid='3106200_2024-12-06_7148-page-34-34'), FileMetadata(uuid='3106200_2024-12-06_7148-page-35-35'), FileMetadata(uuid='3106200_2024-12-06_7148-page-36-36'), FileMetadata(uuid='3106200_2024-12-06_7148-page-37-37'), FileMetadata(uuid='3106200_2024-12-06_7148-page-38-38'), FileMetadata(uuid='3106200_2024-12-06_7148-page-39-39'), FileMetadata(uuid='3106200_2024-12-06_7148-page-4-4'), FileMetadata(uuid='3106200_2024-12-06_7148-page-5-5'), FileMetadata(uuid='3106200_2024-12-06_7148-page-6-6'), FileMetadata(uuid='3106200_2024-12-06_7148-page-7-7'), FileMetadata(uuid='3106200_2024-12-06_7148-page-8-8'), FileMetadata(uuid='3106200_2024-12-06_7148-page-9-9'), FileMetadata(uuid='3106200_2024-12-07_7149-page-0-0'), FileMetadata(uuid='3106200_2024-12-07_7149-page-1-1'), FileMetadata(uuid='3106200_2024-12-07_7149-page-10-10'), FileMetadata(uuid='3106200_2024-12-07_7149-page-11-11'), FileMetadata(uuid='3106200_2024-12-07_7149-page-12-12'), FileMetadata(uuid='3106200_2024-12-07_7149-page-13-13'), FileMetadata(uuid='3106200_2024-12-07_7149-page-14-14'), FileMetadata(uuid='3106200_2024-12-07_7149-page-15-15'), FileMetadata(uuid='3106200_2024-12-07_7149-page-16-16'), FileMetadata(uuid='3106200_2024-12-07_7149-page-17-17'), FileMetadata(uuid='3106200_2024-12-07_7149-page-18-18'), FileMetadata(uuid='3106200_2024-12-07_7149-page-19-19'), FileMetadata(uuid='3106200_2024-12-07_7149-page-2-2'), FileMetadata(uuid='3106200_2024-12-07_7149-page-20-20'), FileMetadata(uuid='3106200_2024-12-07_7149-page-21-21'), FileMetadata(uuid='3106200_2024-12-07_7149-page-22-22'), FileMetadata(uuid='3106200_2024-12-07_7149-page-23-23'), FileMetadata(uuid='3106200_2024-12-07_7149-page-24-24'), FileMetadata(uuid='3106200_2024-12-07_7149-page-25-25'), FileMetadata(uuid='3106200_2024-12-07_7149-page-26-26'), FileMetadata(uuid='3106200_2024-12-07_7149-page-27-27'), FileMetadata(uuid='3106200_2024-12-07_7149-page-28-28'), FileMetadata(uuid='3106200_2024-12-07_7149-page-29-29'), FileMetadata(uuid='3106200_2024-12-07_7149-page-3-3'), FileMetadata(uuid='3106200_2024-12-07_7149-page-30-30'), FileMetadata(uuid='3106200_2024-12-07_7149-page-31-31'), FileMetadata(uuid='3106200_2024-12-07_7149-page-32-32'), FileMetadata(uuid='3106200_2024-12-07_7149-page-33-33'), FileMetadata(uuid='3106200_2024-12-07_7149-page-34-34'), FileMetadata(uuid='3106200_2024-12-07_7149-page-35-35'), FileMetadata(uuid='3106200_2024-12-07_7149-page-36-36'), FileMetadata(uuid='3106200_2024-12-07_7149-page-37-37'), FileMetadata(uuid='3106200_2024-12-07_7149-page-38-38'), FileMetadata(uuid='3106200_2024-12-07_7149-page-39-39'), FileMetadata(uuid='3106200_2024-12-07_7149-page-4-4'), FileMetadata(uuid='3106200_2024-12-07_7149-page-40-40'), FileMetadata(uuid='3106200_2024-12-07_7149-page-41-41'), FileMetadata(uuid='3106200_2024-12-07_7149-page-42-42'), FileMetadata(uuid='3106200_2024-12-07_7149-page-43-43'), FileMetadata(uuid='3106200_2024-12-07_7149-page-44-44'), FileMetadata(uuid='3106200_2024-12-07_7149-page-45-45'), FileMetadata(uuid='3106200_2024-12-07_7149-page-5-5'), FileMetadata(uuid='3106200_2024-12-07_7149-page-6-6'), FileMetadata(uuid='3106200_2024-12-07_7149-page-7-7'), FileMetadata(uuid='3106200_2024-12-07_7149-page-8-8'), FileMetadata(uuid='3106200_2024-12-07_7149-page-9-9'), FileMetadata(uuid='3106200_2024-12-10_7150-page-0-0'), FileMetadata(uuid='3106200_2024-12-10_7150-page-1-1'), FileMetadata(uuid='3106200_2024-12-10_7150-page-10-10'), FileMetadata(uuid='3106200_2024-12-10_7150-page-11-11'), FileMetadata(uuid='3106200_2024-12-10_7150-page-12-12'), FileMetadata(uuid='3106200_2024-12-10_7150-page-13-13'), FileMetadata(uuid='3106200_2024-12-10_7150-page-14-14'), FileMetadata(uuid='3106200_2024-12-10_7150-page-15-15'), FileMetadata(uuid='3106200_2024-12-10_7150-page-16-16'), FileMetadata(uuid='3106200_2024-12-10_7150-page-17-17'), FileMetadata(uuid='3106200_2024-12-10_7150-page-18-18'), FileMetadata(uuid='3106200_2024-12-10_7150-page-19-19'), FileMetadata(uuid='3106200_2024-12-10_7150-page-2-2'), FileMetadata(uuid='3106200_2024-12-10_7150-page-20-20'), FileMetadata(uuid='3106200_2024-12-10_7150-page-21-21'), FileMetadata(uuid='3106200_2024-12-10_7150-page-3-3'), FileMetadata(uuid='3106200_2024-12-10_7150-page-4-4'), FileMetadata(uuid='3106200_2024-12-10_7150-page-5-5'), FileMetadata(uuid='3106200_2024-12-10_7150-page-6-6'), FileMetadata(uuid='3106200_2024-12-10_7150-page-7-7'), FileMetadata(uuid='3106200_2024-12-10_7150-page-8-8'), FileMetadata(uuid='3106200_2024-12-10_7150-page-9-9'), FileMetadata(uuid='3106200_2024-12-11_7151-page-0-0'), FileMetadata(uuid='3106200_2024-12-11_7151-page-1-1'), FileMetadata(uuid='3106200_2024-12-11_7151-page-10-10'), FileMetadata(uuid='3106200_2024-12-11_7151-page-11-11'), FileMetadata(uuid='3106200_2024-12-11_7151-page-12-12'), FileMetadata(uuid='3106200_2024-12-11_7151-page-13-13'), FileMetadata(uuid='3106200_2024-12-11_7151-page-14-14'), FileMetadata(uuid='3106200_2024-12-11_7151-page-15-15'), FileMetadata(uuid='3106200_2024-12-11_7151-page-16-16'), FileMetadata(uuid='3106200_2024-12-11_7151-page-17-17'), FileMetadata(uuid='3106200_2024-12-11_7151-page-18-18'), FileMetadata(uuid='3106200_2024-12-11_7151-page-19-19'), FileMetadata(uuid='3106200_2024-12-11_7151-page-2-2'), FileMetadata(uuid='3106200_2024-12-11_7151-page-20-20'), FileMetadata(uuid='3106200_2024-12-11_7151-page-21-21'), FileMetadata(uuid='3106200_2024-12-11_7151-page-22-22'), FileMetadata(uuid='3106200_2024-12-11_7151-page-23-23'), FileMetadata(uuid='3106200_2024-12-11_7151-page-24-24'), FileMetadata(uuid='3106200_2024-12-11_7151-page-25-25'), FileMetadata(uuid='3106200_2024-12-11_7151-page-26-26'), FileMetadata(uuid='3106200_2024-12-11_7151-page-27-27'), FileMetadata(uuid='3106200_2024-12-11_7151-page-28-28'), FileMetadata(uuid='3106200_2024-12-11_7151-page-29-29'), FileMetadata(uuid='3106200_2024-12-11_7151-page-3-3'), FileMetadata(uuid='3106200_2024-12-11_7151-page-30-30'), FileMetadata(uuid='3106200_2024-12-11_7151-page-31-31'), FileMetadata(uuid='3106200_2024-12-11_7151-page-32-32'), FileMetadata(uuid='3106200_2024-12-11_7151-page-33-33'), FileMetadata(uuid='3106200_2024-12-11_7151-page-34-34'), FileMetadata(uuid='3106200_2024-12-11_7151-page-35-35'), FileMetadata(uuid='3106200_2024-12-11_7151-page-4-4'), FileMetadata(uuid='3106200_2024-12-11_7151-page-5-5'), FileMetadata(uuid='3106200_2024-12-11_7151-page-6-6'), FileMetadata(uuid='3106200_2024-12-11_7151-page-7-7'), FileMetadata(uuid='3106200_2024-12-11_7151-page-8-8'), FileMetadata(uuid='3106200_2024-12-11_7151-page-9-9'), FileMetadata(uuid='3106200_2024-12-12_7152-page-0-0'), FileMetadata(uuid='3106200_2024-12-12_7152-page-1-1'), FileMetadata(uuid='3106200_2024-12-12_7152-page-2-2')]
+[2025-01-25T16:13:44.395+0000] {logging_mixin.py:190} INFO - Adding batch of documents
+[2025-01-25T16:13:45.678+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T16:13:45.900+0000] {logging_mixin.py:190} INFO - Added 13 chunks for document: 3106200_2024-11-26_7140-page-0-0
+[2025-01-25T16:13:46.155+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T16:13:46.352+0000] {logging_mixin.py:190} INFO - Added 13 chunks for document: 3106200_2024-11-26_7140-page-1-1
+[2025-01-25T16:13:46.582+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T16:13:46.767+0000] {logging_mixin.py:190} INFO - Added 12 chunks for document: 3106200_2024-11-26_7140-page-10-10
+[2025-01-25T16:13:47.003+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T16:13:47.205+0000] {logging_mixin.py:190} INFO - Added 11 chunks for document: 3106200_2024-11-26_7140-page-11-11
+[2025-01-25T16:13:47.463+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T16:13:47.766+0000] {logging_mixin.py:190} INFO - Added 13 chunks for document: 3106200_2024-11-26_7140-page-12-12
+[2025-01-25T16:13:48.024+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T16:13:48.259+0000] {logging_mixin.py:190} INFO - Added 16 chunks for document: 3106200_2024-11-26_7140-page-13-13
+[2025-01-25T16:13:48.739+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T16:13:48.972+0000] {logging_mixin.py:190} INFO - Added 11 chunks for document: 3106200_2024-11-26_7140-page-14-14
+[2025-01-25T16:13:49.215+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T16:13:49.417+0000] {logging_mixin.py:190} INFO - Added 12 chunks for document: 3106200_2024-11-26_7140-page-15-15
+[2025-01-25T16:13:49.643+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T16:13:49.876+0000] {logging_mixin.py:190} INFO - Added 11 chunks for document: 3106200_2024-11-26_7140-page-16-16
+[2025-01-25T16:13:50.119+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T16:13:50.315+0000] {logging_mixin.py:190} INFO - Added 11 chunks for document: 3106200_2024-11-26_7140-page-17-17
+[2025-01-25T16:13:50.566+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T16:13:50.834+0000] {logging_mixin.py:190} INFO - Added 13 chunks for document: 3106200_2024-11-26_7140-page-18-18
+[2025-01-25T16:13:51.057+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T16:13:51.301+0000] {logging_mixin.py:190} INFO - Added 12 chunks for document: 3106200_2024-11-26_7140-page-19-19
+[2025-01-25T16:13:51.304+0000] {before_sleep.py:65} WARNING - Retrying langchain_cohere.embeddings.CohereEmbeddings.embed_with_retry.<locals>._embed_with_retry in 4.0 seconds as it raised IndexError: list index out of range.
+[2025-01-25T16:13:55.305+0000] {before_sleep.py:65} WARNING - Retrying langchain_cohere.embeddings.CohereEmbeddings.embed_with_retry.<locals>._embed_with_retry in 4.0 seconds as it raised IndexError: list index out of range.
+[2025-01-25T16:13:59.307+0000] {taskinstance.py:3310} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/utils/generate_index_task.py", line 198, in execute
+    self.add_batch_documents(file_metadata_list)
+  File "/opt/airflow/dags/utils/generate_index_task.py", line 163, in add_batch_documents
+    self.add_document(path, file_metadata)
+  File "/opt/airflow/dags/utils/generate_index_task.py", line 145, in add_document
+    vector_db_ids = self.vector_store.add_documents(documents=docs, ids=chunks_uuids)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/langchain_core/vectorstores/base.py", line 287, in add_documents
+    return self.add_texts(texts, metadatas, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/langchain_community/vectorstores/faiss.py", line 340, in add_texts
+    embeddings = self._embed_documents(texts)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/langchain_community/vectorstores/faiss.py", line 248, in _embed_documents
+    return self.embedding_function.embed_documents(texts)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/langchain_cohere/embeddings.py", line 191, in embed_documents
+    return self.embed(texts, input_type="search_document")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/langchain_cohere/embeddings.py", line 142, in embed
+    response = self.embed_with_retry(
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/langchain_cohere/embeddings.py", line 124, in embed_with_retry
+    return _embed_with_retry(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/tenacity/__init__.py", line 336, in wrapped_f
+    return copy(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/tenacity/__init__.py", line 475, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/tenacity/__init__.py", line 376, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/tenacity/__init__.py", line 418, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/tenacity/__init__.py", line 185, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/airflow/.local/lib/python3.12/site-packages/tenacity/__init__.py", line 478, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/langchain_cohere/embeddings.py", line 122, in _embed_with_retry
+    return self.client.embed(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/cohere/client.py", line 224, in embed
+    return merge_embed_responses(responses)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/cohere/utils.py", line 196, in merge_embed_responses
+    if responses[0].response_type == "embeddings_floats":
+       ~~~~~~~~~^^^
+IndexError: list index out of range
+[2025-01-25T16:13:59.335+0000] {taskinstance.py:1225} INFO - Marking task as UP_FOR_RETRY. dag_id=pull_gazettes_data, task_id=generate_indexes_task, run_id=scheduled__2025-01-24T00:00:00+00:00, execution_date=20250124T000000, start_date=20250125T161343, end_date=20250125T161359
+[2025-01-25T16:13:59.351+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-25T16:13:59.352+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 100 for task generate_indexes_task (list index out of range; 14852)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 115, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3004, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3158, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3182, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/utils/generate_index_task.py", line 198, in execute
+    self.add_batch_documents(file_metadata_list)
+  File "/opt/airflow/dags/utils/generate_index_task.py", line 163, in add_batch_documents
+    self.add_document(path, file_metadata)
+  File "/opt/airflow/dags/utils/generate_index_task.py", line 145, in add_document
+    vector_db_ids = self.vector_store.add_documents(documents=docs, ids=chunks_uuids)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/langchain_core/vectorstores/base.py", line 287, in add_documents
+    return self.add_texts(texts, metadatas, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/langchain_community/vectorstores/faiss.py", line 340, in add_texts
+    embeddings = self._embed_documents(texts)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/langchain_community/vectorstores/faiss.py", line 248, in _embed_documents
+    return self.embedding_function.embed_documents(texts)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/langchain_cohere/embeddings.py", line 191, in embed_documents
+    return self.embed(texts, input_type="search_document")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/langchain_cohere/embeddings.py", line 142, in embed
+    response = self.embed_with_retry(
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/langchain_cohere/embeddings.py", line 124, in embed_with_retry
+    return _embed_with_retry(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/tenacity/__init__.py", line 336, in wrapped_f
+    return copy(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/tenacity/__init__.py", line 475, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/tenacity/__init__.py", line 376, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/tenacity/__init__.py", line 418, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/tenacity/__init__.py", line 185, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/airflow/.local/lib/python3.12/site-packages/tenacity/__init__.py", line 478, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/langchain_cohere/embeddings.py", line 122, in _embed_with_retry
+    return self.client.embed(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/cohere/client.py", line 224, in embed
+    return merge_embed_responses(responses)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/cohere/utils.py", line 196, in merge_embed_responses
+    if responses[0].response_type == "embeddings_floats":
+       ~~~~~~~~~^^^
+IndexError: list index out of range
+[2025-01-25T16:13:59.383+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-01-25T16:13:59.404+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-01-25T16:13:59.407+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

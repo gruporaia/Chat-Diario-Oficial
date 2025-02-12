@@ -1,0 +1,58 @@
+[2025-01-24T19:13:32.209+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-24T19:13:32.231+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pull_gazettes_data.preprocess_documents_task scheduled__2025-01-22T00:00:00+00:00 [queued]>
+[2025-01-24T19:13:32.243+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pull_gazettes_data.preprocess_documents_task scheduled__2025-01-22T00:00:00+00:00 [queued]>
+[2025-01-24T19:13:32.244+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2025-01-24T19:13:32.262+0000] {taskinstance.py:2888} INFO - Executing <Task(PreprocessDocuments): preprocess_documents_task> on 2025-01-22 00:00:00+00:00
+[2025-01-24T19:13:32.280+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=180) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-24T19:13:32.282+0000] {standard_task_runner.py:72} INFO - Started process 213 to run task
+[2025-01-24T19:13:32.282+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'pull_gazettes_data', 'preprocess_documents_task', 'scheduled__2025-01-22T00:00:00+00:00', '--job-id', '52', '--raw', '--subdir', 'DAGS_FOLDER/dag_script.py', '--cfg-path', '/tmp/tmpx0u2p77d']
+[2025-01-24T19:13:32.285+0000] {standard_task_runner.py:105} INFO - Job 52: Subtask preprocess_documents_task
+[2025-01-24T19:13:32.335+0000] {task_command.py:467} INFO - Running <TaskInstance: pull_gazettes_data.preprocess_documents_task scheduled__2025-01-22T00:00:00+00:00 [running]> on host 5792905bcb6a
+[2025-01-24T19:13:32.420+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='***@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='pull_gazettes_data' AIRFLOW_CTX_TASK_ID='preprocess_documents_task' AIRFLOW_CTX_EXECUTION_DATE='2025-01-22T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-01-22T00:00:00+00:00'
+[2025-01-24T19:13:32.422+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-24T19:13:32.438+0000] {logging_mixin.py:190} INFO - Checking pre processed documents log
+[2025-01-24T19:13:32.457+0000] {logging_mixin.py:190} INFO - Already preprocessed documents: set()
+[2025-01-24T19:13:32.625+0000] {document_converter.py:238} INFO - Going to convert document batch...
+[2025-01-24T19:13:32.952+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T19:13:35.427+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T19:13:36.059+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T19:13:36.586+0000] {base_pipeline.py:37} INFO - Processing document 3106200_2024-11-22_7138.pdf
+[2025-01-24T20:05:51.289+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-24T20:05:51.306+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pull_gazettes_data.preprocess_documents_task scheduled__2025-01-22T00:00:00+00:00 [queued]>
+[2025-01-24T20:05:51.315+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pull_gazettes_data.preprocess_documents_task scheduled__2025-01-22T00:00:00+00:00 [queued]>
+[2025-01-24T20:05:51.316+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2025-01-24T20:05:51.328+0000] {taskinstance.py:2888} INFO - Executing <Task(PreprocessDocuments): preprocess_documents_task> on 2025-01-22 00:00:00+00:00
+[2025-01-24T20:05:51.346+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=921) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-24T20:05:51.348+0000] {standard_task_runner.py:72} INFO - Started process 949 to run task
+[2025-01-24T20:05:51.348+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'pull_gazettes_data', 'preprocess_documents_task', 'scheduled__2025-01-22T00:00:00+00:00', '--job-id', '19', '--raw', '--subdir', 'DAGS_FOLDER/dag_script.py', '--cfg-path', '/tmp/tmp1gcem122']
+[2025-01-24T20:05:51.350+0000] {standard_task_runner.py:105} INFO - Job 19: Subtask preprocess_documents_task
+[2025-01-24T20:05:51.395+0000] {task_command.py:467} INFO - Running <TaskInstance: pull_gazettes_data.preprocess_documents_task scheduled__2025-01-22T00:00:00+00:00 [running]> on host 972b45cbfb12
+[2025-01-24T20:05:51.461+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='***@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='pull_gazettes_data' AIRFLOW_CTX_TASK_ID='preprocess_documents_task' AIRFLOW_CTX_EXECUTION_DATE='2025-01-22T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-01-22T00:00:00+00:00'
+[2025-01-24T20:05:51.462+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-24T20:05:51.474+0000] {logging_mixin.py:190} INFO - Checking pre processed documents log
+[2025-01-24T20:05:51.481+0000] {logging_mixin.py:190} INFO - Already preprocessed documents: set()
+[2025-01-24T20:05:51.592+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-24T20:05:51.891+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:05:54.465+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:05:55.102+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:05:55.671+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-11-22_7138.pdf
+[2025-01-24T20:07:22.800+0000] {job.py:229} INFO - Heartbeat recovered after 25.48 seconds
+[2025-01-24T20:10:15.683+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-11-22_7138.pdf in 264.22 sec.
+[2025-01-24T20:10:16.023+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-24T20:10:16.317+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:10:18.833+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:10:19.317+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:10:19.894+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-11-23_7139.pdf
+[2025-01-24T20:12:26.410+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-11-23_7139.pdf in 130.48 sec.
+[2025-01-24T20:12:26.609+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-24T20:12:26.763+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:12:29.191+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:12:29.708+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:12:30.225+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-11-26_7140.pdf
+[2025-01-24T20:12:38.338+0000] {local_task_job_runner.py:266} INFO - Task exited with return code -9For more information, see https://***.apache.org/docs/apache-***/stable/troubleshooting.html#LocalTaskJob-killed
+[2025-01-24T20:12:38.371+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-01-24T20:12:38.374+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

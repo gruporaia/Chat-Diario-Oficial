@@ -1,0 +1,202 @@
+[2025-01-25T01:40:30.490+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-25T01:40:30.507+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pull_gazettes_data.preprocess_documents_task scheduled__2025-01-24T00:00:00+00:00 [queued]>
+[2025-01-25T01:40:30.517+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pull_gazettes_data.preprocess_documents_task scheduled__2025-01-24T00:00:00+00:00 [queued]>
+[2025-01-25T01:40:30.518+0000] {taskinstance.py:2865} INFO - Starting attempt 17 of 18
+[2025-01-25T01:40:30.530+0000] {taskinstance.py:2888} INFO - Executing <Task(PreprocessDocuments): preprocess_documents_task> on 2025-01-24 00:00:00+00:00
+[2025-01-25T01:40:30.558+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=6836) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-25T01:40:30.560+0000] {standard_task_runner.py:72} INFO - Started process 6867 to run task
+[2025-01-25T01:40:30.560+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'pull_gazettes_data', 'preprocess_documents_task', 'scheduled__2025-01-24T00:00:00+00:00', '--job-id', '63', '--raw', '--subdir', 'DAGS_FOLDER/dag_script.py', '--cfg-path', '/tmp/tmppu4wco36']
+[2025-01-25T01:40:30.562+0000] {standard_task_runner.py:105} INFO - Job 63: Subtask preprocess_documents_task
+[2025-01-25T01:40:30.608+0000] {task_command.py:467} INFO - Running <TaskInstance: pull_gazettes_data.preprocess_documents_task scheduled__2025-01-24T00:00:00+00:00 [running]> on host 41bcec3d818b
+[2025-01-25T01:40:30.680+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='***@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='pull_gazettes_data' AIRFLOW_CTX_TASK_ID='preprocess_documents_task' AIRFLOW_CTX_EXECUTION_DATE='2025-01-24T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='17' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-01-24T00:00:00+00:00'
+[2025-01-25T01:40:30.682+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-25T01:40:30.700+0000] {logging_mixin.py:190} INFO - Checking pre processed documents log
+[2025-01-25T01:40:30.709+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-11-26_7140.pdf into multiple PDF single pages
+[2025-01-25T01:40:30.769+0000] {logging_mixin.py:190} INFO - [(4, 3, 410, 410, 8, 'CalRGB', '', 'Xi2', 'FlateDecode', 0), (3, 0, 410, 410, 8, 'DeviceGray', '', 'Xi1', 'FlateDecode', 0)]
+[2025-01-25T01:40:30.866+0000] {logging_mixin.py:190} INFO - [(4, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi5', '', 0), (3, 8641, 1, 1, 8, 'DeviceGray', '', 'Xi4', '', 0)]
+[2025-01-25T01:40:30.923+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-2-2.pdf already broken down into
+[2025-01-25T01:40:30.924+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-3-3.pdf already broken down into
+[2025-01-25T01:40:30.925+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-4-4.pdf already broken down into
+[2025-01-25T01:40:30.925+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-5-5.pdf already broken down into
+[2025-01-25T01:40:30.926+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-6-6.pdf already broken down into
+[2025-01-25T01:40:30.926+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-7-7.pdf already broken down into
+[2025-01-25T01:40:30.927+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-8-8.pdf already broken down into
+[2025-01-25T01:40:30.927+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-9-9.pdf already broken down into
+[2025-01-25T01:40:30.928+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-10-10.pdf already broken down into
+[2025-01-25T01:40:30.928+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-11-11.pdf already broken down into
+[2025-01-25T01:40:30.928+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-12-12.pdf already broken down into
+[2025-01-25T01:40:30.929+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-13-13.pdf already broken down into
+[2025-01-25T01:40:30.929+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-14-14.pdf already broken down into
+[2025-01-25T01:40:30.930+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-15-15.pdf already broken down into
+[2025-01-25T01:40:30.930+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-16-16.pdf already broken down into
+[2025-01-25T01:40:30.931+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-17-17.pdf already broken down into
+[2025-01-25T01:40:30.931+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-18-18.pdf already broken down into
+[2025-01-25T01:40:30.931+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-19-19.pdf already broken down into
+[2025-01-25T01:40:30.932+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-20-20.pdf already broken down into
+[2025-01-25T01:40:30.933+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-21-21.pdf already broken down into
+[2025-01-25T01:40:30.933+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-22-22.pdf already broken down into
+[2025-01-25T01:40:30.933+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-23-23.pdf already broken down into
+[2025-01-25T01:40:30.934+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-24-24.pdf already broken down into
+[2025-01-25T01:40:30.934+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-25-25.pdf already broken down into
+[2025-01-25T01:40:30.934+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-26-26.pdf already broken down into
+[2025-01-25T01:40:30.935+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-27-27.pdf already broken down into
+[2025-01-25T01:40:30.935+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-28-28.pdf already broken down into
+[2025-01-25T01:40:30.936+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-29-29.pdf already broken down into
+[2025-01-25T01:40:30.936+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-30-30.pdf already broken down into
+[2025-01-25T01:40:30.937+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-31-31.pdf already broken down into
+[2025-01-25T01:40:30.937+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-32-32.pdf already broken down into
+[2025-01-25T01:40:30.942+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: [] file_uuid_breakdown
+[2025-01-25T01:40:31.037+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T01:40:31.411+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T01:40:33.662+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T01:40:34.218+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T01:40:34.699+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-11-26_7140-page-0-0.pdf
+[2025-01-25T01:40:36.585+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-11-26_7140-page-0-0.pdf in 5.64 sec.
+[2025-01-25T01:40:36.592+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-11-26_7140-page-0-0.md
+[2025-01-25T01:40:36.605+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-11-26_7140  ... 2025-01-25 01:40:36.589499
+
+[1 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T01:40:36.612+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T01:40:36.892+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T01:40:38.840+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T01:40:39.227+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T01:40:39.549+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-11-26_7140-page-1-1.pdf
+[2025-01-25T01:40:40.689+0000] {local_task_job_runner.py:346} WARNING - State of this instance has been externally set to up_for_retry. Terminating instance.
+[2025-01-25T01:40:40.692+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-01-25T01:40:40.697+0000] {process_utils.py:132} INFO - Sending 15 to group 6867. PIDs of all processes in the group: [6867]
+[2025-01-25T01:40:40.698+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 6867
+[2025-01-25T01:40:40.700+0000] {taskinstance.py:3092} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-01-25T01:40:40.719+0000] {taskinstance.py:3310} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/utils/preprocess_documents.py", line 172, in execute
+    self.process_files()
+  File "/opt/airflow/dags/utils/preprocess_documents.py", line 156, in process_files
+    preprocessed_document = self.preprocess_file(filepath)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/utils/preprocess_documents.py", line 132, in preprocess_file
+    result = converter.convert(source)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pydantic/_internal/_validate_call.py", line 38, in wrapper_function
+    return wrapper(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pydantic/_internal/_validate_call.py", line 111, in __call__
+    res = self.__pydantic_validator__.validate_python(pydantic_core.ArgsKwargs(args, kwargs))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docling/document_converter.py", line 195, in convert
+    return next(all_res)
+           ^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docling/document_converter.py", line 216, in convert_all
+    for conv_res in conv_res_iter:
+                    ^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docling/document_converter.py", line 251, in _convert
+    for item in map(
+                ^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docling/document_converter.py", line 292, in _process_document
+    conv_res = self._execute_pipeline(in_doc, raises_on_error=raises_on_error)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docling/document_converter.py", line 315, in _execute_pipeline
+    conv_res = pipeline.execute(in_doc, raises_on_error=raises_on_error)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docling/pipeline/base_pipeline.py", line 45, in execute
+    conv_res = self._build_document(conv_res)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docling/pipeline/base_pipeline.py", line 161, in _build_document
+    for p in pipeline_pages:  # Must exhaust!
+             ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docling/pipeline/base_pipeline.py", line 127, in _apply_on_pages
+    yield from page_batch
+  File "/home/airflow/.local/lib/python3.12/site-packages/docling/models/page_assemble_model.py", line 60, in __call__
+    for page in page_batch:
+                ^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docling/models/table_structure_model.py", line 136, in __call__
+    for page in page_batch:
+                ^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docling/models/layout_model.py", line 111, in __call__
+    for ix, pred_item in enumerate(
+                         ^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 36, in generator_context
+    response = gen.send(None)
+               ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docling_ibm_models/layoutmodel/layout_predictor.py", line 143, in predict
+    outputs = self._model(**inputs)
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/transformers/models/rt_detr/modeling_rt_detr.py", line 2094, in forward
+    outputs = self.model(
+              ^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/transformers/models/rt_detr/modeling_rt_detr.py", line 1814, in forward
+    encoder_outputs = self.encoder(
+                      ^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/transformers/models/rt_detr/modeling_rt_detr.py", line 1424, in forward
+    hidden_states = self.pan_blocks[idx](
+                    ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/transformers/models/rt_detr/modeling_rt_detr.py", line 723, in forward
+    hidden_state_1 = self.conv1(hidden_state)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/transformers/models/rt_detr/modeling_rt_detr.py", line 591, in forward
+    hidden_state = self.conv(hidden_state)
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/torch/nn/modules/conv.py", line 554, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/torch/nn/modules/conv.py", line 549, in _conv_forward
+    return F.conv2d(
+           ^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3094, in signal_handler
+    raise AirflowTaskTerminated("Task received SIGTERM signal")
+airflow.exceptions.AirflowTaskTerminated: Task received SIGTERM signal
+[2025-01-25T01:40:40.736+0000] {taskinstance.py:1225} INFO - Marking task as UP_FOR_RETRY. dag_id=pull_gazettes_data, task_id=preprocess_documents_task, run_id=scheduled__2025-01-24T00:00:00+00:00, execution_date=20250124T000000, start_date=20250125T014030, end_date=20250125T014040
+[2025-01-25T01:40:40.750+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-25T01:40:40.791+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=6867, status='terminated', exitcode=2, started='01:40:29') (6867) terminated with exit code 2
