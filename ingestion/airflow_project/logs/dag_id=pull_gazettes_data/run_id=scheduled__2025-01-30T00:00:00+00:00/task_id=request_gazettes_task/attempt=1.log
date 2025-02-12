@@ -1,0 +1,35 @@
+[2025-01-31T23:08:04.851+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-31T23:08:04.870+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pull_gazettes_data.request_gazettes_task scheduled__2025-01-30T00:00:00+00:00 [queued]>
+[2025-01-31T23:08:04.881+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pull_gazettes_data.request_gazettes_task scheduled__2025-01-30T00:00:00+00:00 [queued]>
+[2025-01-31T23:08:04.882+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2025-01-31T23:08:04.896+0000] {taskinstance.py:2888} INFO - Executing <Task(RequestGazettesTask): request_gazettes_task> on 2025-01-30 00:00:00+00:00
+[2025-01-31T23:08:04.908+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=156) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-31T23:08:04.909+0000] {standard_task_runner.py:72} INFO - Started process 164 to run task
+[2025-01-31T23:08:04.910+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'pull_gazettes_data', 'request_gazettes_task', 'scheduled__2025-01-30T00:00:00+00:00', '--job-id', '280', '--raw', '--subdir', 'DAGS_FOLDER/dag_script.py', '--cfg-path', '/tmp/tmpm54fx1ag']
+[2025-01-31T23:08:04.912+0000] {standard_task_runner.py:105} INFO - Job 280: Subtask request_gazettes_task
+[2025-01-31T23:08:04.963+0000] {task_command.py:467} INFO - Running <TaskInstance: pull_gazettes_data.request_gazettes_task scheduled__2025-01-30T00:00:00+00:00 [running]> on host 41bcec3d818b
+[2025-01-31T23:08:05.080+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='***@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='pull_gazettes_data' AIRFLOW_CTX_TASK_ID='request_gazettes_task' AIRFLOW_CTX_EXECUTION_DATE='2025-01-30T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-01-30T00:00:00+00:00'
+[2025-01-31T23:08:05.082+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-31T23:08:05.097+0000] {logging_mixin.py:190} INFO - Running for start_date: 2024-12-01, end_date: 2025-01-29
+[2025-01-31T23:08:05.669+0000] {logging_mixin.py:190} INFO - Total number of Gazettes: 13
+[2025-01-31T23:08:05.670+0000] {logging_mixin.py:190} INFO - log request call: https://queridodiario.ok.org.br/api/gazettes, params: {'size': 1, 'excerpt_size': 500, 'published_since': '2024-12-01', 'published_until': '2025-01-29', 'territory_ids': '3106200', 'offset': 0}
+[2025-01-31T23:08:06.880+0000] {logging_mixin.py:190} INFO - Managing URL log
+[2025-01-31T23:08:06.917+0000] {logging_mixin.py:190} INFO - Skipping text url: https://querido-diario.nyc3.cdn.digitaloceanspaces.com/3106200/2024-12-04/2f3fa75cbb72b4671c4812b62e53c433cf637d12.pdf because it was already downloaded in 2025-01-26 00:28:26.157693
+[2025-01-31T23:08:06.918+0000] {logging_mixin.py:190} INFO - Skipping text url: https://querido-diario.nyc3.cdn.digitaloceanspaces.com/3106200/2024-12-03/2e2230428985c8a5f626351043277a8a194842bb.pdf because it was already downloaded in 2025-01-26 00:28:26.157693
+[2025-01-31T23:08:06.919+0000] {logging_mixin.py:190} INFO - Skipping text url: https://querido-diario.nyc3.cdn.digitaloceanspaces.com/3106200/2024-12-11/20e7c0c59915bdb968b474911e69c3a6aa720516.pdf because it was already downloaded in 2025-01-26 00:28:26.157693
+[2025-01-31T23:08:06.920+0000] {logging_mixin.py:190} INFO - Skipping text url: https://querido-diario.nyc3.cdn.digitaloceanspaces.com/3106200/2024-12-06/d52c820d8bb6d5e26f19216bb75cf3110a2c2060.pdf because it was already downloaded in 2025-01-26 00:28:26.157693
+[2025-01-31T23:08:06.921+0000] {logging_mixin.py:190} INFO - Skipping text url: https://querido-diario.nyc3.cdn.digitaloceanspaces.com/3106200/2024-12-07/d14f90c1d8597e384deee8cf1d2bbf2271c9066b.pdf because it was already downloaded in 2025-01-26 00:28:26.157693
+[2025-01-31T23:08:06.922+0000] {logging_mixin.py:190} INFO - Skipping text url: https://querido-diario.nyc3.cdn.digitaloceanspaces.com/3106200/2024-12-10/519176a7cc288344b54dc462f28a7bff38f0d1c8.pdf because it was already downloaded in 2025-01-26 00:28:26.157693
+[2025-01-31T23:08:06.922+0000] {logging_mixin.py:190} INFO - Skipping text url: https://querido-diario.nyc3.cdn.digitaloceanspaces.com/3106200/2024-12-05/7d8a290156993f6beb8eed5d041258950e9b4c2d.pdf because it was already downloaded in 2025-01-26 00:28:26.157693
+[2025-01-31T23:08:06.923+0000] {logging_mixin.py:190} INFO - Skipping text url: https://querido-diario.nyc3.cdn.digitaloceanspaces.com/3106200/2024-12-19/fa771a286c095dd9faf497a166b8353e28b0c515.pdf because it was already downloaded in 2025-01-25 18:45:34.739558
+[2025-01-31T23:08:06.924+0000] {logging_mixin.py:190} INFO - Skipping text url: https://querido-diario.nyc3.cdn.digitaloceanspaces.com/3106200/2024-12-18/6861cc2d150a5545f9d7d9e925e878ac5b4e7a31.pdf because it was already downloaded in 2025-01-25 18:45:34.739558
+[2025-01-31T23:08:06.925+0000] {logging_mixin.py:190} INFO - Skipping text url: https://querido-diario.nyc3.cdn.digitaloceanspaces.com/3106200/2024-12-17/2d6c6b4f17f03de27a15537564469fdcb6a29062.pdf because it was already downloaded in 2025-01-25 18:45:34.739558
+[2025-01-31T23:08:06.926+0000] {logging_mixin.py:190} INFO - Skipping text url: https://querido-diario.nyc3.cdn.digitaloceanspaces.com/3106200/2024-12-13/6de0f87a7b2ea94c0d2580b8a4cde09550d30252.pdf because it was already downloaded in 2025-01-26 00:28:26.157693
+[2025-01-31T23:08:06.927+0000] {logging_mixin.py:190} INFO - Skipping text url: https://querido-diario.nyc3.cdn.digitaloceanspaces.com/3106200/2024-12-12/65ed90146a7204c7377bf987cd6d81c1752e4ad8.pdf because it was already downloaded in 2025-01-26 00:28:26.157693
+[2025-01-31T23:08:06.928+0000] {logging_mixin.py:190} INFO - Skipping text url: https://querido-diario.nyc3.cdn.digitaloceanspaces.com/3106200/2024-12-14/2fa7c07a7f3283c99496be15575a1f56979d14ff.pdf because it was already downloaded in 2025-01-26 00:28:26.157693
+[2025-01-31T23:08:06.948+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-31T23:08:06.949+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=pull_gazettes_data, task_id=request_gazettes_task, run_id=scheduled__2025-01-30T00:00:00+00:00, execution_date=20250130T000000, start_date=20250131T230804, end_date=20250131T230806
+[2025-01-31T23:08:06.971+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-01-31T23:08:06.981+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

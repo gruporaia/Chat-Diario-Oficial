@@ -1,0 +1,42 @@
+[2025-01-28T23:45:44.902+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-28T23:45:44.919+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pull_gazettes_data.generate_indexes_task scheduled__2025-01-27T00:00:00+00:00 [queued]>
+[2025-01-28T23:45:44.935+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pull_gazettes_data.generate_indexes_task scheduled__2025-01-27T00:00:00+00:00 [queued]>
+[2025-01-28T23:45:44.935+0000] {taskinstance.py:2865} INFO - Starting attempt 6 of 7
+[2025-01-28T23:45:44.949+0000] {taskinstance.py:2888} INFO - Executing <Task(GenerateIndexTask): generate_indexes_task> on 2025-01-27 00:00:00+00:00
+[2025-01-28T23:45:44.964+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=3252) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-28T23:45:44.974+0000] {standard_task_runner.py:72} INFO - Started process 3254 to run task
+[2025-01-28T23:45:44.972+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'pull_gazettes_data', 'generate_indexes_task', 'scheduled__2025-01-27T00:00:00+00:00', '--job-id', '261', '--raw', '--subdir', 'DAGS_FOLDER/dag_script.py', '--cfg-path', '/tmp/tmpl0w8ttt5']
+[2025-01-28T23:45:44.975+0000] {standard_task_runner.py:105} INFO - Job 261: Subtask generate_indexes_task
+[2025-01-28T23:45:45.031+0000] {task_command.py:467} INFO - Running <TaskInstance: pull_gazettes_data.generate_indexes_task scheduled__2025-01-27T00:00:00+00:00 [running]> on host 41bcec3d818b
+[2025-01-28T23:45:45.121+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='***@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='pull_gazettes_data' AIRFLOW_CTX_TASK_ID='generate_indexes_task' AIRFLOW_CTX_EXECUTION_DATE='2025-01-27T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='6' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-01-27T00:00:00+00:00'
+[2025-01-28T23:45:45.123+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-28T23:45:45.143+0000] {logging_mixin.py:190} INFO - Initializing database
+[2025-01-28T23:45:46.709+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-28T23:45:46.734+0000] {logging_mixin.py:190} INFO - Parsing database current state
+[2025-01-28T23:45:46.735+0000] {logging_mixin.py:190} INFO - instantiating new database /usr/local/***/data/vector_db/
+[2025-01-28T23:45:46.736+0000] {logging_mixin.py:190} INFO - Reading file metadata
+[2025-01-28T23:45:46.750+0000] {logging_mixin.py:190} INFO - [FileMetadata(uuid='3106200_2024-11-26_7140.pdf'), FileMetadata(uuid='3106200_2024-11-27_7141.pdf'), FileMetadata(uuid='3106200_2024-11-28_7142.pdf'), FileMetadata(uuid='3106200_2024-11-29_7143.pdf'), FileMetadata(uuid='3106200_2024-11-30_7144.pdf'), FileMetadata(uuid='3106200_2024-12-03_7145.pdf'), FileMetadata(uuid='3106200_2024-12-04_7146.pdf'), FileMetadata(uuid='3106200_2024-12-05_7147.pdf'), FileMetadata(uuid='3106200_2024-12-06_7148.pdf'), FileMetadata(uuid='3106200_2024-12-07_7149.pdf'), FileMetadata(uuid='3106200_2024-12-10_7150.pdf'), FileMetadata(uuid='3106200_2024-12-11_7151.pdf'), FileMetadata(uuid='3106200_2024-12-12_7152.pdf'), FileMetadata(uuid='3106200_2024-12-13_7153.pdf'), FileMetadata(uuid='3106200_2024-12-14_7154.pdf'), FileMetadata(uuid='3106200_2024-12-17_7155.pdf')]
+[2025-01-28T23:45:46.750+0000] {logging_mixin.py:190} INFO - Adding batch of documents
+[2025-01-28T23:45:46.753+0000] {logging_mixin.py:190} INFO - 3106200_2024-11-26_7140.txt
+[2025-01-28T23:45:46.753+0000] {logging_mixin.py:190} INFO - 3106200_2024-11-27_7141.txt
+[2025-01-28T23:45:46.753+0000] {logging_mixin.py:190} INFO - 3106200_2024-11-28_7142.txt
+[2025-01-28T23:45:46.754+0000] {logging_mixin.py:190} INFO - 3106200_2024-11-29_7143.txt
+[2025-01-28T23:45:46.754+0000] {logging_mixin.py:190} INFO - 3106200_2024-11-30_7144.txt
+[2025-01-28T23:45:46.754+0000] {logging_mixin.py:190} INFO - 3106200_2024-12-03_7145.txt
+[2025-01-28T23:45:46.755+0000] {logging_mixin.py:190} INFO - 3106200_2024-12-04_7146.txt
+[2025-01-28T23:45:46.755+0000] {logging_mixin.py:190} INFO - 3106200_2024-12-05_7147.txt
+[2025-01-28T23:45:46.755+0000] {logging_mixin.py:190} INFO - 3106200_2024-12-06_7148.txt
+[2025-01-28T23:45:46.756+0000] {logging_mixin.py:190} INFO - 3106200_2024-12-07_7149.txt
+[2025-01-28T23:45:46.756+0000] {logging_mixin.py:190} INFO - 3106200_2024-12-10_7150.txt
+[2025-01-28T23:45:46.756+0000] {logging_mixin.py:190} INFO - 3106200_2024-12-11_7151.txt
+[2025-01-28T23:45:46.757+0000] {logging_mixin.py:190} INFO - 3106200_2024-12-12_7152.txt
+[2025-01-28T23:45:46.757+0000] {logging_mixin.py:190} INFO - 3106200_2024-12-13_7153.txt
+[2025-01-28T23:45:46.758+0000] {logging_mixin.py:190} INFO - 3106200_2024-12-14_7154.txt
+[2025-01-28T23:45:46.758+0000] {logging_mixin.py:190} INFO - 3106200_2024-12-17_7155.txt
+[2025-01-28T23:45:46.768+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-28T23:45:46.768+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=pull_gazettes_data, task_id=generate_indexes_task, run_id=scheduled__2025-01-27T00:00:00+00:00, execution_date=20250127T000000, start_date=20250128T234544, end_date=20250128T234546
+[2025-01-28T23:45:46.797+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-01-28T23:45:46.821+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-01-28T23:45:46.824+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

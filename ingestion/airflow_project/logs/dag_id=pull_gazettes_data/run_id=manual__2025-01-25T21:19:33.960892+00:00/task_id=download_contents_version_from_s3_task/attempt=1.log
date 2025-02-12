@@ -1,0 +1,28 @@
+[2025-01-25T21:19:50.519+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-25T21:19:50.533+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pull_gazettes_data.download_contents_version_from_s3_task manual__2025-01-25T21:19:33.960892+00:00 [queued]>
+[2025-01-25T21:19:50.542+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pull_gazettes_data.download_contents_version_from_s3_task manual__2025-01-25T21:19:33.960892+00:00 [queued]>
+[2025-01-25T21:19:50.543+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2025-01-25T21:19:50.556+0000] {taskinstance.py:2888} INFO - Executing <Task(DownloadContentFromS3): download_contents_version_from_s3_task> on 2025-01-25 21:19:33.960892+00:00
+[2025-01-25T21:19:50.567+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=27386) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-25T21:19:50.569+0000] {standard_task_runner.py:72} INFO - Started process 27399 to run task
+[2025-01-25T21:19:50.569+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'pull_gazettes_data', 'download_contents_version_from_s3_task', 'manual__2025-01-25T21:19:33.960892+00:00', '--job-id', '175', '--raw', '--subdir', 'DAGS_FOLDER/dag_script.py', '--cfg-path', '/tmp/tmprrec_95b']
+[2025-01-25T21:19:50.571+0000] {standard_task_runner.py:105} INFO - Job 175: Subtask download_contents_version_from_s3_task
+[2025-01-25T21:19:50.606+0000] {task_command.py:467} INFO - Running <TaskInstance: pull_gazettes_data.download_contents_version_from_s3_task manual__2025-01-25T21:19:33.960892+00:00 [running]> on host 41bcec3d818b
+[2025-01-25T21:19:50.673+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='***@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='pull_gazettes_data' AIRFLOW_CTX_TASK_ID='download_contents_version_from_s3_task' AIRFLOW_CTX_EXECUTION_DATE='2025-01-25T21:19:33.960892+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-25T21:19:33.960892+00:00'
+[2025-01-25T21:19:50.674+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-25T21:19:50.695+0000] {base.py:84} INFO - Retrieving connection 'minio_s3_conn_id'
+[2025-01-25T21:19:50.696+0000] {connection_wrapper.py:391} INFO - AWS Connection (conn_id='minio_s3_conn_id', conn_type='aws') credentials retrieved from extra.
+[2025-01-25T21:19:50.697+0000] {warnings.py:112} WARNING - <string>:9: AirflowProviderDeprecationWarning: extra['host'] is deprecated and will be removed in a future release. Please set extra['endpoint_url'] instead
+
+[2025-01-25T21:19:50.918+0000] {s3.py:1422} INFO - Downloading source S3 file from Bucket diario-oficial-db-dump with path vector_db/index.faiss
+[2025-01-25T21:19:51.110+0000] {s3.py:1422} INFO - Downloading source S3 file from Bucket diario-oficial-db-dump with path vector_db/index.pkl
+[2025-01-25T21:19:51.177+0000] {logging_mixin.py:190} INFO - Key collection.json does not exists in bucket diario-oficial-db-dump
+[2025-01-25T21:19:51.184+0000] {logging_mixin.py:190} INFO - Key log_urls.csv does not exists in bucket diario-oficial-db-dump
+[2025-01-25T21:19:51.191+0000] {logging_mixin.py:190} INFO - Key preprocessed_documents_log.csv does not exists in bucket diario-oficial-db-dump
+[2025-01-25T21:19:51.199+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-25T21:19:51.200+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=pull_gazettes_data, task_id=download_contents_version_from_s3_task, run_id=manual__2025-01-25T21:19:33.960892+00:00, execution_date=20250125T211933, start_date=20250125T211950, end_date=20250125T211951
+[2025-01-25T21:19:51.225+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-01-25T21:19:51.250+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-01-25T21:19:51.252+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

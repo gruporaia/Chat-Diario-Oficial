@@ -1,0 +1,49 @@
+[2025-01-25T21:20:07.786+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-25T21:20:07.803+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pull_gazettes_data.preprocess_documents_task manual__2025-01-25T21:19:33.960892+00:00 [queued]>
+[2025-01-25T21:20:07.813+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pull_gazettes_data.preprocess_documents_task manual__2025-01-25T21:19:33.960892+00:00 [queued]>
+[2025-01-25T21:20:07.814+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2025-01-25T21:20:07.831+0000] {taskinstance.py:2888} INFO - Executing <Task(PreprocessDocuments): preprocess_documents_task> on 2025-01-25 21:19:33.960892+00:00
+[2025-01-25T21:20:07.844+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=27420) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-25T21:20:07.846+0000] {standard_task_runner.py:72} INFO - Started process 27433 to run task
+[2025-01-25T21:20:07.846+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'pull_gazettes_data', 'preprocess_documents_task', 'manual__2025-01-25T21:19:33.960892+00:00', '--job-id', '177', '--raw', '--subdir', 'DAGS_FOLDER/dag_script.py', '--cfg-path', '/tmp/tmpdsof3fac']
+[2025-01-25T21:20:07.848+0000] {standard_task_runner.py:105} INFO - Job 177: Subtask preprocess_documents_task
+[2025-01-25T21:20:07.893+0000] {task_command.py:467} INFO - Running <TaskInstance: pull_gazettes_data.preprocess_documents_task manual__2025-01-25T21:19:33.960892+00:00 [running]> on host 41bcec3d818b
+[2025-01-25T21:20:07.967+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='***@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='pull_gazettes_data' AIRFLOW_CTX_TASK_ID='preprocess_documents_task' AIRFLOW_CTX_EXECUTION_DATE='2025-01-25T21:19:33.960892+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-25T21:19:33.960892+00:00'
+[2025-01-25T21:20:07.969+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-25T21:20:07.981+0000] {logging_mixin.py:190} INFO - Checking pre processed documents log
+[2025-01-25T21:20:07.988+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-12-17_7155.pdf into multiple PDF single pages
+[2025-01-25T21:20:09.164+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T21:20:09.548+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T21:20:13.693+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T21:20:14.419+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T21:20:15.169+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-17_7155-page-0-0.pdf
+[2025-01-25T21:20:23.657+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-12-17_7155-page-0-0.pdf in 14.66 sec.
+[2025-01-25T21:20:23.678+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-12-17_7155-page-0-0.md
+[2025-01-25T21:20:23.688+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T21:20:23.841+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T21:20:26.041+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T21:20:26.468+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T21:20:26.818+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-17_7155-page-1-1.pdf
+[2025-01-25T21:20:31.140+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-12-17_7155-page-1-1.pdf in 7.46 sec.
+[2025-01-25T21:20:31.150+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-12-17_7155-page-1-1.md
+[2025-01-25T21:20:31.162+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T21:20:31.335+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T21:20:34.688+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T21:20:35.097+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T21:20:35.420+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-17_7155-page-2-2.pdf
+[2025-01-25T21:20:42.241+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-12-17_7155-page-2-2.pdf in 11.08 sec.
+[2025-01-25T21:20:42.251+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-12-17_7155-page-2-2.md
+[2025-01-25T21:20:42.263+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T21:20:42.417+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T21:20:44.605+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T21:20:45.044+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T21:20:45.393+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-17_7155-page-3-3.pdf
+[2025-01-25T21:20:48.399+0000] {local_task_job_runner.py:346} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2025-01-25T21:20:48.401+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-01-25T21:20:48.405+0000] {process_utils.py:132} INFO - Sending 15 to group 27433. PIDs of all processes in the group: [27433]
+[2025-01-25T21:20:48.413+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 27433
+[2025-01-25T21:20:48.416+0000] {taskinstance.py:3092} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-01-25T21:20:48.448+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-25T21:20:48.507+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=27433, status='terminated', exitcode=0, started='21:20:07') (27433) terminated with exit code 0

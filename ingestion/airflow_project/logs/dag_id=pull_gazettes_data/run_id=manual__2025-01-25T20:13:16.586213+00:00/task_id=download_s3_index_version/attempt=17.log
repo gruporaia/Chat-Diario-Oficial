@@ -1,0 +1,48 @@
+[2025-01-25T20:39:14.674+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-25T20:39:14.690+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pull_gazettes_data.download_s3_index_version manual__2025-01-25T20:13:16.586213+00:00 [queued]>
+[2025-01-25T20:39:14.698+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pull_gazettes_data.download_s3_index_version manual__2025-01-25T20:13:16.586213+00:00 [queued]>
+[2025-01-25T20:39:14.699+0000] {taskinstance.py:2865} INFO - Starting attempt 17 of 18
+[2025-01-25T20:39:14.712+0000] {taskinstance.py:2888} INFO - Executing <Task(DownloadContentFromS3): download_s3_index_version> on 2025-01-25 20:13:16.586213+00:00
+[2025-01-25T20:39:14.724+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=25809) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-25T20:39:14.726+0000] {standard_task_runner.py:72} INFO - Started process 25840 to run task
+[2025-01-25T20:39:14.728+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'pull_gazettes_data', 'download_s3_index_version', 'manual__2025-01-25T20:13:16.586213+00:00', '--job-id', '162', '--raw', '--subdir', 'DAGS_FOLDER/dag_script.py', '--cfg-path', '/tmp/tmpwp1j68qz']
+[2025-01-25T20:39:14.732+0000] {standard_task_runner.py:105} INFO - Job 162: Subtask download_s3_index_version
+[2025-01-25T20:39:14.767+0000] {task_command.py:467} INFO - Running <TaskInstance: pull_gazettes_data.download_s3_index_version manual__2025-01-25T20:13:16.586213+00:00 [running]> on host 41bcec3d818b
+[2025-01-25T20:39:14.833+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='***@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='pull_gazettes_data' AIRFLOW_CTX_TASK_ID='download_s3_index_version' AIRFLOW_CTX_EXECUTION_DATE='2025-01-25T20:13:16.586213+00:00' AIRFLOW_CTX_TRY_NUMBER='17' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-25T20:13:16.586213+00:00'
+[2025-01-25T20:39:14.834+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-25T20:39:14.853+0000] {base.py:84} INFO - Retrieving connection 'minio_s3_conn_id'
+[2025-01-25T20:39:14.854+0000] {connection_wrapper.py:391} INFO - AWS Connection (conn_id='minio_s3_conn_id', conn_type='aws') credentials retrieved from extra.
+[2025-01-25T20:39:14.855+0000] {warnings.py:112} WARNING - <string>:9: AirflowProviderDeprecationWarning: extra['host'] is deprecated and will be removed in a future release. Please set extra['endpoint_url'] instead
+
+[2025-01-25T20:39:15.065+0000] {s3.py:1422} INFO - Downloading source S3 file from Bucket diario-oficial-db-dump with path vector_db/index.faiss
+[2025-01-25T20:39:15.258+0000] {logging_mixin.py:190} INFO - [Errno 2] No such file or directory: '/usr/local/***/data/vector_db/vector_db/index.faiss'
+[2025-01-25T20:39:20.272+0000] {logging_mixin.py:190} INFO - [Errno 2] No such file or directory: '/usr/local/***/data/vector_db/vector_db/index.faiss'
+[2025-01-25T20:39:25.284+0000] {logging_mixin.py:190} INFO - [Errno 2] No such file or directory: '/usr/local/***/data/vector_db/vector_db/index.faiss'
+[2025-01-25T20:39:30.296+0000] {logging_mixin.py:190} INFO - [Errno 2] No such file or directory: '/usr/local/***/data/vector_db/vector_db/index.faiss'
+[2025-01-25T20:39:35.307+0000] {logging_mixin.py:190} INFO - [Errno 2] No such file or directory: '/usr/local/***/data/vector_db/vector_db/index.faiss'
+[2025-01-25T20:39:40.319+0000] {logging_mixin.py:190} INFO - [Errno 2] No such file or directory: '/usr/local/***/data/vector_db/vector_db/index.faiss'
+[2025-01-25T20:39:45.330+0000] {logging_mixin.py:190} INFO - [Errno 2] No such file or directory: '/usr/local/***/data/vector_db/vector_db/index.faiss'
+[2025-01-25T20:39:50.339+0000] {logging_mixin.py:190} INFO - [Errno 2] No such file or directory: '/usr/local/***/data/vector_db/vector_db/index.faiss'
+[2025-01-25T20:39:55.350+0000] {logging_mixin.py:190} INFO - [Errno 2] No such file or directory: '/usr/local/***/data/vector_db/vector_db/index.faiss'
+[2025-01-25T20:40:00.361+0000] {logging_mixin.py:190} INFO - [Errno 2] No such file or directory: '/usr/local/***/data/vector_db/vector_db/index.faiss'
+[2025-01-25T20:40:05.371+0000] {logging_mixin.py:190} INFO - [Errno 2] No such file or directory: '/usr/local/***/data/vector_db/vector_db/index.faiss'
+[2025-01-25T20:40:10.372+0000] {s3.py:1422} INFO - Downloading source S3 file from Bucket diario-oficial-db-dump with path vector_db/index.pkl
+[2025-01-25T20:40:10.446+0000] {logging_mixin.py:190} INFO - [Errno 2] No such file or directory: '/usr/local/***/data/vector_db/vector_db/index.pkl'
+[2025-01-25T20:40:15.458+0000] {logging_mixin.py:190} INFO - [Errno 2] No such file or directory: '/usr/local/***/data/vector_db/vector_db/index.pkl'
+[2025-01-25T20:40:20.468+0000] {logging_mixin.py:190} INFO - [Errno 2] No such file or directory: '/usr/local/***/data/vector_db/vector_db/index.pkl'
+[2025-01-25T20:40:25.478+0000] {logging_mixin.py:190} INFO - [Errno 2] No such file or directory: '/usr/local/***/data/vector_db/vector_db/index.pkl'
+[2025-01-25T20:40:30.489+0000] {logging_mixin.py:190} INFO - [Errno 2] No such file or directory: '/usr/local/***/data/vector_db/vector_db/index.pkl'
+[2025-01-25T20:40:35.499+0000] {logging_mixin.py:190} INFO - [Errno 2] No such file or directory: '/usr/local/***/data/vector_db/vector_db/index.pkl'
+[2025-01-25T20:40:40.515+0000] {logging_mixin.py:190} INFO - [Errno 2] No such file or directory: '/usr/local/***/data/vector_db/vector_db/index.pkl'
+[2025-01-25T20:40:45.521+0000] {logging_mixin.py:190} INFO - [Errno 2] No such file or directory: '/usr/local/***/data/vector_db/***_tmp_dir_5d28370e/index.pkl'
+[2025-01-25T20:40:50.527+0000] {logging_mixin.py:190} INFO - [Errno 2] No such file or directory: '/usr/local/***/data/vector_db/***_tmp_dir_5d28370e/index.pkl'
+[2025-01-25T20:40:55.532+0000] {logging_mixin.py:190} INFO - [Errno 2] No such file or directory: '/usr/local/***/data/vector_db/***_tmp_dir_5d28370e/index.pkl'
+[2025-01-25T20:40:55.645+0000] {local_task_job_runner.py:346} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2025-01-25T20:40:55.646+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-01-25T20:40:55.647+0000] {process_utils.py:132} INFO - Sending 15 to group 25840. PIDs of all processes in the group: [25840]
+[2025-01-25T20:40:55.648+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 25840
+[2025-01-25T20:40:55.648+0000] {taskinstance.py:3092} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-01-25T20:40:55.664+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-25T20:40:55.700+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=25840, status='terminated', exitcode=0, started='20:39:13') (25840) terminated with exit code 0

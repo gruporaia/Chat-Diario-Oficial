@@ -1,0 +1,210 @@
+[2025-01-24T21:47:56.189+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-24T21:47:56.207+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pull_gazettes_data.preprocess_documents_task manual__2025-01-24T21:10:42.449118+00:00 [queued]>
+[2025-01-24T21:47:56.217+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pull_gazettes_data.preprocess_documents_task manual__2025-01-24T21:10:42.449118+00:00 [queued]>
+[2025-01-24T21:47:56.218+0000] {taskinstance.py:2865} INFO - Starting attempt 5 of 6
+[2025-01-24T21:47:56.232+0000] {taskinstance.py:2888} INFO - Executing <Task(PreprocessDocuments): preprocess_documents_task> on 2025-01-24 21:10:42.449118+00:00
+[2025-01-24T21:47:56.248+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1978) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-24T21:47:56.250+0000] {standard_task_runner.py:72} INFO - Started process 2009 to run task
+[2025-01-24T21:47:56.250+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'pull_gazettes_data', 'preprocess_documents_task', 'manual__2025-01-24T21:10:42.449118+00:00', '--job-id', '17', '--raw', '--subdir', 'DAGS_FOLDER/dag_script.py', '--cfg-path', '/tmp/tmp0sl5l4xz']
+[2025-01-24T21:47:56.252+0000] {standard_task_runner.py:105} INFO - Job 17: Subtask preprocess_documents_task
+[2025-01-24T21:47:56.298+0000] {task_command.py:467} INFO - Running <TaskInstance: pull_gazettes_data.preprocess_documents_task manual__2025-01-24T21:10:42.449118+00:00 [running]> on host 9e85c216a3c8
+[2025-01-24T21:47:56.368+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='***@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='pull_gazettes_data' AIRFLOW_CTX_TASK_ID='preprocess_documents_task' AIRFLOW_CTX_EXECUTION_DATE='2025-01-24T21:10:42.449118+00:00' AIRFLOW_CTX_TRY_NUMBER='5' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-24T21:10:42.449118+00:00'
+[2025-01-24T21:47:56.369+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-24T21:47:56.388+0000] {logging_mixin.py:190} INFO - Checking pre processed documents log
+[2025-01-24T21:47:56.399+0000] {logging_mixin.py:190} INFO - Already preprocessed documents: {'3106200_2024-11-23_7139-page-20-25', '3106200_2024-11-23_7139-page-10-19', '3106200_2024-11-22_7138-page-40-43', '3106200_2024-11-23_7139-page-0-9', '3106200_2024-11-22_7138-page-10-19', '3106200_2024-11-22_7138-page-30-39', '3106200_2024-11-22_7138-page-20-29', '3106200_2024-11-22_7138-page-0-9'}
+[2025-01-24T21:47:56.402+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-11-22_7138.pdf into multiple PDF single pages
+[2025-01-24T21:47:56.579+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-22_7138-page-0-9.pdf already broken down into
+[2025-01-24T21:47:56.579+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-22_7138-page-10-19.pdf already broken down into
+[2025-01-24T21:47:56.580+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-22_7138-page-20-29.pdf already broken down into
+[2025-01-24T21:47:56.580+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-22_7138-page-30-39.pdf already broken down into
+[2025-01-24T21:47:56.581+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-22_7138-page-40-43.pdf already broken down into
+[2025-01-24T21:47:56.581+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-11-23_7139.pdf into multiple PDF single pages
+[2025-01-24T21:47:56.686+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-23_7139-page-0-9.pdf already broken down into
+[2025-01-24T21:47:56.687+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-23_7139-page-10-19.pdf already broken down into
+[2025-01-24T21:47:56.688+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-23_7139-page-20-25.pdf already broken down into
+[2025-01-24T21:47:56.688+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-11-26_7140.pdf into multiple PDF single pages
+[2025-01-24T21:47:56.812+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-0-9.pdf already broken down into
+[2025-01-24T21:47:56.813+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-10-19.pdf already broken down into
+[2025-01-24T21:47:56.814+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-20-29.pdf already broken down into
+[2025-01-24T21:47:56.814+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-30-32.pdf already broken down into
+[2025-01-24T21:47:56.815+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-11-27_7141.pdf into multiple PDF single pages
+[2025-01-24T21:47:56.978+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-27_7141-page-0-9.pdf already broken down into
+[2025-01-24T21:47:56.978+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-27_7141-page-10-19.pdf already broken down into
+[2025-01-24T21:47:56.979+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-27_7141-page-20-29.pdf already broken down into
+[2025-01-24T21:47:56.979+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-27_7141-page-30-36.pdf already broken down into
+[2025-01-24T21:47:56.980+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-11-28_7142.pdf into multiple PDF single pages
+[2025-01-24T21:47:57.140+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-28_7142-page-0-9.pdf already broken down into
+[2025-01-24T21:47:57.141+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-28_7142-page-10-19.pdf already broken down into
+[2025-01-24T21:47:57.142+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-28_7142-page-20-29.pdf already broken down into
+[2025-01-24T21:47:57.142+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-28_7142-page-30-39.pdf already broken down into
+[2025-01-24T21:47:57.143+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-28_7142-page-40-45.pdf already broken down into
+[2025-01-24T21:47:57.143+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-11-29_7143.pdf into multiple PDF single pages
+[2025-01-24T21:47:57.285+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-29_7143-page-0-9.pdf already broken down into
+[2025-01-24T21:47:57.286+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-29_7143-page-10-19.pdf already broken down into
+[2025-01-24T21:47:57.287+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-29_7143-page-20-29.pdf already broken down into
+[2025-01-24T21:47:57.287+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-29_7143-page-30-38.pdf already broken down into
+[2025-01-24T21:47:57.288+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-11-30_7144.pdf into multiple PDF single pages
+[2025-01-24T21:47:57.435+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-30_7144-page-0-9.pdf already broken down into
+[2025-01-24T21:47:57.436+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-30_7144-page-10-19.pdf already broken down into
+[2025-01-24T21:47:57.436+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-30_7144-page-20-29.pdf already broken down into
+[2025-01-24T21:47:57.436+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-30_7144-page-30-37.pdf already broken down into
+[2025-01-24T21:47:57.437+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-12-03_7145.pdf into multiple PDF single pages
+[2025-01-24T21:47:58.021+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-03_7145-page-0-9.pdf already broken down into
+[2025-01-24T21:47:58.022+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-03_7145-page-10-19.pdf already broken down into
+[2025-01-24T21:47:58.023+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-03_7145-page-20-29.pdf already broken down into
+[2025-01-24T21:47:58.023+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-03_7145-page-30-34.pdf already broken down into
+[2025-01-24T21:47:58.023+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-12-04_7146.pdf into multiple PDF single pages
+[2025-01-24T21:47:58.171+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-04_7146-page-0-9.pdf already broken down into
+[2025-01-24T21:47:58.172+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-04_7146-page-10-19.pdf already broken down into
+[2025-01-24T21:47:58.172+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-04_7146-page-20-29.pdf already broken down into
+[2025-01-24T21:47:58.173+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-04_7146-page-30-39.pdf already broken down into
+[2025-01-24T21:47:58.173+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-12-05_7147.pdf into multiple PDF single pages
+[2025-01-24T21:47:58.262+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-05_7147-page-0-9.pdf already broken down into
+[2025-01-24T21:47:58.263+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-05_7147-page-10-19.pdf already broken down into
+[2025-01-24T21:47:58.263+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-05_7147-page-20-22.pdf already broken down into
+[2025-01-24T21:47:58.264+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-12-06_7148.pdf into multiple PDF single pages
+[2025-01-24T21:47:58.394+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-06_7148-page-0-9.pdf already broken down into
+[2025-01-24T21:47:58.394+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-06_7148-page-10-19.pdf already broken down into
+[2025-01-24T21:47:58.395+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-06_7148-page-20-29.pdf already broken down into
+[2025-01-24T21:47:58.395+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-06_7148-page-30-39.pdf already broken down into
+[2025-01-24T21:47:58.396+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-12-07_7149.pdf into multiple PDF single pages
+[2025-01-24T21:47:58.555+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-07_7149-page-0-9.pdf already broken down into
+[2025-01-24T21:47:58.555+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-07_7149-page-10-19.pdf already broken down into
+[2025-01-24T21:47:58.556+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-07_7149-page-20-29.pdf already broken down into
+[2025-01-24T21:47:58.556+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-07_7149-page-30-39.pdf already broken down into
+[2025-01-24T21:47:58.557+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-07_7149-page-40-45.pdf already broken down into
+[2025-01-24T21:47:58.557+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-12-10_7150.pdf into multiple PDF single pages
+[2025-01-24T21:47:58.631+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-10_7150-page-0-9.pdf already broken down into
+[2025-01-24T21:47:58.632+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-10_7150-page-10-19.pdf already broken down into
+[2025-01-24T21:47:58.632+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-10_7150-page-20-21.pdf already broken down into
+[2025-01-24T21:47:58.633+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-12-11_7151.pdf into multiple PDF single pages
+[2025-01-24T21:47:58.775+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-11_7151-page-0-9.pdf already broken down into
+[2025-01-24T21:47:58.776+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-11_7151-page-10-19.pdf already broken down into
+[2025-01-24T21:47:58.776+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-11_7151-page-20-29.pdf already broken down into
+[2025-01-24T21:47:58.776+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-11_7151-page-30-35.pdf already broken down into
+[2025-01-24T21:47:58.777+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-12-12_7152.pdf into multiple PDF single pages
+[2025-01-24T21:47:58.858+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-12_7152-page-0-9.pdf already broken down into
+[2025-01-24T21:47:58.859+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-12_7152-page-10-19.pdf already broken down into
+[2025-01-24T21:47:58.859+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-12_7152-page-20-24.pdf already broken down into
+[2025-01-24T21:47:58.859+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-12-13_7153.pdf into multiple PDF single pages
+[2025-01-24T21:47:58.971+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-13_7153-page-0-9.pdf already broken down into
+[2025-01-24T21:47:58.971+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-13_7153-page-10-19.pdf already broken down into
+[2025-01-24T21:47:58.971+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-13_7153-page-20-29.pdf already broken down into
+[2025-01-24T21:47:58.972+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-13_7153-page-30-33.pdf already broken down into
+[2025-01-24T21:47:58.972+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-12-14_7154.pdf into multiple PDF single pages
+[2025-01-24T21:47:59.090+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-14_7154-page-0-9.pdf already broken down into
+[2025-01-24T21:47:59.091+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-14_7154-page-10-19.pdf already broken down into
+[2025-01-24T21:47:59.092+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-14_7154-page-20-29.pdf already broken down into
+[2025-01-24T21:47:59.093+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-14_7154-page-30-31.pdf already broken down into
+[2025-01-24T21:47:59.093+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-12-17_7155.pdf into multiple PDF single pages
+[2025-01-24T21:47:59.192+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-17_7155-page-0-9.pdf already broken down into
+[2025-01-24T21:47:59.193+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-17_7155-page-10-19.pdf already broken down into
+[2025-01-24T21:47:59.193+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-17_7155-page-20-24.pdf already broken down into
+[2025-01-24T21:47:59.194+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-12-18_7156.pdf into multiple PDF single pages
+[2025-01-24T21:47:59.426+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-18_7156-page-0-9.pdf already broken down into
+[2025-01-24T21:47:59.426+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-18_7156-page-10-19.pdf already broken down into
+[2025-01-24T21:47:59.426+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-18_7156-page-20-29.pdf already broken down into
+[2025-01-24T21:47:59.427+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-18_7156-page-30-39.pdf already broken down into
+[2025-01-24T21:47:59.427+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-18_7156-page-40-49.pdf already broken down into
+[2025-01-24T21:47:59.427+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-18_7156-page-50-59.pdf already broken down into
+[2025-01-24T21:47:59.428+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-18_7156-page-60-69.pdf already broken down into
+[2025-01-24T21:47:59.428+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-18_7156-page-70-71.pdf already broken down into
+[2025-01-24T21:47:59.429+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-12-19_7157.pdf into multiple PDF single pages
+[2025-01-24T21:47:59.544+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-19_7157-page-0-9.pdf already broken down into
+[2025-01-24T21:47:59.545+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-19_7157-page-10-19.pdf already broken down into
+[2025-01-24T21:47:59.545+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-19_7157-page-20-29.pdf already broken down into
+[2025-01-24T21:47:59.546+0000] {logging_mixin.py:190} INFO - File 3106200_2024-12-19_7157-page-30-34.pdf already broken down into
+[2025-01-24T21:47:59.546+0000] {logging_mixin.py:190} INFO - [{'file_uuid': '3106200_2024-11-22_7138-page-0-9', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-11-22_7138-page-0-9.pdf'}, {'file_uuid': '3106200_2024-11-22_7138-page-10-19', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-11-22_7138-page-10-19.pdf'}, {'file_uuid': '3106200_2024-11-22_7138-page-20-29', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-11-22_7138-page-20-29.pdf'}, {'file_uuid': '3106200_2024-11-22_7138-page-30-39', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-11-22_7138-page-30-39.pdf'}, {'file_uuid': '3106200_2024-11-22_7138-page-40-43', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-11-22_7138-page-40-43.pdf'}, {'file_uuid': '3106200_2024-11-23_7139-page-0-9', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-11-23_7139-page-0-9.pdf'}, {'file_uuid': '3106200_2024-11-23_7139-page-10-19', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-11-23_7139-page-10-19.pdf'}, {'file_uuid': '3106200_2024-11-23_7139-page-20-25', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-11-23_7139-page-20-25.pdf'}, {'file_uuid': '3106200_2024-11-26_7140-page-0-9', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-11-26_7140-page-0-9.pdf'}, {'file_uuid': '3106200_2024-11-26_7140-page-10-19', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-11-26_7140-page-10-19.pdf'}, {'file_uuid': '3106200_2024-11-26_7140-page-20-29', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-11-26_7140-page-20-29.pdf'}, {'file_uuid': '3106200_2024-11-26_7140-page-30-32', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-11-26_7140-page-30-32.pdf'}, {'file_uuid': '3106200_2024-11-27_7141-page-0-9', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-11-27_7141-page-0-9.pdf'}, {'file_uuid': '3106200_2024-11-27_7141-page-10-19', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-11-27_7141-page-10-19.pdf'}, {'file_uuid': '3106200_2024-11-27_7141-page-20-29', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-11-27_7141-page-20-29.pdf'}, {'file_uuid': '3106200_2024-11-27_7141-page-30-36', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-11-27_7141-page-30-36.pdf'}, {'file_uuid': '3106200_2024-11-28_7142-page-0-9', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-11-28_7142-page-0-9.pdf'}, {'file_uuid': '3106200_2024-11-28_7142-page-10-19', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-11-28_7142-page-10-19.pdf'}, {'file_uuid': '3106200_2024-11-28_7142-page-20-29', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-11-28_7142-page-20-29.pdf'}, {'file_uuid': '3106200_2024-11-28_7142-page-30-39', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-11-28_7142-page-30-39.pdf'}, {'file_uuid': '3106200_2024-11-28_7142-page-40-45', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-11-28_7142-page-40-45.pdf'}, {'file_uuid': '3106200_2024-11-29_7143-page-0-9', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-11-29_7143-page-0-9.pdf'}, {'file_uuid': '3106200_2024-11-29_7143-page-10-19', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-11-29_7143-page-10-19.pdf'}, {'file_uuid': '3106200_2024-11-29_7143-page-20-29', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-11-29_7143-page-20-29.pdf'}, {'file_uuid': '3106200_2024-11-29_7143-page-30-38', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-11-29_7143-page-30-38.pdf'}, {'file_uuid': '3106200_2024-11-30_7144-page-0-9', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-11-30_7144-page-0-9.pdf'}, {'file_uuid': '3106200_2024-11-30_7144-page-10-19', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-11-30_7144-page-10-19.pdf'}, {'file_uuid': '3106200_2024-11-30_7144-page-20-29', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-11-30_7144-page-20-29.pdf'}, {'file_uuid': '3106200_2024-11-30_7144-page-30-37', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-11-30_7144-page-30-37.pdf'}, {'file_uuid': '3106200_2024-12-03_7145-page-0-9', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-12-03_7145-page-0-9.pdf'}, {'file_uuid': '3106200_2024-12-03_7145-page-10-19', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-12-03_7145-page-10-19.pdf'}, {'file_uuid': '3106200_2024-12-03_7145-page-20-29', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-12-03_7145-page-20-29.pdf'}, {'file_uuid': '3106200_2024-12-03_7145-page-30-34', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-12-03_7145-page-30-34.pdf'}, {'file_uuid': '3106200_2024-12-04_7146-page-0-9', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-12-04_7146-page-0-9.pdf'}, {'file_uuid': '3106200_2024-12-04_7146-page-10-19', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-12-04_7146-page-10-19.pdf'}, {'file_uuid': '3106200_2024-12-04_7146-page-20-29', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-12-04_7146-page-20-29.pdf'}, {'file_uuid': '3106200_2024-12-04_7146-page-30-39', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-12-04_7146-page-30-39.pdf'}, {'file_uuid': '3106200_2024-12-05_7147-page-0-9', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-12-05_7147-page-0-9.pdf'}, {'file_uuid': '3106200_2024-12-05_7147-page-10-19', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-12-05_7147-page-10-19.pdf'}, {'file_uuid': '3106200_2024-12-05_7147-page-20-22', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-12-05_7147-page-20-22.pdf'}, {'file_uuid': '3106200_2024-12-06_7148-page-0-9', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-12-06_7148-page-0-9.pdf'}, {'file_uuid': '3106200_2024-12-06_7148-page-10-19', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-12-06_7148-page-10-19.pdf'}, {'file_uuid': '3106200_2024-12-06_7148-page-20-29', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-12-06_7148-page-20-29.pdf'}, {'file_uuid': '3106200_2024-12-06_7148-page-30-39', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-12-06_7148-page-30-39.pdf'}, {'file_uuid': '3106200_2024-12-07_7149-page-0-9', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-12-07_7149-page-0-9.pdf'}, {'file_uuid': '3106200_2024-12-07_7149-page-10-19', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-12-07_7149-page-10-19.pdf'}, {'file_uuid': '3106200_2024-12-07_7149-page-20-29', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-12-07_7149-page-20-29.pdf'}, {'file_uuid': '3106200_2024-12-07_7149-page-30-39', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-12-07_7149-page-30-39.pdf'}, {'file_uuid': '3106200_2024-12-07_7149-page-40-45', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-12-07_7149-page-40-45.pdf'}, {'file_uuid': '3106200_2024-12-10_7150-page-0-9', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-12-10_7150-page-0-9.pdf'}, {'file_uuid': '3106200_2024-12-10_7150-page-10-19', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-12-10_7150-page-10-19.pdf'}, {'file_uuid': '3106200_2024-12-10_7150-page-20-21', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-12-10_7150-page-20-21.pdf'}, {'file_uuid': '3106200_2024-12-11_7151-page-0-9', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-12-11_7151-page-0-9.pdf'}, {'file_uuid': '3106200_2024-12-11_7151-page-10-19', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-12-11_7151-page-10-19.pdf'}, {'file_uuid': '3106200_2024-12-11_7151-page-20-29', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-12-11_7151-page-20-29.pdf'}, {'file_uuid': '3106200_2024-12-11_7151-page-30-35', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-12-11_7151-page-30-35.pdf'}, {'file_uuid': '3106200_2024-12-12_7152-page-0-9', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-12-12_7152-page-0-9.pdf'}, {'file_uuid': '3106200_2024-12-12_7152-page-10-19', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-12-12_7152-page-10-19.pdf'}, {'file_uuid': '3106200_2024-12-12_7152-page-20-24', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-12-12_7152-page-20-24.pdf'}, {'file_uuid': '3106200_2024-12-13_7153-page-0-9', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-12-13_7153-page-0-9.pdf'}, {'file_uuid': '3106200_2024-12-13_7153-page-10-19', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-12-13_7153-page-10-19.pdf'}, {'file_uuid': '3106200_2024-12-13_7153-page-20-29', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-12-13_7153-page-20-29.pdf'}, {'file_uuid': '3106200_2024-12-13_7153-page-30-33', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-12-13_7153-page-30-33.pdf'}, {'file_uuid': '3106200_2024-12-14_7154-page-0-9', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-12-14_7154-page-0-9.pdf'}, {'file_uuid': '3106200_2024-12-14_7154-page-10-19', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-12-14_7154-page-10-19.pdf'}, {'file_uuid': '3106200_2024-12-14_7154-page-20-29', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-12-14_7154-page-20-29.pdf'}, {'file_uuid': '3106200_2024-12-14_7154-page-30-31', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-12-14_7154-page-30-31.pdf'}, {'file_uuid': '3106200_2024-12-17_7155-page-0-9', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-12-17_7155-page-0-9.pdf'}, {'file_uuid': '3106200_2024-12-17_7155-page-10-19', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-12-17_7155-page-10-19.pdf'}, {'file_uuid': '3106200_2024-12-17_7155-page-20-24', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-12-17_7155-page-20-24.pdf'}, {'file_uuid': '3106200_2024-12-18_7156-page-0-9', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-12-18_7156-page-0-9.pdf'}, {'file_uuid': '3106200_2024-12-18_7156-page-10-19', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-12-18_7156-page-10-19.pdf'}, {'file_uuid': '3106200_2024-12-18_7156-page-20-29', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-12-18_7156-page-20-29.pdf'}, {'file_uuid': '3106200_2024-12-18_7156-page-30-39', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-12-18_7156-page-30-39.pdf'}, {'file_uuid': '3106200_2024-12-18_7156-page-40-49', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-12-18_7156-page-40-49.pdf'}, {'file_uuid': '3106200_2024-12-18_7156-page-50-59', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-12-18_7156-page-50-59.pdf'}, {'file_uuid': '3106200_2024-12-18_7156-page-60-69', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-12-18_7156-page-60-69.pdf'}, {'file_uuid': '3106200_2024-12-18_7156-page-70-71', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-12-18_7156-page-70-71.pdf'}, {'file_uuid': '3106200_2024-12-19_7157-page-0-9', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-12-19_7157-page-0-9.pdf'}, {'file_uuid': '3106200_2024-12-19_7157-page-10-19', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-12-19_7157-page-10-19.pdf'}, {'file_uuid': '3106200_2024-12-19_7157-page-20-29', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-12-19_7157-page-20-29.pdf'}, {'file_uuid': '3106200_2024-12-19_7157-page-30-34', 'file_path': '/usr/local/***/data/pdf_single_page/3106200_2024-12-19_7157-page-30-34.pdf'}]
+[2025-01-24T21:47:59.630+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-24T21:47:59.965+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T21:48:02.313+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T21:48:02.891+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T21:48:03.381+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-11-22_7138-page-0-9.pdf
+[2025-01-24T21:48:26.579+0000] {local_task_job_runner.py:346} WARNING - State of this instance has been externally set to restarting. Terminating instance.
+[2025-01-24T21:48:26.582+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-01-24T21:48:26.584+0000] {process_utils.py:132} INFO - Sending 15 to group 2009. PIDs of all processes in the group: [2009]
+[2025-01-24T21:48:26.585+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 2009
+[2025-01-24T21:48:26.727+0000] {taskinstance.py:3092} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-01-24T21:48:26.747+0000] {taskinstance.py:3310} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/utils/preprocess_documents.py", line 135, in execute
+    metadata = self.process_files(to_preprocess_files, metadata)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/utils/preprocess_documents.py", line 122, in process_files
+    preprocessed_document = self.preprocess_file(document_metadata['file_path'])
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/utils/preprocess_documents.py", line 104, in preprocess_file
+    result = converter.convert(source)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pydantic/_internal/_validate_call.py", line 38, in wrapper_function
+    return wrapper(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pydantic/_internal/_validate_call.py", line 111, in __call__
+    res = self.__pydantic_validator__.validate_python(pydantic_core.ArgsKwargs(args, kwargs))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docling/document_converter.py", line 195, in convert
+    return next(all_res)
+           ^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docling/document_converter.py", line 216, in convert_all
+    for conv_res in conv_res_iter:
+                    ^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docling/document_converter.py", line 251, in _convert
+    for item in map(
+                ^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docling/document_converter.py", line 292, in _process_document
+    conv_res = self._execute_pipeline(in_doc, raises_on_error=raises_on_error)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docling/document_converter.py", line 315, in _execute_pipeline
+    conv_res = pipeline.execute(in_doc, raises_on_error=raises_on_error)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docling/pipeline/base_pipeline.py", line 45, in execute
+    conv_res = self._build_document(conv_res)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docling/pipeline/base_pipeline.py", line 161, in _build_document
+    for p in pipeline_pages:  # Must exhaust!
+             ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docling/pipeline/base_pipeline.py", line 127, in _apply_on_pages
+    yield from page_batch
+  File "/home/airflow/.local/lib/python3.12/site-packages/docling/models/page_assemble_model.py", line 60, in __call__
+    for page in page_batch:
+                ^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docling/models/table_structure_model.py", line 136, in __call__
+    for page in page_batch:
+                ^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docling/models/layout_model.py", line 102, in __call__
+    for page in page_batch:
+                ^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docling/models/easyocr_model.py", line 89, in __call__
+    ocr_rects = self.get_ocr_rects(page)
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docling/models/base_ocr_model.py", line 79, in get_ocr_rects
+    coverage, ocr_rects = find_ocr_rects(page.size, bitmap_rects)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docling/models/base_ocr_model.py", line 50, in find_ocr_rects
+    np_image = binary_dilation(np_image > 0, structure=structure)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/scipy/ndimage/_morphology.py", line 538, in binary_dilation
+    return _binary_erosion(input, structure, iterations, mask,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/scipy/ndimage/_morphology.py", line 262, in _binary_erosion
+    _nd_image.binary_erosion(input, structure, mask, output,
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3094, in signal_handler
+    raise AirflowTaskTerminated("Task received SIGTERM signal")
+airflow.exceptions.AirflowTaskTerminated: Task received SIGTERM signal
+[2025-01-24T21:48:26.760+0000] {taskinstance.py:1225} INFO - Marking task as UP_FOR_RETRY. dag_id=pull_gazettes_data, task_id=preprocess_documents_task, run_id=manual__2025-01-24T21:10:42.449118+00:00, execution_date=20250124T211042, start_date=20250124T214756, end_date=20250124T214826
+[2025-01-24T21:48:26.773+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-24T21:48:26.839+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=2009, status='terminated', exitcode=2, started='21:47:55') (2009) terminated with exit code 2

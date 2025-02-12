@@ -1,0 +1,118 @@
+[2025-01-25T19:43:40.254+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-25T19:43:40.268+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pull_gazettes_data.generate_indexes_task manual__2025-01-25T18:45:04.636275+00:00 [queued]>
+[2025-01-25T19:43:40.275+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pull_gazettes_data.generate_indexes_task manual__2025-01-25T18:45:04.636275+00:00 [queued]>
+[2025-01-25T19:43:40.276+0000] {taskinstance.py:2865} INFO - Starting attempt 3 of 4
+[2025-01-25T19:43:40.287+0000] {taskinstance.py:2888} INFO - Executing <Task(GenerateIndexTask): generate_indexes_task> on 2025-01-25 18:45:04.636275+00:00
+[2025-01-25T19:43:40.297+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=23411) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-25T19:43:40.298+0000] {standard_task_runner.py:72} INFO - Started process 23424 to run task
+[2025-01-25T19:43:40.298+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'pull_gazettes_data', 'generate_indexes_task', 'manual__2025-01-25T18:45:04.636275+00:00', '--job-id', '133', '--raw', '--subdir', 'DAGS_FOLDER/dag_script.py', '--cfg-path', '/tmp/tmp1gjraexo']
+[2025-01-25T19:43:40.300+0000] {standard_task_runner.py:105} INFO - Job 133: Subtask generate_indexes_task
+[2025-01-25T19:43:40.338+0000] {task_command.py:467} INFO - Running <TaskInstance: pull_gazettes_data.generate_indexes_task manual__2025-01-25T18:45:04.636275+00:00 [running]> on host 41bcec3d818b
+[2025-01-25T19:43:40.396+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='***@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='pull_gazettes_data' AIRFLOW_CTX_TASK_ID='generate_indexes_task' AIRFLOW_CTX_EXECUTION_DATE='2025-01-25T18:45:04.636275+00:00' AIRFLOW_CTX_TRY_NUMBER='3' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-25T18:45:04.636275+00:00'
+[2025-01-25T19:43:40.397+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-25T19:43:40.409+0000] {logging_mixin.py:190} INFO - Initializing database
+[2025-01-25T19:43:40.840+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:43:40.861+0000] {logging_mixin.py:190} INFO - Parsing database current state
+[2025-01-25T19:43:40.862+0000] {logging_mixin.py:190} INFO - instantiating new database /usr/local/***/data/vector_db/
+[2025-01-25T19:43:40.863+0000] {logging_mixin.py:190} INFO - Reading file metadata
+[2025-01-25T19:43:40.874+0000] {logging_mixin.py:190} INFO - [FileMetadata(uuid='3106200_2024-12-17_7155-page-0-0'), FileMetadata(uuid='3106200_2024-12-17_7155-page-1-1'), FileMetadata(uuid='3106200_2024-12-17_7155-page-2-2'), FileMetadata(uuid='3106200_2024-12-17_7155-page-3-3'), FileMetadata(uuid='3106200_2024-12-17_7155-page-4-4'), FileMetadata(uuid='3106200_2024-12-17_7155-page-5-5'), FileMetadata(uuid='3106200_2024-12-17_7155-page-6-6'), FileMetadata(uuid='3106200_2024-12-17_7155-page-7-7'), FileMetadata(uuid='3106200_2024-12-17_7155-page-8-8'), FileMetadata(uuid='3106200_2024-12-17_7155-page-9-9'), FileMetadata(uuid='3106200_2024-12-17_7155-page-10-10'), FileMetadata(uuid='3106200_2024-12-17_7155-page-11-11'), FileMetadata(uuid='3106200_2024-12-17_7155-page-12-12'), FileMetadata(uuid='3106200_2024-12-17_7155-page-13-13'), FileMetadata(uuid='3106200_2024-12-17_7155-page-14-14'), FileMetadata(uuid='3106200_2024-12-17_7155-page-15-15'), FileMetadata(uuid='3106200_2024-12-17_7155-page-16-16'), FileMetadata(uuid='3106200_2024-12-17_7155-page-17-17'), FileMetadata(uuid='3106200_2024-12-17_7155-page-20-20'), FileMetadata(uuid='3106200_2024-12-17_7155-page-21-21'), FileMetadata(uuid='3106200_2024-12-17_7155-page-22-22'), FileMetadata(uuid='3106200_2024-12-17_7155-page-23-23'), FileMetadata(uuid='3106200_2024-12-17_7155-page-24-24')]
+[2025-01-25T19:43:40.875+0000] {logging_mixin.py:190} INFO - Adding batch of documents
+[2025-01-25T19:43:41.136+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:43:41.508+0000] {logging_mixin.py:190} INFO - Added 26 chunks for document: 3106200_2024-12-17_7155-page-0-0
+[2025-01-25T19:43:41.508+0000] {logging_mixin.py:190} INFO - Saving current vector index status
+[2025-01-25T19:43:41.518+0000] {logging_mixin.py:190} INFO - Waiting 6 seconds
+[2025-01-25T19:43:47.913+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:43:48.214+0000] {logging_mixin.py:190} INFO - Added 17 chunks for document: 3106200_2024-12-17_7155-page-1-1
+[2025-01-25T19:43:48.215+0000] {logging_mixin.py:190} INFO - Saving current vector index status
+[2025-01-25T19:43:48.226+0000] {logging_mixin.py:190} INFO - Waiting 1 seconds
+[2025-01-25T19:43:49.523+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:43:50.443+0000] {logging_mixin.py:190} INFO - Added 27 chunks for document: 3106200_2024-12-17_7155-page-2-2
+[2025-01-25T19:43:50.444+0000] {logging_mixin.py:190} INFO - Saving current vector index status
+[2025-01-25T19:43:50.456+0000] {logging_mixin.py:190} INFO - Waiting 6 seconds
+[2025-01-25T19:43:56.934+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:43:57.419+0000] {logging_mixin.py:190} INFO - Added 34 chunks for document: 3106200_2024-12-17_7155-page-3-3
+[2025-01-25T19:43:57.419+0000] {logging_mixin.py:190} INFO - Saving current vector index status
+[2025-01-25T19:43:57.432+0000] {logging_mixin.py:190} INFO - Waiting 1 seconds
+[2025-01-25T19:43:58.664+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:43:58.895+0000] {logging_mixin.py:190} INFO - Added 15 chunks for document: 3106200_2024-12-17_7155-page-4-4
+[2025-01-25T19:43:58.896+0000] {logging_mixin.py:190} INFO - Saving current vector index status
+[2025-01-25T19:43:58.911+0000] {logging_mixin.py:190} INFO - Waiting 8 seconds
+[2025-01-25T19:44:07.265+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:44:07.573+0000] {logging_mixin.py:190} INFO - Added 15 chunks for document: 3106200_2024-12-17_7155-page-5-5
+[2025-01-25T19:44:07.574+0000] {logging_mixin.py:190} INFO - Saving current vector index status
+[2025-01-25T19:44:07.587+0000] {logging_mixin.py:190} INFO - Waiting 1 seconds
+[2025-01-25T19:44:08.800+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:44:08.982+0000] {logging_mixin.py:190} INFO - Added 10 chunks for document: 3106200_2024-12-17_7155-page-6-6
+[2025-01-25T19:44:08.982+0000] {logging_mixin.py:190} INFO - Saving current vector index status
+[2025-01-25T19:44:08.997+0000] {logging_mixin.py:190} INFO - Waiting 3 seconds
+[2025-01-25T19:44:12.238+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:44:12.479+0000] {logging_mixin.py:190} INFO - Added 17 chunks for document: 3106200_2024-12-17_7155-page-7-7
+[2025-01-25T19:44:12.480+0000] {logging_mixin.py:190} INFO - Saving current vector index status
+[2025-01-25T19:44:12.493+0000] {logging_mixin.py:190} INFO - Waiting 5 seconds
+[2025-01-25T19:44:17.851+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:44:18.029+0000] {logging_mixin.py:190} INFO - Added 13 chunks for document: 3106200_2024-12-17_7155-page-8-8
+[2025-01-25T19:44:18.030+0000] {logging_mixin.py:190} INFO - Saving current vector index status
+[2025-01-25T19:44:18.043+0000] {logging_mixin.py:190} INFO - Waiting 4 seconds
+[2025-01-25T19:44:23.291+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:44:23.526+0000] {logging_mixin.py:190} INFO - Added 13 chunks for document: 3106200_2024-12-17_7155-page-9-9
+[2025-01-25T19:44:23.527+0000] {logging_mixin.py:190} INFO - Saving current vector index status
+[2025-01-25T19:44:23.546+0000] {logging_mixin.py:190} INFO - Waiting 9 seconds
+[2025-01-25T19:44:32.950+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:44:33.161+0000] {logging_mixin.py:190} INFO - Added 12 chunks for document: 3106200_2024-12-17_7155-page-10-10
+[2025-01-25T19:44:33.161+0000] {logging_mixin.py:190} INFO - Saving current vector index status
+[2025-01-25T19:44:33.176+0000] {logging_mixin.py:190} INFO - Waiting 10 seconds
+[2025-01-25T19:44:43.648+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:44:44.316+0000] {logging_mixin.py:190} INFO - Added 23 chunks for document: 3106200_2024-12-17_7155-page-11-11
+[2025-01-25T19:44:44.317+0000] {logging_mixin.py:190} INFO - Saving current vector index status
+[2025-01-25T19:44:44.331+0000] {logging_mixin.py:190} INFO - Waiting 2 seconds
+[2025-01-25T19:44:46.639+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:44:47.010+0000] {logging_mixin.py:190} INFO - Added 20 chunks for document: 3106200_2024-12-17_7155-page-12-12
+[2025-01-25T19:44:47.010+0000] {logging_mixin.py:190} INFO - Saving current vector index status
+[2025-01-25T19:44:47.027+0000] {logging_mixin.py:190} INFO - Waiting 3 seconds
+[2025-01-25T19:44:50.295+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:44:50.637+0000] {logging_mixin.py:190} INFO - Added 19 chunks for document: 3106200_2024-12-17_7155-page-13-13
+[2025-01-25T19:44:50.638+0000] {logging_mixin.py:190} INFO - Saving current vector index status
+[2025-01-25T19:44:50.659+0000] {logging_mixin.py:190} INFO - Waiting 7 seconds
+[2025-01-25T19:44:58.026+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:44:58.249+0000] {logging_mixin.py:190} INFO - Added 14 chunks for document: 3106200_2024-12-17_7155-page-14-14
+[2025-01-25T19:44:58.250+0000] {logging_mixin.py:190} INFO - Saving current vector index status
+[2025-01-25T19:44:58.266+0000] {logging_mixin.py:190} INFO - Waiting 2 seconds
+[2025-01-25T19:45:00.497+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:45:00.695+0000] {logging_mixin.py:190} INFO - Added 13 chunks for document: 3106200_2024-12-17_7155-page-15-15
+[2025-01-25T19:45:00.695+0000] {logging_mixin.py:190} INFO - Saving current vector index status
+[2025-01-25T19:45:00.715+0000] {logging_mixin.py:190} INFO - Waiting 7 seconds
+[2025-01-25T19:45:08.077+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:45:08.332+0000] {logging_mixin.py:190} INFO - Added 13 chunks for document: 3106200_2024-12-17_7155-page-16-16
+[2025-01-25T19:45:08.333+0000] {logging_mixin.py:190} INFO - Saving current vector index status
+[2025-01-25T19:45:08.353+0000] {logging_mixin.py:190} INFO - Waiting 3 seconds
+[2025-01-25T19:45:11.574+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:45:11.771+0000] {logging_mixin.py:190} INFO - Added 12 chunks for document: 3106200_2024-12-17_7155-page-17-17
+[2025-01-25T19:45:11.772+0000] {logging_mixin.py:190} INFO - Saving current vector index status
+[2025-01-25T19:45:11.789+0000] {logging_mixin.py:190} INFO - Waiting 3 seconds
+[2025-01-25T19:45:15.017+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:45:15.224+0000] {logging_mixin.py:190} INFO - Added 13 chunks for document: 3106200_2024-12-17_7155-page-20-20
+[2025-01-25T19:45:15.225+0000] {logging_mixin.py:190} INFO - Saving current vector index status
+[2025-01-25T19:45:15.243+0000] {logging_mixin.py:190} INFO - Waiting 9 seconds
+[2025-01-25T19:45:24.655+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:45:25.201+0000] {logging_mixin.py:190} INFO - Added 28 chunks for document: 3106200_2024-12-17_7155-page-21-21
+[2025-01-25T19:45:25.202+0000] {logging_mixin.py:190} INFO - Saving current vector index status
+[2025-01-25T19:45:25.224+0000] {logging_mixin.py:190} INFO - Waiting 2 seconds
+[2025-01-25T19:45:27.445+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:45:27.581+0000] {logging_mixin.py:190} INFO - Added 9 chunks for document: 3106200_2024-12-17_7155-page-22-22
+[2025-01-25T19:45:27.581+0000] {logging_mixin.py:190} INFO - Saving current vector index status
+[2025-01-25T19:45:27.601+0000] {logging_mixin.py:190} INFO - Waiting 9 seconds
+[2025-01-25T19:45:36.996+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:45:37.399+0000] {logging_mixin.py:190} INFO - Added 22 chunks for document: 3106200_2024-12-17_7155-page-23-23
+[2025-01-25T19:45:37.400+0000] {logging_mixin.py:190} INFO - Saving current vector index status
+[2025-01-25T19:45:37.430+0000] {logging_mixin.py:190} INFO - Waiting 7 seconds
+[2025-01-25T19:45:44.771+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:45:44.912+0000] {logging_mixin.py:190} INFO - Added 9 chunks for document: 3106200_2024-12-17_7155-page-24-24
+[2025-01-25T19:45:44.912+0000] {logging_mixin.py:190} INFO - Saving current vector index status
+[2025-01-25T19:45:44.931+0000] {logging_mixin.py:190} INFO - Waiting 6 seconds
+[2025-01-25T19:45:50.940+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-25T19:45:50.941+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=pull_gazettes_data, task_id=generate_indexes_task, run_id=manual__2025-01-25T18:45:04.636275+00:00, execution_date=20250125T184504, start_date=20250125T194340, end_date=20250125T194550
+[2025-01-25T19:45:51.004+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-01-25T19:45:51.025+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-01-25T19:45:51.027+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

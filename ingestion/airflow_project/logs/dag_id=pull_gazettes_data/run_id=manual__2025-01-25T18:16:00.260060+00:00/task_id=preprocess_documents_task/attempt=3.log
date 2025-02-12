@@ -1,0 +1,130 @@
+[2025-01-25T18:23:38.418+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-25T18:23:38.434+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pull_gazettes_data.preprocess_documents_task manual__2025-01-25T18:16:00.260060+00:00 [queued]>
+[2025-01-25T18:23:38.441+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pull_gazettes_data.preprocess_documents_task manual__2025-01-25T18:16:00.260060+00:00 [queued]>
+[2025-01-25T18:23:38.442+0000] {taskinstance.py:2865} INFO - Starting attempt 3 of 4
+[2025-01-25T18:23:38.455+0000] {taskinstance.py:2888} INFO - Executing <Task(PreprocessDocuments): preprocess_documents_task> on 2025-01-25 18:16:00.260060+00:00
+[2025-01-25T18:23:38.465+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=19376) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-25T18:23:38.467+0000] {standard_task_runner.py:72} INFO - Started process 19389 to run task
+[2025-01-25T18:23:38.467+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'pull_gazettes_data', 'preprocess_documents_task', 'manual__2025-01-25T18:16:00.260060+00:00', '--job-id', '110', '--raw', '--subdir', 'DAGS_FOLDER/dag_script.py', '--cfg-path', '/tmp/tmpy1y2zxav']
+[2025-01-25T18:23:38.469+0000] {standard_task_runner.py:105} INFO - Job 110: Subtask preprocess_documents_task
+[2025-01-25T18:23:38.514+0000] {task_command.py:467} INFO - Running <TaskInstance: pull_gazettes_data.preprocess_documents_task manual__2025-01-25T18:16:00.260060+00:00 [running]> on host 41bcec3d818b
+[2025-01-25T18:23:38.582+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='***@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='pull_gazettes_data' AIRFLOW_CTX_TASK_ID='preprocess_documents_task' AIRFLOW_CTX_EXECUTION_DATE='2025-01-25T18:16:00.260060+00:00' AIRFLOW_CTX_TRY_NUMBER='3' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-25T18:16:00.260060+00:00'
+[2025-01-25T18:23:38.584+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-25T18:23:38.599+0000] {logging_mixin.py:190} INFO - Checking pre processed documents log
+[2025-01-25T18:23:38.610+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-11-26_7140.pdf into multiple PDF single pages
+[2025-01-25T18:23:38.653+0000] {logging_mixin.py:190} INFO -                    file_uuid  ...               etl_timestamp
+0    3106200_2024-11-26_7140  ...  2025-01-25 12:02:10.601409
+1    3106200_2024-11-26_7140  ...  2025-01-25 12:02:10.601409
+2    3106200_2024-11-26_7140  ...  2025-01-25 12:02:10.601409
+3    3106200_2024-11-26_7140  ...  2025-01-25 12:02:10.601409
+4    3106200_2024-11-26_7140  ...  2025-01-25 12:02:10.601409
+..                       ...  ...                         ...
+434  3106200_2024-12-11_7151  ...  2025-01-25 12:02:10.601409
+435  3106200_2024-12-11_7151  ...  2025-01-25 12:02:10.601409
+436  3106200_2024-12-12_7152  ...  2025-01-25 12:02:10.601409
+437  3106200_2024-12-12_7152  ...  2025-01-25 12:02:10.601409
+438  3106200_2024-12-12_7152  ...  2025-01-25 12:02:10.601409
+
+[439 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:23:38.827+0000] {logging_mixin.py:190} INFO -                    file_uuid  ...               etl_timestamp
+0    3106200_2024-11-26_7140  ...  2025-01-25 12:02:10.601409
+1    3106200_2024-11-26_7140  ...  2025-01-25 12:02:10.601409
+2    3106200_2024-11-26_7140  ...  2025-01-25 12:02:10.601409
+3    3106200_2024-11-26_7140  ...  2025-01-25 12:02:10.601409
+4    3106200_2024-11-26_7140  ...  2025-01-25 12:02:10.601409
+..                       ...  ...                         ...
+434  3106200_2024-12-11_7151  ...  2025-01-25 12:02:10.601409
+435  3106200_2024-12-11_7151  ...  2025-01-25 12:02:10.601409
+436  3106200_2024-12-12_7152  ...  2025-01-25 12:02:10.601409
+437  3106200_2024-12-12_7152  ...  2025-01-25 12:02:10.601409
+438  3106200_2024-12-12_7152  ...  2025-01-25 12:02:10.601409
+
+[439 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:23:38.969+0000] {logging_mixin.py:190} INFO -                    file_uuid  ...               etl_timestamp
+0    3106200_2024-11-26_7140  ...  2025-01-25 12:02:10.601409
+1    3106200_2024-11-26_7140  ...  2025-01-25 12:02:10.601409
+2    3106200_2024-11-26_7140  ...  2025-01-25 12:02:10.601409
+3    3106200_2024-11-26_7140  ...  2025-01-25 12:02:10.601409
+4    3106200_2024-11-26_7140  ...  2025-01-25 12:02:10.601409
+..                       ...  ...                         ...
+434  3106200_2024-12-11_7151  ...  2025-01-25 12:02:10.601409
+435  3106200_2024-12-11_7151  ...  2025-01-25 12:02:10.601409
+436  3106200_2024-12-12_7152  ...  2025-01-25 12:02:10.601409
+437  3106200_2024-12-12_7152  ...  2025-01-25 12:02:10.601409
+438  3106200_2024-12-12_7152  ...  2025-01-25 12:02:10.601409
+
+[439 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:23:39.133+0000] {logging_mixin.py:190} INFO -                    file_uuid  ...               etl_timestamp
+0    3106200_2024-11-26_7140  ...  2025-01-25 12:02:10.601409
+1    3106200_2024-11-26_7140  ...  2025-01-25 12:02:10.601409
+2    3106200_2024-11-26_7140  ...  2025-01-25 12:02:10.601409
+3    3106200_2024-11-26_7140  ...  2025-01-25 12:02:10.601409
+4    3106200_2024-11-26_7140  ...  2025-01-25 12:02:10.601409
+..                       ...  ...                         ...
+434  3106200_2024-12-11_7151  ...  2025-01-25 12:02:10.601409
+435  3106200_2024-12-11_7151  ...  2025-01-25 12:02:10.601409
+436  3106200_2024-12-12_7152  ...  2025-01-25 12:02:10.601409
+437  3106200_2024-12-12_7152  ...  2025-01-25 12:02:10.601409
+438  3106200_2024-12-12_7152  ...  2025-01-25 12:02:10.601409
+
+[439 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:23:39.286+0000] {logging_mixin.py:190} INFO -                    file_uuid  ...               etl_timestamp
+0    3106200_2024-11-26_7140  ...  2025-01-25 12:02:10.601409
+1    3106200_2024-11-26_7140  ...  2025-01-25 12:02:10.601409
+2    3106200_2024-11-26_7140  ...  2025-01-25 12:02:10.601409
+3    3106200_2024-11-26_7140  ...  2025-01-25 12:02:10.601409
+4    3106200_2024-11-26_7140  ...  2025-01-25 12:02:10.601409
+..                       ...  ...                         ...
+434  3106200_2024-12-11_7151  ...  2025-01-25 12:02:10.601409
+435  3106200_2024-12-11_7151  ...  2025-01-25 12:02:10.601409
+436  3106200_2024-12-12_7152  ...  2025-01-25 12:02:10.601409
+437  3106200_2024-12-12_7152  ...  2025-01-25 12:02:10.601409
+438  3106200_2024-12-12_7152  ...  2025-01-25 12:02:10.601409
+
+[439 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:23:39.426+0000] {logging_mixin.py:190} INFO -                    file_uuid  ...               etl_timestamp
+0    3106200_2024-11-26_7140  ...  2025-01-25 12:02:10.601409
+1    3106200_2024-11-26_7140  ...  2025-01-25 12:02:10.601409
+2    3106200_2024-11-26_7140  ...  2025-01-25 12:02:10.601409
+3    3106200_2024-11-26_7140  ...  2025-01-25 12:02:10.601409
+4    3106200_2024-11-26_7140  ...  2025-01-25 12:02:10.601409
+..                       ...  ...                         ...
+434  3106200_2024-12-11_7151  ...  2025-01-25 12:02:10.601409
+435  3106200_2024-12-11_7151  ...  2025-01-25 12:02:10.601409
+436  3106200_2024-12-12_7152  ...  2025-01-25 12:02:10.601409
+437  3106200_2024-12-12_7152  ...  2025-01-25 12:02:10.601409
+438  3106200_2024-12-12_7152  ...  2025-01-25 12:02:10.601409
+
+[439 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:23:39.592+0000] {logging_mixin.py:190} INFO -                    file_uuid  ...               etl_timestamp
+0    3106200_2024-11-26_7140  ...  2025-01-25 12:02:10.601409
+1    3106200_2024-11-26_7140  ...  2025-01-25 12:02:10.601409
+2    3106200_2024-11-26_7140  ...  2025-01-25 12:02:10.601409
+3    3106200_2024-11-26_7140  ...  2025-01-25 12:02:10.601409
+4    3106200_2024-11-26_7140  ...  2025-01-25 12:02:10.601409
+..                       ...  ...                         ...
+434  3106200_2024-12-11_7151  ...  2025-01-25 12:02:10.601409
+435  3106200_2024-12-11_7151  ...  2025-01-25 12:02:10.601409
+436  3106200_2024-12-12_7152  ...  2025-01-25 12:02:10.601409
+437  3106200_2024-12-12_7152  ...  2025-01-25 12:02:10.601409
+438  3106200_2024-12-12_7152  ...  2025-01-25 12:02:10.601409
+
+[439 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:23:39.715+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T18:23:40.015+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:23:42.417+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:23:43.067+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:23:43.522+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-11-26_7140-page-0-4.pdf
+[2025-01-25T18:23:53.221+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-11-26_7140-page-0-4.pdf in 13.53 sec.
+[2025-01-25T18:23:53.238+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-11-26_7140-page-0-4.md
+[2025-01-25T18:23:53.252+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T18:23:53.423+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:23:53.648+0000] {local_task_job_runner.py:346} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2025-01-25T18:23:53.651+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-01-25T18:23:53.653+0000] {process_utils.py:132} INFO - Sending 15 to group 19389. PIDs of all processes in the group: [19389]
+[2025-01-25T18:23:53.653+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 19389
+[2025-01-25T18:23:53.653+0000] {taskinstance.py:3092} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-01-25T18:23:53.675+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-25T18:23:53.706+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=19389, status='terminated', exitcode=0, started='18:23:38') (19389) terminated with exit code 0

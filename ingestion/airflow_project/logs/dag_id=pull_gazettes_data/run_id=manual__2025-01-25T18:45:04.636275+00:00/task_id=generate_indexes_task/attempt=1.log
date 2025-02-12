@@ -1,0 +1,385 @@
+[2025-01-25T19:19:13.465+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-25T19:19:13.480+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pull_gazettes_data.generate_indexes_task manual__2025-01-25T18:45:04.636275+00:00 [queued]>
+[2025-01-25T19:19:13.488+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pull_gazettes_data.generate_indexes_task manual__2025-01-25T18:45:04.636275+00:00 [queued]>
+[2025-01-25T19:19:13.488+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2025-01-25T19:19:13.501+0000] {taskinstance.py:2888} INFO - Executing <Task(GenerateIndexTask): generate_indexes_task> on 2025-01-25 18:45:04.636275+00:00
+[2025-01-25T19:19:13.517+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=22737) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-25T19:19:13.519+0000] {standard_task_runner.py:72} INFO - Started process 22774 to run task
+[2025-01-25T19:19:13.520+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'pull_gazettes_data', 'generate_indexes_task', 'manual__2025-01-25T18:45:04.636275+00:00', '--job-id', '124', '--raw', '--subdir', 'DAGS_FOLDER/dag_script.py', '--cfg-path', '/tmp/tmp8ib1f3r_']
+[2025-01-25T19:19:13.521+0000] {standard_task_runner.py:105} INFO - Job 124: Subtask generate_indexes_task
+[2025-01-25T19:19:13.559+0000] {task_command.py:467} INFO - Running <TaskInstance: pull_gazettes_data.generate_indexes_task manual__2025-01-25T18:45:04.636275+00:00 [running]> on host 41bcec3d818b
+[2025-01-25T19:19:13.623+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='***@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='pull_gazettes_data' AIRFLOW_CTX_TASK_ID='generate_indexes_task' AIRFLOW_CTX_EXECUTION_DATE='2025-01-25T18:45:04.636275+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-25T18:45:04.636275+00:00'
+[2025-01-25T19:19:13.625+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-25T19:19:13.645+0000] {logging_mixin.py:190} INFO - Initializing database
+[2025-01-25T19:19:14.121+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:19:14.144+0000] {logging_mixin.py:190} INFO - Parsing database current state
+[2025-01-25T19:19:14.146+0000] {logging_mixin.py:190} INFO - instantiating new database /usr/local/***/data/vector_db/
+[2025-01-25T19:19:14.146+0000] {logging_mixin.py:190} INFO - Reading file metadata
+[2025-01-25T19:19:14.164+0000] {logging_mixin.py:190} INFO - [FileMetadata(uuid='3106200_2024-12-17_7155-page-0-0'), FileMetadata(uuid='3106200_2024-12-17_7155-page-1-1'), FileMetadata(uuid='3106200_2024-12-17_7155-page-2-2'), FileMetadata(uuid='3106200_2024-12-17_7155-page-3-3'), FileMetadata(uuid='3106200_2024-12-17_7155-page-4-4'), FileMetadata(uuid='3106200_2024-12-17_7155-page-5-5'), FileMetadata(uuid='3106200_2024-12-17_7155-page-6-6'), FileMetadata(uuid='3106200_2024-12-17_7155-page-7-7'), FileMetadata(uuid='3106200_2024-12-17_7155-page-8-8'), FileMetadata(uuid='3106200_2024-12-17_7155-page-9-9'), FileMetadata(uuid='3106200_2024-12-17_7155-page-10-10'), FileMetadata(uuid='3106200_2024-12-17_7155-page-11-11'), FileMetadata(uuid='3106200_2024-12-17_7155-page-12-12'), FileMetadata(uuid='3106200_2024-12-17_7155-page-13-13'), FileMetadata(uuid='3106200_2024-12-17_7155-page-14-14'), FileMetadata(uuid='3106200_2024-12-17_7155-page-15-15'), FileMetadata(uuid='3106200_2024-12-17_7155-page-16-16'), FileMetadata(uuid='3106200_2024-12-17_7155-page-17-17'), FileMetadata(uuid='3106200_2024-12-17_7155-page-20-20'), FileMetadata(uuid='3106200_2024-12-17_7155-page-21-21'), FileMetadata(uuid='3106200_2024-12-17_7155-page-22-22'), FileMetadata(uuid='3106200_2024-12-17_7155-page-23-23'), FileMetadata(uuid='3106200_2024-12-17_7155-page-24-24'), FileMetadata(uuid='3106200_2024-12-18_7156-page-0-0'), FileMetadata(uuid='3106200_2024-12-18_7156-page-5-5'), FileMetadata(uuid='3106200_2024-12-18_7156-page-6-6'), FileMetadata(uuid='3106200_2024-12-18_7156-page-7-7'), FileMetadata(uuid='3106200_2024-12-18_7156-page-8-8'), FileMetadata(uuid='3106200_2024-12-18_7156-page-9-9'), FileMetadata(uuid='3106200_2024-12-18_7156-page-10-10'), FileMetadata(uuid='3106200_2024-12-18_7156-page-11-11'), FileMetadata(uuid='3106200_2024-12-18_7156-page-12-12'), FileMetadata(uuid='3106200_2024-12-18_7156-page-13-13'), FileMetadata(uuid='3106200_2024-12-18_7156-page-14-14'), FileMetadata(uuid='3106200_2024-12-18_7156-page-15-15'), FileMetadata(uuid='3106200_2024-12-18_7156-page-16-16'), FileMetadata(uuid='3106200_2024-12-18_7156-page-17-17'), FileMetadata(uuid='3106200_2024-12-18_7156-page-18-18'), FileMetadata(uuid='3106200_2024-12-18_7156-page-19-19'), FileMetadata(uuid='3106200_2024-12-18_7156-page-20-20'), FileMetadata(uuid='3106200_2024-12-18_7156-page-21-21'), FileMetadata(uuid='3106200_2024-12-18_7156-page-22-22'), FileMetadata(uuid='3106200_2024-12-18_7156-page-23-23'), FileMetadata(uuid='3106200_2024-12-18_7156-page-24-24'), FileMetadata(uuid='3106200_2024-12-18_7156-page-25-25'), FileMetadata(uuid='3106200_2024-12-18_7156-page-26-26'), FileMetadata(uuid='3106200_2024-12-18_7156-page-27-27'), FileMetadata(uuid='3106200_2024-12-18_7156-page-28-28'), FileMetadata(uuid='3106200_2024-12-18_7156-page-29-29'), FileMetadata(uuid='3106200_2024-12-18_7156-page-30-30'), FileMetadata(uuid='3106200_2024-12-18_7156-page-31-31'), FileMetadata(uuid='3106200_2024-12-18_7156-page-32-32'), FileMetadata(uuid='3106200_2024-12-18_7156-page-33-33'), FileMetadata(uuid='3106200_2024-12-18_7156-page-34-34'), FileMetadata(uuid='3106200_2024-12-18_7156-page-35-35'), FileMetadata(uuid='3106200_2024-12-18_7156-page-36-36'), FileMetadata(uuid='3106200_2024-12-18_7156-page-37-37'), FileMetadata(uuid='3106200_2024-12-18_7156-page-38-38'), FileMetadata(uuid='3106200_2024-12-18_7156-page-39-39'), FileMetadata(uuid='3106200_2024-12-18_7156-page-40-40'), FileMetadata(uuid='3106200_2024-12-18_7156-page-41-41'), FileMetadata(uuid='3106200_2024-12-18_7156-page-42-42'), FileMetadata(uuid='3106200_2024-12-18_7156-page-43-43'), FileMetadata(uuid='3106200_2024-12-18_7156-page-44-44'), FileMetadata(uuid='3106200_2024-12-18_7156-page-45-45'), FileMetadata(uuid='3106200_2024-12-18_7156-page-46-46'), FileMetadata(uuid='3106200_2024-12-18_7156-page-47-47'), FileMetadata(uuid='3106200_2024-12-18_7156-page-48-48'), FileMetadata(uuid='3106200_2024-12-18_7156-page-49-49'), FileMetadata(uuid='3106200_2024-12-18_7156-page-50-50'), FileMetadata(uuid='3106200_2024-12-18_7156-page-51-51'), FileMetadata(uuid='3106200_2024-12-18_7156-page-52-52'), FileMetadata(uuid='3106200_2024-12-18_7156-page-53-53'), FileMetadata(uuid='3106200_2024-12-18_7156-page-54-54'), FileMetadata(uuid='3106200_2024-12-18_7156-page-55-55'), FileMetadata(uuid='3106200_2024-12-18_7156-page-56-56'), FileMetadata(uuid='3106200_2024-12-18_7156-page-57-57'), FileMetadata(uuid='3106200_2024-12-18_7156-page-58-58'), FileMetadata(uuid='3106200_2024-12-18_7156-page-59-59'), FileMetadata(uuid='3106200_2024-12-18_7156-page-60-60'), FileMetadata(uuid='3106200_2024-12-18_7156-page-61-61'), FileMetadata(uuid='3106200_2024-12-18_7156-page-62-62'), FileMetadata(uuid='3106200_2024-12-18_7156-page-63-63'), FileMetadata(uuid='3106200_2024-12-18_7156-page-64-64'), FileMetadata(uuid='3106200_2024-12-18_7156-page-65-65'), FileMetadata(uuid='3106200_2024-12-18_7156-page-66-66'), FileMetadata(uuid='3106200_2024-12-18_7156-page-67-67'), FileMetadata(uuid='3106200_2024-12-18_7156-page-68-68'), FileMetadata(uuid='3106200_2024-12-18_7156-page-69-69'), FileMetadata(uuid='3106200_2024-12-18_7156-page-70-70'), FileMetadata(uuid='3106200_2024-12-18_7156-page-71-71'), FileMetadata(uuid='3106200_2024-12-19_7157-page-0-0'), FileMetadata(uuid='3106200_2024-12-19_7157-page-1-1'), FileMetadata(uuid='3106200_2024-12-19_7157-page-2-2'), FileMetadata(uuid='3106200_2024-12-19_7157-page-3-3'), FileMetadata(uuid='3106200_2024-12-19_7157-page-4-4'), FileMetadata(uuid='3106200_2024-12-19_7157-page-5-5'), FileMetadata(uuid='3106200_2024-12-19_7157-page-6-6'), FileMetadata(uuid='3106200_2024-12-19_7157-page-7-7'), FileMetadata(uuid='3106200_2024-12-19_7157-page-8-8'), FileMetadata(uuid='3106200_2024-12-19_7157-page-9-9'), FileMetadata(uuid='3106200_2024-12-19_7157-page-10-10'), FileMetadata(uuid='3106200_2024-12-19_7157-page-11-11'), FileMetadata(uuid='3106200_2024-12-19_7157-page-12-12'), FileMetadata(uuid='3106200_2024-12-19_7157-page-13-13'), FileMetadata(uuid='3106200_2024-12-19_7157-page-14-14'), FileMetadata(uuid='3106200_2024-12-19_7157-page-15-15'), FileMetadata(uuid='3106200_2024-12-19_7157-page-16-16'), FileMetadata(uuid='3106200_2024-12-19_7157-page-17-17'), FileMetadata(uuid='3106200_2024-12-19_7157-page-18-18'), FileMetadata(uuid='3106200_2024-12-19_7157-page-19-19'), FileMetadata(uuid='3106200_2024-12-19_7157-page-20-20'), FileMetadata(uuid='3106200_2024-12-19_7157-page-21-21'), FileMetadata(uuid='3106200_2024-12-19_7157-page-22-22'), FileMetadata(uuid='3106200_2024-12-19_7157-page-23-23'), FileMetadata(uuid='3106200_2024-12-19_7157-page-24-24'), FileMetadata(uuid='3106200_2024-12-19_7157-page-25-25'), FileMetadata(uuid='3106200_2024-12-19_7157-page-26-26'), FileMetadata(uuid='3106200_2024-12-19_7157-page-27-27'), FileMetadata(uuid='3106200_2024-12-19_7157-page-28-28'), FileMetadata(uuid='3106200_2024-12-19_7157-page-29-29'), FileMetadata(uuid='3106200_2024-12-19_7157-page-30-30'), FileMetadata(uuid='3106200_2024-12-19_7157-page-31-31'), FileMetadata(uuid='3106200_2024-12-19_7157-page-32-32'), FileMetadata(uuid='3106200_2024-12-19_7157-page-33-33'), FileMetadata(uuid='3106200_2024-12-19_7157-page-34-34')]
+[2025-01-25T19:19:14.165+0000] {logging_mixin.py:190} INFO - Adding batch of documents
+[2025-01-25T19:19:14.504+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:19:15.048+0000] {logging_mixin.py:190} INFO - Added 26 chunks for document: 3106200_2024-12-17_7155-page-0-0
+[2025-01-25T19:19:15.048+0000] {logging_mixin.py:190} INFO - Waiting 6 seconds
+[2025-01-25T19:19:21.498+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:19:21.795+0000] {logging_mixin.py:190} INFO - Added 17 chunks for document: 3106200_2024-12-17_7155-page-1-1
+[2025-01-25T19:19:21.796+0000] {logging_mixin.py:190} INFO - Waiting 9 seconds
+[2025-01-25T19:19:31.193+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:19:31.572+0000] {logging_mixin.py:190} INFO - Added 27 chunks for document: 3106200_2024-12-17_7155-page-2-2
+[2025-01-25T19:19:31.572+0000] {logging_mixin.py:190} INFO - Waiting 13 seconds
+[2025-01-25T19:19:45.035+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:19:45.497+0000] {logging_mixin.py:190} INFO - Added 34 chunks for document: 3106200_2024-12-17_7155-page-3-3
+[2025-01-25T19:19:45.497+0000] {logging_mixin.py:190} INFO - Waiting 19 seconds
+[2025-01-25T19:20:04.952+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:20:05.184+0000] {logging_mixin.py:190} INFO - Added 15 chunks for document: 3106200_2024-12-17_7155-page-4-4
+[2025-01-25T19:20:05.184+0000] {logging_mixin.py:190} INFO - Waiting 15 seconds
+[2025-01-25T19:20:20.612+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:20:20.836+0000] {logging_mixin.py:190} INFO - Added 15 chunks for document: 3106200_2024-12-17_7155-page-5-5
+[2025-01-25T19:20:20.836+0000] {logging_mixin.py:190} INFO - Waiting 10 seconds
+[2025-01-25T19:20:31.304+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:20:31.463+0000] {logging_mixin.py:190} INFO - Added 10 chunks for document: 3106200_2024-12-17_7155-page-6-6
+[2025-01-25T19:20:31.464+0000] {logging_mixin.py:190} INFO - Waiting 11 seconds
+[2025-01-25T19:20:45.966+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:20:46.234+0000] {logging_mixin.py:190} INFO - Added 17 chunks for document: 3106200_2024-12-17_7155-page-7-7
+[2025-01-25T19:20:46.235+0000] {logging_mixin.py:190} INFO - Waiting 10 seconds
+[2025-01-25T19:20:56.593+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:20:56.793+0000] {logging_mixin.py:190} INFO - Added 13 chunks for document: 3106200_2024-12-17_7155-page-8-8
+[2025-01-25T19:20:56.794+0000] {logging_mixin.py:190} INFO - Waiting 10 seconds
+[2025-01-25T19:21:07.151+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:21:07.403+0000] {logging_mixin.py:190} INFO - Added 13 chunks for document: 3106200_2024-12-17_7155-page-9-9
+[2025-01-25T19:21:07.403+0000] {logging_mixin.py:190} INFO - Waiting 6 seconds
+[2025-01-25T19:21:13.804+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:21:14.035+0000] {logging_mixin.py:190} INFO - Added 12 chunks for document: 3106200_2024-12-17_7155-page-10-10
+[2025-01-25T19:21:14.036+0000] {logging_mixin.py:190} INFO - Waiting 20 seconds
+[2025-01-25T19:30:12.531+0000] {job.py:229} INFO - Heartbeat recovered after 538.06 seconds
+[2025-01-25T19:30:27.501+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:30:28.022+0000] {logging_mixin.py:190} INFO - Added 23 chunks for document: 3106200_2024-12-17_7155-page-11-11
+[2025-01-25T19:30:28.022+0000] {logging_mixin.py:190} INFO - Waiting 14 seconds
+[2025-01-25T19:30:42.638+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:30:42.922+0000] {logging_mixin.py:190} INFO - Added 20 chunks for document: 3106200_2024-12-17_7155-page-12-12
+[2025-01-25T19:30:42.923+0000] {logging_mixin.py:190} INFO - Waiting 12 seconds
+[2025-01-25T19:30:55.392+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:30:55.665+0000] {logging_mixin.py:190} INFO - Added 19 chunks for document: 3106200_2024-12-17_7155-page-13-13
+[2025-01-25T19:30:55.665+0000] {logging_mixin.py:190} INFO - Waiting 5 seconds
+[2025-01-25T19:31:01.045+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:31:01.254+0000] {logging_mixin.py:190} INFO - Added 14 chunks for document: 3106200_2024-12-17_7155-page-14-14
+[2025-01-25T19:31:01.255+0000] {logging_mixin.py:190} INFO - Waiting 3 seconds
+[2025-01-25T19:31:04.555+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:31:04.761+0000] {logging_mixin.py:190} INFO - Added 13 chunks for document: 3106200_2024-12-17_7155-page-15-15
+[2025-01-25T19:31:04.762+0000] {logging_mixin.py:190} INFO - Waiting 1 seconds
+[2025-01-25T19:31:05.976+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:31:06.206+0000] {logging_mixin.py:190} INFO - Added 13 chunks for document: 3106200_2024-12-17_7155-page-16-16
+[2025-01-25T19:31:06.206+0000] {logging_mixin.py:190} INFO - Waiting 9 seconds
+[2025-01-25T19:31:15.583+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:31:15.768+0000] {logging_mixin.py:190} INFO - Added 12 chunks for document: 3106200_2024-12-17_7155-page-17-17
+[2025-01-25T19:31:15.769+0000] {logging_mixin.py:190} INFO - Waiting 1 seconds
+[2025-01-25T19:31:17.034+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:31:17.240+0000] {logging_mixin.py:190} INFO - Added 13 chunks for document: 3106200_2024-12-17_7155-page-20-20
+[2025-01-25T19:31:17.243+0000] {logging_mixin.py:190} INFO - Waiting 6 seconds
+[2025-01-25T19:31:23.628+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:31:24.378+0000] {logging_mixin.py:190} INFO - Added 28 chunks for document: 3106200_2024-12-17_7155-page-21-21
+[2025-01-25T19:31:24.379+0000] {logging_mixin.py:190} INFO - Waiting 16 seconds
+[2025-01-25T19:31:40.732+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:31:41.060+0000] {logging_mixin.py:190} INFO - Added 9 chunks for document: 3106200_2024-12-17_7155-page-22-22
+[2025-01-25T19:31:41.060+0000] {logging_mixin.py:190} INFO - Waiting 5 seconds
+[2025-01-25T19:31:46.452+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:31:46.805+0000] {logging_mixin.py:190} INFO - Added 22 chunks for document: 3106200_2024-12-17_7155-page-23-23
+[2025-01-25T19:31:46.806+0000] {logging_mixin.py:190} INFO - Waiting 9 seconds
+[2025-01-25T19:31:56.221+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:31:56.358+0000] {logging_mixin.py:190} INFO - Added 9 chunks for document: 3106200_2024-12-17_7155-page-24-24
+[2025-01-25T19:31:56.359+0000] {logging_mixin.py:190} INFO - Waiting 1 seconds
+[2025-01-25T19:31:57.560+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:31:57.708+0000] {logging_mixin.py:190} INFO - Added 9 chunks for document: 3106200_2024-12-18_7156-page-0-0
+[2025-01-25T19:31:57.709+0000] {logging_mixin.py:190} INFO - Waiting 4 seconds
+[2025-01-25T19:32:02.114+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:32:03.322+0000] {logging_mixin.py:190} INFO - Added 77 chunks for document: 3106200_2024-12-18_7156-page-5-5
+[2025-01-25T19:32:03.323+0000] {logging_mixin.py:190} INFO - Waiting 10 seconds
+[2025-01-25T19:32:13.900+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:32:14.894+0000] {logging_mixin.py:190} INFO - Added 39 chunks for document: 3106200_2024-12-18_7156-page-6-6
+[2025-01-25T19:32:14.895+0000] {logging_mixin.py:190} INFO - Waiting 19 seconds
+[2025-01-25T19:32:34.399+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:32:35.575+0000] {logging_mixin.py:190} INFO - Added 78 chunks for document: 3106200_2024-12-18_7156-page-7-7
+[2025-01-25T19:32:35.576+0000] {logging_mixin.py:190} INFO - Waiting 17 seconds
+[2025-01-25T19:32:53.014+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:32:53.599+0000] {logging_mixin.py:190} INFO - Added 39 chunks for document: 3106200_2024-12-18_7156-page-8-8
+[2025-01-25T19:32:53.600+0000] {logging_mixin.py:190} INFO - Waiting 12 seconds
+[2025-01-25T19:33:06.067+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:33:06.178+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:33:07.920+0000] {logging_mixin.py:190} INFO - Added 123 chunks for document: 3106200_2024-12-18_7156-page-9-9
+[2025-01-25T19:33:07.921+0000] {logging_mixin.py:190} INFO - Waiting 7 seconds
+[2025-01-25T19:33:15.359+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:33:16.312+0000] {logging_mixin.py:190} INFO - Added 67 chunks for document: 3106200_2024-12-18_7156-page-10-10
+[2025-01-25T19:33:16.312+0000] {logging_mixin.py:190} INFO - Waiting 8 seconds
+[2025-01-25T19:33:24.890+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:33:26.198+0000] {logging_mixin.py:190} INFO - Added 85 chunks for document: 3106200_2024-12-18_7156-page-11-11
+[2025-01-25T19:33:26.199+0000] {logging_mixin.py:190} INFO - Waiting 18 seconds
+[2025-01-25T19:33:44.739+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:33:46.014+0000] {logging_mixin.py:190} INFO - Added 64 chunks for document: 3106200_2024-12-18_7156-page-12-12
+[2025-01-25T19:33:46.014+0000] {logging_mixin.py:190} INFO - Waiting 13 seconds
+[2025-01-25T19:33:59.672+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:34:01.212+0000] {logging_mixin.py:190} INFO - Added 91 chunks for document: 3106200_2024-12-18_7156-page-13-13
+[2025-01-25T19:34:01.213+0000] {logging_mixin.py:190} INFO - Waiting 18 seconds
+[2025-01-25T19:34:23.561+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:34:24.182+0000] {logging_mixin.py:190} INFO - Added 34 chunks for document: 3106200_2024-12-18_7156-page-14-14
+[2025-01-25T19:34:24.183+0000] {logging_mixin.py:190} INFO - Waiting 5 seconds
+[2025-01-25T19:34:29.738+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:34:31.096+0000] {logging_mixin.py:190} INFO - Added 88 chunks for document: 3106200_2024-12-18_7156-page-15-15
+[2025-01-25T19:34:31.097+0000] {logging_mixin.py:190} INFO - Waiting 8 seconds
+[2025-01-25T19:34:39.590+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:34:40.804+0000] {logging_mixin.py:190} INFO - Added 75 chunks for document: 3106200_2024-12-18_7156-page-16-16
+[2025-01-25T19:34:40.804+0000] {logging_mixin.py:190} INFO - Waiting 2 seconds
+[2025-01-25T19:34:50.384+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 500 Internal Server Error"
+[2025-01-25T19:34:50.385+0000] {before_sleep.py:65} WARNING - Retrying langchain_cohere.embeddings.CohereEmbeddings.embed_with_retry.<locals>._embed_with_retry in 4.0 seconds as it raised InternalServerError: status_code: 500, body: {'message': 'internal server error, this has been reported to our developers. id 61d130e812854a82289c9a6f92f126fc'}.
+[2025-01-25T19:34:55.719+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:34:56.836+0000] {logging_mixin.py:190} INFO - Added 67 chunks for document: 3106200_2024-12-18_7156-page-17-17
+[2025-01-25T19:34:56.837+0000] {logging_mixin.py:190} INFO - Waiting 8 seconds
+[2025-01-25T19:35:12.247+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 500 Internal Server Error"
+[2025-01-25T19:35:12.248+0000] {before_sleep.py:65} WARNING - Retrying langchain_cohere.embeddings.CohereEmbeddings.embed_with_retry.<locals>._embed_with_retry in 4.0 seconds as it raised InternalServerError: status_code: 500, body: {'message': 'internal server error, this has been reported to our developers. id f47679e0b44577bd5c4abb9b9909e2db'}.
+[2025-01-25T19:35:16.657+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:35:18.448+0000] {logging_mixin.py:190} INFO - Added 74 chunks for document: 3106200_2024-12-18_7156-page-18-18
+[2025-01-25T19:35:18.449+0000] {logging_mixin.py:190} INFO - Waiting 18 seconds
+[2025-01-25T19:35:39.842+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 500 Internal Server Error"
+[2025-01-25T19:35:39.843+0000] {before_sleep.py:65} WARNING - Retrying langchain_cohere.embeddings.CohereEmbeddings.embed_with_retry.<locals>._embed_with_retry in 4.0 seconds as it raised InternalServerError: status_code: 500, body: {'message': 'internal server error, this has been reported to our developers. id 052bcb3d9f510dd72e83a30e526035e0'}.
+[2025-01-25T19:35:44.127+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:35:44.790+0000] {logging_mixin.py:190} INFO - Added 41 chunks for document: 3106200_2024-12-18_7156-page-19-19
+[2025-01-25T19:35:44.791+0000] {logging_mixin.py:190} INFO - Waiting 2 seconds
+[2025-01-25T19:35:47.134+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:35:48.397+0000] {logging_mixin.py:190} INFO - Added 73 chunks for document: 3106200_2024-12-18_7156-page-20-20
+[2025-01-25T19:35:48.398+0000] {logging_mixin.py:190} INFO - Waiting 3 seconds
+[2025-01-25T19:35:56.260+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:35:57.239+0000] {logging_mixin.py:190} INFO - Added 72 chunks for document: 3106200_2024-12-18_7156-page-21-21
+[2025-01-25T19:35:57.239+0000] {logging_mixin.py:190} INFO - Waiting 12 seconds
+[2025-01-25T19:36:09.740+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:36:10.392+0000] {logging_mixin.py:190} INFO - Added 40 chunks for document: 3106200_2024-12-18_7156-page-22-22
+[2025-01-25T19:36:10.392+0000] {logging_mixin.py:190} INFO - Waiting 15 seconds
+[2025-01-25T19:36:25.941+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:36:28.946+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 500 Internal Server Error"
+[2025-01-25T19:36:30.561+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:36:30.947+0000] {before_sleep.py:65} WARNING - Retrying langchain_cohere.embeddings.CohereEmbeddings.embed_with_retry.<locals>._embed_with_retry in 4.0 seconds as it raised InternalServerError: status_code: 500, body: {'message': 'internal server error, this has been reported to our developers. id 04aee7787e30faf8130b0ae01e1d3cdc'}.
+[2025-01-25T19:36:35.244+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:36:35.273+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:36:36.419+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:36:38.840+0000] {logging_mixin.py:190} INFO - Added 197 chunks for document: 3106200_2024-12-18_7156-page-23-23
+[2025-01-25T19:36:38.841+0000] {logging_mixin.py:190} INFO - Waiting 13 seconds
+[2025-01-25T19:36:55.289+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 500 Internal Server Error"
+[2025-01-25T19:36:55.305+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 500 Internal Server Error"
+[2025-01-25T19:36:55.306+0000] {before_sleep.py:65} WARNING - Retrying langchain_cohere.embeddings.CohereEmbeddings.embed_with_retry.<locals>._embed_with_retry in 4.0 seconds as it raised InternalServerError: status_code: 500, body: {'message': 'internal server error, this has been reported to our developers. id 0fad892fcf0aa058a9fb3da7a8bcbe50'}.
+[2025-01-25T19:37:02.513+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 500 Internal Server Error"
+[2025-01-25T19:37:02.611+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 500 Internal Server Error"
+[2025-01-25T19:37:02.612+0000] {before_sleep.py:65} WARNING - Retrying langchain_cohere.embeddings.CohereEmbeddings.embed_with_retry.<locals>._embed_with_retry in 4.0 seconds as it raised InternalServerError: status_code: 500, body: {'message': 'internal server error, this has been reported to our developers. id 8322b8e3ade96f1dcaa624a469d06d01'}.
+[2025-01-25T19:37:06.904+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T19:37:09.822+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 500 Internal Server Error"
+[2025-01-25T19:37:09.825+0000] {taskinstance.py:3310} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/utils/generate_index_task.py", line 204, in execute
+    self.add_batch_documents(file_metadata_list)
+  File "/opt/airflow/dags/utils/generate_index_task.py", line 169, in add_batch_documents
+    self.add_document(path, file_metadata)
+  File "/opt/airflow/dags/utils/generate_index_task.py", line 146, in add_document
+    vector_db_ids = self.vector_store.add_documents(documents=docs, ids=chunks_uuids)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/langchain_core/vectorstores/base.py", line 287, in add_documents
+    return self.add_texts(texts, metadatas, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/langchain_community/vectorstores/faiss.py", line 340, in add_texts
+    embeddings = self._embed_documents(texts)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/langchain_community/vectorstores/faiss.py", line 248, in _embed_documents
+    return self.embedding_function.embed_documents(texts)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/langchain_cohere/embeddings.py", line 191, in embed_documents
+    return self.embed(texts, input_type="search_document")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/langchain_cohere/embeddings.py", line 142, in embed
+    response = self.embed_with_retry(
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/langchain_cohere/embeddings.py", line 124, in embed_with_retry
+    return _embed_with_retry(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/tenacity/__init__.py", line 336, in wrapped_f
+    return copy(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/tenacity/__init__.py", line 475, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/tenacity/__init__.py", line 376, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/tenacity/__init__.py", line 418, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/tenacity/__init__.py", line 185, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/airflow/.local/lib/python3.12/site-packages/tenacity/__init__.py", line 478, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/langchain_cohere/embeddings.py", line 122, in _embed_with_retry
+    return self.client.embed(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/cohere/client.py", line 210, in embed
+    for response in self._executor.map(
+                    ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/_base.py", line 619, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/_base.py", line 317, in _result_or_cancel
+    return fut.result(timeout)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/usr/local/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/cohere/client.py", line 211, in <lambda>
+    lambda text_batch: BaseCohere.embed(
+                       ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/cohere/base_client.py", line 1917, in embed
+    raise InternalServerError(
+cohere.errors.internal_server_error.InternalServerError: status_code: 500, body: {'message': 'internal server error, this has been reported to our developers. id 2fd9c57f1c42675897d49939a58ba339'}
+[2025-01-25T19:37:09.847+0000] {taskinstance.py:1225} INFO - Marking task as UP_FOR_RETRY. dag_id=pull_gazettes_data, task_id=generate_indexes_task, run_id=manual__2025-01-25T18:45:04.636275+00:00, execution_date=20250125T184504, start_date=20250125T191913, end_date=20250125T193709
+[2025-01-25T19:37:09.860+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-25T19:37:09.861+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 124 for task generate_indexes_task (status_code: 500, body: {'message': 'internal server error, this has been reported to our developers. id 2fd9c57f1c42675897d49939a58ba339'}; 22774)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 115, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3004, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3158, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3182, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/utils/generate_index_task.py", line 204, in execute
+    self.add_batch_documents(file_metadata_list)
+  File "/opt/airflow/dags/utils/generate_index_task.py", line 169, in add_batch_documents
+    self.add_document(path, file_metadata)
+  File "/opt/airflow/dags/utils/generate_index_task.py", line 146, in add_document
+    vector_db_ids = self.vector_store.add_documents(documents=docs, ids=chunks_uuids)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/langchain_core/vectorstores/base.py", line 287, in add_documents
+    return self.add_texts(texts, metadatas, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/langchain_community/vectorstores/faiss.py", line 340, in add_texts
+    embeddings = self._embed_documents(texts)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/langchain_community/vectorstores/faiss.py", line 248, in _embed_documents
+    return self.embedding_function.embed_documents(texts)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/langchain_cohere/embeddings.py", line 191, in embed_documents
+    return self.embed(texts, input_type="search_document")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/langchain_cohere/embeddings.py", line 142, in embed
+    response = self.embed_with_retry(
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/langchain_cohere/embeddings.py", line 124, in embed_with_retry
+    return _embed_with_retry(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/tenacity/__init__.py", line 336, in wrapped_f
+    return copy(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/tenacity/__init__.py", line 475, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/tenacity/__init__.py", line 376, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/tenacity/__init__.py", line 418, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/tenacity/__init__.py", line 185, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/airflow/.local/lib/python3.12/site-packages/tenacity/__init__.py", line 478, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/langchain_cohere/embeddings.py", line 122, in _embed_with_retry
+    return self.client.embed(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/cohere/client.py", line 210, in embed
+    for response in self._executor.map(
+                    ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/_base.py", line 619, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/_base.py", line 317, in _result_or_cancel
+    return fut.result(timeout)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/usr/local/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/cohere/client.py", line 211, in <lambda>
+    lambda text_batch: BaseCohere.embed(
+                       ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/cohere/base_client.py", line 1917, in embed
+    raise InternalServerError(
+cohere.errors.internal_server_error.InternalServerError: status_code: 500, body: {'message': 'internal server error, this has been reported to our developers. id 2fd9c57f1c42675897d49939a58ba339'}
+[2025-01-25T19:37:09.899+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-01-25T19:37:09.917+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-01-25T19:37:09.919+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

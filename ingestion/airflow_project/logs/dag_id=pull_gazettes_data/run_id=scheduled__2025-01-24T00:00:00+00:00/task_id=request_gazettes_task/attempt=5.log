@@ -1,0 +1,26 @@
+[2025-01-25T01:18:04.874+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-25T01:18:04.892+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pull_gazettes_data.request_gazettes_task scheduled__2025-01-24T00:00:00+00:00 [queued]>
+[2025-01-25T01:18:04.905+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pull_gazettes_data.request_gazettes_task scheduled__2025-01-24T00:00:00+00:00 [queued]>
+[2025-01-25T01:18:04.906+0000] {taskinstance.py:2865} INFO - Starting attempt 5 of 6
+[2025-01-25T01:18:04.920+0000] {taskinstance.py:2888} INFO - Executing <Task(RequestGazettesTask): request_gazettes_task> on 2025-01-24 00:00:00+00:00
+[2025-01-25T01:18:04.935+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=5633) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-25T01:18:04.937+0000] {standard_task_runner.py:72} INFO - Started process 5646 to run task
+[2025-01-25T01:18:04.937+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'pull_gazettes_data', 'request_gazettes_task', 'scheduled__2025-01-24T00:00:00+00:00', '--job-id', '50', '--raw', '--subdir', 'DAGS_FOLDER/dag_script.py', '--cfg-path', '/tmp/tmph6fufttf']
+[2025-01-25T01:18:04.939+0000] {standard_task_runner.py:105} INFO - Job 50: Subtask request_gazettes_task
+[2025-01-25T01:18:04.983+0000] {task_command.py:467} INFO - Running <TaskInstance: pull_gazettes_data.request_gazettes_task scheduled__2025-01-24T00:00:00+00:00 [running]> on host 41bcec3d818b
+[2025-01-25T01:18:05.058+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='***@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='pull_gazettes_data' AIRFLOW_CTX_TASK_ID='request_gazettes_task' AIRFLOW_CTX_EXECUTION_DATE='2025-01-24T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='5' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-01-24T00:00:00+00:00'
+[2025-01-25T01:18:05.059+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-25T01:18:05.074+0000] {logging_mixin.py:190} INFO - Running for start_date: 2024-11-25, end_date: 2025-01-23
+[2025-01-25T01:18:05.664+0000] {logging_mixin.py:190} INFO - Total number of Gazettes: 18
+[2025-01-25T01:18:05.665+0000] {logging_mixin.py:190} INFO - log request call: https://queridodiario.ok.org.br/api/gazettes, params: {'size': 1, 'excerpt_size': 500, 'published_since': '2024-11-25', 'published_until': '2025-01-23', 'territory_ids': '3106200', 'offset': 0}
+[2025-01-25T01:18:09.982+0000] {logging_mixin.py:190} INFO - Managing URL log
+[2025-01-25T01:18:10.019+0000] {warnings.py:112} WARNING - /opt/***/dags/utils/requests_task.py:81: FutureWarning: The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.
+  metadata = pd.concat([metadata, pd.DataFrame(new_downloads)])
+
+[2025-01-25T01:18:19.752+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-25T01:18:19.752+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=pull_gazettes_data, task_id=request_gazettes_task, run_id=scheduled__2025-01-24T00:00:00+00:00, execution_date=20250124T000000, start_date=20250125T011804, end_date=20250125T011819
+[2025-01-25T01:18:19.804+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-01-25T01:18:19.834+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-01-25T01:18:19.836+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,2148 @@
+[2025-01-25T18:45:44.453+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-25T18:45:44.469+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pull_gazettes_data.preprocess_documents_task manual__2025-01-25T18:45:04.636275+00:00 [queued]>
+[2025-01-25T18:45:44.477+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pull_gazettes_data.preprocess_documents_task manual__2025-01-25T18:45:04.636275+00:00 [queued]>
+[2025-01-25T18:45:44.479+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2025-01-25T18:45:44.494+0000] {taskinstance.py:2888} INFO - Executing <Task(PreprocessDocuments): preprocess_documents_task> on 2025-01-25 18:45:04.636275+00:00
+[2025-01-25T18:45:44.509+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=20689) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-25T18:45:44.511+0000] {standard_task_runner.py:72} INFO - Started process 20702 to run task
+[2025-01-25T18:45:44.511+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'pull_gazettes_data', 'preprocess_documents_task', 'manual__2025-01-25T18:45:04.636275+00:00', '--job-id', '120', '--raw', '--subdir', 'DAGS_FOLDER/dag_script.py', '--cfg-path', '/tmp/tmp2e9ias7m']
+[2025-01-25T18:45:44.514+0000] {standard_task_runner.py:105} INFO - Job 120: Subtask preprocess_documents_task
+[2025-01-25T18:45:44.558+0000] {task_command.py:467} INFO - Running <TaskInstance: pull_gazettes_data.preprocess_documents_task manual__2025-01-25T18:45:04.636275+00:00 [running]> on host 41bcec3d818b
+[2025-01-25T18:45:44.629+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='***@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='pull_gazettes_data' AIRFLOW_CTX_TASK_ID='preprocess_documents_task' AIRFLOW_CTX_EXECUTION_DATE='2025-01-25T18:45:04.636275+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-25T18:45:04.636275+00:00'
+[2025-01-25T18:45:44.631+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-25T18:45:44.644+0000] {logging_mixin.py:190} INFO - Checking pre processed documents log
+[2025-01-25T18:45:44.652+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-12-17_7155.pdf into multiple PDF single pages
+[2025-01-25T18:45:44.687+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: [] file_uuid_breakdown
+[2025-01-25T18:45:44.740+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: [] file_uuid_breakdown
+[2025-01-25T18:45:44.790+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: [] file_uuid_breakdown
+[2025-01-25T18:45:44.824+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: [] file_uuid_breakdown
+[2025-01-25T18:45:44.858+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: [] file_uuid_breakdown
+[2025-01-25T18:45:44.900+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: [] file_uuid_breakdown
+[2025-01-25T18:45:44.951+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: [] file_uuid_breakdown
+[2025-01-25T18:45:44.996+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: [] file_uuid_breakdown
+[2025-01-25T18:45:45.031+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: [] file_uuid_breakdown
+[2025-01-25T18:45:45.066+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: [] file_uuid_breakdown
+[2025-01-25T18:45:45.100+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: [] file_uuid_breakdown
+[2025-01-25T18:45:45.142+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: [] file_uuid_breakdown
+[2025-01-25T18:45:45.178+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: [] file_uuid_breakdown
+[2025-01-25T18:45:45.214+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: [] file_uuid_breakdown
+[2025-01-25T18:45:45.252+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: [] file_uuid_breakdown
+[2025-01-25T18:45:45.289+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: [] file_uuid_breakdown
+[2025-01-25T18:45:45.322+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: [] file_uuid_breakdown
+[2025-01-25T18:45:45.355+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: [] file_uuid_breakdown
+[2025-01-25T18:45:45.394+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: [] file_uuid_breakdown
+[2025-01-25T18:45:45.398+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: [] file_uuid_breakdown
+[2025-01-25T18:45:45.401+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: [] file_uuid_breakdown
+[2025-01-25T18:45:45.440+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: [] file_uuid_breakdown
+[2025-01-25T18:45:45.476+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: [] file_uuid_breakdown
+[2025-01-25T18:45:45.518+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: [] file_uuid_breakdown
+[2025-01-25T18:45:45.561+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: [] file_uuid_breakdown
+[2025-01-25T18:45:45.685+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T18:45:45.987+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:45:48.164+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:45:48.721+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:45:49.099+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-17_7155-page-0-0.pdf
+[2025-01-25T18:45:57.502+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-12-17_7155-page-0-0.pdf in 11.90 sec.
+[2025-01-25T18:45:57.519+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-12-17_7155-page-0-0.md
+[2025-01-25T18:45:57.533+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T18:45:57.754+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:46:00.189+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:46:00.618+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:46:00.982+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-17_7155-page-1-1.pdf
+[2025-01-25T18:46:05.984+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-12-17_7155-page-1-1.pdf in 8.46 sec.
+[2025-01-25T18:46:05.994+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-12-17_7155-page-1-1.md
+[2025-01-25T18:46:06.005+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T18:46:06.161+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:46:08.333+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:46:08.752+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:46:09.092+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-17_7155-page-2-2.pdf
+[2025-01-25T18:46:15.850+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-12-17_7155-page-2-2.pdf in 9.85 sec.
+[2025-01-25T18:46:15.861+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-12-17_7155-page-2-2.md
+[2025-01-25T18:46:15.873+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T18:46:16.022+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:46:18.243+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:46:18.657+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:46:18.995+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-17_7155-page-3-3.pdf
+[2025-01-25T18:46:27.699+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-12-17_7155-page-3-3.pdf in 11.83 sec.
+[2025-01-25T18:46:27.725+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-12-17_7155-page-3-3.md
+[2025-01-25T18:46:27.738+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T18:46:27.931+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:46:30.228+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:46:30.665+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:46:31.004+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-17_7155-page-4-4.pdf
+[2025-01-25T18:46:33.638+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-12-17_7155-page-4-4.pdf in 5.91 sec.
+[2025-01-25T18:46:33.648+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-12-17_7155-page-4-4.md
+[2025-01-25T18:46:33.662+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T18:46:33.815+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:46:36.037+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:46:36.479+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:46:36.843+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-17_7155-page-5-5.pdf
+[2025-01-25T18:46:38.700+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-12-17_7155-page-5-5.pdf in 5.04 sec.
+[2025-01-25T18:46:38.706+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-12-17_7155-page-5-5.md
+[2025-01-25T18:46:38.718+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T18:46:38.879+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:46:41.072+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:46:41.487+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:46:41.863+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-17_7155-page-6-6.pdf
+[2025-01-25T18:46:43.477+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-12-17_7155-page-6-6.pdf in 4.76 sec.
+[2025-01-25T18:46:43.484+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-12-17_7155-page-6-6.md
+[2025-01-25T18:46:43.498+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T18:46:43.686+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:46:45.807+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:46:46.223+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:46:46.570+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-17_7155-page-7-7.pdf
+[2025-01-25T18:46:48.168+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-12-17_7155-page-7-7.pdf in 4.68 sec.
+[2025-01-25T18:46:48.174+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-12-17_7155-page-7-7.md
+[2025-01-25T18:46:48.185+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T18:46:48.344+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:46:50.515+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:46:50.924+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:46:51.654+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-17_7155-page-8-8.pdf
+[2025-01-25T18:46:53.265+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-12-17_7155-page-8-8.pdf in 5.09 sec.
+[2025-01-25T18:46:53.270+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-12-17_7155-page-8-8.md
+[2025-01-25T18:46:53.280+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T18:46:53.470+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:46:55.561+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:46:55.964+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:46:56.288+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-17_7155-page-9-9.pdf
+[2025-01-25T18:46:57.840+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-12-17_7155-page-9-9.pdf in 4.56 sec.
+[2025-01-25T18:46:57.847+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-12-17_7155-page-9-9.md
+[2025-01-25T18:46:57.857+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T18:46:58.008+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:47:00.088+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:47:00.487+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:47:00.818+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-17_7155-page-10-10.pdf
+[2025-01-25T18:47:02.460+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-12-17_7155-page-10-10.pdf in 4.61 sec.
+[2025-01-25T18:47:02.465+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-12-17_7155-page-10-10.md
+[2025-01-25T18:47:02.475+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T18:47:02.641+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:47:04.823+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:47:05.278+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:47:05.651+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-17_7155-page-11-11.pdf
+[2025-01-25T18:47:11.451+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-12-17_7155-page-11-11.pdf in 8.98 sec.
+[2025-01-25T18:47:11.462+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-12-17_7155-page-11-11.md
+[2025-01-25T18:47:11.475+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T18:47:11.647+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:47:13.952+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:47:14.369+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:47:14.728+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-17_7155-page-12-12.pdf
+[2025-01-25T18:47:16.166+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-12-17_7155-page-12-12.pdf in 4.70 sec.
+[2025-01-25T18:47:16.173+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-12-17_7155-page-12-12.md
+[2025-01-25T18:47:16.184+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T18:47:16.363+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:47:18.437+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:47:18.827+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:47:19.165+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-17_7155-page-13-13.pdf
+[2025-01-25T18:47:20.593+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-12-17_7155-page-13-13.pdf in 4.42 sec.
+[2025-01-25T18:47:20.598+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-12-17_7155-page-13-13.md
+[2025-01-25T18:47:20.608+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T18:47:20.762+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:47:22.883+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:47:23.287+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:47:23.606+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-17_7155-page-14-14.pdf
+[2025-01-25T18:47:25.084+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-12-17_7155-page-14-14.pdf in 4.48 sec.
+[2025-01-25T18:47:25.090+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-12-17_7155-page-14-14.md
+[2025-01-25T18:47:25.100+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T18:47:25.248+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:47:27.446+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:47:27.846+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:47:28.559+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-17_7155-page-15-15.pdf
+[2025-01-25T18:47:30.261+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-12-17_7155-page-15-15.pdf in 5.16 sec.
+[2025-01-25T18:47:30.267+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-12-17_7155-page-15-15.md
+[2025-01-25T18:47:30.280+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T18:47:30.431+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:47:32.473+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:47:32.865+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:47:33.191+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-17_7155-page-16-16.pdf
+[2025-01-25T18:47:34.731+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-12-17_7155-page-16-16.pdf in 4.46 sec.
+[2025-01-25T18:47:34.738+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-12-17_7155-page-16-16.md
+[2025-01-25T18:47:34.749+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T18:47:34.916+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:47:36.978+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:47:37.379+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:47:37.702+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-17_7155-page-17-17.pdf
+[2025-01-25T18:47:42.194+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-12-17_7155-page-17-17.pdf in 7.45 sec.
+[2025-01-25T18:47:42.204+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-12-17_7155-page-17-17.md
+[2025-01-25T18:47:42.216+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T18:47:42.366+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:47:44.634+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:47:45.089+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:47:45.441+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-17_7155-page-20-20.pdf
+[2025-01-25T18:47:47.114+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-12-17_7155-page-20-20.pdf in 4.90 sec.
+[2025-01-25T18:47:47.120+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-12-17_7155-page-20-20.md
+[2025-01-25T18:47:47.132+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T18:47:47.283+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:47:49.532+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:47:49.964+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:47:50.302+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-17_7155-page-21-21.pdf
+[2025-01-25T18:48:01.327+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-12-17_7155-page-21-21.pdf in 14.20 sec.
+[2025-01-25T18:48:01.339+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-12-17_7155-page-21-21.md
+[2025-01-25T18:48:01.350+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T18:48:01.532+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:48:03.878+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:48:04.282+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:48:04.617+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-17_7155-page-22-22.pdf
+[2025-01-25T18:48:07.325+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-12-17_7155-page-22-22.pdf in 5.98 sec.
+[2025-01-25T18:48:07.332+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-12-17_7155-page-22-22.md
+[2025-01-25T18:48:07.343+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T18:48:07.560+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:48:09.679+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:48:10.107+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:48:10.430+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-17_7155-page-23-23.pdf
+[2025-01-25T18:48:16.768+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-12-17_7155-page-23-23.pdf in 9.43 sec.
+[2025-01-25T18:48:16.778+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-12-17_7155-page-23-23.md
+[2025-01-25T18:48:16.790+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T18:48:16.939+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:48:19.050+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:48:19.496+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:48:19.908+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-17_7155-page-24-24.pdf
+[2025-01-25T18:48:23.301+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-12-17_7155-page-24-24.pdf in 6.52 sec.
+[2025-01-25T18:48:23.307+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-12-17_7155-page-24-24.md
+[2025-01-25T18:48:23.343+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-12-18_7156.pdf into multiple PDF single pages
+[2025-01-25T18:48:23.404+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:23.502+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:23.522+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:23.540+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:23.558+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:23.571+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:23.627+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:23.673+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:23.722+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:23.769+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:23.821+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:23.867+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:23.918+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:23.969+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:24.021+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:24.069+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:24.123+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:24.175+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:24.219+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:24.263+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:24.308+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:24.360+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:24.412+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:24.463+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:24.522+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:24.574+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:24.621+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:24.678+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:24.734+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:24.779+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:24.822+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:24.860+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:24.901+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:24.938+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:24.976+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:25.013+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:25.059+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:25.097+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:25.134+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:25.177+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:25.213+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:25.257+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:25.292+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:25.333+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:25.368+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:25.407+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:25.445+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:25.474+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:25.514+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:25.553+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:25.635+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:25.669+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:25.713+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:25.756+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:25.794+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:25.835+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:25.889+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:25.934+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:25.979+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:26.021+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:26.061+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:26.104+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:26.142+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:26.179+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:26.224+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:26.267+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:26.306+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:26.345+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:26.389+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:26.433+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:26.479+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:26.519+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:45:57.518004
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:05.992174
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:15.860095
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:27.723099
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:33.646811
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:38.704288
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:43.482751
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:48.173609
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:53.269580
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:46:57.846103
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:02.464547
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:11.460885
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:16.171506
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:20.597090
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:25.089330
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:30.266503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:34.736829
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:42.202440
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:47:47.119156
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:01.338503
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:07.331643
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:16.777571
+0  3106200_2024-12-17_7155  ... 2025-01-25 18:48:23.306337
+
+[23 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T18:48:26.565+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T18:48:26.733+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:48:29.155+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:48:29.567+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:48:29.995+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-18_7156-page-0-0.pdf
+[2025-01-25T18:48:31.505+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-12-18_7156-page-0-0.pdf in 4.95 sec.
+[2025-01-25T18:48:31.512+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-12-18_7156-page-0-0.md
+[2025-01-25T18:48:31.523+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T18:48:31.741+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:48:33.838+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:48:34.251+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:48:34.590+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-18_7156-page-5-5.pdf
+[2025-01-25T18:49:02.980+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-12-18_7156-page-5-5.pdf in 31.46 sec.
+[2025-01-25T18:49:03.024+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-12-18_7156-page-5-5.md
+[2025-01-25T18:49:03.041+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T18:49:03.203+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:49:05.918+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:49:06.549+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T18:49:07.095+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-12-18_7156-page-6-6.pdf
+[2025-01-25T18:49:53.240+0000] {job.py:229} INFO - Heartbeat recovered after 26.57 seconds
+[2025-01-25T18:49:53.252+0000] {local_task_job_runner.py:266} INFO - Task exited with return code -9For more information, see https://***.apache.org/docs/apache-***/stable/troubleshooting.html#LocalTaskJob-killed
+[2025-01-25T18:49:53.282+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-01-25T18:49:53.284+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

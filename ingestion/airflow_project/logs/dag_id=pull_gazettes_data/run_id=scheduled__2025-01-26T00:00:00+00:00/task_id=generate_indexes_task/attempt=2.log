@@ -1,0 +1,26 @@
+[2025-01-27T20:15:52.903+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-27T20:15:52.920+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pull_gazettes_data.generate_indexes_task scheduled__2025-01-26T00:00:00+00:00 [queued]>
+[2025-01-27T20:15:52.929+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pull_gazettes_data.generate_indexes_task scheduled__2025-01-26T00:00:00+00:00 [queued]>
+[2025-01-27T20:15:52.930+0000] {taskinstance.py:2865} INFO - Starting attempt 2 of 3
+[2025-01-27T20:15:52.943+0000] {taskinstance.py:2888} INFO - Executing <Task(GenerateIndexTask): generate_indexes_task> on 2025-01-26 00:00:00+00:00
+[2025-01-27T20:15:52.957+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1070) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-27T20:15:52.961+0000] {standard_task_runner.py:72} INFO - Started process 1083 to run task
+[2025-01-27T20:15:52.959+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'pull_gazettes_data', 'generate_indexes_task', 'scheduled__2025-01-26T00:00:00+00:00', '--job-id', '234', '--raw', '--subdir', 'DAGS_FOLDER/dag_script.py', '--cfg-path', '/tmp/tmpdx8g7ynk']
+[2025-01-27T20:15:52.964+0000] {standard_task_runner.py:105} INFO - Job 234: Subtask generate_indexes_task
+[2025-01-27T20:15:53.007+0000] {task_command.py:467} INFO - Running <TaskInstance: pull_gazettes_data.generate_indexes_task scheduled__2025-01-26T00:00:00+00:00 [running]> on host 41bcec3d818b
+[2025-01-27T20:15:53.083+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='***@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='pull_gazettes_data' AIRFLOW_CTX_TASK_ID='generate_indexes_task' AIRFLOW_CTX_EXECUTION_DATE='2025-01-26T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-01-26T00:00:00+00:00'
+[2025-01-27T20:15:53.085+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-27T20:15:53.110+0000] {logging_mixin.py:190} INFO - Initializing database
+[2025-01-27T20:15:58.967+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-27T20:15:59.000+0000] {logging_mixin.py:190} INFO - Parsing database current state
+[2025-01-27T20:15:59.002+0000] {logging_mixin.py:190} INFO - loading database /usr/local/***/data/vector_db/
+[2025-01-27T20:15:59.521+0000] {logging_mixin.py:190} INFO - Reading file metadata
+[2025-01-27T20:15:59.568+0000] {logging_mixin.py:190} INFO - []
+[2025-01-27T20:15:59.569+0000] {logging_mixin.py:190} INFO - Adding batch of documents
+[2025-01-27T20:15:59.586+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-27T20:15:59.587+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=pull_gazettes_data, task_id=generate_indexes_task, run_id=scheduled__2025-01-26T00:00:00+00:00, execution_date=20250126T000000, start_date=20250127T201552, end_date=20250127T201559
+[2025-01-27T20:15:59.633+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-01-27T20:15:59.651+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-01-27T20:15:59.653+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,31 @@
+[2025-01-28T23:44:48.950+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-28T23:44:48.967+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pull_gazettes_data.upload_contents_to_s3_task scheduled__2025-01-27T00:00:00+00:00 [queued]>
+[2025-01-28T23:44:48.975+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pull_gazettes_data.upload_contents_to_s3_task scheduled__2025-01-27T00:00:00+00:00 [queued]>
+[2025-01-28T23:44:48.976+0000] {taskinstance.py:2865} INFO - Starting attempt 5 of 6
+[2025-01-28T23:44:48.992+0000] {taskinstance.py:2888} INFO - Executing <Task(UploadContentsToS3): upload_contents_to_s3_task> on 2025-01-27 00:00:00+00:00
+[2025-01-28T23:44:49.000+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=3141) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-28T23:44:49.002+0000] {standard_task_runner.py:72} INFO - Started process 3143 to run task
+[2025-01-28T23:44:49.002+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'pull_gazettes_data', 'upload_contents_to_s3_task', 'scheduled__2025-01-27T00:00:00+00:00', '--job-id', '260', '--raw', '--subdir', 'DAGS_FOLDER/dag_script.py', '--cfg-path', '/tmp/tmpjzrpujcc']
+[2025-01-28T23:44:49.004+0000] {standard_task_runner.py:105} INFO - Job 260: Subtask upload_contents_to_s3_task
+[2025-01-28T23:44:49.053+0000] {task_command.py:467} INFO - Running <TaskInstance: pull_gazettes_data.upload_contents_to_s3_task scheduled__2025-01-27T00:00:00+00:00 [running]> on host 41bcec3d818b
+[2025-01-28T23:44:49.157+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='***@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='pull_gazettes_data' AIRFLOW_CTX_TASK_ID='upload_contents_to_s3_task' AIRFLOW_CTX_EXECUTION_DATE='2025-01-27T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='5' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-01-27T00:00:00+00:00'
+[2025-01-28T23:44:49.159+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-28T23:44:49.189+0000] {base.py:84} INFO - Retrieving connection 'minio_s3_conn_id'
+[2025-01-28T23:44:49.190+0000] {connection_wrapper.py:391} INFO - AWS Connection (conn_id='minio_s3_conn_id', conn_type='aws') credentials retrieved from extra.
+[2025-01-28T23:44:49.191+0000] {warnings.py:112} WARNING - <string>:9: AirflowProviderDeprecationWarning: extra['host'] is deprecated and will be removed in a future release. Please set extra['endpoint_url'] instead
+
+[2025-01-28T23:44:49.754+0000] {logging_mixin.py:190} INFO - Loading object /usr/local/***/data/ingestion_checkpoint_logs into S3 bucket diario-oficial-db-dump/ingestion_checkpoint_logs/
+[2025-01-28T23:44:49.756+0000] {logging_mixin.py:190} INFO - Loading folder /usr/local/***/data/ingestion_checkpoint_logs into S3 bucket diario-oficial-db-dump/ingestion_checkpoint_logs/
+[2025-01-28T23:44:50.263+0000] {logging_mixin.py:190} INFO - Loading object /usr/local/***/data/texts into S3 bucket diario-oficial-db-dump/texts/
+[2025-01-28T23:44:50.266+0000] {logging_mixin.py:190} INFO - Loading folder /usr/local/***/data/texts into S3 bucket diario-oficial-db-dump/texts/
+[2025-01-28T23:44:54.939+0000] {logging_mixin.py:190} INFO - Loading object /usr/local/***/data/preprocessed_documents/ into S3 bucket diario-oficial-db-dump/preprocessed_documents
+[2025-01-28T23:44:54.948+0000] {logging_mixin.py:190} INFO - Loading folder /usr/local/***/data/preprocessed_documents/ into S3 bucket diario-oficial-db-dump/preprocessed_documents
+[2025-01-28T23:44:56.511+0000] {logging_mixin.py:190} INFO - Loading object /usr/local/***/data/vector_db/ into S3 bucket diario-oficial-db-dump/vector_db/
+[2025-01-28T23:44:56.514+0000] {logging_mixin.py:190} INFO - Loading folder /usr/local/***/data/vector_db/ into S3 bucket diario-oficial-db-dump/vector_db/
+[2025-01-28T23:44:56.526+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-28T23:44:56.527+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=pull_gazettes_data, task_id=upload_contents_to_s3_task, run_id=scheduled__2025-01-27T00:00:00+00:00, execution_date=20250127T000000, start_date=20250128T234448, end_date=20250128T234456
+[2025-01-28T23:44:56.584+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-01-28T23:44:56.602+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-01-28T23:44:56.604+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

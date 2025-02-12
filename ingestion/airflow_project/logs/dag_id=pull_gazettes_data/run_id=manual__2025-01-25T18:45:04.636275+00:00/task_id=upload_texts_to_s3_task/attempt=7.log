@@ -1,0 +1,23 @@
+[2025-01-25T19:49:25.366+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-25T19:49:25.384+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pull_gazettes_data.upload_texts_to_s3_task manual__2025-01-25T18:45:04.636275+00:00 [queued]>
+[2025-01-25T19:49:25.393+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pull_gazettes_data.upload_texts_to_s3_task manual__2025-01-25T18:45:04.636275+00:00 [queued]>
+[2025-01-25T19:49:25.393+0000] {taskinstance.py:2865} INFO - Starting attempt 7 of 8
+[2025-01-25T19:49:25.406+0000] {taskinstance.py:2888} INFO - Executing <Task(UploadContentToS3): upload_texts_to_s3_task> on 2025-01-25 18:45:04.636275+00:00
+[2025-01-25T19:49:25.416+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=23657) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-25T19:49:25.418+0000] {standard_task_runner.py:72} INFO - Started process 23683 to run task
+[2025-01-25T19:49:25.418+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'pull_gazettes_data', 'upload_texts_to_s3_task', 'manual__2025-01-25T18:45:04.636275+00:00', '--job-id', '137', '--raw', '--subdir', 'DAGS_FOLDER/dag_script.py', '--cfg-path', '/tmp/tmpvb40pc86']
+[2025-01-25T19:49:25.420+0000] {standard_task_runner.py:105} INFO - Job 137: Subtask upload_texts_to_s3_task
+[2025-01-25T19:49:25.460+0000] {task_command.py:467} INFO - Running <TaskInstance: pull_gazettes_data.upload_texts_to_s3_task manual__2025-01-25T18:45:04.636275+00:00 [running]> on host 41bcec3d818b
+[2025-01-25T19:49:25.523+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='***@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='pull_gazettes_data' AIRFLOW_CTX_TASK_ID='upload_texts_to_s3_task' AIRFLOW_CTX_EXECUTION_DATE='2025-01-25T18:45:04.636275+00:00' AIRFLOW_CTX_TRY_NUMBER='7' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-25T18:45:04.636275+00:00'
+[2025-01-25T19:49:25.525+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-25T19:49:25.544+0000] {base.py:84} INFO - Retrieving connection 'minio_s3_conn_id'
+[2025-01-25T19:49:25.545+0000] {connection_wrapper.py:391} INFO - AWS Connection (conn_id='minio_s3_conn_id', conn_type='aws') credentials retrieved from extra.
+[2025-01-25T19:49:25.546+0000] {warnings.py:112} WARNING - <string>:9: AirflowProviderDeprecationWarning: extra['host'] is deprecated and will be removed in a future release. Please set extra['endpoint_url'] instead
+
+[2025-01-25T19:49:25.921+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-25T19:49:25.922+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=pull_gazettes_data, task_id=upload_texts_to_s3_task, run_id=manual__2025-01-25T18:45:04.636275+00:00, execution_date=20250125T184504, start_date=20250125T194925, end_date=20250125T194925
+[2025-01-25T19:49:25.954+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-01-25T19:49:25.972+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-01-25T19:49:25.973+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

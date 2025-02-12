@@ -1,0 +1,185 @@
+[2025-01-25T01:28:39.909+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-25T01:28:39.928+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pull_gazettes_data.preprocess_documents_task scheduled__2025-01-24T00:00:00+00:00 [queued]>
+[2025-01-25T01:28:39.938+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pull_gazettes_data.preprocess_documents_task scheduled__2025-01-24T00:00:00+00:00 [queued]>
+[2025-01-25T01:28:39.938+0000] {taskinstance.py:2865} INFO - Starting attempt 12 of 13
+[2025-01-25T01:28:39.952+0000] {taskinstance.py:2888} INFO - Executing <Task(PreprocessDocuments): preprocess_documents_task> on 2025-01-24 00:00:00+00:00
+[2025-01-25T01:28:39.968+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=6249) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-25T01:28:39.970+0000] {standard_task_runner.py:72} INFO - Started process 6262 to run task
+[2025-01-25T01:28:39.970+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'pull_gazettes_data', 'preprocess_documents_task', 'scheduled__2025-01-24T00:00:00+00:00', '--job-id', '58', '--raw', '--subdir', 'DAGS_FOLDER/dag_script.py', '--cfg-path', '/tmp/tmpthxjjei6']
+[2025-01-25T01:28:39.973+0000] {standard_task_runner.py:105} INFO - Job 58: Subtask preprocess_documents_task
+[2025-01-25T01:28:40.017+0000] {task_command.py:467} INFO - Running <TaskInstance: pull_gazettes_data.preprocess_documents_task scheduled__2025-01-24T00:00:00+00:00 [running]> on host 41bcec3d818b
+[2025-01-25T01:28:40.084+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='***@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='pull_gazettes_data' AIRFLOW_CTX_TASK_ID='preprocess_documents_task' AIRFLOW_CTX_EXECUTION_DATE='2025-01-24T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='12' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-01-24T00:00:00+00:00'
+[2025-01-25T01:28:40.086+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-25T01:28:40.099+0000] {logging_mixin.py:190} INFO - Checking pre processed documents log
+[2025-01-25T01:28:40.108+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-11-26_7140.pdf into multiple PDF single pages
+[2025-01-25T01:28:40.221+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-1-1.pdf already broken down into
+[2025-01-25T01:28:40.222+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-2-2.pdf already broken down into
+[2025-01-25T01:28:40.223+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-3-3.pdf already broken down into
+[2025-01-25T01:28:40.223+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-4-4.pdf already broken down into
+[2025-01-25T01:28:40.224+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-5-5.pdf already broken down into
+[2025-01-25T01:28:40.224+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-6-6.pdf already broken down into
+[2025-01-25T01:28:40.225+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-7-7.pdf already broken down into
+[2025-01-25T01:28:40.225+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-8-8.pdf already broken down into
+[2025-01-25T01:28:40.226+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-9-9.pdf already broken down into
+[2025-01-25T01:28:40.226+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-10-10.pdf already broken down into
+[2025-01-25T01:28:40.227+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-11-11.pdf already broken down into
+[2025-01-25T01:28:40.227+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-12-12.pdf already broken down into
+[2025-01-25T01:28:40.228+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-13-13.pdf already broken down into
+[2025-01-25T01:28:40.228+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-14-14.pdf already broken down into
+[2025-01-25T01:28:40.229+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-15-15.pdf already broken down into
+[2025-01-25T01:28:40.229+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-16-16.pdf already broken down into
+[2025-01-25T01:28:40.229+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-17-17.pdf already broken down into
+[2025-01-25T01:28:40.230+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-18-18.pdf already broken down into
+[2025-01-25T01:28:40.230+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-19-19.pdf already broken down into
+[2025-01-25T01:28:40.231+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-20-20.pdf already broken down into
+[2025-01-25T01:28:40.231+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-21-21.pdf already broken down into
+[2025-01-25T01:28:40.231+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-22-22.pdf already broken down into
+[2025-01-25T01:28:40.232+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-23-23.pdf already broken down into
+[2025-01-25T01:28:40.232+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-24-24.pdf already broken down into
+[2025-01-25T01:28:40.233+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-25-25.pdf already broken down into
+[2025-01-25T01:28:40.233+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-26-26.pdf already broken down into
+[2025-01-25T01:28:40.234+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-27-27.pdf already broken down into
+[2025-01-25T01:28:40.234+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-28-28.pdf already broken down into
+[2025-01-25T01:28:40.234+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-29-29.pdf already broken down into
+[2025-01-25T01:28:40.235+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-30-30.pdf already broken down into
+[2025-01-25T01:28:40.235+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-31-31.pdf already broken down into
+[2025-01-25T01:28:40.236+0000] {logging_mixin.py:190} INFO - File 3106200_2024-11-26_7140-page-32-32.pdf already broken down into
+[2025-01-25T01:28:40.242+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [file_uuid, file_uuid_breakdown, etl_timestamp]
+Index: [] file_uuid_breakdown
+[2025-01-25T01:28:40.280+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-25T01:28:40.573+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T01:28:42.949+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T01:28:43.508+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-25T01:28:43.882+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-11-26_7140-page-0-0.pdf
+[2025-01-25T01:28:45.854+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-11-26_7140-page-0-0.pdf in 5.61 sec.
+[2025-01-25T01:28:45.861+0000] {logging_mixin.py:190} INFO - Saving in path: /usr/local/***/data/preprocessed_documents/3106200_2024-11-26_7140-page-0-0.md
+[2025-01-25T01:28:45.881+0000] {logging_mixin.py:190} INFO -                  file_uuid  ...              etl_timestamp
+0  3106200_2024-11-26_7140  ... 2025-01-25 01:28:45.859821
+
+[1 rows x 3 columns] file_uuid_breakdown
+[2025-01-25T01:28:45.882+0000] {taskinstance.py:3310} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3791, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 152, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 181, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'file_uuid_breakdown'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/utils/preprocess_documents.py", line 174, in execute
+    self.process_files()
+  File "/opt/airflow/dags/utils/preprocess_documents.py", line 154, in process_files
+    if self.is_file_already_processed(breakdown_filename_uuid, is_breakdown=True):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/utils/preprocess_documents.py", line 59, in is_file_already_processed
+    return source in self.get_already_preprocessed_documents_from_log(is_breakdown)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/utils/preprocess_documents.py", line 55, in get_already_preprocessed_documents_from_log
+    return set(self.metadata[key].to_list())
+               ~~~~~~~~~~~~~^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/frame.py", line 3893, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3798, in get_loc
+    raise KeyError(key) from err
+KeyError: 'file_uuid_breakdown'
+[2025-01-25T01:28:45.904+0000] {taskinstance.py:1225} INFO - Marking task as UP_FOR_RETRY. dag_id=pull_gazettes_data, task_id=preprocess_documents_task, run_id=scheduled__2025-01-24T00:00:00+00:00, execution_date=20250124T000000, start_date=20250125T012839, end_date=20250125T012845
+[2025-01-25T01:28:45.925+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-25T01:28:45.926+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 58 for task preprocess_documents_task ('file_uuid_breakdown'; 6262)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3791, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 152, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 181, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'file_uuid_breakdown'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 115, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3004, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3158, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3182, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/utils/preprocess_documents.py", line 174, in execute
+    self.process_files()
+  File "/opt/airflow/dags/utils/preprocess_documents.py", line 154, in process_files
+    if self.is_file_already_processed(breakdown_filename_uuid, is_breakdown=True):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/utils/preprocess_documents.py", line 59, in is_file_already_processed
+    return source in self.get_already_preprocessed_documents_from_log(is_breakdown)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/utils/preprocess_documents.py", line 55, in get_already_preprocessed_documents_from_log
+    return set(self.metadata[key].to_list())
+               ~~~~~~~~~~~~~^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/frame.py", line 3893, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3798, in get_loc
+    raise KeyError(key) from err
+KeyError: 'file_uuid_breakdown'
+[2025-01-25T01:28:45.978+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-01-25T01:28:46.001+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-01-25T01:28:46.004+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

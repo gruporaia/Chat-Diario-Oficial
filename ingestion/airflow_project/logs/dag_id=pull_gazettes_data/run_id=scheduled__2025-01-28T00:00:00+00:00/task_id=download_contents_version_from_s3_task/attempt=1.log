@@ -1,0 +1,26 @@
+[2025-01-31T23:07:59.755+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-31T23:07:59.778+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pull_gazettes_data.download_contents_version_from_s3_task scheduled__2025-01-28T00:00:00+00:00 [queued]>
+[2025-01-31T23:07:59.792+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pull_gazettes_data.download_contents_version_from_s3_task scheduled__2025-01-28T00:00:00+00:00 [queued]>
+[2025-01-31T23:07:59.794+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2025-01-31T23:07:59.813+0000] {taskinstance.py:2888} INFO - Executing <Task(DownloadContentFromS3): download_contents_version_from_s3_task> on 2025-01-28 00:00:00+00:00
+[2025-01-31T23:07:59.827+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=144) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-31T23:07:59.829+0000] {standard_task_runner.py:72} INFO - Started process 152 to run task
+[2025-01-31T23:07:59.830+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'pull_gazettes_data', 'download_contents_version_from_s3_task', 'scheduled__2025-01-28T00:00:00+00:00', '--job-id', '277', '--raw', '--subdir', 'DAGS_FOLDER/dag_script.py', '--cfg-path', '/tmp/tmp5um8f2k2']
+[2025-01-31T23:07:59.833+0000] {standard_task_runner.py:105} INFO - Job 277: Subtask download_contents_version_from_s3_task
+[2025-01-31T23:07:59.895+0000] {task_command.py:467} INFO - Running <TaskInstance: pull_gazettes_data.download_contents_version_from_s3_task scheduled__2025-01-28T00:00:00+00:00 [running]> on host 41bcec3d818b
+[2025-01-31T23:08:00.006+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='***@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='pull_gazettes_data' AIRFLOW_CTX_TASK_ID='download_contents_version_from_s3_task' AIRFLOW_CTX_EXECUTION_DATE='2025-01-28T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-01-28T00:00:00+00:00'
+[2025-01-31T23:08:00.008+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-31T23:08:00.038+0000] {base.py:84} INFO - Retrieving connection 'minio_s3_conn_id'
+[2025-01-31T23:08:00.039+0000] {connection_wrapper.py:391} INFO - AWS Connection (conn_id='minio_s3_conn_id', conn_type='aws') credentials retrieved from extra.
+[2025-01-31T23:08:00.040+0000] {warnings.py:112} WARNING - <string>:9: AirflowProviderDeprecationWarning: extra['host'] is deprecated and will be removed in a future release. Please set extra['endpoint_url'] instead
+
+[2025-01-31T23:08:01.185+0000] {s3.py:323} ERROR - Access to bucket "diario-oficial-db-dump" is forbidden or there was an error with the request
+[2025-01-31T23:08:01.828+0000] {s3.py:326} ERROR - An error occurred (403) when calling the HeadBucket operation: Forbidden
+[2025-01-31T23:08:01.829+0000] {logging_mixin.py:190} INFO - Bucket does not exists
+[2025-01-31T23:08:01.841+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-31T23:08:01.842+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=pull_gazettes_data, task_id=download_contents_version_from_s3_task, run_id=scheduled__2025-01-28T00:00:00+00:00, execution_date=20250128T000000, start_date=20250131T230759, end_date=20250131T230801
+[2025-01-31T23:08:01.892+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-01-31T23:08:01.934+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-01-31T23:08:01.938+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

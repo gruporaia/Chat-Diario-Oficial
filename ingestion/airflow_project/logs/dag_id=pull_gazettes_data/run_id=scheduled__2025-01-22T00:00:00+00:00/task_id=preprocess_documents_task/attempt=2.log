@@ -1,0 +1,403 @@
+[2025-01-24T20:19:22.224+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-24T20:19:22.242+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pull_gazettes_data.preprocess_documents_task scheduled__2025-01-22T00:00:00+00:00 [queued]>
+[2025-01-24T20:19:22.250+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pull_gazettes_data.preprocess_documents_task scheduled__2025-01-22T00:00:00+00:00 [queued]>
+[2025-01-24T20:19:22.251+0000] {taskinstance.py:2865} INFO - Starting attempt 2 of 2
+[2025-01-24T20:19:22.263+0000] {taskinstance.py:2888} INFO - Executing <Task(PreprocessDocuments): preprocess_documents_task> on 2025-01-22 00:00:00+00:00
+[2025-01-24T20:19:22.277+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1575) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-24T20:19:22.279+0000] {standard_task_runner.py:72} INFO - Started process 1588 to run task
+[2025-01-24T20:19:22.278+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'pull_gazettes_data', 'preprocess_documents_task', 'scheduled__2025-01-22T00:00:00+00:00', '--job-id', '24', '--raw', '--subdir', 'DAGS_FOLDER/dag_script.py', '--cfg-path', '/tmp/tmpyiyjbn8b']
+[2025-01-24T20:19:22.281+0000] {standard_task_runner.py:105} INFO - Job 24: Subtask preprocess_documents_task
+[2025-01-24T20:19:22.326+0000] {task_command.py:467} INFO - Running <TaskInstance: pull_gazettes_data.preprocess_documents_task scheduled__2025-01-22T00:00:00+00:00 [running]> on host 972b45cbfb12
+[2025-01-24T20:19:22.389+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='***@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='pull_gazettes_data' AIRFLOW_CTX_TASK_ID='preprocess_documents_task' AIRFLOW_CTX_EXECUTION_DATE='2025-01-22T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-01-22T00:00:00+00:00'
+[2025-01-24T20:19:22.390+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-24T20:19:22.410+0000] {logging_mixin.py:190} INFO - Checking pre processed documents log
+[2025-01-24T20:19:22.418+0000] {logging_mixin.py:190} INFO - Already preprocessed documents: set()
+[2025-01-24T20:19:22.420+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-11-22_7138.pdf into multiple PDF single pages
+[2025-01-24T20:19:23.710+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-11-23_7139.pdf into multiple PDF single pages
+[2025-01-24T20:19:25.463+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-11-26_7140.pdf into multiple PDF single pages
+[2025-01-24T20:19:26.596+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-11-27_7141.pdf into multiple PDF single pages
+[2025-01-24T20:19:27.878+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-11-28_7142.pdf into multiple PDF single pages
+[2025-01-24T20:19:29.143+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-11-29_7143.pdf into multiple PDF single pages
+[2025-01-24T20:19:30.771+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-11-30_7144.pdf into multiple PDF single pages
+[2025-01-24T20:19:32.059+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-12-03_7145.pdf into multiple PDF single pages
+[2025-01-24T20:19:33.277+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-12-04_7146.pdf into multiple PDF single pages
+[2025-01-24T20:19:34.862+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-12-05_7147.pdf into multiple PDF single pages
+[2025-01-24T20:19:36.031+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-12-06_7148.pdf into multiple PDF single pages
+[2025-01-24T20:19:37.225+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-12-07_7149.pdf into multiple PDF single pages
+[2025-01-24T20:19:38.804+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-12-10_7150.pdf into multiple PDF single pages
+[2025-01-24T20:19:40.159+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-12-11_7151.pdf into multiple PDF single pages
+[2025-01-24T20:19:41.394+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-12-12_7152.pdf into multiple PDF single pages
+[2025-01-24T20:19:42.715+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-12-13_7153.pdf into multiple PDF single pages
+[2025-01-24T20:19:44.527+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-12-14_7154.pdf into multiple PDF single pages
+[2025-01-24T20:19:45.709+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-12-17_7155.pdf into multiple PDF single pages
+[2025-01-24T20:19:46.881+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-12-18_7156.pdf into multiple PDF single pages
+[2025-01-24T20:19:48.525+0000] {logging_mixin.py:190} INFO - Breaking down pdf 3106200_2024-12-19_7157.pdf into multiple PDF single pages
+[2025-01-24T20:19:49.902+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-24T20:19:50.265+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:19:52.398+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:19:52.933+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:19:53.290+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-11-22_7138.pdf-page-0.pdf
+[2025-01-24T20:19:58.111+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-11-22_7138.pdf-page-0.pdf in 8.23 sec.
+[2025-01-24T20:19:58.132+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-24T20:19:58.386+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:20:00.357+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:20:00.770+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:20:01.153+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-11-22_7138.pdf-page-1.pdf
+[2025-01-24T20:20:02.766+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-11-22_7138.pdf-page-1.pdf in 4.64 sec.
+[2025-01-24T20:20:02.782+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-24T20:20:02.930+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:20:05.645+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:20:06.092+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:20:06.537+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-11-22_7138.pdf-page-2.pdf
+[2025-01-24T20:20:08.481+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-11-22_7138.pdf-page-2.pdf in 5.71 sec.
+[2025-01-24T20:20:08.496+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-24T20:20:08.646+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:20:10.762+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:20:11.195+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:20:11.598+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-11-22_7138.pdf-page-3.pdf
+[2025-01-24T20:20:13.187+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-11-22_7138.pdf-page-3.pdf in 4.70 sec.
+[2025-01-24T20:20:13.200+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-24T20:20:13.381+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:20:15.583+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:20:16.465+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:20:16.834+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-11-22_7138.pdf-page-4.pdf
+[2025-01-24T20:20:18.279+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-11-22_7138.pdf-page-4.pdf in 5.08 sec.
+[2025-01-24T20:20:18.289+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-24T20:20:18.448+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:20:20.632+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:20:21.070+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:20:21.410+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-11-22_7138.pdf-page-5.pdf
+[2025-01-24T20:20:27.020+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-11-22_7138.pdf-page-5.pdf in 8.74 sec.
+[2025-01-24T20:20:27.036+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-24T20:20:27.188+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:20:29.331+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:20:29.804+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:20:30.153+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-11-22_7138.pdf-page-6.pdf
+[2025-01-24T20:20:33.086+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-11-22_7138.pdf-page-6.pdf in 6.06 sec.
+[2025-01-24T20:20:33.099+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-24T20:20:33.245+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:20:35.316+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:20:35.749+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:20:36.064+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-11-22_7138.pdf-page-7.pdf
+[2025-01-24T20:20:40.864+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-11-22_7138.pdf-page-7.pdf in 7.77 sec.
+[2025-01-24T20:20:40.879+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-24T20:20:41.025+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:20:43.192+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:20:43.633+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:20:43.977+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-11-22_7138.pdf-page-8.pdf
+[2025-01-24T20:20:51.314+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-11-22_7138.pdf-page-8.pdf in 10.44 sec.
+[2025-01-24T20:20:51.333+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-24T20:20:51.491+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:20:53.581+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:20:54.044+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:20:54.460+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-11-22_7138.pdf-page-9.pdf
+[2025-01-24T20:21:00.965+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-11-22_7138.pdf-page-9.pdf in 9.64 sec.
+[2025-01-24T20:21:00.983+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-24T20:21:01.162+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:21:03.247+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:21:04.112+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:21:04.457+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-11-22_7138.pdf-page-10.pdf
+[2025-01-24T20:21:11.511+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-11-22_7138.pdf-page-10.pdf in 10.54 sec.
+[2025-01-24T20:21:11.530+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-24T20:21:11.685+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:21:13.766+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:21:14.171+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:21:14.493+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-11-22_7138.pdf-page-11.pdf
+[2025-01-24T20:21:21.022+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-11-22_7138.pdf-page-11.pdf in 9.50 sec.
+[2025-01-24T20:21:21.042+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-24T20:21:21.188+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:21:23.334+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:21:23.825+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:21:24.188+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-11-22_7138.pdf-page-12.pdf
+[2025-01-24T20:21:31.080+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-11-22_7138.pdf-page-12.pdf in 10.04 sec.
+[2025-01-24T20:21:31.096+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-24T20:21:31.238+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:21:33.347+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:21:33.792+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:21:34.155+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-11-22_7138.pdf-page-13.pdf
+[2025-01-24T20:21:38.985+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-11-22_7138.pdf-page-13.pdf in 7.89 sec.
+[2025-01-24T20:21:39.000+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-24T20:21:39.148+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:21:41.089+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:21:41.537+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:21:41.882+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-11-22_7138.pdf-page-14.pdf
+[2025-01-24T20:21:46.869+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-11-22_7138.pdf-page-14.pdf in 7.87 sec.
+[2025-01-24T20:21:46.885+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-24T20:21:47.079+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:21:49.138+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:21:49.575+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:21:50.360+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-11-22_7138.pdf-page-15.pdf
+[2025-01-24T20:21:58.754+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-11-22_7138.pdf-page-15.pdf in 11.87 sec.
+[2025-01-24T20:21:58.770+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-24T20:21:58.916+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:22:00.914+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:22:01.412+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:22:01.760+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-11-22_7138.pdf-page-16.pdf
+[2025-01-24T20:22:06.681+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-11-22_7138.pdf-page-16.pdf in 7.92 sec.
+[2025-01-24T20:22:06.702+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-24T20:22:06.848+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:22:08.960+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:22:09.578+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:22:10.112+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-11-22_7138.pdf-page-17.pdf
+[2025-01-24T20:22:42.171+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-11-22_7138.pdf-page-17.pdf in 35.48 sec.
+[2025-01-24T20:22:42.185+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-24T20:22:42.336+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:22:44.623+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:22:45.157+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:22:45.515+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-11-22_7138.pdf-page-18.pdf
+[2025-01-24T20:22:49.955+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-11-22_7138.pdf-page-18.pdf in 7.77 sec.
+[2025-01-24T20:22:49.966+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-24T20:22:50.131+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:22:52.252+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:22:52.731+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:22:53.092+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-11-22_7138.pdf-page-19.pdf
+[2025-01-24T20:22:55.743+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-11-22_7138.pdf-page-19.pdf in 5.78 sec.
+[2025-01-24T20:22:55.756+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-24T20:22:55.903+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:22:57.987+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:22:58.431+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:22:58.750+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-11-22_7138.pdf-page-20.pdf
+[2025-01-24T20:23:00.283+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-11-22_7138.pdf-page-20.pdf in 4.53 sec.
+[2025-01-24T20:23:00.296+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-24T20:23:00.459+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:23:02.549+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:23:02.995+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:23:03.322+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-11-22_7138.pdf-page-21.pdf
+[2025-01-24T20:23:13.546+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-11-22_7138.pdf-page-21.pdf in 13.26 sec.
+[2025-01-24T20:23:13.565+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-24T20:23:13.711+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:23:15.772+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:23:16.245+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:23:16.599+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-11-22_7138.pdf-page-22.pdf
+[2025-01-24T20:23:22.304+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-11-22_7138.pdf-page-22.pdf in 8.74 sec.
+[2025-01-24T20:23:22.321+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-24T20:23:22.506+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:23:24.656+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:23:25.095+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:23:25.423+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-11-22_7138.pdf-page-23.pdf
+[2025-01-24T20:23:26.869+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-11-22_7138.pdf-page-23.pdf in 4.55 sec.
+[2025-01-24T20:23:26.882+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-24T20:23:27.049+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:23:29.058+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:23:29.484+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:23:29.813+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-11-22_7138.pdf-page-24.pdf
+[2025-01-24T20:23:33.081+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-11-22_7138.pdf-page-24.pdf in 6.20 sec.
+[2025-01-24T20:23:33.094+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-24T20:23:33.286+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:23:35.377+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:23:35.822+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:23:36.179+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-11-22_7138.pdf-page-25.pdf
+[2025-01-24T20:23:39.662+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-11-22_7138.pdf-page-25.pdf in 6.57 sec.
+[2025-01-24T20:23:39.678+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-24T20:23:39.824+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:23:42.343+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:23:42.806+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:23:43.161+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-11-22_7138.pdf-page-26.pdf
+[2025-01-24T20:23:45.044+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-11-22_7138.pdf-page-26.pdf in 5.37 sec.
+[2025-01-24T20:23:45.063+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-24T20:23:45.209+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:23:47.320+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:23:47.800+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:23:48.152+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-11-22_7138.pdf-page-27.pdf
+[2025-01-24T20:23:49.905+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-11-22_7138.pdf-page-27.pdf in 4.85 sec.
+[2025-01-24T20:23:49.917+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-24T20:23:50.114+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:23:52.389+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:23:53.230+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:23:53.574+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-11-22_7138.pdf-page-28.pdf
+[2025-01-24T20:24:01.777+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-11-22_7138.pdf-page-28.pdf in 11.87 sec.
+[2025-01-24T20:24:01.793+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-24T20:24:01.943+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:24:04.022+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:24:04.489+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:24:04.847+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-11-22_7138.pdf-page-29.pdf
+[2025-01-24T20:24:19.957+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-11-22_7138.pdf-page-29.pdf in 18.17 sec.
+[2025-01-24T20:24:19.982+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-24T20:24:20.147+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:24:22.195+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:24:22.669+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:24:23.011+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-11-22_7138.pdf-page-30.pdf
+[2025-01-24T20:24:26.239+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-11-22_7138.pdf-page-30.pdf in 6.26 sec.
+[2025-01-24T20:24:26.252+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-24T20:24:26.431+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:24:28.547+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:24:28.988+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:24:29.361+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-11-22_7138.pdf-page-31.pdf
+[2025-01-24T20:24:30.983+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-11-22_7138.pdf-page-31.pdf in 4.74 sec.
+[2025-01-24T20:24:30.994+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-24T20:24:31.144+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:24:33.446+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:24:34.007+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:24:34.423+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-11-22_7138.pdf-page-32.pdf
+[2025-01-24T20:24:36.641+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-11-22_7138.pdf-page-32.pdf in 5.65 sec.
+[2025-01-24T20:24:36.665+0000] {document_converter.py:242} INFO - Going to convert document batch...
+[2025-01-24T20:24:36.892+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:24:39.194+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:24:39.730+0000] {accelerator_utils.py:41} INFO - Accelerator device: 'cpu'
+[2025-01-24T20:24:40.125+0000] {base_pipeline.py:38} INFO - Processing document 3106200_2024-11-22_7138.pdf-page-33.pdf
+[2025-01-24T20:24:43.103+0000] {document_converter.py:257} INFO - Finished converting document 3106200_2024-11-22_7138.pdf-page-33.pdf in 6.44 sec.
+[2025-01-24T20:24:43.118+0000] {taskinstance.py:3310} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/docling_core/utils/file.py", line 69, in resolve_source_to_stream
+    http_url: AnyHttpUrl = TypeAdapter(AnyHttpUrl).validate_python(source)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pydantic/type_adapter.py", line 412, in validate_python
+    return self.validator.validate_python(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for function-wrap[wrap_val()]
+  Input should be a valid URL, relative URL without a base [type=url_parsing, input_value='/usr/local/airflow/data/...22_7138.pdf-page-34.pdf', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.10/v/url_parsing
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/utils/preprocess_documents.py", line 129, in execute
+    'etl_timestamp': datetime.now()
+                             ^^^^^^^
+  File "/opt/airflow/dags/utils/preprocess_documents.py", line 94, in preprocess_file
+    return result.document.export_to_markdown()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pydantic/_internal/_validate_call.py", line 38, in wrapper_function
+    return wrapper(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pydantic/_internal/_validate_call.py", line 111, in __call__
+    res = self.__pydantic_validator__.validate_python(pydantic_core.ArgsKwargs(args, kwargs))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docling/document_converter.py", line 195, in convert
+    return next(all_res)
+           ^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docling/document_converter.py", line 216, in convert_all
+    for conv_res in conv_res_iter:
+                    ^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docling/document_converter.py", line 238, in _convert
+    for input_batch in chunkify(
+                       ^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docling/utils/utils.py", line 12, in chunkify
+    for first in iterator:  # Take the first element from the iterator
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docling/datamodel/document.py", line 238, in docs
+    resolve_source_to_stream(item, self.headers)
+  File "/home/airflow/.local/lib/python3.12/site-packages/docling_core/utils/file.py", line 89, in resolve_source_to_stream
+    stream = BytesIO(local_path.read_bytes())
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/pathlib.py", line 1019, in read_bytes
+    with self.open(mode='rb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/usr/local/airflow/data/pdf_single_page/3106200_2024-11-22_7138.pdf-page-34.pdf'
+[2025-01-24T20:24:43.139+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=pull_gazettes_data, task_id=preprocess_documents_task, run_id=scheduled__2025-01-22T00:00:00+00:00, execution_date=20250122T000000, start_date=20250124T201922, end_date=20250124T202443
+[2025-01-24T20:24:43.155+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-24T20:24:43.156+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 24 for task preprocess_documents_task ([Errno 2] No such file or directory: '/usr/local/airflow/data/pdf_single_page/3106200_2024-11-22_7138.pdf-page-34.pdf'; 1588)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/docling_core/utils/file.py", line 69, in resolve_source_to_stream
+    http_url: AnyHttpUrl = TypeAdapter(AnyHttpUrl).validate_python(source)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pydantic/type_adapter.py", line 412, in validate_python
+    return self.validator.validate_python(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for function-wrap[wrap_val()]
+  Input should be a valid URL, relative URL without a base [type=url_parsing, input_value='/usr/local/airflow/data/...22_7138.pdf-page-34.pdf', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.10/v/url_parsing
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 115, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3004, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3158, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3182, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/utils/preprocess_documents.py", line 129, in execute
+    'etl_timestamp': datetime.now()
+                             ^^^^^^^
+  File "/opt/airflow/dags/utils/preprocess_documents.py", line 94, in preprocess_file
+    return result.document.export_to_markdown()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pydantic/_internal/_validate_call.py", line 38, in wrapper_function
+    return wrapper(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pydantic/_internal/_validate_call.py", line 111, in __call__
+    res = self.__pydantic_validator__.validate_python(pydantic_core.ArgsKwargs(args, kwargs))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docling/document_converter.py", line 195, in convert
+    return next(all_res)
+           ^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docling/document_converter.py", line 216, in convert_all
+    for conv_res in conv_res_iter:
+                    ^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docling/document_converter.py", line 238, in _convert
+    for input_batch in chunkify(
+                       ^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docling/utils/utils.py", line 12, in chunkify
+    for first in iterator:  # Take the first element from the iterator
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docling/datamodel/document.py", line 238, in docs
+    resolve_source_to_stream(item, self.headers)
+  File "/home/airflow/.local/lib/python3.12/site-packages/docling_core/utils/file.py", line 89, in resolve_source_to_stream
+    stream = BytesIO(local_path.read_bytes())
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/pathlib.py", line 1019, in read_bytes
+    with self.open(mode='rb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/usr/local/airflow/data/pdf_single_page/3106200_2024-11-22_7138.pdf-page-34.pdf'
+[2025-01-24T20:24:43.238+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-01-24T20:24:43.275+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-01-24T20:24:43.283+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

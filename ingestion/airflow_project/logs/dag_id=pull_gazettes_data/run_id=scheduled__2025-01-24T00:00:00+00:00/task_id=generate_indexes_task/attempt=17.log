@@ -1,0 +1,786 @@
+[2025-01-25T18:04:35.814+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-25T18:04:35.830+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pull_gazettes_data.generate_indexes_task scheduled__2025-01-24T00:00:00+00:00 [queued]>
+[2025-01-25T18:04:35.838+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pull_gazettes_data.generate_indexes_task scheduled__2025-01-24T00:00:00+00:00 [queued]>
+[2025-01-25T18:04:35.839+0000] {taskinstance.py:2865} INFO - Starting attempt 17 of 18
+[2025-01-25T18:04:35.853+0000] {taskinstance.py:2888} INFO - Executing <Task(GenerateIndexTask): generate_indexes_task> on 2025-01-24 00:00:00+00:00
+[2025-01-25T18:04:35.869+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=18547) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-25T18:04:35.872+0000] {standard_task_runner.py:72} INFO - Started process 18560 to run task
+[2025-01-25T18:04:35.872+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'pull_gazettes_data', 'generate_indexes_task', 'scheduled__2025-01-24T00:00:00+00:00', '--job-id', '102', '--raw', '--subdir', 'DAGS_FOLDER/dag_script.py', '--cfg-path', '/tmp/tmp7txlqidj']
+[2025-01-25T18:04:35.874+0000] {standard_task_runner.py:105} INFO - Job 102: Subtask generate_indexes_task
+[2025-01-25T18:04:35.919+0000] {task_command.py:467} INFO - Running <TaskInstance: pull_gazettes_data.generate_indexes_task scheduled__2025-01-24T00:00:00+00:00 [running]> on host 41bcec3d818b
+[2025-01-25T18:04:35.991+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='***@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='pull_gazettes_data' AIRFLOW_CTX_TASK_ID='generate_indexes_task' AIRFLOW_CTX_EXECUTION_DATE='2025-01-24T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='17' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-01-24T00:00:00+00:00'
+[2025-01-25T18:04:35.992+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-25T18:04:36.009+0000] {logging_mixin.py:190} INFO - Initializing database
+[2025-01-25T18:04:36.634+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:04:36.655+0000] {logging_mixin.py:190} INFO - Parsing database current state
+[2025-01-25T18:04:36.656+0000] {logging_mixin.py:190} INFO - loading database /usr/local/***/data/vector_db/
+[2025-01-25T18:04:36.661+0000] {logging_mixin.py:190} INFO - Reading file metadata
+[2025-01-25T18:04:36.696+0000] {logging_mixin.py:190} INFO - [FileMetadata(uuid='3106200_2024-11-26_7140-page-0-0'), FileMetadata(uuid='3106200_2024-11-26_7140-page-1-1'), FileMetadata(uuid='3106200_2024-11-26_7140-page-10-10'), FileMetadata(uuid='3106200_2024-11-26_7140-page-11-11'), FileMetadata(uuid='3106200_2024-11-26_7140-page-12-12'), FileMetadata(uuid='3106200_2024-11-26_7140-page-13-13'), FileMetadata(uuid='3106200_2024-11-26_7140-page-14-14'), FileMetadata(uuid='3106200_2024-11-26_7140-page-15-15'), FileMetadata(uuid='3106200_2024-11-26_7140-page-16-16'), FileMetadata(uuid='3106200_2024-11-26_7140-page-17-17'), FileMetadata(uuid='3106200_2024-11-26_7140-page-18-18'), FileMetadata(uuid='3106200_2024-11-26_7140-page-19-19'), FileMetadata(uuid='3106200_2024-11-26_7140-page-2-2'), FileMetadata(uuid='3106200_2024-11-26_7140-page-20-20'), FileMetadata(uuid='3106200_2024-11-26_7140-page-21-21'), FileMetadata(uuid='3106200_2024-11-26_7140-page-22-22'), FileMetadata(uuid='3106200_2024-11-26_7140-page-23-23'), FileMetadata(uuid='3106200_2024-11-26_7140-page-24-24'), FileMetadata(uuid='3106200_2024-11-26_7140-page-25-25'), FileMetadata(uuid='3106200_2024-11-26_7140-page-26-26'), FileMetadata(uuid='3106200_2024-11-26_7140-page-27-27'), FileMetadata(uuid='3106200_2024-11-26_7140-page-28-28'), FileMetadata(uuid='3106200_2024-11-26_7140-page-29-29'), FileMetadata(uuid='3106200_2024-11-26_7140-page-3-3'), FileMetadata(uuid='3106200_2024-11-26_7140-page-30-30'), FileMetadata(uuid='3106200_2024-11-26_7140-page-31-31'), FileMetadata(uuid='3106200_2024-11-26_7140-page-32-32'), FileMetadata(uuid='3106200_2024-11-26_7140-page-4-4'), FileMetadata(uuid='3106200_2024-11-26_7140-page-5-5'), FileMetadata(uuid='3106200_2024-11-26_7140-page-6-6'), FileMetadata(uuid='3106200_2024-11-26_7140-page-7-7'), FileMetadata(uuid='3106200_2024-11-26_7140-page-8-8'), FileMetadata(uuid='3106200_2024-11-26_7140-page-9-9'), FileMetadata(uuid='3106200_2024-11-27_7141-page-0-0'), FileMetadata(uuid='3106200_2024-11-27_7141-page-1-1'), FileMetadata(uuid='3106200_2024-11-27_7141-page-10-10'), FileMetadata(uuid='3106200_2024-11-27_7141-page-11-11'), FileMetadata(uuid='3106200_2024-11-27_7141-page-12-12'), FileMetadata(uuid='3106200_2024-11-27_7141-page-13-13'), FileMetadata(uuid='3106200_2024-11-27_7141-page-14-14'), FileMetadata(uuid='3106200_2024-11-27_7141-page-15-15'), FileMetadata(uuid='3106200_2024-11-27_7141-page-16-16'), FileMetadata(uuid='3106200_2024-11-27_7141-page-17-17'), FileMetadata(uuid='3106200_2024-11-27_7141-page-18-18'), FileMetadata(uuid='3106200_2024-11-27_7141-page-19-19'), FileMetadata(uuid='3106200_2024-11-27_7141-page-2-2'), FileMetadata(uuid='3106200_2024-11-27_7141-page-20-20'), FileMetadata(uuid='3106200_2024-11-27_7141-page-21-21'), FileMetadata(uuid='3106200_2024-11-27_7141-page-22-22'), FileMetadata(uuid='3106200_2024-11-27_7141-page-23-23'), FileMetadata(uuid='3106200_2024-11-27_7141-page-24-24'), FileMetadata(uuid='3106200_2024-11-27_7141-page-25-25'), FileMetadata(uuid='3106200_2024-11-27_7141-page-26-26'), FileMetadata(uuid='3106200_2024-11-27_7141-page-27-27'), FileMetadata(uuid='3106200_2024-11-27_7141-page-28-28'), FileMetadata(uuid='3106200_2024-11-27_7141-page-29-29'), FileMetadata(uuid='3106200_2024-11-27_7141-page-3-3'), FileMetadata(uuid='3106200_2024-11-27_7141-page-30-30'), FileMetadata(uuid='3106200_2024-11-27_7141-page-31-31'), FileMetadata(uuid='3106200_2024-11-27_7141-page-32-32'), FileMetadata(uuid='3106200_2024-11-27_7141-page-33-33'), FileMetadata(uuid='3106200_2024-11-27_7141-page-34-34'), FileMetadata(uuid='3106200_2024-11-27_7141-page-35-35'), FileMetadata(uuid='3106200_2024-11-27_7141-page-36-36'), FileMetadata(uuid='3106200_2024-11-27_7141-page-4-4'), FileMetadata(uuid='3106200_2024-11-27_7141-page-5-5'), FileMetadata(uuid='3106200_2024-11-27_7141-page-6-6'), FileMetadata(uuid='3106200_2024-11-27_7141-page-7-7'), FileMetadata(uuid='3106200_2024-11-27_7141-page-8-8'), FileMetadata(uuid='3106200_2024-11-27_7141-page-9-9'), FileMetadata(uuid='3106200_2024-11-28_7142-page-0-0'), FileMetadata(uuid='3106200_2024-11-28_7142-page-1-1'), FileMetadata(uuid='3106200_2024-11-28_7142-page-10-10'), FileMetadata(uuid='3106200_2024-11-28_7142-page-11-11'), FileMetadata(uuid='3106200_2024-11-28_7142-page-12-12'), FileMetadata(uuid='3106200_2024-11-28_7142-page-13-13'), FileMetadata(uuid='3106200_2024-11-28_7142-page-14-14'), FileMetadata(uuid='3106200_2024-11-28_7142-page-15-15'), FileMetadata(uuid='3106200_2024-11-28_7142-page-16-16'), FileMetadata(uuid='3106200_2024-11-28_7142-page-17-17'), FileMetadata(uuid='3106200_2024-11-28_7142-page-18-18'), FileMetadata(uuid='3106200_2024-11-28_7142-page-19-19'), FileMetadata(uuid='3106200_2024-11-28_7142-page-2-2'), FileMetadata(uuid='3106200_2024-11-28_7142-page-20-20'), FileMetadata(uuid='3106200_2024-11-28_7142-page-21-21'), FileMetadata(uuid='3106200_2024-11-28_7142-page-22-22'), FileMetadata(uuid='3106200_2024-11-28_7142-page-23-23'), FileMetadata(uuid='3106200_2024-11-28_7142-page-24-24'), FileMetadata(uuid='3106200_2024-11-28_7142-page-25-25'), FileMetadata(uuid='3106200_2024-11-28_7142-page-25-29'), FileMetadata(uuid='3106200_2024-11-28_7142-page-26-26'), FileMetadata(uuid='3106200_2024-11-28_7142-page-27-27'), FileMetadata(uuid='3106200_2024-11-28_7142-page-28-28'), FileMetadata(uuid='3106200_2024-11-28_7142-page-29-29'), FileMetadata(uuid='3106200_2024-11-28_7142-page-3-3'), FileMetadata(uuid='3106200_2024-11-28_7142-page-30-30'), FileMetadata(uuid='3106200_2024-11-28_7142-page-31-31'), FileMetadata(uuid='3106200_2024-11-28_7142-page-32-32'), FileMetadata(uuid='3106200_2024-11-28_7142-page-33-33'), FileMetadata(uuid='3106200_2024-11-28_7142-page-34-34'), FileMetadata(uuid='3106200_2024-11-28_7142-page-35-35'), FileMetadata(uuid='3106200_2024-11-28_7142-page-36-36'), FileMetadata(uuid='3106200_2024-11-28_7142-page-37-37'), FileMetadata(uuid='3106200_2024-11-28_7142-page-38-38'), FileMetadata(uuid='3106200_2024-11-28_7142-page-39-39'), FileMetadata(uuid='3106200_2024-11-28_7142-page-4-4'), FileMetadata(uuid='3106200_2024-11-28_7142-page-40-40'), FileMetadata(uuid='3106200_2024-11-28_7142-page-41-41'), FileMetadata(uuid='3106200_2024-11-28_7142-page-42-42'), FileMetadata(uuid='3106200_2024-11-28_7142-page-43-43'), FileMetadata(uuid='3106200_2024-11-28_7142-page-44-44'), FileMetadata(uuid='3106200_2024-11-28_7142-page-45-45'), FileMetadata(uuid='3106200_2024-11-28_7142-page-5-5'), FileMetadata(uuid='3106200_2024-11-28_7142-page-6-6'), FileMetadata(uuid='3106200_2024-11-28_7142-page-7-7'), FileMetadata(uuid='3106200_2024-11-28_7142-page-8-8'), FileMetadata(uuid='3106200_2024-11-28_7142-page-9-9'), FileMetadata(uuid='3106200_2024-11-29_7143-page-0-0'), FileMetadata(uuid='3106200_2024-11-29_7143-page-1-1'), FileMetadata(uuid='3106200_2024-11-29_7143-page-10-10'), FileMetadata(uuid='3106200_2024-11-29_7143-page-11-11'), FileMetadata(uuid='3106200_2024-11-29_7143-page-12-12'), FileMetadata(uuid='3106200_2024-11-29_7143-page-13-13'), FileMetadata(uuid='3106200_2024-11-29_7143-page-14-14'), FileMetadata(uuid='3106200_2024-11-29_7143-page-15-15'), FileMetadata(uuid='3106200_2024-11-29_7143-page-16-16'), FileMetadata(uuid='3106200_2024-11-29_7143-page-17-17'), FileMetadata(uuid='3106200_2024-11-29_7143-page-18-18'), FileMetadata(uuid='3106200_2024-11-29_7143-page-19-19'), FileMetadata(uuid='3106200_2024-11-29_7143-page-2-2'), FileMetadata(uuid='3106200_2024-11-29_7143-page-20-20'), FileMetadata(uuid='3106200_2024-11-29_7143-page-21-21'), FileMetadata(uuid='3106200_2024-11-29_7143-page-22-22'), FileMetadata(uuid='3106200_2024-11-29_7143-page-23-23'), FileMetadata(uuid='3106200_2024-11-29_7143-page-24-24'), FileMetadata(uuid='3106200_2024-11-29_7143-page-25-25'), FileMetadata(uuid='3106200_2024-11-29_7143-page-26-26'), FileMetadata(uuid='3106200_2024-11-29_7143-page-27-27'), FileMetadata(uuid='3106200_2024-11-29_7143-page-28-28'), FileMetadata(uuid='3106200_2024-11-29_7143-page-29-29'), FileMetadata(uuid='3106200_2024-11-29_7143-page-3-3'), FileMetadata(uuid='3106200_2024-11-29_7143-page-30-30'), FileMetadata(uuid='3106200_2024-11-29_7143-page-31-31'), FileMetadata(uuid='3106200_2024-11-29_7143-page-32-32'), FileMetadata(uuid='3106200_2024-11-29_7143-page-33-33'), FileMetadata(uuid='3106200_2024-11-29_7143-page-34-34'), FileMetadata(uuid='3106200_2024-11-29_7143-page-35-35'), FileMetadata(uuid='3106200_2024-11-29_7143-page-36-36'), FileMetadata(uuid='3106200_2024-11-29_7143-page-37-37'), FileMetadata(uuid='3106200_2024-11-29_7143-page-38-38'), FileMetadata(uuid='3106200_2024-11-29_7143-page-4-4'), FileMetadata(uuid='3106200_2024-11-29_7143-page-5-5'), FileMetadata(uuid='3106200_2024-11-29_7143-page-6-6'), FileMetadata(uuid='3106200_2024-11-29_7143-page-7-7'), FileMetadata(uuid='3106200_2024-11-29_7143-page-8-8'), FileMetadata(uuid='3106200_2024-11-29_7143-page-9-9'), FileMetadata(uuid='3106200_2024-11-30_7144-page-0-0'), FileMetadata(uuid='3106200_2024-11-30_7144-page-1-1'), FileMetadata(uuid='3106200_2024-11-30_7144-page-10-10'), FileMetadata(uuid='3106200_2024-11-30_7144-page-11-11'), FileMetadata(uuid='3106200_2024-11-30_7144-page-12-12'), FileMetadata(uuid='3106200_2024-11-30_7144-page-13-13'), FileMetadata(uuid='3106200_2024-11-30_7144-page-14-14'), FileMetadata(uuid='3106200_2024-11-30_7144-page-15-15'), FileMetadata(uuid='3106200_2024-11-30_7144-page-16-16'), FileMetadata(uuid='3106200_2024-11-30_7144-page-17-17'), FileMetadata(uuid='3106200_2024-11-30_7144-page-18-18'), FileMetadata(uuid='3106200_2024-11-30_7144-page-19-19'), FileMetadata(uuid='3106200_2024-11-30_7144-page-2-2'), FileMetadata(uuid='3106200_2024-11-30_7144-page-20-20'), FileMetadata(uuid='3106200_2024-11-30_7144-page-21-21'), FileMetadata(uuid='3106200_2024-11-30_7144-page-22-22'), FileMetadata(uuid='3106200_2024-11-30_7144-page-23-23'), FileMetadata(uuid='3106200_2024-11-30_7144-page-24-24'), FileMetadata(uuid='3106200_2024-11-30_7144-page-25-25'), FileMetadata(uuid='3106200_2024-11-30_7144-page-26-26'), FileMetadata(uuid='3106200_2024-11-30_7144-page-27-27'), FileMetadata(uuid='3106200_2024-11-30_7144-page-28-28'), FileMetadata(uuid='3106200_2024-11-30_7144-page-29-29'), FileMetadata(uuid='3106200_2024-11-30_7144-page-3-3'), FileMetadata(uuid='3106200_2024-11-30_7144-page-30-30'), FileMetadata(uuid='3106200_2024-11-30_7144-page-31-31'), FileMetadata(uuid='3106200_2024-11-30_7144-page-32-32'), FileMetadata(uuid='3106200_2024-11-30_7144-page-33-33'), FileMetadata(uuid='3106200_2024-11-30_7144-page-34-34'), FileMetadata(uuid='3106200_2024-11-30_7144-page-35-35'), FileMetadata(uuid='3106200_2024-11-30_7144-page-36-36'), FileMetadata(uuid='3106200_2024-11-30_7144-page-37-37'), FileMetadata(uuid='3106200_2024-11-30_7144-page-4-4'), FileMetadata(uuid='3106200_2024-11-30_7144-page-5-5'), FileMetadata(uuid='3106200_2024-11-30_7144-page-6-6'), FileMetadata(uuid='3106200_2024-11-30_7144-page-7-7'), FileMetadata(uuid='3106200_2024-11-30_7144-page-8-8'), FileMetadata(uuid='3106200_2024-11-30_7144-page-9-9'), FileMetadata(uuid='3106200_2024-12-03_7145-page-0-0'), FileMetadata(uuid='3106200_2024-12-03_7145-page-1-1'), FileMetadata(uuid='3106200_2024-12-03_7145-page-10-10'), FileMetadata(uuid='3106200_2024-12-03_7145-page-11-11'), FileMetadata(uuid='3106200_2024-12-03_7145-page-12-12'), FileMetadata(uuid='3106200_2024-12-03_7145-page-13-13'), FileMetadata(uuid='3106200_2024-12-03_7145-page-14-14'), FileMetadata(uuid='3106200_2024-12-03_7145-page-15-15'), FileMetadata(uuid='3106200_2024-12-03_7145-page-16-16'), FileMetadata(uuid='3106200_2024-12-03_7145-page-17-17'), FileMetadata(uuid='3106200_2024-12-03_7145-page-18-18'), FileMetadata(uuid='3106200_2024-12-03_7145-page-19-19'), FileMetadata(uuid='3106200_2024-12-03_7145-page-2-2'), FileMetadata(uuid='3106200_2024-12-03_7145-page-20-20'), FileMetadata(uuid='3106200_2024-12-03_7145-page-21-21'), FileMetadata(uuid='3106200_2024-12-03_7145-page-22-22'), FileMetadata(uuid='3106200_2024-12-03_7145-page-23-23'), FileMetadata(uuid='3106200_2024-12-03_7145-page-24-24'), FileMetadata(uuid='3106200_2024-12-03_7145-page-25-25'), FileMetadata(uuid='3106200_2024-12-03_7145-page-26-26'), FileMetadata(uuid='3106200_2024-12-03_7145-page-27-27'), FileMetadata(uuid='3106200_2024-12-03_7145-page-28-28'), FileMetadata(uuid='3106200_2024-12-03_7145-page-29-29'), FileMetadata(uuid='3106200_2024-12-03_7145-page-3-3'), FileMetadata(uuid='3106200_2024-12-03_7145-page-30-30'), FileMetadata(uuid='3106200_2024-12-03_7145-page-31-31'), FileMetadata(uuid='3106200_2024-12-03_7145-page-32-32'), FileMetadata(uuid='3106200_2024-12-03_7145-page-33-33'), FileMetadata(uuid='3106200_2024-12-03_7145-page-34-34'), FileMetadata(uuid='3106200_2024-12-03_7145-page-4-4'), FileMetadata(uuid='3106200_2024-12-03_7145-page-5-5'), FileMetadata(uuid='3106200_2024-12-03_7145-page-6-6'), FileMetadata(uuid='3106200_2024-12-03_7145-page-7-7'), FileMetadata(uuid='3106200_2024-12-03_7145-page-8-8'), FileMetadata(uuid='3106200_2024-12-03_7145-page-9-9'), FileMetadata(uuid='3106200_2024-12-04_7146-page-0-0'), FileMetadata(uuid='3106200_2024-12-04_7146-page-1-1'), FileMetadata(uuid='3106200_2024-12-04_7146-page-10-10'), FileMetadata(uuid='3106200_2024-12-04_7146-page-11-11'), FileMetadata(uuid='3106200_2024-12-04_7146-page-12-12'), FileMetadata(uuid='3106200_2024-12-04_7146-page-13-13'), FileMetadata(uuid='3106200_2024-12-04_7146-page-14-14'), FileMetadata(uuid='3106200_2024-12-04_7146-page-15-15'), FileMetadata(uuid='3106200_2024-12-04_7146-page-16-16'), FileMetadata(uuid='3106200_2024-12-04_7146-page-17-17'), FileMetadata(uuid='3106200_2024-12-04_7146-page-18-18'), FileMetadata(uuid='3106200_2024-12-04_7146-page-19-19'), FileMetadata(uuid='3106200_2024-12-04_7146-page-2-2'), FileMetadata(uuid='3106200_2024-12-04_7146-page-20-20'), FileMetadata(uuid='3106200_2024-12-04_7146-page-21-21'), FileMetadata(uuid='3106200_2024-12-04_7146-page-22-22'), FileMetadata(uuid='3106200_2024-12-04_7146-page-23-23'), FileMetadata(uuid='3106200_2024-12-04_7146-page-24-24'), FileMetadata(uuid='3106200_2024-12-04_7146-page-25-25'), FileMetadata(uuid='3106200_2024-12-04_7146-page-26-26'), FileMetadata(uuid='3106200_2024-12-04_7146-page-27-27'), FileMetadata(uuid='3106200_2024-12-04_7146-page-28-28'), FileMetadata(uuid='3106200_2024-12-04_7146-page-29-29'), FileMetadata(uuid='3106200_2024-12-04_7146-page-3-3'), FileMetadata(uuid='3106200_2024-12-04_7146-page-30-30'), FileMetadata(uuid='3106200_2024-12-04_7146-page-31-31'), FileMetadata(uuid='3106200_2024-12-04_7146-page-32-32'), FileMetadata(uuid='3106200_2024-12-04_7146-page-33-33'), FileMetadata(uuid='3106200_2024-12-04_7146-page-34-34'), FileMetadata(uuid='3106200_2024-12-04_7146-page-35-35'), FileMetadata(uuid='3106200_2024-12-04_7146-page-36-36'), FileMetadata(uuid='3106200_2024-12-04_7146-page-37-37'), FileMetadata(uuid='3106200_2024-12-04_7146-page-38-38'), FileMetadata(uuid='3106200_2024-12-04_7146-page-39-39'), FileMetadata(uuid='3106200_2024-12-04_7146-page-4-4'), FileMetadata(uuid='3106200_2024-12-04_7146-page-5-5'), FileMetadata(uuid='3106200_2024-12-04_7146-page-6-6'), FileMetadata(uuid='3106200_2024-12-04_7146-page-7-7'), FileMetadata(uuid='3106200_2024-12-04_7146-page-8-8'), FileMetadata(uuid='3106200_2024-12-04_7146-page-9-9'), FileMetadata(uuid='3106200_2024-12-05_7147-page-0-0'), FileMetadata(uuid='3106200_2024-12-05_7147-page-1-1'), FileMetadata(uuid='3106200_2024-12-05_7147-page-10-10'), FileMetadata(uuid='3106200_2024-12-05_7147-page-11-11'), FileMetadata(uuid='3106200_2024-12-05_7147-page-12-12'), FileMetadata(uuid='3106200_2024-12-05_7147-page-13-13'), FileMetadata(uuid='3106200_2024-12-05_7147-page-14-14'), FileMetadata(uuid='3106200_2024-12-05_7147-page-15-15'), FileMetadata(uuid='3106200_2024-12-05_7147-page-16-16'), FileMetadata(uuid='3106200_2024-12-05_7147-page-17-17'), FileMetadata(uuid='3106200_2024-12-05_7147-page-18-18'), FileMetadata(uuid='3106200_2024-12-05_7147-page-19-19'), FileMetadata(uuid='3106200_2024-12-05_7147-page-2-2'), FileMetadata(uuid='3106200_2024-12-05_7147-page-20-20'), FileMetadata(uuid='3106200_2024-12-05_7147-page-21-21'), FileMetadata(uuid='3106200_2024-12-05_7147-page-22-22'), FileMetadata(uuid='3106200_2024-12-05_7147-page-3-3'), FileMetadata(uuid='3106200_2024-12-05_7147-page-4-4'), FileMetadata(uuid='3106200_2024-12-05_7147-page-5-5'), FileMetadata(uuid='3106200_2024-12-05_7147-page-6-6'), FileMetadata(uuid='3106200_2024-12-05_7147-page-7-7'), FileMetadata(uuid='3106200_2024-12-05_7147-page-8-8'), FileMetadata(uuid='3106200_2024-12-05_7147-page-9-9'), FileMetadata(uuid='3106200_2024-12-06_7148-page-0-0'), FileMetadata(uuid='3106200_2024-12-06_7148-page-1-1'), FileMetadata(uuid='3106200_2024-12-06_7148-page-10-10'), FileMetadata(uuid='3106200_2024-12-06_7148-page-11-11'), FileMetadata(uuid='3106200_2024-12-06_7148-page-12-12'), FileMetadata(uuid='3106200_2024-12-06_7148-page-13-13'), FileMetadata(uuid='3106200_2024-12-06_7148-page-14-14'), FileMetadata(uuid='3106200_2024-12-06_7148-page-15-15'), FileMetadata(uuid='3106200_2024-12-06_7148-page-16-16'), FileMetadata(uuid='3106200_2024-12-06_7148-page-17-17'), FileMetadata(uuid='3106200_2024-12-06_7148-page-18-18'), FileMetadata(uuid='3106200_2024-12-06_7148-page-19-19'), FileMetadata(uuid='3106200_2024-12-06_7148-page-2-2'), FileMetadata(uuid='3106200_2024-12-06_7148-page-20-20'), FileMetadata(uuid='3106200_2024-12-06_7148-page-21-21'), FileMetadata(uuid='3106200_2024-12-06_7148-page-22-22'), FileMetadata(uuid='3106200_2024-12-06_7148-page-23-23'), FileMetadata(uuid='3106200_2024-12-06_7148-page-24-24'), FileMetadata(uuid='3106200_2024-12-06_7148-page-25-25'), FileMetadata(uuid='3106200_2024-12-06_7148-page-26-26'), FileMetadata(uuid='3106200_2024-12-06_7148-page-27-27'), FileMetadata(uuid='3106200_2024-12-06_7148-page-28-28'), FileMetadata(uuid='3106200_2024-12-06_7148-page-29-29'), FileMetadata(uuid='3106200_2024-12-06_7148-page-3-3'), FileMetadata(uuid='3106200_2024-12-06_7148-page-30-30'), FileMetadata(uuid='3106200_2024-12-06_7148-page-31-31'), FileMetadata(uuid='3106200_2024-12-06_7148-page-32-32'), FileMetadata(uuid='3106200_2024-12-06_7148-page-33-33'), FileMetadata(uuid='3106200_2024-12-06_7148-page-34-34'), FileMetadata(uuid='3106200_2024-12-06_7148-page-35-35'), FileMetadata(uuid='3106200_2024-12-06_7148-page-36-36'), FileMetadata(uuid='3106200_2024-12-06_7148-page-37-37'), FileMetadata(uuid='3106200_2024-12-06_7148-page-38-38'), FileMetadata(uuid='3106200_2024-12-06_7148-page-39-39'), FileMetadata(uuid='3106200_2024-12-06_7148-page-4-4'), FileMetadata(uuid='3106200_2024-12-06_7148-page-5-5'), FileMetadata(uuid='3106200_2024-12-06_7148-page-6-6'), FileMetadata(uuid='3106200_2024-12-06_7148-page-7-7'), FileMetadata(uuid='3106200_2024-12-06_7148-page-8-8'), FileMetadata(uuid='3106200_2024-12-06_7148-page-9-9'), FileMetadata(uuid='3106200_2024-12-07_7149-page-0-0'), FileMetadata(uuid='3106200_2024-12-07_7149-page-1-1'), FileMetadata(uuid='3106200_2024-12-07_7149-page-10-10'), FileMetadata(uuid='3106200_2024-12-07_7149-page-11-11'), FileMetadata(uuid='3106200_2024-12-07_7149-page-12-12'), FileMetadata(uuid='3106200_2024-12-07_7149-page-13-13'), FileMetadata(uuid='3106200_2024-12-07_7149-page-14-14'), FileMetadata(uuid='3106200_2024-12-07_7149-page-15-15'), FileMetadata(uuid='3106200_2024-12-07_7149-page-16-16'), FileMetadata(uuid='3106200_2024-12-07_7149-page-17-17'), FileMetadata(uuid='3106200_2024-12-07_7149-page-18-18'), FileMetadata(uuid='3106200_2024-12-07_7149-page-19-19'), FileMetadata(uuid='3106200_2024-12-07_7149-page-2-2'), FileMetadata(uuid='3106200_2024-12-07_7149-page-20-20'), FileMetadata(uuid='3106200_2024-12-07_7149-page-21-21'), FileMetadata(uuid='3106200_2024-12-07_7149-page-22-22'), FileMetadata(uuid='3106200_2024-12-07_7149-page-23-23'), FileMetadata(uuid='3106200_2024-12-07_7149-page-24-24'), FileMetadata(uuid='3106200_2024-12-07_7149-page-25-25'), FileMetadata(uuid='3106200_2024-12-07_7149-page-26-26'), FileMetadata(uuid='3106200_2024-12-07_7149-page-27-27'), FileMetadata(uuid='3106200_2024-12-07_7149-page-28-28'), FileMetadata(uuid='3106200_2024-12-07_7149-page-29-29'), FileMetadata(uuid='3106200_2024-12-07_7149-page-3-3'), FileMetadata(uuid='3106200_2024-12-07_7149-page-30-30'), FileMetadata(uuid='3106200_2024-12-07_7149-page-31-31'), FileMetadata(uuid='3106200_2024-12-07_7149-page-32-32'), FileMetadata(uuid='3106200_2024-12-07_7149-page-33-33'), FileMetadata(uuid='3106200_2024-12-07_7149-page-34-34'), FileMetadata(uuid='3106200_2024-12-07_7149-page-35-35'), FileMetadata(uuid='3106200_2024-12-07_7149-page-36-36'), FileMetadata(uuid='3106200_2024-12-07_7149-page-37-37'), FileMetadata(uuid='3106200_2024-12-07_7149-page-38-38'), FileMetadata(uuid='3106200_2024-12-07_7149-page-39-39'), FileMetadata(uuid='3106200_2024-12-07_7149-page-4-4'), FileMetadata(uuid='3106200_2024-12-07_7149-page-40-40'), FileMetadata(uuid='3106200_2024-12-07_7149-page-41-41'), FileMetadata(uuid='3106200_2024-12-07_7149-page-42-42'), FileMetadata(uuid='3106200_2024-12-07_7149-page-43-43'), FileMetadata(uuid='3106200_2024-12-07_7149-page-44-44'), FileMetadata(uuid='3106200_2024-12-07_7149-page-45-45'), FileMetadata(uuid='3106200_2024-12-07_7149-page-5-5'), FileMetadata(uuid='3106200_2024-12-07_7149-page-6-6'), FileMetadata(uuid='3106200_2024-12-07_7149-page-7-7'), FileMetadata(uuid='3106200_2024-12-07_7149-page-8-8'), FileMetadata(uuid='3106200_2024-12-07_7149-page-9-9'), FileMetadata(uuid='3106200_2024-12-10_7150-page-0-0'), FileMetadata(uuid='3106200_2024-12-10_7150-page-1-1'), FileMetadata(uuid='3106200_2024-12-10_7150-page-10-10'), FileMetadata(uuid='3106200_2024-12-10_7150-page-11-11'), FileMetadata(uuid='3106200_2024-12-10_7150-page-12-12'), FileMetadata(uuid='3106200_2024-12-10_7150-page-13-13'), FileMetadata(uuid='3106200_2024-12-10_7150-page-14-14'), FileMetadata(uuid='3106200_2024-12-10_7150-page-15-15'), FileMetadata(uuid='3106200_2024-12-10_7150-page-16-16'), FileMetadata(uuid='3106200_2024-12-10_7150-page-17-17'), FileMetadata(uuid='3106200_2024-12-10_7150-page-18-18'), FileMetadata(uuid='3106200_2024-12-10_7150-page-19-19'), FileMetadata(uuid='3106200_2024-12-10_7150-page-2-2'), FileMetadata(uuid='3106200_2024-12-10_7150-page-20-20'), FileMetadata(uuid='3106200_2024-12-10_7150-page-21-21'), FileMetadata(uuid='3106200_2024-12-10_7150-page-3-3'), FileMetadata(uuid='3106200_2024-12-10_7150-page-4-4'), FileMetadata(uuid='3106200_2024-12-10_7150-page-5-5'), FileMetadata(uuid='3106200_2024-12-10_7150-page-6-6'), FileMetadata(uuid='3106200_2024-12-10_7150-page-7-7'), FileMetadata(uuid='3106200_2024-12-10_7150-page-8-8'), FileMetadata(uuid='3106200_2024-12-10_7150-page-9-9'), FileMetadata(uuid='3106200_2024-12-11_7151-page-0-0'), FileMetadata(uuid='3106200_2024-12-11_7151-page-1-1'), FileMetadata(uuid='3106200_2024-12-11_7151-page-10-10'), FileMetadata(uuid='3106200_2024-12-11_7151-page-11-11'), FileMetadata(uuid='3106200_2024-12-11_7151-page-12-12'), FileMetadata(uuid='3106200_2024-12-11_7151-page-13-13'), FileMetadata(uuid='3106200_2024-12-11_7151-page-14-14'), FileMetadata(uuid='3106200_2024-12-11_7151-page-15-15'), FileMetadata(uuid='3106200_2024-12-11_7151-page-16-16'), FileMetadata(uuid='3106200_2024-12-11_7151-page-17-17'), FileMetadata(uuid='3106200_2024-12-11_7151-page-18-18'), FileMetadata(uuid='3106200_2024-12-11_7151-page-19-19'), FileMetadata(uuid='3106200_2024-12-11_7151-page-2-2'), FileMetadata(uuid='3106200_2024-12-11_7151-page-20-20'), FileMetadata(uuid='3106200_2024-12-11_7151-page-21-21'), FileMetadata(uuid='3106200_2024-12-11_7151-page-22-22'), FileMetadata(uuid='3106200_2024-12-11_7151-page-23-23'), FileMetadata(uuid='3106200_2024-12-11_7151-page-24-24'), FileMetadata(uuid='3106200_2024-12-11_7151-page-25-25'), FileMetadata(uuid='3106200_2024-12-11_7151-page-26-26'), FileMetadata(uuid='3106200_2024-12-11_7151-page-27-27'), FileMetadata(uuid='3106200_2024-12-11_7151-page-28-28'), FileMetadata(uuid='3106200_2024-12-11_7151-page-29-29'), FileMetadata(uuid='3106200_2024-12-11_7151-page-3-3'), FileMetadata(uuid='3106200_2024-12-11_7151-page-30-30'), FileMetadata(uuid='3106200_2024-12-11_7151-page-31-31'), FileMetadata(uuid='3106200_2024-12-11_7151-page-32-32'), FileMetadata(uuid='3106200_2024-12-11_7151-page-33-33'), FileMetadata(uuid='3106200_2024-12-11_7151-page-34-34'), FileMetadata(uuid='3106200_2024-12-11_7151-page-35-35'), FileMetadata(uuid='3106200_2024-12-11_7151-page-4-4'), FileMetadata(uuid='3106200_2024-12-11_7151-page-5-5'), FileMetadata(uuid='3106200_2024-12-11_7151-page-6-6'), FileMetadata(uuid='3106200_2024-12-11_7151-page-7-7'), FileMetadata(uuid='3106200_2024-12-11_7151-page-8-8'), FileMetadata(uuid='3106200_2024-12-11_7151-page-9-9'), FileMetadata(uuid='3106200_2024-12-12_7152-page-0-0'), FileMetadata(uuid='3106200_2024-12-12_7152-page-1-1'), FileMetadata(uuid='3106200_2024-12-12_7152-page-2-2')]
+[2025-01-25T18:04:36.697+0000] {logging_mixin.py:190} INFO - Adding batch of documents
+[2025-01-25T18:04:37.174+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:04:37.364+0000] {logging_mixin.py:190} INFO - Added 13 chunks for document: 3106200_2024-11-26_7140-page-0-0
+[2025-01-25T18:04:37.600+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:04:37.797+0000] {logging_mixin.py:190} INFO - Added 13 chunks for document: 3106200_2024-11-26_7140-page-1-1
+[2025-01-25T18:04:38.123+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:04:38.560+0000] {logging_mixin.py:190} INFO - Added 12 chunks for document: 3106200_2024-11-26_7140-page-10-10
+[2025-01-25T18:04:38.896+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:04:39.098+0000] {logging_mixin.py:190} INFO - Added 11 chunks for document: 3106200_2024-11-26_7140-page-11-11
+[2025-01-25T18:04:39.335+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:04:39.518+0000] {logging_mixin.py:190} INFO - Added 13 chunks for document: 3106200_2024-11-26_7140-page-12-12
+[2025-01-25T18:04:39.761+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:04:40.200+0000] {logging_mixin.py:190} INFO - Added 16 chunks for document: 3106200_2024-11-26_7140-page-13-13
+[2025-01-25T18:04:40.534+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:04:40.689+0000] {logging_mixin.py:190} INFO - Added 11 chunks for document: 3106200_2024-11-26_7140-page-14-14
+[2025-01-25T18:04:40.972+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:04:41.161+0000] {logging_mixin.py:190} INFO - Added 12 chunks for document: 3106200_2024-11-26_7140-page-15-15
+[2025-01-25T18:04:41.390+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:04:41.579+0000] {logging_mixin.py:190} INFO - Added 11 chunks for document: 3106200_2024-11-26_7140-page-16-16
+[2025-01-25T18:04:41.801+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:04:41.988+0000] {logging_mixin.py:190} INFO - Added 11 chunks for document: 3106200_2024-11-26_7140-page-17-17
+[2025-01-25T18:04:42.270+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:04:42.481+0000] {logging_mixin.py:190} INFO - Added 13 chunks for document: 3106200_2024-11-26_7140-page-18-18
+[2025-01-25T18:04:42.718+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:04:42.933+0000] {logging_mixin.py:190} INFO - Added 12 chunks for document: 3106200_2024-11-26_7140-page-19-19
+[2025-01-25T18:04:43.181+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:04:43.506+0000] {logging_mixin.py:190} INFO - Added 19 chunks for document: 3106200_2024-11-26_7140-page-20-20
+[2025-01-25T18:04:43.880+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:04:44.472+0000] {logging_mixin.py:190} INFO - Added 36 chunks for document: 3106200_2024-11-26_7140-page-21-21
+[2025-01-25T18:04:44.718+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:04:44.917+0000] {logging_mixin.py:190} INFO - Added 11 chunks for document: 3106200_2024-11-26_7140-page-23-23
+[2025-01-25T18:04:45.159+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:04:45.351+0000] {logging_mixin.py:190} INFO - Added 9 chunks for document: 3106200_2024-11-26_7140-page-24-24
+[2025-01-25T18:04:45.714+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:04:46.627+0000] {logging_mixin.py:190} INFO - Added 63 chunks for document: 3106200_2024-11-26_7140-page-25-25
+[2025-01-25T18:04:46.904+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:04:47.416+0000] {logging_mixin.py:190} INFO - Added 22 chunks for document: 3106200_2024-11-26_7140-page-26-26
+[2025-01-25T18:04:47.637+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:04:47.850+0000] {logging_mixin.py:190} INFO - Added 10 chunks for document: 3106200_2024-11-26_7140-page-27-27
+[2025-01-25T18:04:48.144+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:04:48.421+0000] {logging_mixin.py:190} INFO - Added 17 chunks for document: 3106200_2024-11-26_7140-page-28-28
+[2025-01-25T18:04:48.679+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:04:48.990+0000] {logging_mixin.py:190} INFO - Added 18 chunks for document: 3106200_2024-11-26_7140-page-29-29
+[2025-01-25T18:04:49.209+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:04:49.422+0000] {logging_mixin.py:190} INFO - Added 13 chunks for document: 3106200_2024-11-26_7140-page-3-3
+[2025-01-25T18:04:49.674+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:04:49.943+0000] {logging_mixin.py:190} INFO - Added 18 chunks for document: 3106200_2024-11-26_7140-page-30-30
+[2025-01-25T18:04:50.190+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:04:50.425+0000] {logging_mixin.py:190} INFO - Added 13 chunks for document: 3106200_2024-11-26_7140-page-31-31
+[2025-01-25T18:04:50.656+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:04:50.880+0000] {logging_mixin.py:190} INFO - Added 10 chunks for document: 3106200_2024-11-26_7140-page-32-32
+[2025-01-25T18:04:51.136+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:04:51.408+0000] {logging_mixin.py:190} INFO - Added 16 chunks for document: 3106200_2024-11-26_7140-page-4-4
+[2025-01-25T18:04:51.634+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:04:51.828+0000] {logging_mixin.py:190} INFO - Added 12 chunks for document: 3106200_2024-11-26_7140-page-5-5
+[2025-01-25T18:04:52.051+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:04:52.250+0000] {logging_mixin.py:190} INFO - Added 10 chunks for document: 3106200_2024-11-26_7140-page-6-6
+[2025-01-25T18:04:52.487+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:04:52.779+0000] {logging_mixin.py:190} INFO - Added 15 chunks for document: 3106200_2024-11-26_7140-page-7-7
+[2025-01-25T18:04:53.004+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:04:53.175+0000] {logging_mixin.py:190} INFO - Added 10 chunks for document: 3106200_2024-11-26_7140-page-8-8
+[2025-01-25T18:04:53.472+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:04:54.182+0000] {logging_mixin.py:190} INFO - Added 19 chunks for document: 3106200_2024-11-26_7140-page-9-9
+[2025-01-25T18:04:54.425+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:04:54.715+0000] {logging_mixin.py:190} INFO - Added 16 chunks for document: 3106200_2024-11-27_7141-page-0-0
+[2025-01-25T18:04:54.952+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:04:55.243+0000] {logging_mixin.py:190} INFO - Added 16 chunks for document: 3106200_2024-11-27_7141-page-1-1
+[2025-01-25T18:04:55.454+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:04:55.619+0000] {logging_mixin.py:190} INFO - Added 10 chunks for document: 3106200_2024-11-27_7141-page-10-10
+[2025-01-25T18:04:55.837+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:04:56.047+0000] {logging_mixin.py:190} INFO - Added 12 chunks for document: 3106200_2024-11-27_7141-page-11-11
+[2025-01-25T18:04:56.334+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:04:57.132+0000] {logging_mixin.py:190} INFO - Added 56 chunks for document: 3106200_2024-11-27_7141-page-12-12
+[2025-01-25T18:04:57.416+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:04:57.662+0000] {logging_mixin.py:190} INFO - Added 14 chunks for document: 3106200_2024-11-27_7141-page-13-13
+[2025-01-25T18:04:57.936+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:04:58.346+0000] {logging_mixin.py:190} INFO - Added 15 chunks for document: 3106200_2024-11-27_7141-page-14-14
+[2025-01-25T18:04:58.610+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:04:58.815+0000] {logging_mixin.py:190} INFO - Added 14 chunks for document: 3106200_2024-11-27_7141-page-15-15
+[2025-01-25T18:04:59.058+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:04:59.335+0000] {logging_mixin.py:190} INFO - Added 15 chunks for document: 3106200_2024-11-27_7141-page-16-16
+[2025-01-25T18:04:59.711+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:00.509+0000] {logging_mixin.py:190} INFO - Added 39 chunks for document: 3106200_2024-11-27_7141-page-17-17
+[2025-01-25T18:05:00.837+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:01.597+0000] {logging_mixin.py:190} INFO - Added 40 chunks for document: 3106200_2024-11-27_7141-page-18-18
+[2025-01-25T18:05:01.885+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:02.720+0000] {logging_mixin.py:190} INFO - Added 36 chunks for document: 3106200_2024-11-27_7141-page-19-19
+[2025-01-25T18:05:02.997+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:03.548+0000] {logging_mixin.py:190} INFO - Added 36 chunks for document: 3106200_2024-11-27_7141-page-20-20
+[2025-01-25T18:05:03.844+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:04.416+0000] {logging_mixin.py:190} INFO - Added 35 chunks for document: 3106200_2024-11-27_7141-page-21-21
+[2025-01-25T18:05:04.667+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:05.107+0000] {logging_mixin.py:190} INFO - Added 29 chunks for document: 3106200_2024-11-27_7141-page-23-23
+[2025-01-25T18:05:05.423+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:05.936+0000] {logging_mixin.py:190} INFO - Added 23 chunks for document: 3106200_2024-11-27_7141-page-24-24
+[2025-01-25T18:05:06.174+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:06.396+0000] {logging_mixin.py:190} INFO - Added 14 chunks for document: 3106200_2024-11-27_7141-page-25-25
+[2025-01-25T18:05:06.656+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:06.896+0000] {logging_mixin.py:190} INFO - Added 13 chunks for document: 3106200_2024-11-27_7141-page-26-26
+[2025-01-25T18:05:07.143+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:07.358+0000] {logging_mixin.py:190} INFO - Added 13 chunks for document: 3106200_2024-11-27_7141-page-27-27
+[2025-01-25T18:05:07.601+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:07.796+0000] {logging_mixin.py:190} INFO - Added 11 chunks for document: 3106200_2024-11-27_7141-page-28-28
+[2025-01-25T18:05:08.027+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:08.218+0000] {logging_mixin.py:190} INFO - Added 10 chunks for document: 3106200_2024-11-27_7141-page-29-29
+[2025-01-25T18:05:08.441+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:08.661+0000] {logging_mixin.py:190} INFO - Added 14 chunks for document: 3106200_2024-11-27_7141-page-3-3
+[2025-01-25T18:05:08.903+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:09.104+0000] {logging_mixin.py:190} INFO - Added 11 chunks for document: 3106200_2024-11-27_7141-page-30-30
+[2025-01-25T18:05:09.331+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:09.537+0000] {logging_mixin.py:190} INFO - Added 11 chunks for document: 3106200_2024-11-27_7141-page-31-31
+[2025-01-25T18:05:09.763+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:09.947+0000] {logging_mixin.py:190} INFO - Added 10 chunks for document: 3106200_2024-11-27_7141-page-32-32
+[2025-01-25T18:05:10.183+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:10.392+0000] {logging_mixin.py:190} INFO - Added 10 chunks for document: 3106200_2024-11-27_7141-page-33-33
+[2025-01-25T18:05:10.629+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:10.840+0000] {logging_mixin.py:190} INFO - Added 12 chunks for document: 3106200_2024-11-27_7141-page-34-34
+[2025-01-25T18:05:11.146+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:11.512+0000] {logging_mixin.py:190} INFO - Added 23 chunks for document: 3106200_2024-11-27_7141-page-35-35
+[2025-01-25T18:05:11.771+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:12.163+0000] {logging_mixin.py:190} INFO - Added 23 chunks for document: 3106200_2024-11-27_7141-page-36-36
+[2025-01-25T18:05:12.383+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:12.597+0000] {logging_mixin.py:190} INFO - Added 11 chunks for document: 3106200_2024-11-27_7141-page-4-4
+[2025-01-25T18:05:12.847+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:13.254+0000] {logging_mixin.py:190} INFO - Added 26 chunks for document: 3106200_2024-11-27_7141-page-5-5
+[2025-01-25T18:05:13.500+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:13.753+0000] {logging_mixin.py:190} INFO - Added 17 chunks for document: 3106200_2024-11-27_7141-page-6-6
+[2025-01-25T18:05:13.980+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:14.186+0000] {logging_mixin.py:190} INFO - Added 11 chunks for document: 3106200_2024-11-27_7141-page-7-7
+[2025-01-25T18:05:14.427+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:14.734+0000] {logging_mixin.py:190} INFO - Added 19 chunks for document: 3106200_2024-11-27_7141-page-8-8
+[2025-01-25T18:05:14.961+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:15.151+0000] {logging_mixin.py:190} INFO - Added 11 chunks for document: 3106200_2024-11-27_7141-page-9-9
+[2025-01-25T18:05:15.420+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:15.823+0000] {logging_mixin.py:190} INFO - Added 22 chunks for document: 3106200_2024-11-28_7142-page-0-0
+[2025-01-25T18:05:16.115+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:16.588+0000] {logging_mixin.py:190} INFO - Added 28 chunks for document: 3106200_2024-11-28_7142-page-1-1
+[2025-01-25T18:05:17.029+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:17.835+0000] {logging_mixin.py:190} INFO - Added 52 chunks for document: 3106200_2024-11-28_7142-page-10-10
+[2025-01-25T18:05:18.114+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:18.664+0000] {logging_mixin.py:190} INFO - Added 37 chunks for document: 3106200_2024-11-28_7142-page-11-11
+[2025-01-25T18:05:18.952+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:19.549+0000] {logging_mixin.py:190} INFO - Added 42 chunks for document: 3106200_2024-11-28_7142-page-12-12
+[2025-01-25T18:05:19.878+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:20.655+0000] {logging_mixin.py:190} INFO - Added 50 chunks for document: 3106200_2024-11-28_7142-page-13-13
+[2025-01-25T18:05:21.010+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:21.984+0000] {logging_mixin.py:190} INFO - Added 60 chunks for document: 3106200_2024-11-28_7142-page-14-14
+[2025-01-25T18:05:22.525+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:22.732+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:25.164+0000] {logging_mixin.py:190} INFO - Added 176 chunks for document: 3106200_2024-11-28_7142-page-15-15
+[2025-01-25T18:05:25.428+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:25.705+0000] {logging_mixin.py:190} INFO - Added 17 chunks for document: 3106200_2024-11-28_7142-page-16-16
+[2025-01-25T18:05:25.921+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:26.119+0000] {logging_mixin.py:190} INFO - Added 12 chunks for document: 3106200_2024-11-28_7142-page-17-17
+[2025-01-25T18:05:26.377+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:26.668+0000] {logging_mixin.py:190} INFO - Added 17 chunks for document: 3106200_2024-11-28_7142-page-18-18
+[2025-01-25T18:05:26.919+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:27.175+0000] {logging_mixin.py:190} INFO - Added 18 chunks for document: 3106200_2024-11-28_7142-page-19-19
+[2025-01-25T18:05:27.407+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:27.630+0000] {logging_mixin.py:190} INFO - Added 14 chunks for document: 3106200_2024-11-28_7142-page-20-20
+[2025-01-25T18:05:27.863+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:28.081+0000] {logging_mixin.py:190} INFO - Added 13 chunks for document: 3106200_2024-11-28_7142-page-21-21
+[2025-01-25T18:05:28.312+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:28.523+0000] {logging_mixin.py:190} INFO - Added 13 chunks for document: 3106200_2024-11-28_7142-page-23-23
+[2025-01-25T18:05:28.749+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:28.926+0000] {logging_mixin.py:190} INFO - Added 11 chunks for document: 3106200_2024-11-28_7142-page-24-24
+[2025-01-25T18:05:29.155+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:29.305+0000] {logging_mixin.py:190} INFO - Added 9 chunks for document: 3106200_2024-11-28_7142-page-25-25
+[2025-01-25T18:05:29.698+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:30.617+0000] {logging_mixin.py:190} INFO - Added 52 chunks for document: 3106200_2024-11-28_7142-page-25-29
+[2025-01-25T18:05:30.840+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:30.996+0000] {logging_mixin.py:190} INFO - Added 11 chunks for document: 3106200_2024-11-28_7142-page-26-26
+[2025-01-25T18:05:31.213+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:31.359+0000] {logging_mixin.py:190} INFO - Added 10 chunks for document: 3106200_2024-11-28_7142-page-27-27
+[2025-01-25T18:05:31.576+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:31.758+0000] {logging_mixin.py:190} INFO - Added 11 chunks for document: 3106200_2024-11-28_7142-page-28-28
+[2025-01-25T18:05:31.980+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:32.186+0000] {logging_mixin.py:190} INFO - Added 11 chunks for document: 3106200_2024-11-28_7142-page-29-29
+[2025-01-25T18:05:32.431+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:32.667+0000] {logging_mixin.py:190} INFO - Added 12 chunks for document: 3106200_2024-11-28_7142-page-3-3
+[2025-01-25T18:05:32.882+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:33.053+0000] {logging_mixin.py:190} INFO - Added 11 chunks for document: 3106200_2024-11-28_7142-page-30-30
+[2025-01-25T18:05:33.284+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:33.496+0000] {logging_mixin.py:190} INFO - Added 11 chunks for document: 3106200_2024-11-28_7142-page-31-31
+[2025-01-25T18:05:33.751+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:33.996+0000] {logging_mixin.py:190} INFO - Added 13 chunks for document: 3106200_2024-11-28_7142-page-32-32
+[2025-01-25T18:05:34.252+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:34.611+0000] {logging_mixin.py:190} INFO - Added 23 chunks for document: 3106200_2024-11-28_7142-page-33-33
+[2025-01-25T18:05:34.868+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:35.300+0000] {logging_mixin.py:190} INFO - Added 24 chunks for document: 3106200_2024-11-28_7142-page-34-34
+[2025-01-25T18:05:35.525+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:35.767+0000] {logging_mixin.py:190} INFO - Added 13 chunks for document: 3106200_2024-11-28_7142-page-35-35
+[2025-01-25T18:05:35.993+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:36.192+0000] {logging_mixin.py:190} INFO - Added 11 chunks for document: 3106200_2024-11-28_7142-page-36-36
+[2025-01-25T18:05:36.480+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:36.809+0000] {logging_mixin.py:190} INFO - Added 23 chunks for document: 3106200_2024-11-28_7142-page-37-37
+[2025-01-25T18:05:37.028+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:37.181+0000] {logging_mixin.py:190} INFO - Added 10 chunks for document: 3106200_2024-11-28_7142-page-38-38
+[2025-01-25T18:05:37.491+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:38.181+0000] {logging_mixin.py:190} INFO - Added 40 chunks for document: 3106200_2024-11-28_7142-page-39-39
+[2025-01-25T18:05:38.414+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:38.537+0000] {logging_mixin.py:190} INFO - Added 7 chunks for document: 3106200_2024-11-28_7142-page-4-4
+[2025-01-25T18:05:38.793+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:39.130+0000] {logging_mixin.py:190} INFO - Added 20 chunks for document: 3106200_2024-11-28_7142-page-40-40
+[2025-01-25T18:05:39.401+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:39.888+0000] {logging_mixin.py:190} INFO - Added 30 chunks for document: 3106200_2024-11-28_7142-page-41-41
+[2025-01-25T18:05:40.378+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:40.470+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:42.406+0000] {logging_mixin.py:190} INFO - Added 118 chunks for document: 3106200_2024-11-28_7142-page-42-42
+[2025-01-25T18:05:42.639+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:42.818+0000] {logging_mixin.py:190} INFO - Added 11 chunks for document: 3106200_2024-11-28_7142-page-43-43
+[2025-01-25T18:05:43.103+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:43.755+0000] {logging_mixin.py:190} INFO - Added 40 chunks for document: 3106200_2024-11-28_7142-page-44-44
+[2025-01-25T18:05:43.959+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:44.081+0000] {logging_mixin.py:190} INFO - Added 8 chunks for document: 3106200_2024-11-28_7142-page-45-45
+[2025-01-25T18:05:44.480+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:45.839+0000] {logging_mixin.py:190} INFO - Added 89 chunks for document: 3106200_2024-11-28_7142-page-5-5
+[2025-01-25T18:05:46.167+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:47.432+0000] {logging_mixin.py:190} INFO - Added 76 chunks for document: 3106200_2024-11-28_7142-page-6-6
+[2025-01-25T18:05:47.781+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:49.022+0000] {logging_mixin.py:190} INFO - Added 81 chunks for document: 3106200_2024-11-28_7142-page-7-7
+[2025-01-25T18:05:49.362+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:49.426+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:51.013+0000] {logging_mixin.py:190} INFO - Added 101 chunks for document: 3106200_2024-11-28_7142-page-8-8
+[2025-01-25T18:05:51.328+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:52.006+0000] {logging_mixin.py:190} INFO - Added 35 chunks for document: 3106200_2024-11-28_7142-page-9-9
+[2025-01-25T18:05:52.260+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:52.663+0000] {logging_mixin.py:190} INFO - Added 22 chunks for document: 3106200_2024-11-29_7143-page-0-0
+[2025-01-25T18:05:52.929+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:53.430+0000] {logging_mixin.py:190} INFO - Added 26 chunks for document: 3106200_2024-11-29_7143-page-1-1
+[2025-01-25T18:05:53.686+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:54.014+0000] {logging_mixin.py:190} INFO - Added 20 chunks for document: 3106200_2024-11-29_7143-page-10-10
+[2025-01-25T18:05:54.270+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:54.622+0000] {logging_mixin.py:190} INFO - Added 19 chunks for document: 3106200_2024-11-29_7143-page-11-11
+[2025-01-25T18:05:54.856+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:55.123+0000] {logging_mixin.py:190} INFO - Added 14 chunks for document: 3106200_2024-11-29_7143-page-12-12
+[2025-01-25T18:05:55.359+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:55.594+0000] {logging_mixin.py:190} INFO - Added 12 chunks for document: 3106200_2024-11-29_7143-page-13-13
+[2025-01-25T18:05:55.832+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:56.023+0000] {logging_mixin.py:190} INFO - Added 11 chunks for document: 3106200_2024-11-29_7143-page-14-14
+[2025-01-25T18:05:56.273+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:56.814+0000] {logging_mixin.py:190} INFO - Added 29 chunks for document: 3106200_2024-11-29_7143-page-15-15
+[2025-01-25T18:05:57.059+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:57.337+0000] {logging_mixin.py:190} INFO - Added 16 chunks for document: 3106200_2024-11-29_7143-page-16-16
+[2025-01-25T18:05:57.603+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:57.911+0000] {logging_mixin.py:190} INFO - Added 17 chunks for document: 3106200_2024-11-29_7143-page-17-17
+[2025-01-25T18:05:58.140+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:58.367+0000] {logging_mixin.py:190} INFO - Added 14 chunks for document: 3106200_2024-11-29_7143-page-18-18
+[2025-01-25T18:05:58.584+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:58.749+0000] {logging_mixin.py:190} INFO - Added 10 chunks for document: 3106200_2024-11-29_7143-page-19-19
+[2025-01-25T18:05:58.996+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:05:59.274+0000] {logging_mixin.py:190} INFO - Added 17 chunks for document: 3106200_2024-11-29_7143-page-20-20
+[2025-01-25T18:05:59.583+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:00.546+0000] {logging_mixin.py:190} INFO - Added 66 chunks for document: 3106200_2024-11-29_7143-page-21-21
+[2025-01-25T18:06:00.766+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:00.914+0000] {logging_mixin.py:190} INFO - Added 10 chunks for document: 3106200_2024-11-29_7143-page-23-23
+[2025-01-25T18:06:01.183+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:01.495+0000] {logging_mixin.py:190} INFO - Added 16 chunks for document: 3106200_2024-11-29_7143-page-24-24
+[2025-01-25T18:06:01.798+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:02.564+0000] {logging_mixin.py:190} INFO - Added 44 chunks for document: 3106200_2024-11-29_7143-page-25-25
+[2025-01-25T18:06:02.882+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:03.380+0000] {logging_mixin.py:190} INFO - Added 27 chunks for document: 3106200_2024-11-29_7143-page-26-26
+[2025-01-25T18:06:03.622+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:03.848+0000] {logging_mixin.py:190} INFO - Added 14 chunks for document: 3106200_2024-11-29_7143-page-27-27
+[2025-01-25T18:06:04.097+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:04.371+0000] {logging_mixin.py:190} INFO - Added 15 chunks for document: 3106200_2024-11-29_7143-page-28-28
+[2025-01-25T18:06:04.609+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:04.846+0000] {logging_mixin.py:190} INFO - Added 14 chunks for document: 3106200_2024-11-29_7143-page-29-29
+[2025-01-25T18:06:05.109+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:05.493+0000] {logging_mixin.py:190} INFO - Added 25 chunks for document: 3106200_2024-11-29_7143-page-3-3
+[2025-01-25T18:06:05.743+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:06.019+0000] {logging_mixin.py:190} INFO - Added 18 chunks for document: 3106200_2024-11-29_7143-page-30-30
+[2025-01-25T18:06:06.257+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:06.645+0000] {logging_mixin.py:190} INFO - Added 16 chunks for document: 3106200_2024-11-29_7143-page-31-31
+[2025-01-25T18:06:06.922+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:07.388+0000] {logging_mixin.py:190} INFO - Added 31 chunks for document: 3106200_2024-11-29_7143-page-32-32
+[2025-01-25T18:06:07.686+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:08.150+0000] {logging_mixin.py:190} INFO - Added 27 chunks for document: 3106200_2024-11-29_7143-page-33-33
+[2025-01-25T18:06:08.444+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:09.047+0000] {logging_mixin.py:190} INFO - Added 32 chunks for document: 3106200_2024-11-29_7143-page-34-34
+[2025-01-25T18:06:09.284+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:09.526+0000] {logging_mixin.py:190} INFO - Added 15 chunks for document: 3106200_2024-11-29_7143-page-35-35
+[2025-01-25T18:06:09.783+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:10.104+0000] {logging_mixin.py:190} INFO - Added 19 chunks for document: 3106200_2024-11-29_7143-page-36-36
+[2025-01-25T18:06:10.321+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:10.432+0000] {logging_mixin.py:190} INFO - Added 8 chunks for document: 3106200_2024-11-29_7143-page-37-37
+[2025-01-25T18:06:10.662+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:10.793+0000] {logging_mixin.py:190} INFO - Added 8 chunks for document: 3106200_2024-11-29_7143-page-38-38
+[2025-01-25T18:06:11.054+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:11.601+0000] {logging_mixin.py:190} INFO - Added 31 chunks for document: 3106200_2024-11-29_7143-page-4-4
+[2025-01-25T18:06:11.845+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:12.158+0000] {logging_mixin.py:190} INFO - Added 20 chunks for document: 3106200_2024-11-29_7143-page-5-5
+[2025-01-25T18:06:12.392+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:12.636+0000] {logging_mixin.py:190} INFO - Added 13 chunks for document: 3106200_2024-11-29_7143-page-6-6
+[2025-01-25T18:06:12.873+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:13.125+0000] {logging_mixin.py:190} INFO - Added 15 chunks for document: 3106200_2024-11-29_7143-page-7-7
+[2025-01-25T18:06:13.335+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:13.422+0000] {logging_mixin.py:190} INFO - Added 5 chunks for document: 3106200_2024-11-29_7143-page-8-8
+[2025-01-25T18:06:13.660+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:13.923+0000] {logging_mixin.py:190} INFO - Added 16 chunks for document: 3106200_2024-11-29_7143-page-9-9
+[2025-01-25T18:06:14.178+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:14.417+0000] {logging_mixin.py:190} INFO - Added 16 chunks for document: 3106200_2024-11-30_7144-page-0-0
+[2025-01-25T18:06:14.640+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:14.808+0000] {logging_mixin.py:190} INFO - Added 10 chunks for document: 3106200_2024-11-30_7144-page-1-1
+[2025-01-25T18:06:15.031+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:15.188+0000] {logging_mixin.py:190} INFO - Added 10 chunks for document: 3106200_2024-11-30_7144-page-10-10
+[2025-01-25T18:06:15.410+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:15.573+0000] {logging_mixin.py:190} INFO - Added 10 chunks for document: 3106200_2024-11-30_7144-page-11-11
+[2025-01-25T18:06:15.800+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:16.015+0000] {logging_mixin.py:190} INFO - Added 13 chunks for document: 3106200_2024-11-30_7144-page-12-12
+[2025-01-25T18:06:16.264+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:16.554+0000] {logging_mixin.py:190} INFO - Added 18 chunks for document: 3106200_2024-11-30_7144-page-13-13
+[2025-01-25T18:06:16.801+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:17.088+0000] {logging_mixin.py:190} INFO - Added 21 chunks for document: 3106200_2024-11-30_7144-page-14-14
+[2025-01-25T18:06:17.336+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:17.586+0000] {logging_mixin.py:190} INFO - Added 17 chunks for document: 3106200_2024-11-30_7144-page-15-15
+[2025-01-25T18:06:17.808+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:18.030+0000] {logging_mixin.py:190} INFO - Added 13 chunks for document: 3106200_2024-11-30_7144-page-16-16
+[2025-01-25T18:06:18.400+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:18.591+0000] {logging_mixin.py:190} INFO - Added 11 chunks for document: 3106200_2024-11-30_7144-page-17-17
+[2025-01-25T18:06:19.176+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:19.575+0000] {logging_mixin.py:190} INFO - Added 26 chunks for document: 3106200_2024-11-30_7144-page-18-18
+[2025-01-25T18:06:19.962+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:20.156+0000] {logging_mixin.py:190} INFO - Added 13 chunks for document: 3106200_2024-11-30_7144-page-19-19
+[2025-01-25T18:06:20.482+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:20.668+0000] {logging_mixin.py:190} INFO - Added 11 chunks for document: 3106200_2024-11-30_7144-page-20-20
+[2025-01-25T18:06:21.001+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:21.178+0000] {logging_mixin.py:190} INFO - Added 11 chunks for document: 3106200_2024-11-30_7144-page-21-21
+[2025-01-25T18:06:21.504+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:21.687+0000] {logging_mixin.py:190} INFO - Added 11 chunks for document: 3106200_2024-11-30_7144-page-23-23
+[2025-01-25T18:06:22.055+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:22.251+0000] {logging_mixin.py:190} INFO - Added 13 chunks for document: 3106200_2024-11-30_7144-page-24-24
+[2025-01-25T18:06:22.636+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:23.018+0000] {logging_mixin.py:190} INFO - Added 26 chunks for document: 3106200_2024-11-30_7144-page-25-25
+[2025-01-25T18:06:23.297+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:23.422+0000] {logging_mixin.py:190} INFO - Added 9 chunks for document: 3106200_2024-11-30_7144-page-26-26
+[2025-01-25T18:06:23.739+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:23.960+0000] {logging_mixin.py:190} INFO - Added 11 chunks for document: 3106200_2024-11-30_7144-page-27-27
+[2025-01-25T18:06:24.187+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:24.392+0000] {logging_mixin.py:190} INFO - Added 13 chunks for document: 3106200_2024-11-30_7144-page-28-28
+[2025-01-25T18:06:24.740+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:25.948+0000] {logging_mixin.py:190} INFO - Added 72 chunks for document: 3106200_2024-11-30_7144-page-29-29
+[2025-01-25T18:06:26.493+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:26.822+0000] {logging_mixin.py:190} INFO - Added 22 chunks for document: 3106200_2024-11-30_7144-page-3-3
+[2025-01-25T18:06:27.929+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:29.338+0000] {logging_mixin.py:190} INFO - Added 93 chunks for document: 3106200_2024-11-30_7144-page-30-30
+[2025-01-25T18:06:29.699+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:29.945+0000] {logging_mixin.py:190} INFO - Added 13 chunks for document: 3106200_2024-11-30_7144-page-31-31
+[2025-01-25T18:06:30.504+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:30.947+0000] {logging_mixin.py:190} INFO - Added 29 chunks for document: 3106200_2024-11-30_7144-page-32-32
+[2025-01-25T18:06:31.244+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:31.813+0000] {logging_mixin.py:190} INFO - Added 36 chunks for document: 3106200_2024-11-30_7144-page-33-33
+[2025-01-25T18:06:32.081+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:32.457+0000] {logging_mixin.py:190} INFO - Added 22 chunks for document: 3106200_2024-11-30_7144-page-34-34
+[2025-01-25T18:06:32.684+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:32.840+0000] {logging_mixin.py:190} INFO - Added 9 chunks for document: 3106200_2024-11-30_7144-page-35-35
+[2025-01-25T18:06:33.072+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:33.263+0000] {logging_mixin.py:190} INFO - Added 12 chunks for document: 3106200_2024-11-30_7144-page-36-36
+[2025-01-25T18:06:33.520+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:33.658+0000] {logging_mixin.py:190} INFO - Added 8 chunks for document: 3106200_2024-11-30_7144-page-37-37
+[2025-01-25T18:06:34.230+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:34.604+0000] {logging_mixin.py:190} INFO - Added 24 chunks for document: 3106200_2024-11-30_7144-page-4-4
+[2025-01-25T18:06:35.043+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:35.326+0000] {logging_mixin.py:190} INFO - Added 19 chunks for document: 3106200_2024-11-30_7144-page-5-5
+[2025-01-25T18:06:35.788+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:36.260+0000] {logging_mixin.py:190} INFO - Added 32 chunks for document: 3106200_2024-11-30_7144-page-6-6
+[2025-01-25T18:06:36.695+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:36.924+0000] {logging_mixin.py:190} INFO - Added 14 chunks for document: 3106200_2024-11-30_7144-page-7-7
+[2025-01-25T18:06:37.306+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:37.538+0000] {logging_mixin.py:190} INFO - Added 15 chunks for document: 3106200_2024-11-30_7144-page-8-8
+[2025-01-25T18:06:37.868+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:38.010+0000] {logging_mixin.py:190} INFO - Added 10 chunks for document: 3106200_2024-11-30_7144-page-9-9
+[2025-01-25T18:06:38.488+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:38.690+0000] {logging_mixin.py:190} INFO - Added 13 chunks for document: 3106200_2024-12-03_7145-page-0-0
+[2025-01-25T18:06:39.041+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:39.315+0000] {logging_mixin.py:190} INFO - Added 16 chunks for document: 3106200_2024-12-03_7145-page-1-1
+[2025-01-25T18:06:39.598+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:39.896+0000] {logging_mixin.py:190} INFO - Added 18 chunks for document: 3106200_2024-12-03_7145-page-10-10
+[2025-01-25T18:06:40.155+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:40.504+0000] {logging_mixin.py:190} INFO - Added 20 chunks for document: 3106200_2024-12-03_7145-page-11-11
+[2025-01-25T18:06:40.894+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:41.109+0000] {logging_mixin.py:190} INFO - Added 13 chunks for document: 3106200_2024-12-03_7145-page-12-12
+[2025-01-25T18:06:41.394+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:41.627+0000] {logging_mixin.py:190} INFO - Added 14 chunks for document: 3106200_2024-12-03_7145-page-13-13
+[2025-01-25T18:06:42.069+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:42.373+0000] {logging_mixin.py:190} INFO - Added 20 chunks for document: 3106200_2024-12-03_7145-page-14-14
+[2025-01-25T18:06:42.689+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:43.044+0000] {logging_mixin.py:190} INFO - Added 22 chunks for document: 3106200_2024-12-03_7145-page-15-15
+[2025-01-25T18:06:43.304+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:43.646+0000] {logging_mixin.py:190} INFO - Added 22 chunks for document: 3106200_2024-12-03_7145-page-16-16
+[2025-01-25T18:06:43.919+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:44.338+0000] {logging_mixin.py:190} INFO - Added 22 chunks for document: 3106200_2024-12-03_7145-page-17-17
+[2025-01-25T18:06:44.578+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:44.848+0000] {logging_mixin.py:190} INFO - Added 15 chunks for document: 3106200_2024-12-03_7145-page-18-18
+[2025-01-25T18:06:45.083+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:45.306+0000] {logging_mixin.py:190} INFO - Added 13 chunks for document: 3106200_2024-12-03_7145-page-19-19
+[2025-01-25T18:06:45.536+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:45.816+0000] {logging_mixin.py:190} INFO - Added 14 chunks for document: 3106200_2024-12-03_7145-page-20-20
+[2025-01-25T18:06:46.058+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:46.298+0000] {logging_mixin.py:190} INFO - Added 13 chunks for document: 3106200_2024-12-03_7145-page-21-21
+[2025-01-25T18:06:46.535+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:46.764+0000] {logging_mixin.py:190} INFO - Added 13 chunks for document: 3106200_2024-12-03_7145-page-23-23
+[2025-01-25T18:06:47.006+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:47.312+0000] {logging_mixin.py:190} INFO - Added 18 chunks for document: 3106200_2024-12-03_7145-page-24-24
+[2025-01-25T18:06:47.551+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:47.823+0000] {logging_mixin.py:190} INFO - Added 17 chunks for document: 3106200_2024-12-03_7145-page-25-25
+[2025-01-25T18:06:48.060+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:48.409+0000] {logging_mixin.py:190} INFO - Added 13 chunks for document: 3106200_2024-12-03_7145-page-26-26
+[2025-01-25T18:06:48.640+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:48.863+0000] {logging_mixin.py:190} INFO - Added 12 chunks for document: 3106200_2024-12-03_7145-page-27-27
+[2025-01-25T18:06:49.117+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:49.478+0000] {logging_mixin.py:190} INFO - Added 22 chunks for document: 3106200_2024-12-03_7145-page-28-28
+[2025-01-25T18:06:49.731+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:50.239+0000] {logging_mixin.py:190} INFO - Added 29 chunks for document: 3106200_2024-12-03_7145-page-29-29
+[2025-01-25T18:06:50.476+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:50.779+0000] {logging_mixin.py:190} INFO - Added 20 chunks for document: 3106200_2024-12-03_7145-page-3-3
+[2025-01-25T18:06:51.032+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:51.461+0000] {logging_mixin.py:190} INFO - Added 28 chunks for document: 3106200_2024-12-03_7145-page-30-30
+[2025-01-25T18:06:51.709+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:52.037+0000] {logging_mixin.py:190} INFO - Added 21 chunks for document: 3106200_2024-12-03_7145-page-31-31
+[2025-01-25T18:06:52.266+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:52.448+0000] {logging_mixin.py:190} INFO - Added 11 chunks for document: 3106200_2024-12-03_7145-page-32-32
+[2025-01-25T18:06:52.707+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:53.061+0000] {logging_mixin.py:190} INFO - Added 20 chunks for document: 3106200_2024-12-03_7145-page-33-33
+[2025-01-25T18:06:53.262+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:53.349+0000] {logging_mixin.py:190} INFO - Added 5 chunks for document: 3106200_2024-12-03_7145-page-34-34
+[2025-01-25T18:06:53.595+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:53.924+0000] {logging_mixin.py:190} INFO - Added 17 chunks for document: 3106200_2024-12-03_7145-page-4-4
+[2025-01-25T18:06:54.211+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:54.669+0000] {logging_mixin.py:190} INFO - Added 28 chunks for document: 3106200_2024-12-03_7145-page-5-5
+[2025-01-25T18:06:54.954+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:55.588+0000] {logging_mixin.py:190} INFO - Added 38 chunks for document: 3106200_2024-12-03_7145-page-6-6
+[2025-01-25T18:06:55.853+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:56.140+0000] {logging_mixin.py:190} INFO - Added 16 chunks for document: 3106200_2024-12-03_7145-page-7-7
+[2025-01-25T18:06:56.369+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:56.554+0000] {logging_mixin.py:190} INFO - Added 13 chunks for document: 3106200_2024-12-03_7145-page-8-8
+[2025-01-25T18:06:56.806+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:57.103+0000] {logging_mixin.py:190} INFO - Added 17 chunks for document: 3106200_2024-12-03_7145-page-9-9
+[2025-01-25T18:06:57.364+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:57.778+0000] {logging_mixin.py:190} INFO - Added 25 chunks for document: 3106200_2024-12-04_7146-page-0-0
+[2025-01-25T18:06:58.036+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:58.388+0000] {logging_mixin.py:190} INFO - Added 23 chunks for document: 3106200_2024-12-04_7146-page-1-1
+[2025-01-25T18:06:58.656+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:58.947+0000] {logging_mixin.py:190} INFO - Added 17 chunks for document: 3106200_2024-12-04_7146-page-10-10
+[2025-01-25T18:06:59.187+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:59.357+0000] {logging_mixin.py:190} INFO - Added 10 chunks for document: 3106200_2024-12-04_7146-page-11-11
+[2025-01-25T18:06:59.592+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:06:59.793+0000] {logging_mixin.py:190} INFO - Added 13 chunks for document: 3106200_2024-12-04_7146-page-12-12
+[2025-01-25T18:07:00.015+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:07:00.201+0000] {logging_mixin.py:190} INFO - Added 10 chunks for document: 3106200_2024-12-04_7146-page-13-13
+[2025-01-25T18:07:00.457+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:07:00.893+0000] {logging_mixin.py:190} INFO - Added 25 chunks for document: 3106200_2024-12-04_7146-page-14-14
+[2025-01-25T18:07:01.148+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:07:01.638+0000] {logging_mixin.py:190} INFO - Added 27 chunks for document: 3106200_2024-12-04_7146-page-15-15
+[2025-01-25T18:07:01.872+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:07:02.201+0000] {logging_mixin.py:190} INFO - Added 12 chunks for document: 3106200_2024-12-04_7146-page-16-16
+[2025-01-25T18:07:02.455+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:07:02.813+0000] {logging_mixin.py:190} INFO - Added 20 chunks for document: 3106200_2024-12-04_7146-page-17-17
+[2025-01-25T18:07:06.007+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 500 Internal Server Error"
+[2025-01-25T18:07:06.008+0000] {before_sleep.py:65} WARNING - Retrying langchain_cohere.embeddings.CohereEmbeddings.embed_with_retry.<locals>._embed_with_retry in 4.0 seconds as it raised InternalServerError: status_code: 500, body: {'message': 'internal server error, this has been reported to our developers. id 219b64a8bbf9bf36094478116cb4b5e5'}.
+[2025-01-25T18:07:10.247+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:07:10.499+0000] {logging_mixin.py:190} INFO - Added 16 chunks for document: 3106200_2024-12-04_7146-page-18-18
+[2025-01-25T18:07:10.723+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:07:10.860+0000] {logging_mixin.py:190} INFO - Added 9 chunks for document: 3106200_2024-12-04_7146-page-19-19
+[2025-01-25T18:07:11.107+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:07:11.370+0000] {logging_mixin.py:190} INFO - Added 17 chunks for document: 3106200_2024-12-04_7146-page-20-20
+[2025-01-25T18:07:11.595+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:07:11.780+0000] {logging_mixin.py:190} INFO - Added 12 chunks for document: 3106200_2024-12-04_7146-page-21-21
+[2025-01-25T18:07:12.020+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:07:12.251+0000] {logging_mixin.py:190} INFO - Added 15 chunks for document: 3106200_2024-12-04_7146-page-23-23
+[2025-01-25T18:07:15.448+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 500 Internal Server Error"
+[2025-01-25T18:07:15.449+0000] {before_sleep.py:65} WARNING - Retrying langchain_cohere.embeddings.CohereEmbeddings.embed_with_retry.<locals>._embed_with_retry in 4.0 seconds as it raised InternalServerError: status_code: 500, body: {'message': 'internal server error, this has been reported to our developers. id 5dac52ab87233dc1e3e7c3680f9d7c27'}.
+[2025-01-25T18:07:19.678+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:07:19.873+0000] {logging_mixin.py:190} INFO - Added 13 chunks for document: 3106200_2024-12-04_7146-page-24-24
+[2025-01-25T18:07:20.112+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:07:20.334+0000] {logging_mixin.py:190} INFO - Added 13 chunks for document: 3106200_2024-12-04_7146-page-25-25
+[2025-01-25T18:07:23.531+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 500 Internal Server Error"
+[2025-01-25T18:07:23.532+0000] {before_sleep.py:65} WARNING - Retrying langchain_cohere.embeddings.CohereEmbeddings.embed_with_retry.<locals>._embed_with_retry in 4.0 seconds as it raised InternalServerError: status_code: 500, body: {'message': 'internal server error, this has been reported to our developers. id e0476390370e46e46e769d7e3eed1d3a'}.
+[2025-01-25T18:07:32.642+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:07:32.871+0000] {logging_mixin.py:190} INFO - Added 13 chunks for document: 3106200_2024-12-04_7146-page-26-26
+[2025-01-25T18:07:34.816+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:07:35.093+0000] {logging_mixin.py:190} INFO - Added 17 chunks for document: 3106200_2024-12-04_7146-page-27-27
+[2025-01-25T18:07:40.040+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:07:40.512+0000] {logging_mixin.py:190} INFO - Added 33 chunks for document: 3106200_2024-12-04_7146-page-28-28
+[2025-01-25T18:07:40.828+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:07:41.502+0000] {logging_mixin.py:190} INFO - Added 43 chunks for document: 3106200_2024-12-04_7146-page-29-29
+[2025-01-25T18:07:41.739+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:07:41.969+0000] {logging_mixin.py:190} INFO - Added 14 chunks for document: 3106200_2024-12-04_7146-page-3-3
+[2025-01-25T18:07:42.198+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:07:42.370+0000] {logging_mixin.py:190} INFO - Added 11 chunks for document: 3106200_2024-12-04_7146-page-30-30
+[2025-01-25T18:07:45.578+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 500 Internal Server Error"
+[2025-01-25T18:07:45.579+0000] {before_sleep.py:65} WARNING - Retrying langchain_cohere.embeddings.CohereEmbeddings.embed_with_retry.<locals>._embed_with_retry in 4.0 seconds as it raised InternalServerError: status_code: 500, body: {'message': 'internal server error, this has been reported to our developers. id 86c1d35b73a480ac0307d01cc396b6b7'}.
+[2025-01-25T18:07:49.898+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:07:50.794+0000] {logging_mixin.py:190} INFO - Added 57 chunks for document: 3106200_2024-12-04_7146-page-31-31
+[2025-01-25T18:07:56.131+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:07:56.298+0000] {logging_mixin.py:190} INFO - Added 11 chunks for document: 3106200_2024-12-04_7146-page-32-32
+[2025-01-25T18:07:56.515+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:07:56.700+0000] {logging_mixin.py:190} INFO - Added 12 chunks for document: 3106200_2024-12-04_7146-page-33-33
+[2025-01-25T18:08:01.795+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:08:02.005+0000] {logging_mixin.py:190} INFO - Added 13 chunks for document: 3106200_2024-12-04_7146-page-34-34
+[2025-01-25T18:08:05.209+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 500 Internal Server Error"
+[2025-01-25T18:08:05.210+0000] {before_sleep.py:65} WARNING - Retrying langchain_cohere.embeddings.CohereEmbeddings.embed_with_retry.<locals>._embed_with_retry in 4.0 seconds as it raised InternalServerError: status_code: 500, body: {'message': 'internal server error, this has been reported to our developers. id ba64486b74c055cca7f2c2690326d181'}.
+[2025-01-25T18:08:09.471+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:08:09.752+0000] {logging_mixin.py:190} INFO - Added 16 chunks for document: 3106200_2024-12-04_7146-page-35-35
+[2025-01-25T18:08:10.143+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:08:11.309+0000] {logging_mixin.py:190} INFO - Added 78 chunks for document: 3106200_2024-12-04_7146-page-36-36
+[2025-01-25T18:08:11.568+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:08:11.923+0000] {logging_mixin.py:190} INFO - Added 21 chunks for document: 3106200_2024-12-04_7146-page-37-37
+[2025-01-25T18:08:12.167+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:08:12.407+0000] {logging_mixin.py:190} INFO - Added 14 chunks for document: 3106200_2024-12-04_7146-page-38-38
+[2025-01-25T18:08:12.624+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:08:12.775+0000] {logging_mixin.py:190} INFO - Added 9 chunks for document: 3106200_2024-12-04_7146-page-39-39
+[2025-01-25T18:08:13.023+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:08:13.308+0000] {logging_mixin.py:190} INFO - Added 17 chunks for document: 3106200_2024-12-04_7146-page-4-4
+[2025-01-25T18:08:13.562+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:08:13.841+0000] {logging_mixin.py:190} INFO - Added 18 chunks for document: 3106200_2024-12-04_7146-page-5-5
+[2025-01-25T18:08:14.096+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:08:14.404+0000] {logging_mixin.py:190} INFO - Added 18 chunks for document: 3106200_2024-12-04_7146-page-6-6
+[2025-01-25T18:08:16.265+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:08:16.479+0000] {logging_mixin.py:190} INFO - Added 15 chunks for document: 3106200_2024-12-04_7146-page-7-7
+[2025-01-25T18:08:16.745+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:08:16.962+0000] {logging_mixin.py:190} INFO - Added 14 chunks for document: 3106200_2024-12-04_7146-page-8-8
+[2025-01-25T18:08:17.232+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:08:17.514+0000] {logging_mixin.py:190} INFO - Added 18 chunks for document: 3106200_2024-12-04_7146-page-9-9
+[2025-01-25T18:08:17.727+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:08:17.916+0000] {logging_mixin.py:190} INFO - Added 10 chunks for document: 3106200_2024-12-05_7147-page-0-0
+[2025-01-25T18:08:18.238+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:08:18.765+0000] {logging_mixin.py:190} INFO - Added 32 chunks for document: 3106200_2024-12-05_7147-page-1-1
+[2025-01-25T18:08:19.105+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:08:19.329+0000] {logging_mixin.py:190} INFO - Added 14 chunks for document: 3106200_2024-12-05_7147-page-10-10
+[2025-01-25T18:08:19.693+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:08:19.928+0000] {logging_mixin.py:190} INFO - Added 14 chunks for document: 3106200_2024-12-05_7147-page-11-11
+[2025-01-25T18:08:23.127+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 500 Internal Server Error"
+[2025-01-25T18:08:23.128+0000] {before_sleep.py:65} WARNING - Retrying langchain_cohere.embeddings.CohereEmbeddings.embed_with_retry.<locals>._embed_with_retry in 4.0 seconds as it raised InternalServerError: status_code: 500, body: {'message': 'internal server error, this has been reported to our developers. id 843d84b6d74ec96e7ecef184be0dff6e'}.
+[2025-01-25T18:08:27.358+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:08:27.578+0000] {logging_mixin.py:190} INFO - Added 14 chunks for document: 3106200_2024-12-05_7147-page-12-12
+[2025-01-25T18:08:30.802+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 500 Internal Server Error"
+[2025-01-25T18:08:30.803+0000] {before_sleep.py:65} WARNING - Retrying langchain_cohere.embeddings.CohereEmbeddings.embed_with_retry.<locals>._embed_with_retry in 4.0 seconds as it raised InternalServerError: status_code: 500, body: {'message': 'internal server error, this has been reported to our developers. id 9a3c79a2fb42ecf19bd88528d3e4a84f'}.
+[2025-01-25T18:08:35.633+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:08:35.825+0000] {logging_mixin.py:190} INFO - Added 13 chunks for document: 3106200_2024-12-05_7147-page-13-13
+[2025-01-25T18:08:36.471+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:08:36.705+0000] {logging_mixin.py:190} INFO - Added 17 chunks for document: 3106200_2024-12-05_7147-page-14-14
+[2025-01-25T18:08:37.103+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:08:37.373+0000] {logging_mixin.py:190} INFO - Added 18 chunks for document: 3106200_2024-12-05_7147-page-15-15
+[2025-01-25T18:08:37.606+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:08:37.780+0000] {logging_mixin.py:190} INFO - Added 11 chunks for document: 3106200_2024-12-05_7147-page-16-16
+[2025-01-25T18:08:37.981+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 200 OK"
+[2025-01-25T18:08:38.062+0000] {logging_mixin.py:190} INFO - Added 5 chunks for document: 3106200_2024-12-05_7147-page-17-17
+[2025-01-25T18:08:41.258+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 500 Internal Server Error"
+[2025-01-25T18:08:41.259+0000] {before_sleep.py:65} WARNING - Retrying langchain_cohere.embeddings.CohereEmbeddings.embed_with_retry.<locals>._embed_with_retry in 4.0 seconds as it raised InternalServerError: status_code: 500, body: {'message': 'internal server error, this has been reported to our developers. id 407231bd59ea15a89565a81592c12683'}.
+[2025-01-25T18:08:48.451+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 500 Internal Server Error"
+[2025-01-25T18:08:48.452+0000] {before_sleep.py:65} WARNING - Retrying langchain_cohere.embeddings.CohereEmbeddings.embed_with_retry.<locals>._embed_with_retry in 4.0 seconds as it raised InternalServerError: status_code: 500, body: {'message': 'internal server error, this has been reported to our developers. id adb45bceb82050ad8cdd2f813d557055'}.
+[2025-01-25T18:08:55.645+0000] {_client.py:1026} INFO - HTTP Request: POST https://stg.api.cohere.ai/v1/embed "HTTP/1.1 500 Internal Server Error"
+[2025-01-25T18:08:55.648+0000] {taskinstance.py:3310} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/utils/generate_index_task.py", line 198, in execute
+    self.add_batch_documents(file_metadata_list)
+  File "/opt/airflow/dags/utils/generate_index_task.py", line 163, in add_batch_documents
+    self.add_document(path, file_metadata)
+  File "/opt/airflow/dags/utils/generate_index_task.py", line 145, in add_document
+    vector_db_ids = self.vector_store.add_documents(documents=docs, ids=chunks_uuids)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/langchain_core/vectorstores/base.py", line 287, in add_documents
+    return self.add_texts(texts, metadatas, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/langchain_community/vectorstores/faiss.py", line 340, in add_texts
+    embeddings = self._embed_documents(texts)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/langchain_community/vectorstores/faiss.py", line 248, in _embed_documents
+    return self.embedding_function.embed_documents(texts)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/langchain_cohere/embeddings.py", line 191, in embed_documents
+    return self.embed(texts, input_type="search_document")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/langchain_cohere/embeddings.py", line 142, in embed
+    response = self.embed_with_retry(
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/langchain_cohere/embeddings.py", line 124, in embed_with_retry
+    return _embed_with_retry(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/tenacity/__init__.py", line 336, in wrapped_f
+    return copy(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/tenacity/__init__.py", line 475, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/tenacity/__init__.py", line 376, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/tenacity/__init__.py", line 418, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/tenacity/__init__.py", line 185, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/airflow/.local/lib/python3.12/site-packages/tenacity/__init__.py", line 478, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/langchain_cohere/embeddings.py", line 122, in _embed_with_retry
+    return self.client.embed(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/cohere/client.py", line 210, in embed
+    for response in self._executor.map(
+                    ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/_base.py", line 619, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/_base.py", line 317, in _result_or_cancel
+    return fut.result(timeout)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/usr/local/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/cohere/client.py", line 211, in <lambda>
+    lambda text_batch: BaseCohere.embed(
+                       ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/cohere/base_client.py", line 1917, in embed
+    raise InternalServerError(
+cohere.errors.internal_server_error.InternalServerError: status_code: 500, body: {'message': 'internal server error, this has been reported to our developers. id bfa51a98671c9e712046b00262b33d2e'}
+[2025-01-25T18:08:55.675+0000] {taskinstance.py:1225} INFO - Marking task as UP_FOR_RETRY. dag_id=pull_gazettes_data, task_id=generate_indexes_task, run_id=scheduled__2025-01-24T00:00:00+00:00, execution_date=20250124T000000, start_date=20250125T180435, end_date=20250125T180855
+[2025-01-25T18:08:55.696+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-25T18:08:55.697+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 102 for task generate_indexes_task (status_code: 500, body: {'message': 'internal server error, this has been reported to our developers. id bfa51a98671c9e712046b00262b33d2e'}; 18560)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 115, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3004, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3158, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3182, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/utils/generate_index_task.py", line 198, in execute
+    self.add_batch_documents(file_metadata_list)
+  File "/opt/airflow/dags/utils/generate_index_task.py", line 163, in add_batch_documents
+    self.add_document(path, file_metadata)
+  File "/opt/airflow/dags/utils/generate_index_task.py", line 145, in add_document
+    vector_db_ids = self.vector_store.add_documents(documents=docs, ids=chunks_uuids)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/langchain_core/vectorstores/base.py", line 287, in add_documents
+    return self.add_texts(texts, metadatas, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/langchain_community/vectorstores/faiss.py", line 340, in add_texts
+    embeddings = self._embed_documents(texts)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/langchain_community/vectorstores/faiss.py", line 248, in _embed_documents
+    return self.embedding_function.embed_documents(texts)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/langchain_cohere/embeddings.py", line 191, in embed_documents
+    return self.embed(texts, input_type="search_document")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/langchain_cohere/embeddings.py", line 142, in embed
+    response = self.embed_with_retry(
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/langchain_cohere/embeddings.py", line 124, in embed_with_retry
+    return _embed_with_retry(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/tenacity/__init__.py", line 336, in wrapped_f
+    return copy(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/tenacity/__init__.py", line 475, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/tenacity/__init__.py", line 376, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/tenacity/__init__.py", line 418, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/tenacity/__init__.py", line 185, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/airflow/.local/lib/python3.12/site-packages/tenacity/__init__.py", line 478, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/langchain_cohere/embeddings.py", line 122, in _embed_with_retry
+    return self.client.embed(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/cohere/client.py", line 210, in embed
+    for response in self._executor.map(
+                    ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/_base.py", line 619, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/_base.py", line 317, in _result_or_cancel
+    return fut.result(timeout)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/usr/local/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/cohere/client.py", line 211, in <lambda>
+    lambda text_batch: BaseCohere.embed(
+                       ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/cohere/base_client.py", line 1917, in embed
+    raise InternalServerError(
+cohere.errors.internal_server_error.InternalServerError: status_code: 500, body: {'message': 'internal server error, this has been reported to our developers. id bfa51a98671c9e712046b00262b33d2e'}
+[2025-01-25T18:08:55.734+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-01-25T18:08:55.756+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-01-25T18:08:55.758+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
