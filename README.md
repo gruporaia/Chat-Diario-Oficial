@@ -78,11 +78,18 @@ A etapa de *Question Answering* tem como objetivo processar a pergunta do usuár
 
 
 ## Funcionamento
+O Chat Diário Oficial pode ser testado localmente seguindo as instruções contidas nas páginas destacadas abaixo. Basta seguir o tutorial fornecido para configurar o ambiente e executar a aplicação, garantindo que todas as dependências estejam corretamente instaladas. A aplicação foi desenvolvida como uma prova de conceito e ainda requer melhorias para aprimorar sua eficiência e usabilidade. Interessados em contribuir para o seu desenvolvimento são bem-vindos e podem entrar em contato com o RAIA para colaborar. O teste desta ferramenta foi realizado com funcionários da Prefeitura de Belo Horizonte, permitindo validar seu funcionamento em um ambiente real.
 - [Funcionamento do pipeline de extração dos dados](https://github.com/gruporaia/Chat-Diario-Oficial/tree/main/ingestion/airflow_project)
 - [Funcionamento da aplicação](https://github.com/gruporaia/Chat-Diario-Oficial/tree/main/app)
 
-TODO: exemplos de interação
-
 ## Quem somos
 
-Este projeto foi desenvolvido pelos membros do **RAIA (Rede de Avanço de Inteligência Artificial)**, uma iniciativa estudantil do Instituto de Ciências Matemáticas e de Computação (ICMC) da USP - São Carlos. O RAIA é um grupo formado por estudantes que compartilham o objetivo de criar soluções inovadoras utilizando inteligência artificial para impactar positivamente a sociedade. Para saber mais, acesse <insta> ou <site>!
+Este projeto foi desenvolvido pelos membros do **RAIA (Rede de Avanço de Inteligência Artificial)**, uma iniciativa estudantil do Instituto de Ciências Matemáticas e de Computação (ICMC) da USP - São Carlos. O RAIA é um grupo formado por estudantes que compartilham o objetivo de criar soluções inovadoras utilizando inteligência artificial para impactar positivamente a sociedade. Para saber mais, acesse [nosso site](https://gruporaia.vercel.app/) ou [nosso Instagram](instagram.com/grupo.raia)!
+
+### **Desenvolvedores**
+
+- **Alvaro Jose Lopes** - [LinkedIn](https://www.linkedin.com/in/alvaro-jose-lopes/) | [GitHub](https://github.com/AlvaroJoseLopes)
+- **Bernardo Marques Costa** - [LinkedIn](https://www.linkedin.com/in/bernardo-marques-costa/) | [GitHub](https://github.com/bmarquescost)
+- **Cecília Nunes Sedenho** - [LinkedIn](https://www.linkedin.com/in/cec%C3%ADlia-nunes-sedenho-305059255/) | [GitHub](https://github.com/HeNunes)
+- **Laura Fernandes Camargos** - [LinkedIn](https://www.linkedin.com/in/laura-fernandes-camargos-a26b89246/) | [GitHub](https://github.com/laurafcamargos)
+- **Pedro Augusto Monteiro Delgado** - [LinkedIn](https://www.linkedin.com/in/pedroamdelgado) | [GitHub](https://github.com/DelgadoPedro)
