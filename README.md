@@ -33,20 +33,6 @@ A etapa de ingestão de dados tem como objetivo principal coletar, processar e a
     
     -   O banco de dados vetorial atualizado, juntamente com os arquivos processados, é armazenado em um _bucket_ de _Object Storage_, garantindo sua disponibilidade para consumo pela aplicação.
 
-----------
-
-### **Tecnologias Utilizadas**
-
--   **[Apache Airflow](https://airflow.apache.org/):**  Responsável pela orquestração e _scheduling_ da pipeline, garantindo a execução diária e a importação contínua dos documentos recém-publicados.
-    
--   **[Faiss](https://ai.meta.com/tools/faiss/):**  Banco de dados vetorial otimizado para armazenar e recuperar _embeddings_ de forma eficiente.
-    
--   **[LangChain](https://www.langchain.com/):**  Biblioteca que facilita a integração com _LLMs_ e ferramentas de processamento de texto.
-    -   Utilizamos o modelo `embed-multilingual-v2.0` da [Cohere](https://cohere.com/) para geração dos _embeddings_.
--   **[MinIO](https://min.io/):** _Object Storage_ de código aberto utilizado para armazenamento local durante a fase de desenvolvimento.
-    
-    -   Possui a mesma interface do AWS S3, facilitando a transição entre os ambientes de desenvolvimento e produção através de variáveis de ambiente.
-
 ## Question Answering
 
 A etapa de *Question Answering* tem como objetivo processar a pergunta do usuário, recuperar trechos relevantes da base vetorial e gerar uma resposta fundamentada no contexto identificado.
@@ -71,18 +57,24 @@ A etapa de *Question Answering* tem como objetivo processar a pergunta do usuár
 6. **Validação da Resposta**
     - O mesmo modelo verifica a adequação da resposta ao contexto. Caso necessário, mais documentos são recuperados e uma nova resposta é gerada com um contexto expandido.
 
----
+## **Tecnologias Utilizadas**
 
-### **Tecnologias Utilizadas**
+-   **[Apache Airflow](https://airflow.apache.org/):**  Responsável pela orquestração e _scheduling_ da pipeline, garantindo a execução diária e a importação contínua dos documentos recém-publicados.
 
-- **[MinIO](https://docs.min.io/):** _Object Storage_ utilizado para armazenar e recuperar os arquivos referentes à base vetorial.
-- **[FAISS](https://github.com/facebookresearch/faiss/):** Banco de dados vetorial otimizado para buscas eficientes por similaridade.
-    - **Index.faiss:** Contém os vetores dos documentos para busca.
+-   **[MinIO](https://min.io/):** _Object Storage_ de código aberto utilizado para armazenamento local durante a fase de desenvolvimento.
+    
+    -   Possui a mesma interface do AWS S3, facilitando a transição entre os ambientes de desenvolvimento e produção através de variáveis de ambiente.
+
+-   **[Faiss](https://ai.meta.com/tools/faiss/):**  Banco de dados vetorial otimizado para armazenar e recuperar _embeddings_ de forma eficiente. Utilizado para realizar a busca por similaridade nos documentos disponíveis, com o objetivo de construir o contexto necessário para a resposta da pergunta realizada pelo usuário.
+    - **Index.faiss:** Armazena os vetores dos documentos presentes na base para que sejam utilizados na busca por similaridade.
     - **Index.pkl:** Armazena dados serializados para recuperação posterior.
-- **[LangChain](https://www.langchain.com/):** Biblioteca que facilita a integração entre o banco vetorial e a geração de respostas.
-- **[Cohere API](https://cohere.ai/docs):** Responsável pela geração de respostas utilizando a técnica *Retrieval-Augmented Generation (RAG)*.
-    - **Cohere Chat-Stream:** Método utilizado para interações em tempo real.
-    - **Modelo command-r-plus-08-2024:** Modelo pré-treinado e multilíngue adequado para *question answering*.
+
+-   **[LangChain](https://www.langchain.com/):**  Biblioteca que facilita a integração com _LLMs_ e ferramentas de processamento de texto.
+    -   Utilizamos o modelo `embed-multilingual-v2.0` da [Cohere](https://cohere.com/) para geração dos _embeddings_.
+
+-   **[Cohere API](https://cohere.ai/docs):** Utilizada para a implementação do processo de geração de respostas.
+    - **Cohere Chat-Stream:** Método usado para a interação do modelo em tempo real, gerando respostas através de *request* realizada à API.
+    - **Modelo command-r-plus-08-2024:** Modelo pré-treinado e multilingual adequado para tarefas de *question answering*.
 
 
 ## Funcionamento
