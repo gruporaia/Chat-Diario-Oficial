@@ -46,42 +46,44 @@ A etapa de ingestão de dados tem como objetivo principal coletar, processar e a
 -   **[MinIO](https://min.io/):** _Object Storage_ de código aberto utilizado para armazenamento local durante a fase de desenvolvimento.
     
     -   Possui a mesma interface do AWS S3, facilitando a transição entre os ambientes de desenvolvimento e produção através de variáveis de ambiente.
-# Question Answering
 
-Esta etapa é responsável pelo processamento da pergunta do usuário, busca por similaridade na base vetorial para a construção do contexto e geração da resposta para a pergunta.
+## Question Answering
 
-## 1. Tecnologias
+A etapa de *Question Answering* tem como objetivo processar a pergunta do usuário, recuperar trechos relevantes da base vetorial e gerar uma resposta fundamentada no contexto identificado.
 
-A arquitetura é baseada na técnica **Retrieval-Augmented Generation (RAG)**, reunindo trechos relevantes dos documentos e utilizando-os como contexto para as perguntas. Os trechos são obtidos através de uma busca por similaridade em base de dados vetorial (FAISS), e as respostas obtidas através da API da Cohere.
+### **Pipeline de Question Answering**
 
-### 1.1. MinIO
-- **Aplicação:** Utilizado para o armazenamento dos arquivos referentes à base vetorial. Após o *download*, os mesmos são carregados em memória.
-- **Documentação:** [MinIO Documentation](https://docs.min.io/)
+1. **Download da Base de Dados**
+    - A base de dados vetorial é baixada do *Object Storage* MinIO e carregada em memória para consulta eficiente.
+    
+2. **Entrada do Usuário**
+    - O usuário submete uma pergunta através da interface da aplicação.
+    
+3. **Enriquecimento da Pergunta**
+    - A função *enrich_query* expande a consulta, atribuindo maior peso a termos-chave, como números de artigos e nomes de órgãos públicos, aumentando a precisão da busca.
+    
+4. **Recuperação de Dados**
+    - A busca por similaridade é realizada no banco vetorial *FAISS*, retornando os documentos mais relevantes para compor o contexto da resposta.
+    
+5. **Geração de Resposta**
+    - O modelo *command-r-plus-08-2024*, da API Cohere, gera uma resposta com base nos trechos recuperados.
+    
+6. **Validação da Resposta**
+    - O mesmo modelo verifica a adequação da resposta ao contexto. Caso necessário, mais documentos são recuperados e uma nova resposta é gerada com um contexto expandido.
 
-### 1.2. FAISS
-- **Aplicação:** Utilizado para realizar a busca por similaridade nos documentos disponíveis, com o objetivo de construir o contexto necessário para a resposta da pergunta realizada pelo usuário.
-- **Index.faiss?** Armazena os vetores dos documentos presentes na base para que sejam utilizados na busca por similaridade.
-- **Index.plk?** Arquivo binário que armazena dados serializados posteriormente utilizados para a recuperação de informação no processo de busca.
-- **Documentação:** [FAISS Documentation](https://github.com/facebookresearch/faiss)
+---
 
-### 1.3. LangChain
-- **Aplicação:** Utilizada como facilitadora da integração entre a base vetorial e o processo de geração de respostas.
-- **Documentação:** [LangChain Documentation](https://www.langchain.com/)
+### **Tecnologias Utilizadas**
 
-### 1.4. Cohere API
-- **Aplicação:** Utilizada para a implementação do processo de geração de respostas.
-- **Cohere Chat-Stream:** Método usado para a interação do modelo em tempo real, gerando respostas através de *request* realizada à API.
-- **Modelo command-r-plus-08-2024:** Modelo pré-treinado e multilingual adequado para tarefas de *question answering*.
-- **Documentação:** [Cohere Documentation](https://cohere.ai/docs)
+- **[MinIO](https://docs.min.io/):** _Object Storage_ utilizado para armazenar e recuperar os arquivos referentes à base vetorial.
+- **[FAISS](https://github.com/facebookresearch/faiss/):** Banco de dados vetorial otimizado para buscas eficientes por similaridade.
+    - **Index.faiss:** Contém os vetores dos documentos para busca.
+    - **Index.pkl:** Armazena dados serializados para recuperação posterior.
+- **[LangChain](https://www.langchain.com/):** Biblioteca que facilita a integração entre o banco vetorial e a geração de respostas.
+- **[Cohere API](https://cohere.ai/docs):** Responsável pela geração de respostas utilizando a técnica *Retrieval-Augmented Generation (RAG)*.
+    - **Cohere Chat-Stream:** Método utilizado para interações em tempo real.
+    - **Modelo command-r-plus-08-2024:** Modelo pré-treinado e multilíngue adequado para *question answering*.
 
-## 2. Pipeline
-
-1. **Download da base de dados:** A base de dados vetorial é baixada do MinIO.
-2. **Entrada do Usuário:** O usuário fornece uma pergunta através da interface visual da aplicação.
-3. **Enriquecimento da Pergunta:** Através da função *enrich_query*, a pergunta do usuário é multiplicada através da replicação de termos "chave". Isso atribui mais peso a termos de maior importância, tais como números de artigos ou nomes de órgãos públicos mencionados, possibilitando uma busca mais precisa.
-4. **Recuperação de Dados (FAISS):** Através de uma busca por similaridade, o sistema recupera os documentos mais relevantes para responder a pergunta do usuário.
-5. **Geração de Resposta (Cohere):** Uma requisição à API da Cohere é realizada para que uma resposta seja gerada.
-6. **Validação da resposta:** O mesmo modelo é utilizado para a validação da resposta gerada, conferindo se a mesma está de acordo com o contexto fornecido. Em caso negativo, a busca por similaridade é refeita, dessa vez retornando mais documentos, e uma nova resposta é gerada, agora com um maior contexto.
 
 ## Funcionamento
 - [Funcionamento do pipeline de extração dos dados](https://github.com/gruporaia/Chat-Diario-Oficial/tree/main/ingestion/airflow_project)
