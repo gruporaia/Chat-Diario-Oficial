@@ -2,6 +2,11 @@
 
 O **Chat Diário Oficial** é uma solução end-to-end desenvolvida para otimizar a busca de informações em longas bases de dados textuais, como o Diário Oficial do Município de Belo Horizonte (MG). Utilizando conceitos de Retrieval Augmented Generation (RAG), este projeto visa auxiliar servidores públicos e profissionais que precisam navegar diariamente por extensos documentos, proporcionando uma experiência de busca eficiente e economia de tempo.
 
+## Funcionamento
+
+TODO: inserir um vídeo do funcionamento
+TODO: inserir um link para mais vídeos
+
 ## Design & Arquitetura 
 
 ![Group 38](https://github.com/user-attachments/assets/0747e95b-ec41-4cb9-86b1-d2e2035bdb1e)
@@ -77,8 +82,8 @@ A etapa de *Question Answering* tem como objetivo processar a pergunta do usuár
     - **Modelo command-r-plus-08-2024:** Modelo pré-treinado e multilingual adequado para tarefas de *question answering*.
 
 
-## Funcionamento
-O Chat Diário Oficial pode ser testado localmente seguindo as instruções contidas nas páginas destacadas abaixo. Basta seguir o tutorial fornecido para configurar o ambiente e executar a aplicação, garantindo que todas as dependências estejam corretamente instaladas. A aplicação foi desenvolvida como uma prova de conceito e ainda requer melhorias para aprimorar sua eficiência e usabilidade. Interessados em contribuir para o seu desenvolvimento são bem-vindos e podem entrar em contato com o RAIA para colaborar. O teste desta ferramenta foi realizado com funcionários da Prefeitura de Belo Horizonte, permitindo validar seu funcionamento em um ambiente real.
+## Como testar
+O Chat Diário Oficial pode ser testado localmente seguindo as instruções contidas nas páginas destacadas abaixo. Basta seguir o tutorial fornecido para configurar o ambiente e executar a aplicação, garantindo que todas as dependências estejam corretamente instaladas. A aplicação foi desenvolvida como uma prova de conceito e ainda requer melhorias para aprimorar sua eficiência e usabilidade. Interessados em contribuir para o seu desenvolvimento são bem-vindos e podem entrar em contato com o RAIA para colaborar. O teste desta ferramenta foi realizado internamente e também com funcionários da Prefeitura de Belo Horizonte, permitindo validar seu funcionamento em um ambiente real.
 - [Funcionamento do pipeline de extração dos dados](https://github.com/gruporaia/Chat-Diario-Oficial/tree/main/ingestion/airflow_project)
 - [Funcionamento da aplicação](https://github.com/gruporaia/Chat-Diario-Oficial/tree/main/app)
 
