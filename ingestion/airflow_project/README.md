@@ -7,8 +7,10 @@
 3. A partir destes documentos, é construído um índice vetorial por meio da biblioteca FAISS, com base em embeddings gerados pela Cohere.
 
 4. Os PDFs e o índice final gerado são enviados para um bucket no S3/Minio, permitindo que seja compartilhado entre diferentes serviços.
-
-![Group 55](https://github.com/user-attachments/assets/f294d968-7071-44b6-8a68-9673bd052054)
+   
+<p align="center">
+    <img width="900" src="https://github.com/user-attachments/assets/6456d175-4758-41c0-90e3-4d7667c7c02a" alt="Ingestão de dados - Diagrama">
+</p>
 
 ## Configuração do Docker + Airflow
 Projeto de ingestão de dados utiliza do Airflow. Para isso, utilizamos Docker para tornar mais prático o desenvolvimento.
