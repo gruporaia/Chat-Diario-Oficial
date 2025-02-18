@@ -1,10 +1,11 @@
-# **Diário Oficial APP**
+# **Aplicação**
 
 ## **Funcionamento**
-O App desenvolvido neste respositório corresponde a um backend (em `./app`) e um frontend (em `./frontend`). O backend está conectado à object storage Minio/S3 que é construída e mantida pelo pipeline de ingestão e orquestrado pelo Airflow. A principal funcionalidade é permitir com que um usuário forneça uma questão de input, que é então enviado consumido pelo backend e utilizado para fazer query no FAISS Vector database. Os N documentos extraidos pele indexação são utilizados para enriquecer o prompt que é enviado para um gerador de texto (um GPT ou semelhante).
+O App desenvolvido neste respositório corresponde a um backend (em `./app`) e um frontend (em `./frontend`). O backend está conectado à object storage Minio/S3 que é construída e mantida pelo pipeline de ingestão e orquestrado pelo Airflow. A principal funcionalidade é permitir com que um usuário forneça uma questão de input, que é então enviado consumido pelo backend e utilizado para fazer query no FAISS Vector database. Os N documentos extraidos pele indexação são utilizados para enriquecer o prompt que é enviado para um gerador de texto.
 
-!![Design sem nome (2)](https://github.com/user-attachments/assets/45ffde8a-0861-45c4-8cbd-5ec573d0afe4)
-
+<p align="center">
+    <img width="800" src="https://github.com/user-attachments/assets/4c56fd4a-218d-4b7d-9148-f6a0ff44d1af" alt="Aplicação - Diagrama">
+</p>
 
 ## **Rodar a aplicação**
 Para rodar a aplicação, é necessário ter uma versão do Minio instanciada ou um AWS S3 para que seja possível conectar à object storage e puxar os arquivos necessários para formar o índice FAISS. 
