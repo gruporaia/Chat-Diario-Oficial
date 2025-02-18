@@ -2,10 +2,10 @@
 
 O **Chat Diário Oficial** é uma solução end-to-end desenvolvida para otimizar a busca de informações em longas bases de dados textuais, como o Diário Oficial do Município de Belo Horizonte (MG). Utilizando conceitos de Retrieval Augmented Generation (RAG), este projeto visa auxiliar servidores públicos e profissionais que precisam navegar diariamente por extensos documentos, proporcionando uma experiência de busca eficiente e economia de tempo.
 
-[Demo](https://github.com/user-attachments/assets/ebe3fcad-f528-42c2-949e-d627202bad7e)
-
 ## Design & Arquitetura 
-![Design sem nome](https://github.com/user-attachments/assets/26a7d6b0-76c5-4ad6-9bf4-c4b4f204ae81)
+
+![Group 38](https://github.com/user-attachments/assets/0747e95b-ec41-4cb9-86b1-d2e2035bdb1e)
+
 ## Ingestão de Dados
 
 A etapa de ingestão de dados tem como objetivo principal coletar, processar e armazenar os Diários Oficiais Municipais de forma estruturada, disponibilizando os dados para consulta pela aplicação principal.
@@ -83,13 +83,14 @@ O Chat Diário Oficial pode ser testado localmente seguindo as instruções cont
 - [Funcionamento da aplicação](https://github.com/gruporaia/Chat-Diario-Oficial/tree/main/app)
 
 ## Quem somos
-
-Este projeto foi desenvolvido pelos membros do **RAIA (Rede de Avanço de Inteligência Artificial)**, uma iniciativa estudantil do Instituto de Ciências Matemáticas e de Computação (ICMC) da USP - São Carlos. O RAIA é um grupo formado por estudantes que compartilham o objetivo de criar soluções inovadoras utilizando inteligência artificial para impactar positivamente a sociedade. Para saber mais, acesse [nosso site](https://gruporaia.vercel.app/) ou [nosso Instagram](instagram.com/grupo.raia)!
-
+| ![LogoRAIA](https://github.com/user-attachments/assets/ce3f8386-a900-43ff-af84-adce9c17abd2) |  Este projeto foi desenvolvido pelos membros do **RAIA (Rede de Avanço de Inteligência Artificial)**, uma iniciativa estudantil do Instituto de Ciências Matemáticas e de Computação (ICMC) da USP - São Carlos. Somos estudantes que compartilham o objetivo de criar soluções inovadoras utilizando inteligência artificial para impactar positivamente a sociedade. Para saber mais, acesse [nosso site](https://gruporaia.vercel.app/) ou [nosso Instagram](instagram.com/grupo.raia)! |
+|------------------|-------------------------------------------|
+ 
 ### **Desenvolvedores**
-
 - **Alvaro Jose Lopes** - [LinkedIn](https://www.linkedin.com/in/alvaro-jose-lopes/) | [GitHub](https://github.com/AlvaroJoseLopes)
 - **Bernardo Marques Costa** - [LinkedIn](https://www.linkedin.com/in/bernardo-marques-costa/) | [GitHub](https://github.com/bmarquescost)
 - **Cecília Nunes Sedenho** - [LinkedIn](https://www.linkedin.com/in/cec%C3%ADlia-nunes-sedenho-305059255/) | [GitHub](https://github.com/HeNunes)
 - **Laura Fernandes Camargos** - [LinkedIn](https://www.linkedin.com/in/laura-fernandes-camargos-a26b89246/) | [GitHub](https://github.com/laurafcamargos)
 - **Pedro Augusto Monteiro Delgado** - [LinkedIn](https://www.linkedin.com/in/pedroamdelgado) | [GitHub](https://github.com/DelgadoPedro)
+
+
