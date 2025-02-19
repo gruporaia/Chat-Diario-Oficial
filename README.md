@@ -1,8 +1,8 @@
 # Chat Diário Oficial
+<img align="right" width="260" height="260" src="https://github.com/user-attachments/assets/25cabb9f-8b7e-436f-a0d4-a76c51c3cda5">
 
 O **Chat Diário Oficial** é uma solução end-to-end desenvolvida para otimizar a busca de informações em longas bases de dados textuais, como o Diário Oficial do Município de Belo Horizonte (MG). Utilizando conceitos de Retrieval Augmented Generation (RAG), este projeto visa auxiliar servidores públicos e profissionais que precisam navegar diariamente por extensos documentos, proporcionando uma experiência de busca eficiente e economia de tempo.
 
-## Funcionamento
 O funcionamento da ferramenta baseia-se na interação do usuário por meio de uma caixa de texto, onde ele pode enviar perguntas relacionadas ao Diário Oficial (nesse caso, de Belo Horizonte). Utilizando técnicas  de recuperação e geração de informações, a ferramenta processa a solicitação e exibe a resposta na tela. Confira abaixo alguns exemplos de interação para entender melhor como o Chat Diário Oficial pode otimizar a busca por informações relevantes.
 
 <details>
