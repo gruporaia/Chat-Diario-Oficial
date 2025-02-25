@@ -103,7 +103,7 @@ O Chat Diário Oficial pode ser testado localmente seguindo as instruções cont
 ### **Desenvolvedores**
 - **Alvaro Jose Lopes** - [LinkedIn](https://www.linkedin.com/in/alvaro-jose-lopes/) | [GitHub](https://github.com/AlvaroJoseLopes)
 - **Bernardo Marques Costa** - [LinkedIn](https://www.linkedin.com/in/bernardo-marques-costa/) | [GitHub](https://github.com/bmarquescost)
-- **Cecília Nunes Sedenho** - [LinkedIn](https://www.linkedin.com/in/cec%C3%ADlia-nunes-sedenho-305059255/) | [GitHub](https://github.com/HeNunes)
+- **Cecilia Nunes Sedenho** - [LinkedIn](https://www.linkedin.com/in/cec%C3%ADlia-nunes-sedenho-305059255/) | [GitHub](https://github.com/HeNunes)
 - **Laura Fernandes Camargos** - [LinkedIn](https://www.linkedin.com/in/laura-fernandes-camargos-a26b89246/) | [GitHub](https://github.com/laurafcamargos)
 - **Pedro Augusto Monteiro Delgado** - [LinkedIn](https://www.linkedin.com/in/pedroamdelgado) | [GitHub](https://github.com/DelgadoPedro)
 
